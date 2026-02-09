@@ -5,30 +5,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   selector: 'app-navbar',
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
-  template: `
-    <nav class="flex items-center justify-between px-8 py-4 bg-white/10 backdrop-blur-md border-b border-white/20 sticky top-0 z-50">
-      <div class="flex items-center gap-2">
-        <div class="w-10 h-10 bg-gradient-to-tr from-orange-500 to-pink-600 rounded-lg flex items-center justify-center shadow-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
-          </svg>
-        </div>
-        <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-pink-600">Radio Hub</span>
-      </div>
-
-      <div class="hidden md:flex items-center gap-8">
-        <a routerLink="/" routerLinkActive="text-orange-500" [routerLinkActiveOptions]="{exact: true}" class="text-white hover:text-orange-400 transition-colors font-medium">Inicio</a>
-        <a routerLink="/schedule" routerLinkActive="text-orange-500" class="text-white hover:text-orange-400 transition-colors font-medium">Programación</a>
-        <a routerLink="/podcasts" routerLinkActive="text-orange-500" class="text-white hover:text-orange-400 transition-colors font-medium">Podcasts</a>
-        <a routerLink="/contact" routerLinkActive="text-orange-500" class="text-white hover:text-orange-400 transition-colors font-medium">Contacto</a>
-      </div>
-
-      <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg flex items-center gap-2">
-        <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-        EN VIVO
-      </button>
-    </nav>
-  `,
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent {}
