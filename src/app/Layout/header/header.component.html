@@ -1,11 +1,16 @@
-<header id="main-header" class="flex items-center justify-between">
-    <div class="logo">
-        <img src="" alt="Radio station Logo">
-    </div>
+<div id="main-header" class="flex items-center justify-between max-w-desktop mx-auto">
+  <div class="flex items-center gap-2">
+    <svg-icon
+      name="radio"
+      class="text-brand-secondary group-hover:text-red-500 w-10 h-10 transition-colors flex items-center justify-center"
+    >
+    </svg-icon>
+    <span class="text-brand-primary text-xl font-bold translate-y-[2px]">RADIO NAME</span>
+  </div>
 
-    <app-navbar />
+  <app-navbar />
 
-    <div class="Contact">
-        <button>Contáctanos</button>
-    </div>
-</header>
+  <div class="Contact">
+    <button>Contáctanos</button>
+  </div>
+</div>
