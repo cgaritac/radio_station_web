@@ -1,5 +1,14 @@
-<div class="min-h-screen flex flex-col bg-gray-950 text-white">
-  <app-header />
+<div class="min-h-screen flex flex-col text-white">
+  <header
+    class="sticky top-0 z-50 transition-all duration-500 border-b"
+    [ngClass]="
+      isScrolled
+        ? 'bg-white/10 backdrop-blur-md border-white/20 py-2'
+        : 'bg-white/0 backdrop-blur-none border-transparent py-4'
+    "
+  >
+    <app-header />
+  </header>
 
   <main class="flex-grow">
     <router-outlet />

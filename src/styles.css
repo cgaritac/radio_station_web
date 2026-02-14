@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+@theme {
+    --color-brand-primary: #FFFFFF;
+    --color-brand-secondary: #FFF82E;
+
+    --background-image-blue-gradient: radial-gradient(at 15% 15%, #003B5C 0%, transparent 35%),
+                                      radial-gradient(at 85% 15%, #001A2C 0%, transparent 40%),
+                                      radial-gradient(at 50% 50%, #002D52 0%, transparent 45%),
+                                      radial-gradient(at 80% 85%, #004D7A 0%, transparent 40%),
+                                      radial-gradient(at 15% 85%, #001A2C 0%, transparent 45%),
+                                      radial-gradient(at 30% 60%, #003366 0%, transparent 30%),
+                                      radial-gradient(at 70% 40%, #000814 0%, transparent 50%),
+                                      linear-gradient(135deg, #000814 0%, #001F3D 100%);
+
+    --font-family-primary: 'Poppins', sans-serif;
+    --font-family-secondary: 'Roboto', sans-serif;
+
+    --spacing-desktop: 1512px;
+    --spacing-laptop: 1280px;
+    --spacing-tablet: 768px;
+    --spacing-mobile: 480px;
+}
+
+body {
+    background-image: var(--background-image-blue-gradient);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--color-text);
+    font-family: var(--font-family-primary);
+}
