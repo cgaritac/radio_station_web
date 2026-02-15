@@ -1,9 +1,65 @@
-<div class="flex items-center gap-4">
-  <button class="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors">
-    <svg-icon name="play" class="w-6 h-6"></svg-icon>
-  </button>
+<div class="flex justify-between items-center max-w-desktop mx-auto">
   <div>
-    <p class="text-sm font-bold">Nombre de la canción</p>
-    <p class="text-xs text-gray-400">Artista</p>
+    <p class="flex items-center gap-2 text-sm font-bold">
+      <span class="text-brand-secondary" [class.animate-pulse]="radioService.isPlaying()"
+        >Live:</span
+      >{{ radioService.trackInfo().title }}
+    </p>
+    @if (radioService.trackInfo().title) {
+      <p class="text-xs text-brand-sextary">
+        {{ radioService.trackInfo().artist }}
+      </p>
+    }
+  </div>
+  <div class="flex flex-col items-center gap-2">
+    @if (radioService.isPlaying()) {
+      <button
+        (click)="radioService.togglePlay()"
+        class="bg-brand-primary/60 hover:bg-brand-primary/30 p-1 rounded-full transition-colors cursor-pointer"
+      >
+        <svg-icon name="stop" class="text-brand-secondary hover:text-brand-secondary/80"></svg-icon>
+      </button>
+    } @else {
+      <button
+        (click)="radioService.togglePlay()"
+        class="bg-brand-primary/60 hover:bg-brand-primary/30 p-1 rounded-full transition-colors cursor-pointer"
+      >
+        <svg-icon name="play" class="text-brand-secondary hover:text-brand-secondary/80"></svg-icon>
+      </button>
+    }
+    <div class="text-xs text-brand-secondary flex items-center gap-2">
+      @if (radioService.isPlaying()) {
+        <span class="w-2 h-2 bg-brand-quaternary rounded-full animate-pulse"></span>
+      }
+      <p>{{ radioService.isPlaying() ? 'Streaming' : 'Live Streaming' }}</p>
+    </div>
+  </div>
+  <div class="flex items-center justify-center gap-2">
+    <svg-icon
+      [name]="radioService.isMuted() || radioService.volume() === 0 ? 'mute' : 'volume'"
+      [class]="
+        radioService.isMuted() || radioService.volume() === 0
+          ? 'text-brand-quinary hover:text-brand-quinary/80 transition-colors'
+          : 'text-brand-secondary hover:text-brand-secondary/80 transition-colors'
+      "
+      class="cursor-pointer"
+      (click)="radioService.toggleMute()"
+    ></svg-icon>
+    <input
+      type="range"
+      min="0"
+      max="10"
+      [value]="radioService.volume()"
+      (input)="radioService.setVolume(vol.valueAsNumber)"
+      #vol
+      class="w-24 h-1 rounded-full cursor-pointer appearance-none"
+      [style.background-image]="
+        'linear-gradient(to right, var(--color-brand-secondary) 0%, var(--color-brand-secondary) ' +
+        radioService.volume() * 10 +
+        '%, transparent ' +
+        radioService.volume() * 10 +
+        '%, transparent 100%)'
+      "
+    />
   </div>
 </div>

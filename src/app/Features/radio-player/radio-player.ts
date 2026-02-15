@@ -1,5 +1,6 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import { SvgIconComponent } from 'angular-svg-icon';
+import { RadioService } from '../../Core/services/radio.service';
 
 @Component({
   selector: 'app-radio-player',
@@ -10,5 +11,5 @@ import { SvgIconComponent } from 'angular-svg-icon';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RadioPlayer {
-
+    protected readonly radioService = inject(RadioService);
 }
