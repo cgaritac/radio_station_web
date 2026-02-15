@@ -1,16 +1,14 @@
-<div id="main-header" class="flex items-center justify-between max-w-desktop mx-auto">
+<div id="main-header" class="flex justify-between items-center max-w-desktop mx-auto">
   <div class="flex items-center gap-2">
-    <svg-icon
-      name="radio"
-      class="text-brand-secondary group-hover:text-red-500 w-10 h-10 transition-colors flex items-center justify-center"
-    >
-    </svg-icon>
-    <span class="text-brand-primary text-xl font-bold translate-y-[2px]">RADIO NAME</span>
+    <a routerLink="/">
+      <svg-icon
+        name="radio"
+        class="text-brand-secondary hover:text-brand-quaternary w-10 h-10 transition-colors flex items-center justify-center cursor-pointer"
+      >
+      </svg-icon>
+    </a>
+    <span class="text-brand-tertiary tracking-wider text-xl font-bold translate-y-[2px]">RADIO NAME</span>
   </div>
 
   <app-navbar />
-
-  <div class="Contact">
-    <button>Contáctanos</button>
-  </div>
 </div>
