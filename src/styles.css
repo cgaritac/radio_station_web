@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-    --color-brand-primary: #000080; /* Blue */
+    --color-brand-primary: #032441; /* Blue */
+    --color-brand-primary-light: #03294A; /* Blue */
     --color-brand-secondary: #FFD700; /* Yellow */
     --color-brand-tertiary: #FFFFFF; /* White */
-    --color-brand-quaternary: #9ACD32; /* Green */
+    --color-brand-quaternary: #92B118; /* Green */
     --color-brand-quinary: #FF0000; /* Red */
     --color-brand-sextary: #A9A9A9; /* Gray */
     
