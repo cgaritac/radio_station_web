@@ -21,8 +21,10 @@
 
       <div class="flex items-center gap-2 text-slate-500 text-xs">
         <span class="w-2 h-2 bg-red-500 rounded-full" 
-              [class.animate-ping]="radioService.isPlaying()"></span>
+              [class.animate-ping]="radioService.isPlaying()">
+        </span>
         {{ radioService.isPlaying() ? 'TRANSMITIENDO DIRECTO' : 'REPRODUCIR AHORA' }}
+        {{ radioService.currentTrack() }}
       </div>
     </div>
   </div>
