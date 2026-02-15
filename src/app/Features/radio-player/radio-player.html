@@ -1,5 +1,5 @@
-<div class="flex justify-between items-center max-w-desktop mx-auto">
-  <div>
+<div class="grid grid-cols-3 items-center max-w-desktop mx-auto w-full">
+  <div class="justify-self-start">
     <p class="flex items-center gap-2 text-sm font-bold">
       <span class="text-brand-secondary" [class.animate-pulse]="radioService.isPlaying()"
         >Live:</span
@@ -11,7 +11,7 @@
       </p>
     }
   </div>
-  <div class="flex flex-col items-center gap-2">
+  <div class="flex flex-col items-center gap-2 justify-self-center">
     @if (radioService.isPlaying()) {
       <button
         (click)="radioService.togglePlay()"
@@ -34,7 +34,7 @@
       <p>{{ radioService.isPlaying() ? 'Streaming' : 'Live Streaming' }}</p>
     </div>
   </div>
-  <div class="flex items-center justify-center gap-2">
+  <div class="flex items-center gap-2 justify-self-end">
     <svg-icon
       [name]="radioService.isMuted() || radioService.volume() === 0 ? 'mute' : 'volume'"
       [class]="
