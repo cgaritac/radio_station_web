@@ -1,5 +1,4 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { SvgIconComponent } from "angular-svg-icon";
 

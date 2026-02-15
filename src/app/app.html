@@ -3,16 +3,19 @@
     class="sticky top-0 z-50 transition-all duration-500 border-b"
     [ngClass]="
       isScrolled
-        ? 'bg-white/10 backdrop-blur-md border-white/20 py-2'
-        : 'bg-white/0 backdrop-blur-none border-transparent py-4'
+        ? 'bg-white/10 backdrop-blur-md border-white/20 py-1'
+        : 'bg-white/0 backdrop-blur-none border-transparent py-3'
     "
   >
     <app-header />
   </header>
 
-  <main class="flex-grow">
+  <main class="grow">
     <router-outlet />
   </main>
 
   <app-footer />
+  <div class="sticky bottom-0 z-50 border-t border-white/20 bg-white/20 backdrop-blur-md py-3">
+    <app-radio-player />
+  </div>
 </div>
