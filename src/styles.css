@@ -26,6 +26,17 @@
     --spacing-laptop: 1280px;
     --spacing-tablet: 768px;
     --spacing-mobile: 480px;
+
+    --animate-shadow-pulse: shadow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    @keyframes shadow-pulse {
+        0%, 100% {
+            box-shadow: 0 0 12px 3px rgba(255, 215, 0, 0.5);
+        }
+        50% {
+            box-shadow: 0 0 0px 0px rgba(255, 215, 0, 0);
+        }
+    }
 }
 
 body {
@@ -34,4 +45,16 @@ body {
     min-height: 100vh;
     color: var(--color-text);
     font-family: var(--font-family-primary);
+}
+
+svg-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg-icon svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
 }

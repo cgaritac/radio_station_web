@@ -1,49 +1,144 @@
-<footer class="bg-brand-primary/60 text-gray-400 py-8 border-t border-white/5 mt-auto">
+<footer class="bg-brand-primary/60 text-gray-400 py-8 px-4 border-t border-white/5 mt-auto">
   <div class="max-w-desktop mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
     <div class="col-span-1 md:col-span-1">
       <a routerLink="/" class="flex items-center gap-2 mb-6 cursor-pointer">
-        <svg-icon name="radio" class="text-brand-secondary"></svg-icon>
+        <svg-icon
+          name="radio"
+          class="text-brand-secondary hover:text-brand-secondary/80 transition-colors"
+        ></svg-icon>
         <span class="text-xl font-bold text-white">{{ radioService.radioName() }}</span>
       </a>
       <p class="text-sm leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in
+        accumsan est, at vehicula urna.
       </p>
     </div>
 
     <div>
-      <h3 class="text-white font-bold mb-4">Menu</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a routerLink="/" class="hover:text-brand-quaternary transition-colors cursor-pointer">Home</a></li>
-        <li><a routerLink="/schedule" class="hover:text-brand-quaternary transition-colors cursor-pointer">Schedule</a></li>
-        <li><a routerLink="/biblic-studies" class="hover:text-brand-quaternary transition-colors cursor-pointer">Biblic Studies</a></li>
-        <li><a routerLink="/news" class="hover:text-brand-quaternary transition-colors cursor-pointer">News</a></li>
-        <li><a routerLink="/blog" class="hover:text-brand-quaternary transition-colors cursor-pointer">Blog</a></li>
-        <li><a routerLink="/about-us" class="hover:text-brand-quaternary transition-colors cursor-pointer">About Us</a></li>
+      <h3 class="text-white font-bold mb-6">Menu</h3>
+      <ul class="space-y-3 text-sm">
+        <li>
+          <a
+            routerLink="/"
+            class="hover:text-brand-quaternary transition-colors cursor-pointer flex items-center gap-2"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/schedule"
+            class="hover:text-brand-quaternary transition-colors cursor-pointer flex items-center gap-2"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
+            Schedule
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/biblic-studies"
+            class="hover:text-brand-quaternary transition-colors cursor-pointer flex items-center gap-2"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
+            Biblic Studies
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/news"
+            class="hover:text-brand-quaternary transition-colors cursor-pointer flex items-center gap-2"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
+            News
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/blog"
+            class="hover:text-brand-quaternary transition-colors cursor-pointer flex items-center gap-2"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
+            Blog
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/about-us"
+            class="hover:text-brand-quaternary transition-colors cursor-pointer flex items-center gap-2"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
+            About Us
+          </a>
+        </li>
       </ul>
     </div>
 
     <div>
-      <h3 class="text-white font-bold mb-4">Follow Us</h3>
-      <div class="flex gap-4">
+      <h3 class="text-white font-bold mb-6">Follow Us</h3>
+      <div class="grid grid-cols-4 gap-3 w-fit">
         <a
-          href="#"
-          class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-quaternary transition-colors group"
+          href="https://www.facebook.com/radioornannandayure/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary transition-all group"
+          title="Facebook"
         >
-          <svg class="w-5 h-5 group-hover:fill-white" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-            />
-          </svg>
+          <svg-icon name="facebook" class="w-5 h-5"></svg-icon>
         </a>
         <a
-          href="#"
-          class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-quaternary transition-colors group"
+          href="https://www.instagram.com/radioornannandayure/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary transition-all group"
+          title="Instagram"
         >
-          <svg class="w-5 h-5 group-hover:fill-white" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-            />
-          </svg>
+          <svg-icon name="instagram" class="w-5 h-5"></svg-icon>
+        </a>
+        <a
+          href="https://www.youtube.com/@radioornannandayure"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary transition-all group"
+          title="YouTube"
+        >
+          <svg-icon name="youtube" class="w-5 h-5"></svg-icon>
+        </a>
+        <a
+          href="https://open.spotify.com/show/1aZmACn7gBSoVyNDVl0ltY"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary transition-all group"
+          title="Spotify"
+        >
+          <svg-icon name="spotify" class="w-5 h-5"></svg-icon>
+        </a>
+        <a
+          href="https://www.tiktok.com/@ministerio_ornan?lang=es"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary transition-all group"
+          title="TikTok"
+        >
+          <svg-icon name="tiktok" class="w-5 h-5"></svg-icon>
+        </a>
+        <a
+          href="https://www.whatsapp.com/channel/0029VbA1ifh1NCrXCaosEy2t"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary transition-all group"
+          title="WhatsApp"
+        >
+          <svg-icon name="whatsapp" class="w-5 h-5"></svg-icon>
+        </a>
+        <a
+          href="https://onlineradiobox.com/cr/ornannandayure/?cs=cr.ornannandayure"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary transition-all group"
+          title="Radio Box"
+        >
+          <svg-icon name="microphone" class="w-5 h-5"></svg-icon>
         </a>
       </div>
     </div>
@@ -58,7 +153,7 @@
     </div>
   </div>
 
-  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 text-center text-xs">
+  <div class="max-w-desktop px-4 mx-auto mt-12 pt-8 border-t border-white/5 text-center text-xs">
     <p>© {{ currentYear }} {{ radioService.radioName() }}. All rights reserved.</p>
   </div>
 </footer>
