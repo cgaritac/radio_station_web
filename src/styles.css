@@ -7,8 +7,7 @@
     --color-brand-tertiary: #FFFFFF; /* White */
     --color-brand-quaternary: #92B118; /* Green */
     --color-brand-quinary: #FF0000; /* Red */
-    --color-brand-sextary: #A9A9A9; /* Gray */
-    
+    --color-brand-sextary: #A9A9A9; /* Gray */   
 
     --background-image-blue-gradient: radial-gradient(at 15% 15%, #003B5C 0%, transparent 35%),
                                       radial-gradient(at 85% 15%, #001A2C 0%, transparent 40%),

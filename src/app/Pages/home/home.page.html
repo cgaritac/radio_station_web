@@ -1,31 +1,44 @@
-<div class="min-h-screen flex items-center justify-center p-6 font-sans">
-  <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-[2.5rem] shadow-2xl w-full max-w-sm text-center">
-    
-    <div class="relative w-40 h-40 mx-auto mb-6">
-      <div class="absolute inset-0 bg-orange-500 rounded-full blur-2xl opacity-20" 
-           [class.animate-pulse]="radioService.isPlaying()"></div>
-      <div class="relative bg-gradient-to-tr from-orange-400 to-yellow-200 w-full h-full rounded-full flex items-center justify-center text-5xl shadow-inner select-none transition-transform duration-500"
-           [class.scale-110]="radioService.isPlaying()">
-        📻
+<div class="min-h-screen flex flex-col font-sans">
+  <app-hero />
+
+  <section class="grow flex items-center justify-center p-6">
+    <div
+      class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-[2.5rem] shadow-2xl w-full max-w-sm text-center"
+    >
+      <div class="relative w-40 h-40 mx-auto mb-6">
+        <div
+          class="absolute inset-0 bg-orange-500 rounded-full blur-2xl opacity-20"
+          [class.animate-pulse]="radioService.isPlaying()"
+        ></div>
+        <div
+          class="relative bg-linear-to-tr from-orange-400 to-yellow-200 w-full h-full rounded-full flex items-center justify-center text-5xl shadow-inner select-none transition-transform duration-500"
+          [class.scale-110]="radioService.isPlaying()"
+        >
+          📻
+        </div>
+      </div>
+
+      <h1 class="text-white text-3xl font-black tracking-tight">Radio Ornán</h1>
+      <p class="text-slate-400 text-sm font-medium mb-8">Nandayure • En Vivo</p>
+
+      <div class="flex flex-col items-center gap-4">
+        <button
+          (click)="radioService.togglePlay()"
+          class="bg-orange-500 hover:bg-orange-600 active:scale-95 transition-all text-white w-20 h-20 rounded-full flex items-center justify-center shadow-lg shadow-orange-500/50"
+        >
+          <span class="text-2xl">{{ radioService.isPlaying() ? '⏸' : '▶' }}</span>
+        </button>
+
+        <div class="flex items-center gap-2 text-slate-500 text-xs">
+          <span
+            class="w-2 h-2 bg-red-500 rounded-full"
+            [class.animate-ping]="radioService.isPlaying()"
+          >
+          </span>
+          {{ radioService.isPlaying() ? 'TRANSMITIENDO DIRECTO' : 'REPRODUCIR AHORA' }}
+          {{ radioService.currentTrack() }}
+        </div>
       </div>
     </div>
-
-    <h1 class="text-white text-3xl font-black tracking-tight">Radio Ornán</h1>
-    <p class="text-slate-400 text-sm font-medium mb-8">Nandayure • En Vivo</p>
-
-    <div class="flex flex-col items-center gap-4">
-      <button (click)="radioService.togglePlay()" 
-              class="bg-orange-500 hover:bg-orange-600 active:scale-95 transition-all text-white w-20 h-20 rounded-full flex items-center justify-center shadow-lg shadow-orange-500/50">
-        <span class="text-2xl">{{ radioService.isPlaying() ? '⏸' : '▶' }}</span>
-      </button>
-
-      <div class="flex items-center gap-2 text-slate-500 text-xs">
-        <span class="w-2 h-2 bg-red-500 rounded-full" 
-              [class.animate-ping]="radioService.isPlaying()">
-        </span>
-        {{ radioService.isPlaying() ? 'TRANSMITIENDO DIRECTO' : 'REPRODUCIR AHORA' }}
-        {{ radioService.currentTrack() }}
-      </div>
-    </div>
-  </div>
+  </section>
 </div>
