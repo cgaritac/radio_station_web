@@ -18,7 +18,11 @@ export class IconRegistryService {
     { name: 'stop', path: 'icons/stop.svg' },
     { name: 'facebook', path: 'icons/facebook.svg' },
     { name: 'instagram', path: 'icons/instagram.svg' },
-    { name: 'youtube', path: 'icons/youtube.svg' }
+    { name: 'youtube', path: 'icons/youtube.svg' },
+    { name: 'spotify', path: 'icons/spotify.svg' },
+    { name: 'tiktok', path: 'icons/tiktok.svg' },
+    { name: 'whatsapp', path: 'icons/whatsapp.svg' },
+    { name: 'microphone', path: 'icons/microphone.svg' }
   ];
 
   preloadIcons(): void {
