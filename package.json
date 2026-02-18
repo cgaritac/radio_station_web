@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "ng serve",
+    "dev:es": "ng serve --configuration=es",
+    "build:i18n": "ng build --localize",
     "ng": "ng",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
@@ -37,6 +39,7 @@
     "@angular/build": "^21.0.0",
     "@angular/cli": "^21.0.0",
     "@angular/compiler-cli": "^21.0.0",
+    "@angular/localize": "21.1.3",
     "@ngx-env/builder": "^21.0.1",
     "@tailwindcss/postcss": "^4.1.12",
     "jsdom": "^27.1.0",

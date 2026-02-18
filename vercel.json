@@ -1,5 +1,29 @@
 {
+  "version": 2,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/en",
+      "destination": "/en/index.html"
+    },
+    {
+      "source": "/en/([^.]*)",
+      "destination": "/en/index.html"
+    },
+    {
+      "source": "/en/(.*)",
+      "destination": "/en/$1"
+    },
+    {
+      "source": "/",
+      "destination": "/es/index.html"
+    },
+    {
+      "source": "/([^.]*)",
+      "destination": "/es/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/es/$1"
+    }
   ]
 }

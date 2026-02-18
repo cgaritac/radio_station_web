@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="es" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="8610504659433544583" datatype="html">
+        <source>Live</source>
+        <target>En Vivo</target>
+      </trans-unit>
+      <trans-unit id="4150925393347027229" datatype="html">
+        <source>Music <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Non-Stop</source>
+        <target>Música <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Sin Parar</target>
+      </trans-unit>
+      <trans-unit id="3084372633771030547" datatype="html">
+        <source> Listen to the best hits, carefully curated for your vibe. Only on our station. </source>
+        <target> Escucha los mejores éxitos, cuidadosamente seleccionados para tu ambiente. Solo en nuestra estación. </target>
+      </trans-unit>
+      <trans-unit id="3311269073804742952" datatype="html">
+        <source>Listen Now</source>
+        <target>Escuchar Ahora</target>
+      </trans-unit>
+      <trans-unit id="3611421580852177549" datatype="html">
+        <source>Live:</source>
+        <target>En Vivo:</target>
+      </trans-unit>
+      <trans-unit id="8872285976030977366" datatype="html">
+        <source>Streaming</source>
+        <target>Transmitiendo</target>
+      </trans-unit>
+      <trans-unit id="9027971916089311906" datatype="html">
+        <source>Live Streaming</source>
+        <target>Transmisión en Vivo</target>
+      </trans-unit>
+      <trans-unit id="6621652901766796298" datatype="html">
+        <source> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna. </source>
+        <target> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna. </target>
+      </trans-unit>
+      <trans-unit id="2102825898069375693" datatype="html">
+        <source>Menu</source>
+        <target>Menú</target>
+      </trans-unit>
+      <trans-unit id="3966184126536364248" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Home </source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Inicio </target>
+      </trans-unit>
+      <trans-unit id="5620590648596628457" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Schedule </source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Horario </target>
+      </trans-unit>
+      <trans-unit id="8325182703430323094" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Biblic Studies </source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Estudios Bíblicos </target>
+      </trans-unit>
+      <trans-unit id="1193464708720727541" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> News </source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Noticias </target>
+      </trans-unit>
+      <trans-unit id="7115862712322766063" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Blog </source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Blog </target>
+      </trans-unit>
+      <trans-unit id="6102980306844222361" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> About Us </source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-brand-quaternary/40&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Sobre Nosotros </target>
+      </trans-unit>
+      <trans-unit id="66889124423938629" datatype="html">
+        <source>Follow Us</source>
+        <target>Síguenos</target>
+      </trans-unit>
+      <trans-unit id="759687838251957893" datatype="html">
+        <source>Contact Us</source>
+        <target>Contáctanos</target>
+      </trans-unit>
+      <trans-unit id="3704426281480438191" datatype="html">
+        <source>All rights reserved.</source>
+        <target>Todos los derechos reservados.</target>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target>Inicio</target>
+      </trans-unit>
+      <trans-unit id="5433782699501161466" datatype="html">
+        <source>Schedule</source>
+        <target>Horario</target>
+      </trans-unit>
+      <trans-unit id="3595904970154307757" datatype="html">
+        <source>Biblic Studies</source>
+        <target>Estudios Bíblicos</target>
+      </trans-unit>
+      <trans-unit id="841934696444961534" datatype="html">
+        <source>News</source>
+        <target>Noticias</target>
+      </trans-unit>
+      <trans-unit id="7751010942038334793" datatype="html">
+        <source>Blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit id="5736481176444461852" datatype="html">
+        <source>About Us</source>
+        <target>Sobre Nosotros</target>
+      </trans-unit>
+      <trans-unit id="7922989125096435449" datatype="html">
+        <source>Contact</source>
+        <target>Contacto</target>
+      </trans-unit>
+      <trans-unit id="1763327113877419602" datatype="html">
+        <source>BROADCASTING LIVE</source>
+        <target>TRANSMITIENDO EN VIVO</target>
+      </trans-unit>
+      <trans-unit id="194442258151999902" datatype="html">
+        <source>PLAY NOW</source>
+        <target>REPRODUCIR AHORA</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
