@@ -49,7 +49,7 @@ export class ActionButtonComponent {
   @Input() label: string = '';
   @Input() icon: string = '';
   @Input() link: string = '';
-  @Input() color: 'primary' | 'secondary' | 'accent' | 'tertiary' | 'white' = 'secondary';
+  @Input() color: 'primary' | 'secondary' | 'accent' | 'tertiary' | 'quaternary' | 'quinary' | 'sextary' = 'secondary';
   @Input() size: 'small' | 'medium' | 'large' = 'medium';
   @Input() showPulse: boolean = false;
 
@@ -60,9 +60,9 @@ export class ActionButtonComponent {
     const base = "tracking-wide rounded-full font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center gap-2 cursor-pointer hover:opacity-90";
     
     const sizeClasses = {
-      small: "px-4 py-1.5 text-sm",
-      medium: "px-6 py-2",
-      large: "px-8 py-3 text-lg"
+      small: "px-4 py-1.5 text-sm min-w-32",
+      medium: "px-6 py-2 min-w-36",
+      large: "px-8 py-3 text-lg min-w-52"
     };
 
     return `${base} ${sizeClasses[this.size]}`;
@@ -82,8 +82,12 @@ export class ActionButtonComponent {
         return ['bg-brand-tertiary', 'text-brand-primary'];
       case 'accent':
         return ['bg-brand-quaternary', 'text-brand-primary'];
-      case 'white':
-        return ['bg-white', 'text-brand-primary'];
+      case 'quaternary':
+        return ['bg-brand-quaternary', 'text-brand-primary'];
+      case 'quinary':
+        return ['bg-brand-quinary', 'text-brand-tertiary'];
+      case 'sextary':
+        return ['bg-brand-sextary', 'text-brand-primary'];
       default:
         return ['bg-brand-secondary', 'text-brand-primary'];
     }

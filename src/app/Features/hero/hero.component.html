@@ -25,13 +25,23 @@
       {{ 'HERO.SUBTITLE' | translate }}
     </p>
     <div class="flex gap-4">
-      <app-action-button
-        [text]="'HERO.LISTEN_NOW' | translate"
-        [icon]="'play'"
-        color="secondary"
-        size="large"
-        (click)="radioService.togglePlay()"
-      ></app-action-button>
+      @if(radioService.isPlaying()) {
+        <app-action-button
+          [text]="'HERO.STOP' | translate"
+          [icon]="'stop'"
+          color="secondary"
+          size="large"
+          (click)="radioService.togglePlay()"
+        ></app-action-button>
+      } @else {
+        <app-action-button
+          [text]="'HERO.LISTEN_NOW' | translate"
+          [icon]="'play'"
+          color="secondary"
+          size="large"
+          (click)="radioService.togglePlay()"
+        ></app-action-button>
+      }
       <app-action-button
         [text]="'HERO.YOUTUBE' | translate"
         [icon]="'youtube'"
