@@ -35,11 +35,11 @@
             [class.animate-ping]="radioService.isPlaying()"
           >
           </span>
-          @if (radioService.isPlaying()) {
-            <span i18n>BROADCASTING LIVE</span>
-          } @else {
-            <span i18n>PLAY NOW</span>
-          }
+          {{
+            radioService.isPlaying()
+              ? ('HOME.BROADCASTING' | translate)
+              : ('HOME.PLAY_NOW' | translate)
+          }}
           {{ radioService.currentTrack() }}
         </div>
       </div>

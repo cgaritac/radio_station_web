@@ -5,51 +5,48 @@
       routerLinkActive="!text-brand-quaternary"
       [routerLinkActiveOptions]="{ exact: true }"
       class="text-brand-tertiary hover:text-brand-quaternary transition-colors font-medium"
-      i18n
-      >Home</a
+      >{{ 'NAV.HOME' | translate }}</a
     >
     <a
       routerLink="/schedule"
       routerLinkActive="!text-brand-quaternary"
       class="text-brand-tertiary hover:text-brand-quaternary transition-colors font-medium"
-      i18n
-      >Schedule</a
+      >{{ 'NAV.SCHEDULE' | translate }}</a
     >
     <a
       routerLink="/podcasts"
       routerLinkActive="!text-brand-quaternary"
       class="text-brand-tertiary hover:text-brand-quaternary transition-colors font-medium"
-      i18n
-      >Biblic Studies</a
+      >{{ 'NAV.PODCASTS' | translate }}</a
     >
     <a
       routerLink="/news"
       routerLinkActive="!text-brand-quaternary"
       class="text-brand-tertiary hover:text-brand-quaternary transition-colors font-medium"
-      i18n
-      >News</a
+      >{{ 'NAV.NEWS' | translate }}</a
     >
     <a
       routerLink="/blog"
       routerLinkActive="!text-brand-quaternary"
       class="text-brand-tertiary hover:text-brand-quaternary transition-colors font-medium"
-      i18n
-      >Blog</a
+      >{{ 'NAV.BLOG' | translate }}</a
     >
     <a
       routerLink="/about"
       routerLinkActive="!text-brand-quaternary"
       class="text-white hover:text-brand-quaternary transition-colors font-medium mr-4"
-      i18n
-      >About Us</a
+      >{{ 'NAV.ABOUT' | translate }}</a
     >
   </div>
 
-  <app-action-button
-    label="Contact"
-    i18n-label
-    [showPulse]="true"
-    bgColor="bg-brand-secondary"
-    textColor="text-brand-primary"
-  ></app-action-button>
+  <div class="flex items-center gap-4">
+    <app-language-switcher />
+
+    <app-action-button
+      [label]="'NAV.CONTACT' | translate"
+      [showPulse]="true"
+      bgColor="bg-brand-secondary"
+      textColor="text-brand-primary"
+    ></app-action-button>
+  </div>
 </nav>

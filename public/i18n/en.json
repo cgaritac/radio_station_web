@@ -1,0 +1,34 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "SCHEDULE": "Schedule",
+    "PODCASTS": "Biblic Studies",
+    "NEWS": "News",
+    "BLOG": "Blog",
+    "ABOUT": "About Us",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "LIVE": "Live",
+    "MUSIC": "Music",
+    "NON_STOP": "Non-Stop",
+    "SUBTITLE": "Listen to the best hits, carefully curated for your vibe. Only on our station.",
+    "LISTEN_NOW": "Listen Now"
+  },
+  "HOME": {
+    "BROADCASTING": "BROADCASTING LIVE",
+    "PLAY_NOW": "PLAY NOW"
+  },
+  "PLAYER": {
+    "LIVE": "Live:",
+    "STREAMING": "Streaming",
+    "LIVE_STREAMING": "Live Streaming"
+  },
+  "FOOTER": {
+    "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",
+    "MENU": "Menu",
+    "FOLLOW_US": "Follow Us",
+    "CONTACT_US": "Contact Us",
+    "RIGHTS": "All rights reserved."
+  }
+}

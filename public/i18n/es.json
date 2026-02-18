@@ -1,0 +1,34 @@
+{
+  "NAV": {
+    "HOME": "Inicio",
+    "SCHEDULE": "Horario",
+    "PODCASTS": "Estudios Bíblicos",
+    "NEWS": "Noticias",
+    "BLOG": "Blog",
+    "ABOUT": "Sobre Nosotros",
+    "CONTACT": "Contacto"
+  },
+  "HERO": {
+    "LIVE": "En Vivo",
+    "MUSIC": "Música",
+    "NON_STOP": "Sin Parar",
+    "SUBTITLE": "Escucha los mejores éxitos, cuidadosamente seleccionados para tu ambiente. Solo en nuestra estación.",
+    "LISTEN_NOW": "Escuchar Ahora"
+  },
+  "HOME": {
+    "BROADCASTING": "TRANSMITIENDO EN VIVO",
+    "PLAY_NOW": "REPRODUCIR AHORA"
+  },
+  "PLAYER": {
+    "LIVE": "En Vivo:",
+    "STREAMING": "Transmitiendo",
+    "LIVE_STREAMING": "Transmisión en Vivo"
+  },
+  "FOOTER": {
+    "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",
+    "MENU": "Menú",
+    "FOLLOW_US": "Síguenos",
+    "CONTACT_US": "Contáctanos",
+    "RIGHTS": "Todos los derechos reservados."
+  }
+}
