@@ -3,7 +3,7 @@ import { IconRegistryService } from './Core/services/icon-registry.service';
 import { provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { provideAngularSvgIcon } from 'angular-svg-icon';
-import { provideTranslateService } from '@ngx-translate/core';
+import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { routes } from './app.routes';
@@ -29,7 +29,18 @@ export const appConfig: ApplicationConfig = {
     }),
     provideAppInitializer(() => {
       const iconService = inject(IconRegistryService);
-      return iconService.preloadIcons();
+      const translate = inject(TranslateService);
+      const initialLang = getInitialLang();
+      
+      return Promise.all([
+        iconService.preloadIcons(),
+        new Promise((resolve) => {
+          translate.use(initialLang).subscribe({
+            next: () => resolve(true),
+            error: () => resolve(false)
+          });
+        })
+      ]);
     })
   ]
 };

@@ -26,6 +26,8 @@
     --spacing-tablet: 768px;
     --spacing-mobile: 480px;
 
+    --animate-fade-in: fade-in 0.8s ease-out forwards;
+    --animate-shimmer: shimmer 2s linear infinite;
     --animate-shadow-pulse: shadow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
     @keyframes shadow-pulse {
@@ -36,6 +38,28 @@
             box-shadow: 0 0 0px 0px rgba(255, 215, 0, 0);
         }
     }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes shimmer {
+        from {
+            background-position: -200% 0;
+        }
+        to {
+            background-position: 200% 0;
+        }
+    }
+}
+
+@utility text-shadow-brand-quaternary {
+    text-shadow: 0 0 12px var(--color-brand-quaternary);
 }
 
 body {
@@ -56,4 +80,10 @@ svg-icon svg {
     width: 100% !important;
     height: 100% !important;
     display: block;
+}
+
+.skeleton {
+    background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%);
+    background-size: 200% 100%;
+    @apply animate-shimmer rounded-md;
 }
