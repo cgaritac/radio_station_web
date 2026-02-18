@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import { RadioService } from '../../Core/services/radio.service';
 import { SvgIconComponent } from "angular-svg-icon";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +9,7 @@ import { SvgIconComponent } from "angular-svg-icon";
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SvgIconComponent]
+  imports: [SvgIconComponent, TranslateModule]
 })
 export class FooterComponent {
   radioService = inject(RadioService);

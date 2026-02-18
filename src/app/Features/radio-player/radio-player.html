@@ -2,8 +2,9 @@
   <div class="grid grid-cols-3 items-center max-w-desktop mx-auto w-full">
     <div class="justify-self-start">
       <p class="flex items-center gap-2 text-sm font-bold">
-        <span class="text-brand-secondary" [class.animate-pulse]="radioService.isPlaying()" i18n
-          >Live:</span
+        <span class="text-brand-secondary" [class.animate-pulse]="radioService.isPlaying()">{{
+          'PLAYER.LIVE' | translate
+        }}</span
         >{{ radioService.trackInfo().title }}
       </p>
       @if (radioService.trackInfo().title) {
@@ -40,9 +41,9 @@
         }
         <p>
           @if (radioService.isPlaying()) {
-            <ng-container i18n>Streaming</ng-container>
+            {{ 'PLAYER.STREAMING' | translate }}
           } @else {
-            <ng-container i18n>Live Streaming</ng-container>
+            {{ 'PLAYER.LIVE_STREAMING' | translate }}
           }
         </p>
       </div>

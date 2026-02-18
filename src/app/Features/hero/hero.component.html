@@ -5,7 +5,9 @@
       alt="People praying together in a community gathering"
       class="w-full h-full object-cover"
     />
-    <div class="absolute inset-0 bg-linear-to-t from-brand-primary/90 via-brand-primary/70 to-brand-primary/50"></div>
+    <div
+      class="absolute inset-0 bg-linear-to-t from-brand-primary/90 via-brand-primary/70 to-brand-primary/50"
+    ></div>
   </div>
 
   <!-- Hero Content -->
@@ -13,14 +15,12 @@
     class="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-start pt-20 text-white"
   >
     <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-      <span class="text-brand-primary" i18n>Live</span>
-      <ng-container i18n
-        >Music <br />
-        Non-Stop</ng-container
-      >
+      <span class="text-brand-primary">{{ 'HERO.LIVE' | translate }}</span>
+      {{ 'HERO.MUSIC' | translate }} <br />
+      {{ 'HERO.NON_STOP' | translate }}
     </h1>
-    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl drop-shadow-md" i18n>
-      Listen to the best hits, carefully curated for your vibe. Only on our station.
+    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl drop-shadow-md">
+      {{ 'HERO.SUBTITLE' | translate }}
     </p>
     <button
       class="bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-brand-primary/50 flex items-center gap-2"
@@ -34,7 +34,7 @@
       >
         <path d="M8 5v14l11-7z" />
       </svg>
-      <span i18n>Listen Now</span>
+      {{ 'HERO.LISTEN_NOW' | translate }}
     </button>
   </div>
 </section>

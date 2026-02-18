@@ -12,14 +12,6 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "i18n": {
-        "sourceLocale": "en",
-        "locales": {
-          "es": {
-            "translation": "src/locale/messages.es.xlf"
-          }
-        }
-      },
       "architect": {
         "build": {
           "builder": "@ngx-env/builder:application",
@@ -57,12 +49,6 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
-            },
-            "es": {
-              "baseHref": "/",
-              "localize": [
-                "es"
-              ]
             }
           },
           "defaultConfiguration": "production"
@@ -75,15 +61,9 @@
             },
             "development": {
               "buildTarget": "radio_station_web:build:development"
-            },
-            "es": {
-              "buildTarget": "radio_station_web:build:es"
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
         },
         "test": {
           "builder": "@angular/build:unit-test"
