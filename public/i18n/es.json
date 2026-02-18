@@ -9,11 +9,13 @@
     "CONTACT": "Contacto"
   },
   "HERO": {
-    "LIVE": "En Vivo",
-    "MUSIC": "Música",
-    "NON_STOP": "Sin Parar",
-    "SUBTITLE": "Escucha los mejores éxitos, cuidadosamente seleccionados para tu ambiente. Solo en nuestra estación.",
-    "LISTEN_NOW": "Escuchar Ahora"
+    "TEXT1": "Sintoniza la",
+    "TEXT2": "Fe",
+    "TEXT3": "y",
+    "TEXT4": "Esperanza",
+    "SUBTITLE": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",
+    "LISTEN_NOW": "Escuchar Ahora",
+    "YOUTUBE": "Ver en Youtube"
   },
   "HOME": {
     "BROADCASTING": "TRANSMITIENDO EN VIVO",
@@ -29,6 +31,9 @@
     "MENU": "Menú",
     "FOLLOW_US": "Síguenos",
     "CONTACT_US": "Contáctanos",
-    "RIGHTS": "Todos los derechos reservados."
+    "RIGHTS": "Todos los derechos reservados.",
+    "ADDRESS": "Av. XXX 123, Ciudad de XXXXX",
+    "EMAIL": "[EMAIL_ADDRESS]",
+    "PHONE": "+XX (XXX) XXXX XXXX"
   }
 }

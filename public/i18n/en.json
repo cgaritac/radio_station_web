@@ -9,11 +9,13 @@
     "CONTACT": "Contact"
   },
   "HERO": {
-    "LIVE": "Live",
-    "MUSIC": "Music",
-    "NON_STOP": "Non-Stop",
-    "SUBTITLE": "Listen to the best hits, carefully curated for your vibe. Only on our station.",
-    "LISTEN_NOW": "Listen Now"
+    "TEXT1": "Tune in to the",
+    "TEXT2": "Faith",
+    "TEXT3": "and",
+    "TEXT4": "Hope",
+    "SUBTITLE": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",
+    "LISTEN_NOW": "Listen Now",
+    "YOUTUBE": "Watch on Youtube"
   },
   "HOME": {
     "BROADCASTING": "BROADCASTING LIVE",
@@ -29,6 +31,9 @@
     "MENU": "Menu",
     "FOLLOW_US": "Follow Us",
     "CONTACT_US": "Contact Us",
-    "RIGHTS": "All rights reserved."
+    "RIGHTS": "All rights reserved.",
+    "ADDRESS": "Av. XXX 123, Ciudad de XXXXX",
+    "EMAIL": "[EMAIL_ADDRESS]",
+    "PHONE": "+XX (XXX) XXXX XXXX"
   }
 }
