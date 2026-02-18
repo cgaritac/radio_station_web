@@ -22,7 +22,8 @@ export class IconRegistryService {
     { name: 'spotify', path: 'icons/spotify.svg' },
     { name: 'tiktok', path: 'icons/tiktok.svg' },
     { name: 'whatsapp', path: 'icons/whatsapp.svg' },
-    { name: 'microphone', path: 'icons/microphone.svg' }
+    { name: 'microphone', path: 'icons/microphone.svg' },
+    { name: 'downArrow', path: 'icons/downArrow.svg' }
   ];
 
   preloadIcons(): void {

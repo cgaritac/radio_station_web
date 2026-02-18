@@ -28,6 +28,7 @@
 
     --animate-fade-in: fade-in 0.8s ease-out forwards;
     --animate-shimmer: shimmer 2s linear infinite;
+    --animate-shadow-pulse: shadow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
     @keyframes shadow-pulse {
         0%, 100% {
@@ -55,6 +56,10 @@
             background-position: 200% 0;
         }
     }
+}
+
+@utility text-shadow-brand-quaternary {
+    text-shadow: 0 0 12px var(--color-brand-quaternary);
 }
 
 body {

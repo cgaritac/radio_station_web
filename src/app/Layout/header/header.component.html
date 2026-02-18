@@ -1,15 +1,15 @@
 <div id="main-header" class="flex justify-between items-center px-4 max-w-desktop mx-auto">
   <div class="flex items-center gap-2">
-    <a routerLink="/">
+    <a routerLink="/" class="group flex items-center gap-2 cursor-pointer">
       <svg-icon
         name="radio"
-        class="text-brand-secondary hover:text-brand-quaternary w-10 h-10 transition-colors flex items-center justify-center cursor-pointer"
+        class="text-brand-secondary group-hover:text-brand-quaternary w-10 h-10 transition-colors"
+      ></svg-icon>
+      <span
+        class="text-xl font-bold text-brand-tertiary group-hover:text-brand-quaternary tracking-wide translate-y-[2px]"
+        >{{ radioService.radioName() }}</span
       >
-      </svg-icon>
     </a>
-    <span class="text-brand-tertiary tracking-wider text-xl font-bold translate-y-[2px]">{{
-      radioService.radioName()
-    }}</span>
   </div>
 
   <app-navbar />
