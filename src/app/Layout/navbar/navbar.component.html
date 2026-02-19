@@ -1,5 +1,48 @@
-<nav class="flex items-center justify-between py-4">
-  <div class="hidden md:flex items-center text-lg tracking-wide gap-8">
+<nav class="relative flex items-center justify-between py-4">
+  <!-- Mobile Toggle Button -->
+  <button
+    (click)="toggleMenu()"
+    class="md:hidden text-brand-tertiary backdrop-blur-md hover:text-brand-secondary border border-brand-tertiary/10 rounded-xl transition-colors px-2 py-1 -ml-2 mr-2 select-none hamburger-trigger"
+    aria-label="Toggle menu"
+  >
+    @if (!isMenuOpen()) {
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-menu"
+      >
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+    } @else {
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-x"
+      >
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    }
+  </button>
+
+  <!-- Desktop Navigation -->
+  <div class="hidden md:flex items-center text-lg tracking-wide lg:gap-8 md:gap-4 sm:gap-1">
     <a
       routerLink="/"
       routerLinkActive="!text-brand-secondary"
@@ -39,7 +82,8 @@
     >
   </div>
 
-  <div class="flex items-center gap-4">
+  <!-- Right Side Actions (Always Visible) -->
+  <div class="flex items-center md:gap-4">
     <app-language-switcher />
 
     <app-action-button
@@ -47,6 +91,58 @@
       [showPulse]="true"
       bgColor="bg-brand-secondary"
       textColor="text-brand-primary"
+      class="scale-90 md:scale-100 origin-right transition-transform"
     ></app-action-button>
   </div>
+
+  <!-- Mobile Menu Overlay -->
+  @if (isMenuOpen()) {
+    <div
+      class="absolute top-full left-0 right-0 z-100 mt-2 py-6 px-4 flex flex-col gap-4 bg-brand-tertiary/10 backdrop-blur-md border border-brand-tertiary/10 rounded-2xl shadow-2xl md:hidden animate-fade-down mobile-menu-panel"
+    >
+      <a
+        routerLink="/"
+        (click)="isMenuOpen.set(false)"
+        routerLinkActive="!text-brand-secondary"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="text-brand-tertiary hover:text-brand-quaternary p-3 rounded-2xl hover:bg-brand-tertiary/5 transition-all font-medium text-lg"
+        >{{ 'NAV.HOME' | translate }}</a
+      >
+      <a
+        routerLink="/schedule"
+        (click)="isMenuOpen.set(false)"
+        routerLinkActive="!text-brand-secondary"
+        class="text-brand-tertiary hover:text-brand-quaternary p-3 rounded-2xl hover:bg-brand-tertiary/5 transition-all font-medium text-lg"
+        >{{ 'NAV.SCHEDULE' | translate }}</a
+      >
+      <a
+        routerLink="/studies"
+        (click)="isMenuOpen.set(false)"
+        routerLinkActive="!text-brand-secondary"
+        class="text-brand-tertiary hover:text-brand-quaternary p-3 rounded-2xl hover:bg-brand-tertiary/5 transition-all font-medium text-lg"
+        >{{ 'NAV.PODCASTS' | translate }}</a
+      >
+      <a
+        routerLink="/news"
+        (click)="isMenuOpen.set(false)"
+        routerLinkActive="!text-brand-secondary"
+        class="text-brand-tertiary hover:text-brand-quaternary p-3 rounded-2xl hover:bg-brand-tertiary/5 transition-all font-medium text-lg"
+        >{{ 'NAV.NEWS' | translate }}</a
+      >
+      <a
+        routerLink="/blog"
+        (click)="isMenuOpen.set(false)"
+        routerLinkActive="!text-brand-secondary"
+        class="text-brand-tertiary hover:text-brand-quaternary p-3 rounded-2xl hover:bg-brand-tertiary/5 transition-all font-medium text-lg"
+        >{{ 'NAV.BLOG' | translate }}</a
+      >
+      <a
+        routerLink="/about"
+        (click)="isMenuOpen.set(false)"
+        routerLinkActive="!text-brand-secondary"
+        class="text-brand-tertiary hover:text-brand-quaternary p-3 rounded-2xl hover:bg-brand-tertiary/5 transition-all font-medium text-lg"
+        >{{ 'NAV.ABOUT' | translate }}</a
+      >
+    </div>
+  }
 </nav>

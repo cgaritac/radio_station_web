@@ -27,8 +27,20 @@
     --spacing-mobile: 480px;
 
     --animate-fade-in: fade-in 0.8s ease-out forwards;
+    --animate-fade-down: fade-down 0.3s ease-out forwards;
     --animate-shimmer: shimmer 2s linear infinite;
     --animate-shadow-pulse: shadow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    @keyframes fade-down {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
     @keyframes shadow-pulse {
         0%, 100% {

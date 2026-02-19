@@ -1,6 +1,8 @@
 <footer class="bg-brand-primary/60 text-gray-400 py-8 px-4 border-t border-white/5 mt-auto">
   <div class="max-w-desktop mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-    <div class="col-span-1 md:col-span-1 tracking-wide">
+    <div
+      class="col-span-1 tracking-wide flex flex-col items-center md:items-start text-center md:text-left"
+    >
       <a routerLink="/" class="group flex items-center gap-2 mb-6 cursor-pointer">
         <svg-icon
           name="radio"
@@ -16,8 +18,8 @@
       </p>
     </div>
 
-    <div class="flex items-center md:justify-center tracking-wide">
-      <div>
+    <div class="flex justify-center md:justify-center tracking-wide">
+      <div class="flex flex-col items-center md:items-start">
         <h3 class="text-white font-bold mb-6">{{ 'FOOTER.MENU' | translate }}</h3>
         <ul class="space-y-3 text-sm">
           <li>
@@ -78,7 +80,7 @@
       </div>
     </div>
 
-    <div class="tracking-wide">
+    <div class="tracking-wide flex flex-col items-center md:items-start">
       <h3 class="text-white font-bold mb-6">{{ 'FOOTER.FOLLOW_US' | translate }}</h3>
       <div class="grid grid-cols-4 gap-3 w-fit">
         <a
@@ -147,9 +149,9 @@
       </div>
     </div>
 
-    <div class="tracking-wide">
-      <h3 class="text-brand-quaternary font-bold mb-4">{{ 'FOOTER.CONTACT_US' | translate }}</h3>
-      <div class="text-sm leading-relaxed space-y-3">
+    <div class="tracking-wide flex flex-col items-center md:items-start">
+      <h3 class="text-brand-tertiary font-bold mb-4">{{ 'FOOTER.CONTACT_US' | translate }}</h3>
+      <div class="text-sm leading-relaxed space-y-3 flex flex-col items-center md:items-start">
         <a
           [href]="'https://www.google.com/maps?q=' + ('FOOTER.ADDRESS' | translate)"
           target="_blank"

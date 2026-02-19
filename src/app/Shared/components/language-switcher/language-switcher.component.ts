@@ -1,4 +1,4 @@
-import { Component, inject, HostListener } from '@angular/core';
+import { Component, inject, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from "angular-svg-icon";
@@ -10,8 +10,8 @@ import { SvgIconComponent } from "angular-svg-icon";
   template: `
     <div class="relative">
       <button
-        (click)="toggleMenu($event)"
-        class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-brand-tertiary/5 hover:bg-brand-tertiary/10 border border-brand-tertiary/10 transition-all text-sm font-medium text-brand-tertiary"
+        (click)="toggleMenu()"
+        class="flex items-center gap-2 px-3 py-1.5 rounded-2xl bg-brand-tertiary/10 hover:bg-brand-tertiary/10 backdrop-blur-md border border-brand-tertiary/10 transition-all text-sm font-medium text-brand-tertiary"
       >
         <span class="uppercase">{{ currentLang }}</span>
         <svg-icon 
@@ -22,7 +22,7 @@ import { SvgIconComponent } from "angular-svg-icon";
       </button>
 
       <div
-        class="absolute right-0 top-full mt-2 w-40 bg-brand-tertiary/10 border border-brand-tertiary/10 rounded-xl shadow-2xl transition-all duration-200 z-50 overflow-hidden"
+        class="absolute right-0 top-full mt-2 w-40 bg-brand-tertiary/10 border border-brand-tertiary/10 backdrop-blur-md rounded-2xl shadow-2xl transition-all duration-200 z-50 overflow-hidden"
         [class.opacity-100]="isOpen"
         [class.visible]="isOpen"
         [class.opacity-0]="!isOpen"
@@ -49,6 +49,7 @@ import { SvgIconComponent } from "angular-svg-icon";
 })
 export class LanguageSwitcherComponent {
   private translate = inject(TranslateService);
+  private el = inject(ElementRef);
   isOpen = false;
 
   get currentLang() {
@@ -59,14 +60,15 @@ export class LanguageSwitcherComponent {
     return this.translate.getLangs();
   }
 
-  toggleMenu(event: Event) {
-    event.stopPropagation();
+  toggleMenu() {
     this.isOpen = !this.isOpen;
   }
 
-  @HostListener('document:click')
-  closeMenu() {
-    this.isOpen = false;
+  @HostListener('document:click', ['$event'])
+  closeMenu(event: MouseEvent) {
+    if (!this.el.nativeElement.contains(event.target)) {
+      this.isOpen = false;
+    }
   }
 
   switchLang(lang: string) {
