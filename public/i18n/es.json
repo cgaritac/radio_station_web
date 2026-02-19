@@ -20,7 +20,11 @@
   },
   "HOME": {
     "BROADCASTING": "TRANSMITIENDO EN VIVO",
-    "PLAY_NOW": "REPRODUCIR AHORA"
+    "PLAY_NOW": "REPRODUCIR AHORA",
+    "SCHEDULE_TITLE": "Programación",
+    "NEWS_TITLE": "Noticias",
+    "REFLECTIONS_TITLE": "Reflexiones",
+    "TESTIMONIALS_TITLE": "Testimonios"
   },
   "PLAYER": {
     "LIVE": "En Vivo:",
@@ -45,6 +49,6 @@
     "ADVERTISE_TITLE": "¿Te gustaría anunciar tu actividad?",
     "ADVERTISE_SUBTITLE": "Ayudamos a las iglesias locales y ministerios a difundir sus eventos y campañas evangelísticas en toda nuestra región.",
     "CONTACT_NOW": "Contactar ahora",
-    "DOWNLOAD_PRICES": "Descargar Tarifario"
+    "DOWNLOAD_PRICES": "Descargar información"
   }
 }

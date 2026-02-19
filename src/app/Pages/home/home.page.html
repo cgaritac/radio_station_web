@@ -3,49 +3,46 @@
 
   <section class="flex items-center justify-center w-full bg-brand-tertiary/90">
     <div class="p-8 text-center">
-      <h2>Programacion</h2>
+      <h2>{{ 'HOME.SCHEDULE_TITLE' | translate }}</h2>
     </div>
   </section>
 
   <section class="flex items-center justify-center w-full bg-brand-tertiary/60">
     <div class="p-8 text-center">
-      <h2>Noticias</h2>
+      <h2>{{ 'HOME.NEWS_TITLE' | translate }}</h2>
     </div>
   </section>
 
   <section class="flex items-center justify-center w-full bg-brand-tertiary/10">
     <div class="p-8 text-center">
-      <h2>Reflexion</h2>
+      <h2>{{ 'HOME.REFLECTIONS_TITLE' | translate }}</h2>
     </div>
   </section>
 
   <section class="flex items-center justify-center w-full bg-brand-tertiary/90">
     <div class="p-8 text-center">
-      <h2>Testimonios</h2>
+      <h2>{{ 'HOME.TESTIMONIALS_TITLE' | translate }}</h2>
     </div>
   </section>
 
-  <section class="flex flex-col items-center justify-center w-full bg-brand-tertiary/60 px-4 py-8">
+  <section class="flex flex-col items-center justify-center w-full bg-brand-tertiary/85 px-4 py-8">
     <app-banner
-      title="¿Te gustaría anunciar tu actividad?"
-      description="Ayudamos a las iglesias locales y ministerios a difundir sus eventos y campañas evangelísticas en toda nuestra región."
-      primaryText="Contactar ahora"
+      [title]="'BANNER.ADVERTISE_TITLE' | translate"
+      [description]="'BANNER.ADVERTISE_SUBTITLE' | translate"
+      [primaryText]="'BANNER.CONTACT_NOW' | translate"
       primaryLink="/contact"
-      primaryIcon="arrow-right"
-      secondaryText="Descargar Tarifario"
-      secondaryLink="/advertise"
-      secondaryIcon="download"
-      iconName="megaphone"
+      primaryIcon="mail"
+      [secondaryText]="'BANNER.DOWNLOAD_PRICES' | translate"
+      secondaryLink="XXXXX" 
+      secondaryIcon="info"
+      iconName="speaker"
       backgroundColor="bg-brand-quaternary"
       textColor="text-brand-primary"
-      iconColor="text-brand-primary"
+      iconColor="text-brand-primary/30"
       buttonColor="bg-brand-primary"
       buttonTextColor="text-brand-primary"
       width="max-w-desktop mx-auto"
       height="h-full"
-    ></app-banner>
-    <div class="p-8 text-center">
-      <h2>Patrocinadores</h2>
-    </div>
+    ></app-banner> <!-- TODO: Add the link to the price list -->
   </section>
 </div>
