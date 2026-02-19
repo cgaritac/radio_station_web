@@ -20,7 +20,11 @@
   },
   "HOME": {
     "BROADCASTING": "BROADCASTING LIVE",
-    "PLAY_NOW": "PLAY NOW"
+    "PLAY_NOW": "PLAY NOW",
+    "SCHEDULE_TITLE": "Schedule",
+    "NEWS_TITLE": "News",
+    "REFLECTIONS_TITLE": "Reflections",
+    "TESTIMONIALS_TITLE": "Testimonials"
   },
   "PLAYER": {
     "LIVE": "Live:",
@@ -45,6 +49,6 @@
     "ADVERTISE_TITLE": "Would you like to advertise your activity?",
     "ADVERTISE_SUBTITLE": "We help local churches and ministries spread their events and evangelistic campaigns across our entire region.",
     "CONTACT_NOW": "Contact now",
-    "DOWNLOAD_PRICES": "Download Price List"
+    "DOWNLOAD_PRICES": "Download Information"
   }
 }

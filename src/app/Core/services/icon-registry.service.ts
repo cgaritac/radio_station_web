@@ -26,7 +26,9 @@ export class IconRegistryService {
     { name: 'downArrow', path: 'icons/downArrow.svg' },
     { name: 'location', path: 'icons/location.svg' },
     { name: 'mail', path: 'icons/mail.svg' },
-    { name: 'phone', path: 'icons/phone.svg' }
+    { name: 'phone', path: 'icons/phone.svg' },
+    { name: 'speaker', path: 'icons/speaker.svg' },
+    { name: 'info', path: 'icons/info.svg' },
   ];
 
   preloadIcons(): void {
