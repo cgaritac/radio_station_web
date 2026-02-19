@@ -36,5 +36,9 @@
     "ADDRESS": "Av. XXX 123, Ciudad de XXXXX",
     "EMAIL": "info@XXXXX.com",
     "PHONE": "+506 12345678"
+  },
+  "LANG": {
+    "ES": "Español",
+    "EN": "Inglés"
   }
 }
