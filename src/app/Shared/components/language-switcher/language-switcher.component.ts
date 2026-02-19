@@ -1,23 +1,34 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from "angular-svg-icon";
 
 @Component({
   selector: 'app-language-switcher',
   standalone: true,
-  imports: [CommonModule, SvgIconComponent],
+  imports: [CommonModule, SvgIconComponent, TranslateModule],
   template: `
-    <div class="relative group">
+    <div class="relative">
       <button
+        (click)="toggleMenu($event)"
         class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-brand-tertiary/5 hover:bg-brand-tertiary/10 border border-brand-tertiary/10 transition-all text-sm font-medium text-brand-tertiary"
       >
         <span class="uppercase">{{ currentLang }}</span>
-        <svg-icon name="downArrow" class="w-4 h-4" />
+        <svg-icon 
+          name="downArrow" 
+          class="w-4 h-4 transition-transform duration-300"
+          [class.rotate-180]="isOpen"
+        />
       </button>
 
       <div
-        class="absolute right-0 top-full mt-2 w-32 bg-brand-tertiary/10 border border-brand-tertiary/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden"
+        class="absolute right-0 top-full mt-2 w-40 bg-brand-tertiary/10 border border-brand-tertiary/10 rounded-xl shadow-2xl transition-all duration-200 z-50 overflow-hidden"
+        [class.opacity-100]="isOpen"
+        [class.visible]="isOpen"
+        [class.opacity-0]="!isOpen"
+        [class.invisible]="!isOpen"
+        [class.translate-y-0]="isOpen"
+        [class.-translate-y-2]="!isOpen"
       >
         @for (lang of langs; track lang) {
           <button
@@ -26,7 +37,7 @@ import { SvgIconComponent } from "angular-svg-icon";
             [class.text-brand-secondary]="lang === currentLang"
             [class.text-gray-300]="lang !== currentLang"
           >
-            <span class="uppercase font-bold">{{ lang }}</span>
+            <span class="font-bold">{{ 'LANG.' + (lang | uppercase) | translate }}</span>
             @if (lang === currentLang) {
               <div class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-pulse"></div>
             }
@@ -38,6 +49,7 @@ import { SvgIconComponent } from "angular-svg-icon";
 })
 export class LanguageSwitcherComponent {
   private translate = inject(TranslateService);
+  isOpen = false;
 
   get currentLang() {
     return this.translate.getCurrentLang();
@@ -47,7 +59,18 @@ export class LanguageSwitcherComponent {
     return this.translate.getLangs();
   }
 
+  toggleMenu(event: Event) {
+    event.stopPropagation();
+    this.isOpen = !this.isOpen;
+  }
+
+  @HostListener('document:click')
+  closeMenu() {
+    this.isOpen = false;
+  }
+
   switchLang(lang: string) {
     this.translate.use(lang);
+    this.isOpen = false;
   }
 }

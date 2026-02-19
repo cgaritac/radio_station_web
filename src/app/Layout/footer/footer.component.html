@@ -150,18 +150,36 @@
     <div class="tracking-wide">
       <h3 class="text-brand-quaternary font-bold mb-4">{{ 'FOOTER.CONTACT_US' | translate }}</h3>
       <div class="text-sm leading-relaxed space-y-3">
-        <p class="flex items-center gap-2">
+        <a
+          [href]="'https://www.google.com/maps?q=' + ('FOOTER.ADDRESS' | translate)"
+          target="_blank"
+          title="{{ 'FOOTER.ADDRESS' | translate }}"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 hover:text-brand-quaternary transition-all"
+        >
           <svg-icon name="location" class="w-5 h-5"></svg-icon>
           {{ 'FOOTER.ADDRESS' | translate }}
-        </p>
-        <p class="flex items-center gap-2">
+        </a>
+        <a
+          [href]="'mailto:' + ('FOOTER.EMAIL' | translate)"
+          target="_blank"
+          title="{{ 'FOOTER.EMAIL' | translate }}"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 hover:text-brand-quaternary transition-all"
+        >
           <svg-icon name="mail" class="w-5 h-5"></svg-icon>
           {{ 'FOOTER.EMAIL' | translate }}
-        </p>
-        <p class="flex items-center gap-2">
+        </a>
+        <a
+          [href]="'tel:' + ('FOOTER.PHONE' | translate)"
+          target="_blank"
+          title="{{ 'FOOTER.PHONE' | translate }}"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 hover:text-brand-quaternary transition-all"
+        >
           <svg-icon name="phone" class="w-5 h-5"></svg-icon>
           {{ 'FOOTER.PHONE' | translate }}
-        </p>
+        </a>
       </div>
     </div>
   </div>

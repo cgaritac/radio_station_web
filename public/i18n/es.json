@@ -34,7 +34,11 @@
     "CONTACT_US": "Contáctanos",
     "RIGHTS": "Todos los derechos reservados.",
     "ADDRESS": "Av. XXX 123, Ciudad de XXXXX",
-    "EMAIL": "[EMAIL_ADDRESS]",
-    "PHONE": "+XX (XXX) XXXX XXXX"
+    "EMAIL": "info@XXXXX.com",
+    "PHONE": "+506 12345678"
+  },
+  "LANG": {
+    "ES": "Español",
+    "EN": "Inglés"
   }
 }
