@@ -2,7 +2,7 @@
 
 A premium, modern, and feature-rich web application designed for community-focused radio stations. This platform provides a seamless listening experience with a sleek aesthetic, emphasizing values, community engagement, and high-quality broadcasting.
 
-## 🌟 Features
+## Features
 
 - **Live Stream Player**: A robust audio player with real-time streaming capabilities, volume control, and intuitive playback management.
 - **Multilingual Support**: Fully localized in multiple languages (English and Spanish) to reach a diverse audience.
@@ -11,7 +11,7 @@ A premium, modern, and feature-rich web application designed for community-focus
 - **Content Hub**: Dedicated sections for News and Blog posts to share updates and stories.
 - **Values-Based Content**: Includes specialized sections for educational "Studies" and community-focused series.
 
-## 🛠️ Technical Highlights
+## Technical Highlights
 
 - **Angular 21+**: Built using the latest Angular features for peak performance and maintainability.
 - **Signals-Based State Management**: Leveraging Angular Signals (`signal`, `computed`, `effect`) for reactive and efficient state handling.
@@ -20,7 +20,7 @@ A premium, modern, and feature-rich web application designed for community-focus
 - **Optimal Performance**: Implements `ChangeDetectionStrategy.OnPush` across all components.
 - **Tailwind CSS 4.0**: Styling powered by the latest Tailwind utility-first framework for rapid and consistent design.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Framework**: [Angular](https://angular.io/) (Latest Version)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
@@ -28,7 +28,7 @@ A premium, modern, and feature-rich web application designed for community-focus
 - **Internationalization**: [NGX-Translate](http://www.ngx-translate.com/)
 - **Icons**: Angular SVG Icon
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -64,7 +64,7 @@ npm run dev
 
 The application will be available at `http://localhost:4200/`.
 
-## 📦 Building for Production
+## Building for Production
 
 To create a production-ready bundle, run:
 
@@ -76,7 +76,7 @@ npm run build
 
 The build artifacts will be stored in the `dist/` directory.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
