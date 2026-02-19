@@ -49,7 +49,7 @@ export class ActionButtonComponent {
   @Input() label: string = '';
   @Input() icon: string = '';
   @Input() link: string = '';
-  @Input() color: 'primary' | 'secondary' | 'accent' | 'tertiary' | 'quaternary' | 'quinary' | 'sextary' = 'secondary';
+  @Input() color: 'primary' | 'secondary' | 'accent' | 'tertiary' | 'quaternary' | 'quinary' | 'sextary' | 'transparent_dark' | 'transparent_light' = 'secondary';
   @Input() size: 'small' | 'medium' | 'large' = 'medium';
   @Input() showPulse: boolean = false;
 
@@ -75,7 +75,7 @@ export class ActionButtonComponent {
 
     switch (this.color) {
       case 'primary':
-        return ['bg-brand-primary', 'text-white'];
+        return ['bg-brand-primary', 'text-brand-tertiary'];
       case 'secondary':
         return ['bg-brand-secondary', 'text-brand-primary'];
       case 'tertiary':
@@ -88,6 +88,10 @@ export class ActionButtonComponent {
         return ['bg-brand-quinary', 'text-brand-tertiary'];
       case 'sextary':
         return ['bg-brand-sextary', 'text-brand-primary'];
+      case 'transparent_dark':
+        return ['bg-transparent', 'text-brand-primary'];
+      case 'transparent_light':
+        return ['bg-transparent', 'text-brand-tertiary'];
       default:
         return ['bg-brand-secondary', 'text-brand-primary'];
     }
