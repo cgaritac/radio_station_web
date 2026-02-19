@@ -1,59 +1,85 @@
-# RadioStationWeb
+# Radio Station Web Platform
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+A premium, modern, and feature-rich web application designed for community-focused radio stations. This platform provides a seamless listening experience with a sleek aesthetic, emphasizing values, community engagement, and high-quality broadcasting.
 
-## Development server
+## 🌟 Features
 
-To start a local development server, run:
+- **Live Stream Player**: A robust audio player with real-time streaming capabilities, volume control, and intuitive playback management.
+- **Multilingual Support**: Fully localized in multiple languages (English and Spanish) to reach a diverse audience.
+- **Modern UI/UX**: Crafted with a premium design aesthetic using Tailwind CSS, ensuring responsiveness across all devices.
+- **Broadcast Schedule**: Keep your audience informed with a dynamic daily and weekly programming schedule.
+- **Content Hub**: Dedicated sections for News and Blog posts to share updates and stories.
+- **Values-Based Content**: Includes specialized sections for educational "Studies" and community-focused series.
+
+## 🛠️ Technical Highlights
+
+- **Angular 21+**: Built using the latest Angular features for peak performance and maintainability.
+- **Signals-Based State Management**: Leveraging Angular Signals (`signal`, `computed`, `effect`) for reactive and efficient state handling.
+- **Standalone Architecture**: 100% standalone components, promoting modularity and reducing boilerplate.
+- **Modern Control Flow**: Utilizing the new `@if`, `@for`, and `@switch` syntax for cleaner templates.
+- **Optimal Performance**: Implements `ChangeDetectionStrategy.OnPush` across all components.
+- **Tailwind CSS 4.0**: Styling powered by the latest Tailwind utility-first framework for rapid and consistent design.
+
+## 🚀 Tech Stack
+
+- **Framework**: [Angular](https://angular.io/) (Latest Version)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management & Logic**: RxJS
+- **Internationalization**: [NGX-Translate](http://www.ngx-translate.com/)
+- **Icons**: Angular SVG Icon
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js (Latest LTS recommended)
+- Yarn or NPM
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/radio-station-web.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd radio-station-web
+   ```
+3. Install dependencies:
+   ```bash
+   yarn install
+   # or
+   npm install
+   ```
+
+### Development Server
+
+Run the following command to start the development server:
 
 ```bash
-ng serve
+yarn dev
+# or
+npm run dev
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The application will be available at `http://localhost:4200/`.
 
-## Code scaffolding
+## 📦 Building for Production
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+To create a production-ready bundle, run:
 
 ```bash
-ng generate component component-name
+yarn build
+# or
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The build artifacts will be stored in the `dist/` directory.
 
-```bash
-ng generate --help
-```
+## 📄 License
 
-## Building
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+_Designed for stations that inspire and connect._
