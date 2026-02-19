@@ -1,0 +1,49 @@
+<div
+  class="relative overflow-hidden {{ backgroundColor }} rounded-3xl p-8 md:p-12 {{ width }} {{ height }} flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl"
+>
+  <!-- Content -->
+  <div class="z-10 flex-1 {{ textColor }} text-center md:text-left">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      {{ title | translate }}
+    </h2>
+    <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl">
+      {{ description | translate }}
+    </p>
+
+    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+      @if (primaryText) {
+        <app-action-button
+          [text]="primaryText | translate"
+          [link]="primaryLink"
+          [icon]="primaryIcon"
+          color="primary"
+          size="large"
+        ></app-action-button>
+      }
+
+      @if (secondaryText) {
+        <app-action-button
+          [text]="secondaryText | translate"
+          [link]="secondaryLink"
+          [icon]="secondaryIcon"
+          color="tertiary"
+          size="large"
+        ></app-action-button>
+      }
+    </div>
+  </div>
+
+  <!-- Decorative Circle & Icon -->
+  <div class="hidden lg:flex relative items-center justify-center">
+    <div class="absolute w-64 h-64 bg-brand-primary opacity-5 rounded-full -right-20 -top-10"></div>
+    <div
+      class="relative bg-brand-primary/10 w-48 h-48 rounded-full flex items-center justify-center"
+    >
+      <svg-icon
+        [name]="iconName"
+        [applyClass]="true"
+        class="w-24 h-24 {{ iconColor }} transition-transform hover:scale-110"
+      ></svg-icon>
+    </div>
+  </div>
+</div>

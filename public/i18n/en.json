@@ -40,5 +40,11 @@
   "LANG": {
     "ES": "Spanish",
     "EN": "English"
+  },
+  "BANNER": {
+    "ADVERTISE_TITLE": "Would you like to advertise your activity?",
+    "ADVERTISE_SUBTITLE": "We help local churches and ministries spread their events and evangelistic campaigns across our entire region.",
+    "CONTACT_NOW": "Contact now",
+    "DOWNLOAD_PRICES": "Download Price List"
   }
 }

@@ -40,5 +40,11 @@
   "LANG": {
     "ES": "Español",
     "EN": "Inglés"
+  },
+  "BANNER": {
+    "ADVERTISE_TITLE": "¿Te gustaría anunciar tu actividad?",
+    "ADVERTISE_SUBTITLE": "Ayudamos a las iglesias locales y ministerios a difundir sus eventos y campañas evangelísticas en toda nuestra región.",
+    "CONTACT_NOW": "Contactar ahora",
+    "DOWNLOAD_PRICES": "Descargar Tarifario"
   }
 }
