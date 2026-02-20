@@ -42,7 +42,7 @@
       @if (radioService.isPlaying()) {
         <button
           (click)="radioService.togglePlay()"
-          class="w-14 h-14 flex items-center justify-center bg-brand-primary/60 hover:bg-brand-primary/30 rounded-full transition-colors animate-shadow-pulse cursor-pointer"
+          class="w-14 h-14 flex items-center justify-center bg-brand-primary/60 border border-brand-secondary/10 hover:bg-brand-primary/30 rounded-full transition-colors animate-shadow-pulse cursor-pointer"
         >
           <svg-icon
             name="stop"
@@ -52,7 +52,7 @@
       } @else {
         <button
           (click)="radioService.togglePlay()"
-          class="w-14 h-14 flex items-center justify-center bg-brand-primary/60 hover:bg-brand-primary/30 hover:shadow-lg hover:shadow-brand-quaternary/50 rounded-full transition-colors cursor-pointer"
+          class="w-14 h-14 flex items-center justify-center bg-brand-primary/60 border border-brand-secondary/10 hover:bg-brand-primary/30 hover:shadow-lg hover:shadow-brand-quaternary/50 rounded-full transition-colors cursor-pointer"
         >
           <svg-icon
             name="play"
@@ -76,22 +76,24 @@
         class="w-6 h-6 cursor-pointer"
         (click)="radioService.toggleMute()"
       ></svg-icon>
-      <input
-        type="range"
-        min="0"
-        max="10"
-        [value]="radioService.volume()"
-        (input)="radioService.setVolume(vol.valueAsNumber)"
-        #vol
-        class="w-24 h-1 rounded-full cursor-pointer appearance-none"
-        [style.background-image]="
-          'linear-gradient(to right, var(--color-brand-secondary) 0%, var(--color-brand-secondary) ' +
-          radioService.volume() * 10 +
-          '%, transparent ' +
-          radioService.volume() * 10 +
-          '%, transparent 100%)'
-        "
-      />
+      @if (!radioService.isIOS()) {
+        <input
+          type="range"
+          min="0"
+          max="10"
+          [value]="radioService.volume()"
+          (input)="radioService.setVolume(vol.valueAsNumber)"
+          #vol
+          class="w-24 h-1 rounded-full cursor-pointer appearance-none"
+          [style.background-image]="
+            'linear-gradient(to right, var(--color-brand-secondary) 0%, var(--color-brand-secondary) ' +
+            radioService.volume() * 10 +
+            '%, transparent ' +
+            radioService.volume() * 10 +
+            '%, transparent 100%)'
+          "
+        />
+      }
     </div>
   </div>
 </div>
