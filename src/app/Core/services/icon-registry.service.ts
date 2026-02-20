@@ -29,6 +29,7 @@ export class IconRegistryService {
     { name: 'phone', path: 'icons/phone.svg' },
     { name: 'speaker', path: 'icons/speaker.svg' },
     { name: 'info', path: 'icons/info.svg' },
+    { name: 'link', path: 'icons/link.svg' },
   ];
 
   preloadIcons(): void {

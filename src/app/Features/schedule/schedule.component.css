@@ -1,0 +1,49 @@
+:host {
+  display: block;
+}
+
+@keyframes audio {
+  0%, 100% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.history-scroll-container {
+  max-height: 560px; /* Approximately 5.5 items */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #032441 transparent;
+  padding-right: 12px;
+}
+
+.history-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.history-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.history-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #032441;
+  border-radius: 20px;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .truncate {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+  }
+}
