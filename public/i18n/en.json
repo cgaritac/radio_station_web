@@ -9,10 +9,10 @@
     "CONTACT": "Contact"
   },
   "HERO": {
-    "TEXT1": "Tune in to the",
-    "TEXT2": "Faith",
-    "TEXT3": "and",
-    "TEXT4": "Hope",
+    "TEXT1": "TUNE IN TO THE",
+    "TEXT2": "FAITH",
+    "TEXT3": "AND",
+    "TEXT4": "HOPE",
     "SUBTITLE": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",
     "LISTEN_NOW": "Listen Now",
     "STOP": "Stop Now",
@@ -23,8 +23,11 @@
     "PLAY_NOW": "PLAY NOW",
     "SCHEDULE_TITLE": "Schedule",
     "NEWS_TITLE": "News",
-    "REFLECTIONS_TITLE": "Reflections",
-    "TESTIMONIALS_TITLE": "Testimonials"
+    "VERSE_TITLE": "DAILY VERSE",
+    "VERSE_SUBTITLE": "Spiritual food for your daily life",
+    "TESTIMONIALS_TITLE": "Testimonials",
+    "POWERED_BY": "Powered by",
+    "BIBLE_GATEWAY": "BibleGateway"
   },
   "PLAYER": {
     "LIVE": "Live:",
