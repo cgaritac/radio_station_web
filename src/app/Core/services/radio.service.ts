@@ -15,6 +15,7 @@ export class RadioService {
   readonly isPlaying = signal(false);
   readonly volume = signal(5);
   readonly isMuted = signal(false);
+  readonly isIOS = signal(false);
   readonly currentTrack = signal<string>('Loading program...');
   
   readonly trackInfo = computed(() => {
@@ -28,6 +29,8 @@ export class RadioService {
 
   constructor() {
     if (typeof window !== 'undefined') {
+      this.isIOS.set(/iPad|iPhone|iPod/.test(navigator.userAgent));
+      
       this.audio = new Audio(this.streamUrl);
       this.audio.preload = 'none';
       this.audio.volume = this.volume() / 10;
@@ -101,7 +104,7 @@ export class RadioService {
     this.audio.src = '';
     this.audio.load();
     this.audio.src = this.streamUrl;
-    this.audio.volume = this.volume() / 100;
+    this.audio.volume = this.volume() / 10;
     this.isPlaying.set(false);
   }
 }
