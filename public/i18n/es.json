@@ -14,9 +14,10 @@
     "TEXT3": "Y",
     "TEXT4": "ESPERANZA",
     "SUBTITLE": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",
-    "LISTEN_NOW": "Escuchar Ahora",
-    "STOP": "Detener Ahora",
-    "YOUTUBE": "Ver en Youtube"
+    "LISTEN_NOW": "ESCUCHAR AHORA",
+    "STOP": "DETENER AHORA",
+    "YOUTUBE": "VER EN YOUTUBE",
+    "STREAMING": "TRANSMITIENDO AHORA"
   },
   "HOME": {
     "BROADCASTING": "TRANSMITIENDO EN VIVO",
@@ -24,14 +25,13 @@
     "SCHEDULE_TITLE": "Programación",
     "NEWS_TITLE": "Noticias",
     "VERSE_TITLE": "VERSÍCULO DEL DÍA",
-    "VERSE_SUBTITLE": "Alimento espiritual para tu vida diaria",
+    "VERSE_SUBTITLE": "Alimenta tu Espíritu",
     "TESTIMONIALS_TITLE": "Testimonios",
     "POWERED_BY": "Proporcionado por",
     "BIBLE_GATEWAY": "BibleGateway"
   },
   "PLAYER": {
     "LIVE": "En Vivo:",
-    "STREAMING": "Transmitiendo",
     "LIVE_STREAMING": "Transmisión en Vivo"
   },
   "FOOTER": {
@@ -51,6 +51,7 @@
   "BANNER": {
     "ADVERTISE_TITLE": "¿Te gustaría anunciar tu actividad?",
     "ADVERTISE_SUBTITLE": "Ayudamos a las iglesias locales y ministerios a difundir sus eventos y campañas evangelísticas en toda nuestra región.",
+    "ADVERTISE_TOOLTIP": "Anunciate",
     "CONTACT_NOW": "Contactar ahora",
     "DOWNLOAD_PRICES": "Descargar información"
   }

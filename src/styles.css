@@ -94,6 +94,31 @@ svg-icon svg {
     display: block;
 }
 
+/* Disable header blur when mobile menu or language switcher is open */
+body.mobile-menu-open header,
+body.lang-menu-open header {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Base styles for blurred panels (shared config) */
+.mobile-menu-panel,
+.lang-dropdown-panel {
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    will-change: backdrop-filter;
+    transform: translateZ(0);
+}
+
+/* Specific intensities */
+.mobile-menu-panel {
+    background-color: color-mix(in srgb, var(--color-brand-primary-light) 25%, transparent);
+}
+
+.lang-dropdown-panel {
+    background-color: color-mix(in srgb, var(--color-brand-primary-light) 25%, transparent);
+}
+
 .skeleton {
     background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%);
     background-size: 200% 100%;

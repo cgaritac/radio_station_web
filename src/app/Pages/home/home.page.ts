@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, inject, OnInit, ChangeDetectorRef } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { HeroComponent } from '../../Features/hero/hero.component';
 import { RadioService } from '../../Core/services/radio.service';
+import { BibleService } from '../../Core/services/bible.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { BannerComponent } from '../../Shared/components/banner/banner.component';
 
@@ -15,7 +15,7 @@ import { BannerComponent } from '../../Shared/components/banner/banner.component
 export class HomePage implements OnInit {
   protected readonly radioService = inject(RadioService);
   protected readonly translate = inject(TranslateService);
-  private readonly http = inject(HttpClient);
+  private readonly bibleService = inject(BibleService);
   private readonly cdr = inject(ChangeDetectorRef);
 
   verseData: any;
@@ -28,13 +28,12 @@ export class HomePage implements OnInit {
   }
 
   private loadVerse() {
-    const lang = this.translate.currentLang || 'es';
+    const lang = this.translate.getCurrentLang();
     const version = lang === 'es' ? 'rvr1960' : 'NIV';
-    const url = `https://www.biblegateway.com/votd/get/?format=json&version=${version}`;
 
-    this.http.jsonp(url, 'callback').subscribe({
-      next: (data: any) => {
-        this.verseData = data.votd;
+    this.bibleService.getVerse(version).subscribe({
+      next: (votd) => {
+        this.verseData = votd;
         this.cdr.markForCheck();
       },
       error: (err) => {

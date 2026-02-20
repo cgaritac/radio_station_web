@@ -15,6 +15,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class BannerComponent {
   @Input() title: string = '';
   @Input() description: string = '';
+  @Input() tooltip: string = '';
 
   // Styles
   @Input() backgroundColor: string = 'bg-brand-quaternary';
