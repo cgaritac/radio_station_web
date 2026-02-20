@@ -14,5 +14,5 @@ import { ActionButtonComponent } from '../../Shared/components/action-button/act
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroComponent {
-  radioService = inject(RadioService);
+  protected readonly radioService = inject(RadioService);
 }

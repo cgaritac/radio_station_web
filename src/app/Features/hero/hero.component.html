@@ -13,8 +13,17 @@
   </div>
 
   <div
-    class="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-start pt-20 text-brand-tertiary"
+    class="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-start text-brand-tertiary"
   >
+    @if(radioService.isPlaying()) {
+      <div class="flex items-center gap-x-2 bg-brand-secondary/15 border border-brand-secondary/35 rounded-full px-3 py-1.5 mb-4">
+        <span class="h-2 w-2 bg-brand-secondary rounded-full animate-pulse"></span> 
+        <span class="text-brand-secondary text-xs font-semibold tracking-wider animate-pulse">{{ 'HERO.STREAMING' | translate }}</span>        
+      </div>
+    }
+    @else {
+      <span class="h-7.5 mb-4"></span>
+    }
     <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
       {{ 'HERO.TEXT1' | translate }} <br />
       <span class="text-brand-secondary">{{ 'HERO.TEXT2' | translate }}</span>

@@ -15,6 +15,7 @@ import { SvgIconComponent } from 'angular-svg-icon';
         rel="noopener noreferrer"
         [class]="buttonClasses"
         [ngClass]="variantClasses"
+        [title]="tooltipText"
       >
         @if (icon) {
           <svg-icon [name]="icon" [applyClass]="true" [class]="iconSizeClass"></svg-icon>
@@ -28,6 +29,7 @@ import { SvgIconComponent } from 'angular-svg-icon';
         type="button"
         [class]="buttonClasses"
         [ngClass]="variantClasses"
+        [title]="tooltipText"
       >
         @if (icon) {
           <svg-icon [name]="icon" [applyClass]="true" [class]="iconSizeClass"></svg-icon>
@@ -47,6 +49,7 @@ import { SvgIconComponent } from 'angular-svg-icon';
 export class ActionButtonComponent {
   @Input() text: string = '';
   @Input() label: string = '';
+  @Input() tooltip: string = '';
   @Input() icon: string = '';
   @Input() link: string = '';
   @Input() color: 'primary' | 'secondary' | 'accent' | 'tertiary' | 'quaternary' | 'quinary' | 'sextary' | 'transparent_dark' | 'transparent_light' = 'secondary';
@@ -55,6 +58,10 @@ export class ActionButtonComponent {
 
   @Input() bgColor: string = '';
   @Input() textColor: string = '';
+
+  get tooltipText(): string {
+    return this.tooltip || this.text || this.label;
+  }
 
   get buttonClasses(): string {
     const base = "tracking-wide rounded-full font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center gap-2 cursor-pointer hover:opacity-90";

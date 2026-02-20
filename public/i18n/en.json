@@ -14,9 +14,10 @@
     "TEXT3": "AND",
     "TEXT4": "HOPE",
     "SUBTITLE": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",
-    "LISTEN_NOW": "Listen Now",
-    "STOP": "Stop Now",
-    "YOUTUBE": "Watch on Youtube"
+    "LISTEN_NOW": "LISTEN NOW",
+    "STOP": "STOP NOW",
+    "YOUTUBE": "WATCH ON YOUTUBE",
+    "STREAMING": "STREAMING NOW"
   },
   "HOME": {
     "BROADCASTING": "BROADCASTING LIVE",
@@ -31,7 +32,6 @@
   },
   "PLAYER": {
     "LIVE": "Live:",
-    "STREAMING": "Streaming",
     "LIVE_STREAMING": "Live Streaming"
   },
   "FOOTER": {
@@ -51,6 +51,7 @@
   "BANNER": {
     "ADVERTISE_TITLE": "Would you like to advertise your activity?",
     "ADVERTISE_SUBTITLE": "We help local churches and ministries spread their events and evangelistic campaigns across our entire region.",
+    "ADVERTISE_TOOLTIP": "Advertise",
     "CONTACT_NOW": "Contact now",
     "DOWNLOAD_PRICES": "Download Information"
   }
