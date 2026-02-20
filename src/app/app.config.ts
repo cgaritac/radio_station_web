@@ -1,6 +1,6 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideAppInitializer, inject } from '@angular/core';
 import { IconRegistryService } from './Core/services/icon-registry.service';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withJsonpSupport } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { provideAngularSvgIcon } from 'angular-svg-icon';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
@@ -20,7 +20,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
-    provideHttpClient(),
+    provideHttpClient(withJsonpSupport()),
     provideAngularSvgIcon(),
     provideTranslateService({
       loader: provideTranslateHttpLoader({ prefix: '/i18n/' }),

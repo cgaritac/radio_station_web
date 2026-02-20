@@ -1,31 +1,100 @@
 <div class="min-h-screen flex flex-col font-sans">
   <app-hero />
 
-  <section class="flex items-center justify-center w-full bg-brand-tertiary/90">
+  <!-- Schedule -->
+  <section class="flex items-center justify-center w-full bg-brand-tertiary/95">
     <div class="p-8 text-center">
       <h2>{{ 'HOME.SCHEDULE_TITLE' | translate }}</h2>
     </div>
   </section>
 
-  <section class="flex items-center justify-center w-full bg-brand-tertiary/60">
-    <div class="p-8 text-center">
+  <!-- News -->
+  <section class="flex items-center justify-center w-full bg-brand-tertiary/95">
+    <div class="p-4 text-center">
       <h2>{{ 'HOME.NEWS_TITLE' | translate }}</h2>
     </div>
   </section>
 
-  <section class="flex items-center justify-center w-full bg-brand-tertiary/10">
-    <div class="p-8 text-center">
-      <h2>{{ 'HOME.REFLECTIONS_TITLE' | translate }}</h2>
+  <!-- Verse of the day -->
+  <section
+    id="verse-section"
+    class="flex items-center justify-center w-full bg-brand-tertiary/95 py-8 md:py-12"
+  >
+    <div
+      class="flex flex-col md:flex-row p-4 md:p-2 text-start w-full max-w-desktop mx-auto min-h-96 gap-6 md:gap-8"
+    >
+      <div
+        id="verse-image"
+        class="w-full md:w-2/5 aspect-video md:aspect-auto rounded-3xl overflow-hidden shadow-xl"
+      >
+        <img
+          src="images/home_bible.png"
+          alt="{{ 'HOME.VERSE_TITLE' | translate }}"
+          class="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
+          <h2
+            id="verse-title"
+            class="text-base md:text-lg font-bold tracking-wide text-brand-primary-light"
+          >
+            {{ 'HOME.VERSE_TITLE' | translate }}
+          </h2>
+        </div>
+        <p
+          id="verse-subtitle"
+          class="text-2xl md:text-4xl tracking-tight font-extrabold text-brand-primary-light mb-4"
+        >
+          {{ 'HOME.VERSE_SUBTITLE' | translate }}
+        </p>
+        <div id="verse-container" class="mt-2">
+          @if (verseData) {
+            <div class="flex flex-col gap-4">
+              <p
+                class="text-brand-primary-light/60 text-xl md:text-2xl font-medium leading-tight italic"
+                [innerHTML]="verseData.text"
+              ></p>
+              <p class="text-brand-primary-light/70 font-bold text-base md:text-lg">
+                {{ verseData.display_ref }}
+              </p>
+              <footer class="mt-4 text-[10px] text-brand-sextary/80 text-right">
+                {{ 'HOME.POWERED_BY' | translate }}
+                <a
+                  href="https://www.biblegateway.com"
+                  target="_blank"
+                  class="text-brand-sextary/80 hover:underline"
+                  >{{ 'HOME.BIBLE_GATEWAY' | translate }}</a
+                >
+              </footer>
+            </div>
+          } @else {
+            <div class="h-32 flex items-center justify-center">
+              <div
+                class="w-8 h-8 border-4 border-brand-secondary border-t-transparent rounded-full animate-spin"
+              ></div>
+            </div>
+          }
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Testimonials -->
   <section class="flex items-center justify-center w-full bg-brand-tertiary/90">
     <div class="p-8 text-center">
       <h2>{{ 'HOME.TESTIMONIALS_TITLE' | translate }}</h2>
     </div>
   </section>
 
-  <section class="flex flex-col items-center justify-center w-full bg-brand-tertiary/85 px-4 py-8">
+  <!-- Advertise Banner -->
+  <section
+    id="advertise-banner"
+    class="flex flex-col items-center justify-center w-full bg-brand-tertiary/90 px-4 py-8"
+  >
     <app-banner
       [title]="'BANNER.ADVERTISE_TITLE' | translate"
       [description]="'BANNER.ADVERTISE_SUBTITLE' | translate"
@@ -33,7 +102,7 @@
       primaryLink="/contact"
       primaryIcon="mail"
       [secondaryText]="'BANNER.DOWNLOAD_PRICES' | translate"
-      secondaryLink="XXXXX" 
+      secondaryLink="XXXXX"
       secondaryIcon="info"
       iconName="speaker"
       backgroundColor="bg-brand-quaternary"
@@ -43,6 +112,7 @@
       buttonTextColor="text-brand-primary"
       width="max-w-desktop mx-auto"
       height="h-full"
-    ></app-banner> <!-- TODO: Add the link to the price list -->
+    ></app-banner>
+    <!-- TODO: Add the link to the price list -->
   </section>
 </div>
