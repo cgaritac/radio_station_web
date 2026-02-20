@@ -4,11 +4,13 @@ import { RadioService } from '../../Core/services/radio.service';
 import { BibleService } from '../../Core/services/bible.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { BannerComponent } from '../../Shared/components/banner/banner.component';
+import { ScheduleComponent } from '../../Features/schedule/schedule.component';
+import { SvgIconComponent } from 'angular-svg-icon';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, TranslateModule, BannerComponent],
+  imports: [HeroComponent, TranslateModule, BannerComponent, ScheduleComponent, SvgIconComponent],
   templateUrl: './home.page.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

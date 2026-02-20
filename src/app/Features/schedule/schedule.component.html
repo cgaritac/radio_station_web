@@ -1,0 +1,135 @@
+<section class="w-full py-12 md:py-20 bg-brand-tertiary/95">
+  <div class="max-w-desktop mx-auto px-4 md:px-8">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-3">
+          <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
+          <h2 class="text-base md:text-lg font-bold tracking-wide text-brand-primary/60 uppercase">
+            {{ 'HOME.HISTORY_TITLE' | translate }}
+          </h2>
+        </div>
+        <h3 class="text-3xl md:text-5xl font-bold text-brand-primary tracking-tight">
+          {{ 'HOME.HISTORY_SUBTITLE' | translate }}
+        </h3>
+      </div>
+    </div>
+
+    <!-- Timeline/List Content -->
+    <div class="relative w-full">
+      @if (isLoading()) {
+        <div class="space-y-4">
+          @for (i of [1, 2, 3, 4, 5]; track i) {
+            <div class="flex items-center gap-6 p-4 bg-gray-50 rounded-2xl animate-pulse">
+              <div class="w-16 h-6 bg-gray-200 rounded-full"></div>
+              <div class="flex-1 h-6 bg-gray-200 rounded-lg"></div>
+            </div>
+          }
+        </div>
+      } @else if (error()) {
+        <div class="text-center py-20 bg-gray-50 rounded-[40px]">
+          <p class="text-brand-primary/60 font-medium">{{ error() }}</p>
+          <button
+            (click)="loadSchedule()"
+            class="mt-4 text-brand-secondary font-bold hover:underline"
+          >
+            Reintentar
+          </button>
+        </div>
+      } @else {
+        <div class="history-scroll-container pr-4">
+          <div class="relative space-y-3 pb-4">
+            <!-- Timeline line -->
+            <div
+              class="absolute left-[116px] top-6 bottom-6 w-px bg-brand-primary/10 hidden md:block"
+            ></div>
+
+            @for (
+              item of schedule().slice(0, 6);
+              track item.id;
+              let first = $first;
+              let last = $last
+            ) {
+              <div
+                class="group relative flex items-center md:items-center gap-6 md:gap-16 p-4 md:p-6 rounded-[24px] transition-all duration-300"
+                [ngClass]="{
+                  'bg-brand-primary': first,
+                  'bg-brand-primary/4 hover:bg-brand-primary-light/5': !first,
+                }"
+              >
+                <!-- Time Column (Left) -->
+                <div class="shrink-0 w-20 md:w-24 flex justify-center z-10">
+                  @if (first) {
+                    <span
+                      class="px-4 py-1.5 bg-brand-secondary text-brand-primary text-[10px] md:text-xs font-black rounded-full animate-pulse flex items-center gap-1.5 whitespace-nowrap shadow-sm"
+                    >
+                      <span class="w-1.5 h-1.5 bg-brand-primary rounded-full"></span>
+                      {{ 'HOME.LIVE_NOW' | translate }}
+                    </span>
+                  } @else {
+                    <span
+                      class="text-sm md:text-base font-bold text-brand-primary/40 group-hover:text-brand-primary/70 transition-colors"
+                    >
+                      {{ formatTime(item.created) }}
+                    </span>
+                  }
+                </div>
+
+                <!-- Spacer for the line on Desktop -->
+                <div class="hidden md:block w-px h-full"></div>
+
+                <!-- Content Column (Right) -->
+                <div class="flex-1 min-w-0 z-10">
+                  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <h4
+                      class="text-base md:text-xl font-bold leading-snug truncate"
+                      [ngClass]="first ? 'text-brand-secondary' : 'text-brand-primary'"
+                    >
+                      {{ first ? radioService.currentTrack() : item.name }}
+                    </h4>
+
+                    @if (first) {
+                      <div class="gap-1.5 shrink-0 flex">
+                        <span
+                          class="w-1 h-3 bg-brand-secondary/40 rounded-full animate-[audio_1s_infinite_0s]"
+                        ></span>
+                        <span
+                          class="w-1 h-5 bg-brand-secondary/80 rounded-full animate-[audio_1.2s_infinite_0.2s]"
+                        ></span>
+                        <span
+                          class="w-1 h-4 bg-brand-secondary rounded-full animate-[audio_0.8s_infinite_0.4s]"
+                        ></span>
+                      </div>
+                    }
+                  </div>
+                </div>
+
+                <!-- Timeline Junction Dot -->
+                @if (!first) {
+                  <div
+                    class="absolute left-[116px] -translate-x-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-[3px] border-white hidden md:block z-20 transition-transform group-hover:scale-110 bg-brand-primary/10"
+                  ></div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Source Reference Footer -->
+        <footer class=" pt-2 border-t border-brand-primary/5 text-center">
+          <p class="text-[10px] text-brand-sextary/80">
+            {{ 'HOME.SOURCE_INFO' | translate }}
+            <a
+              href="https://onlineradiobox.com/cr/ornannandayure/playlist/"
+              target="_blank"
+              class="font-bold text-brand-primary/60 hover:text-brand-secondary transition-colors inline-flex items-center gap-1"
+            >
+              {{ 'HOME.SOURCE_LINK' | translate }}
+              <svg-icon name="link" class="w-2.5 h-2.5"></svg-icon>
+            </a>
+          </p>
+        </footer>
+      }
+    </div>
+  </div>
+</section>
