@@ -3,16 +3,7 @@
     <div
       class="col-span-1 tracking-wide flex flex-col items-center md:items-start text-center md:text-left"
     >
-      <a routerLink="/" class="group flex items-center gap-2 mb-6 cursor-pointer">
-        <svg-icon
-          name="radio"
-          class="text-brand-secondary group-hover:text-brand-quaternary w-10 h-10 transition-colors"
-        ></svg-icon>
-        <span
-          class="text-xl font-bold text-brand-tertiary group-hover:text-brand-quaternary translate-y-[2px]"
-          >{{ radioService.radioName() }}</span
-        >
-      </a>
+      <app-logo className="mb-6" />
       <p class="text-sm leading-relaxed">
         {{ 'FOOTER.DESCRIPTION' | translate }}
       </p>
