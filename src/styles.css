@@ -86,6 +86,10 @@
     text-shadow: 0 0 12px var(--color-brand-quaternary);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: var(--background-image-blue-gradient);
     background-attachment: fixed;

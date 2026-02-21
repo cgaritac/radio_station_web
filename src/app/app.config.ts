@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { IconRegistryService } from './Core/services/icon-registry.service';
 import { provideHttpClient, withJsonpSupport } from '@angular/common/http';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideAngularSvgIcon } from 'angular-svg-icon';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -33,7 +33,13 @@ const getInitialLang = () => {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(
+      routes,
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'disabled',
+        anchorScrolling: 'enabled',
+      }),
+    ),
     provideHttpClient(withJsonpSupport()),
     provideAngularSvgIcon(),
     provideTranslateService({
