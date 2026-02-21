@@ -41,7 +41,7 @@
   "NAV": {
     "HOME": "Inicio",
     "SCHEDULE": "Horario",
-    "PODCASTS": "Estudios Bíblicos",
+    "PODCASTS": "Estudios",
     "NEWS": "Noticias",
     "BLOG": "Blog",
     "ABOUT": "Nosotros",
@@ -160,7 +160,8 @@
       "ITEM_1": {
         "TITLE": "Nueva Antena de Transmisión en Nandayure",
         "DATE": "18 de Febrero, 2026",
-        "EXCERPT": "Estamos felices de anunciar la instalación de nuestro nuevo equipo que permitirá una señal más clara en toda la región."
+        "EXCERPT": "Estamos felices de anunciar la instalación de nuestro nuevo equipo que permitirá una señal más clara en toda la región.",
+        "CONTENT": "Nos complace anunciar que Radio Ornan ha dado un paso gigante en su compromiso con la excelencia técnica. Esta semana finalizamos la instalación de nuestra nueva antena de transmisión de alta ganancia en el cerro principal de Nandayure.\n\nEste nuevo equipo no solo expande nuestra cobertura a zonas que anteriormente tenían dificultades de recepción, sino que también mejora significativamente la fidelidad del audio. Nuestros técnicos han trabajado arduamente para asegurar que cada hogar en la región reciba un mensaje claro y sin interferencias. Esta inversión es gracias al apoyo constante de nuestra audiencia y patrocinadores que creen en el impacto de nuestra señal."
       },
       "ITEM_2": {
         "TITLE": "Resultados de la Campaña de Ayuda 'Corazón Abierto'",
@@ -184,7 +185,8 @@
       "ITEM_1": {
         "TITLE": "Cómo fortalecer tu vida de oración este año",
         "CATEGORY": "Vida Cristiana",
-        "EXCERPT": "Descubre pasos prácticos para mantener una comunicación constante y profunda con Dios en tu día a día."
+        "EXCERPT": "Descubre pasos prácticos para mantener una comunicación constante y profunda con Dios en tu día a día.",
+        "CONTENT": "La oración no es simplemente un rito religioso, es el respirar del alma. En este artículo exploramos cómo transformar tu vida de comunicación con el Creador.\n\nPrimero, la constancia sobre la intensidad. Es más efectivo dedicar 15 minutos diarios de calidad que una hora una vez a la semana. Busca un lugar tranquilo, elimina las distracciones de tu teléfono y prepárate para escuchar tanto como para hablar.\n\nSegundo, utiliza la Palabra como guía. Cuando no sepas qué orar, abre los Salmos. Deja que las verdades bíblicas den forma a tus peticiones. Verás cómo tu perspectiva cambia de tus problemas hacia la soberanía de Dios."
       },
       "ITEM_2": {
         "TITLE": "La importancia de la comunidad en la fe",
@@ -239,7 +241,8 @@
       "ITEM_1": {
         "TITLE": "El Sermón del Monte",
         "SERIES": "Mateo",
-        "EXCERPT": "Un análisis profundo de las enseñanzas de Jesús sobre el carácter y el Reino de Dios."
+        "EXCERPT": "Un análisis profundo de las enseñanzas de Jesús sobre el carácter y el Reino de Dios.",
+        "CONTENT": "El Sermón del Monte es quizás el discurso más famoso y profundo de Jesús. En este estudio, dividimos las bienaventuranzas no como una lista de mandamientos, sino como una descripción del carácter de un ciudadano del Reino.\n\nJesús comienza confrontando las expectativas terrenales: los pobres en espíritu, los que lloran, los humildes... son ellos los verdaderos bendecidos. A través de este estudio, aprenderemos cómo aplicar estos valores contraculturales en nuestra sociedad moderna, siendo sal y luz en un mundo que a menudo camina en la dirección opuesta."
       },
       "ITEM_2": {
         "TITLE": "Los Frutos del Espíritu",

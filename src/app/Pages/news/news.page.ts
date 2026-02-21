@@ -1,13 +1,10 @@
 import { Component, ChangeDetectionStrategy, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { BannerComponent } from '../../Shared/components/banner/banner.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
-import {
-  DetailModalComponent,
-  ModalDetail,
-} from '../../Shared/components/detail-modal/detail-modal.component';
 
 interface NewsItem {
   id: string;
@@ -27,7 +24,7 @@ interface NewsItem {
     SvgIconComponent,
     BannerComponent,
     SectionHeaderComponent,
-    DetailModalComponent,
+    RouterLink,
   ],
   templateUrl: './news.page.html',
   styleUrl: './news.page.css',
@@ -64,23 +61,4 @@ export class NewsPage {
       category: 'Eventos',
     },
   ]);
-
-  selectedItem = signal<NewsItem | null>(null);
-
-  openItem(item: NewsItem) {
-    this.selectedItem.set(item);
-    document.body.style.overflow = 'hidden';
-  }
-
-  closeModal() {
-    this.selectedItem.set(null);
-    document.body.style.overflow = 'auto';
-  }
-
-  getModalDetails(item: NewsItem): ModalDetail[] {
-    return [
-      { icon: 'calendar', text: this.translate.instant(item.date) },
-      { icon: 'info', text: item.category },
-    ];
-  }
 }

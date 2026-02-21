@@ -9,6 +9,7 @@ import { StudiesPage } from './Pages/studies/studies.page';
 import { ContactPage } from './Pages/contact/contact.page';
 import { PrivacyPage } from './Pages/privacy/privacy.page';
 import { NotFoundPage } from './Pages/not-found/not-found.page';
+import { ItemDetailPage } from './Pages/item-detail/item-detail.page';
 
 export const routes: Routes = [
   {
@@ -46,6 +47,10 @@ export const routes: Routes = [
   {
     path: 'privacy',
     component: PrivacyPage,
+  },
+  {
+    path: ':type/:id',
+    component: ItemDetailPage,
   },
   {
     path: 'not-found',

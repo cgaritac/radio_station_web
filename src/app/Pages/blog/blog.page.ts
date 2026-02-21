@@ -1,13 +1,10 @@
 import { Component, ChangeDetectionStrategy, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { BannerComponent } from '../../Shared/components/banner/banner.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
-import {
-  DetailModalComponent,
-  ModalDetail,
-} from '../../Shared/components/detail-modal/detail-modal.component';
 
 interface BlogPost {
   id: string;
@@ -21,13 +18,7 @@ interface BlogPost {
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [
-    CommonModule,
-    TranslateModule,
-    SvgIconComponent,
-    SectionHeaderComponent,
-    DetailModalComponent,
-  ],
+  imports: [CommonModule, TranslateModule, SvgIconComponent, SectionHeaderComponent, RouterLink],
   templateUrl: './blog.page.html',
   styleUrl: './blog.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -63,23 +54,4 @@ export class BlogPage {
       author: 'Juan Rodríguez',
     },
   ]);
-
-  selectedPost = signal<BlogPost | null>(null);
-
-  openPost(post: BlogPost) {
-    this.selectedPost.set(post);
-    document.body.style.overflow = 'hidden';
-  }
-
-  closeModal() {
-    this.selectedPost.set(null);
-    document.body.style.overflow = 'auto';
-  }
-
-  getModalDetails(post: BlogPost): ModalDetail[] {
-    return [
-      { icon: 'person', text: post.author },
-      { icon: 'info', text: this.translate.instant(post.category) },
-    ];
-  }
 }

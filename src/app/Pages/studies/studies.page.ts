@@ -1,13 +1,11 @@
 import { Component, ChangeDetectionStrategy, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { BannerComponent } from '../../Shared/components/banner/banner.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
-import {
-  DetailModalComponent,
-  ModalDetail,
-} from '../../Shared/components/detail-modal/detail-modal.component';
 
 interface StudyItem {
   id: string;
@@ -27,7 +25,7 @@ interface StudyItem {
     SvgIconComponent,
     BannerComponent,
     SectionHeaderComponent,
-    DetailModalComponent,
+    RouterLink,
   ],
   templateUrl: './studies.page.html',
   styleUrl: './studies.page.css',
@@ -64,23 +62,4 @@ export class StudiesPage {
       category: 'Teología',
     },
   ]);
-
-  selectedItem = signal<StudyItem | null>(null);
-
-  openItem(item: StudyItem) {
-    this.selectedItem.set(item);
-    document.body.style.overflow = 'hidden';
-  }
-
-  closeModal() {
-    this.selectedItem.set(null);
-    document.body.style.overflow = 'auto';
-  }
-
-  getModalDetails(item: StudyItem): ModalDetail[] {
-    return [
-      { icon: 'radio', text: item.series },
-      { icon: 'info', text: item.category },
-    ];
-  }
 }
