@@ -9,7 +9,7 @@ import { RadioService } from '../../../Core/services/radio.service';
   imports: [SvgIconComponent, RouterLink],
   template: `
     <a
-      (click)="onLogoClick()"
+      (click)="onLogoClick($event)"
       routerLink="/"
       [class]="'group flex items-center gap-2 cursor-pointer ' + className()"
     >
@@ -32,8 +32,9 @@ export class LogoComponent {
 
   className = input<string>('');
 
-  onLogoClick(): void {
+  onLogoClick(event: MouseEvent): void {
     if (this.router.url === '/') {
+      event.preventDefault();
       window.scrollTo({
         top: 0,
         behavior: 'smooth',

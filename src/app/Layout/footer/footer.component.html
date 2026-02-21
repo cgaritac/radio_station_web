@@ -16,6 +16,7 @@
           <li>
             <a
               routerLink="/"
+              (click)="scrollToTop($event, '/')"
               class="hover:text-brand-quaternary transition-all hover:text-shadow-brand-quaternary cursor-pointer flex items-center gap-2"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
@@ -25,6 +26,7 @@
           <li>
             <a
               routerLink="/schedule"
+              (click)="scrollToTop($event, '/schedule')"
               class="hover:text-brand-quaternary transition-all hover:text-shadow-brand-quaternary cursor-pointer flex items-center gap-2"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
@@ -34,6 +36,7 @@
           <li>
             <a
               routerLink="/studies"
+              (click)="scrollToTop($event, '/studies')"
               class="hover:text-brand-quaternary transition-all hover:text-shadow-brand-quaternary cursor-pointer flex items-center gap-2"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
@@ -43,6 +46,7 @@
           <li>
             <a
               routerLink="/news"
+              (click)="scrollToTop($event, '/news')"
               class="hover:text-brand-quaternary transition-all hover:text-shadow-brand-quaternary cursor-pointer flex items-center gap-2"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
@@ -52,6 +56,7 @@
           <li>
             <a
               routerLink="/blog"
+              (click)="scrollToTop($event, '/blog')"
               class="hover:text-brand-quaternary transition-all hover:text-shadow-brand-quaternary cursor-pointer flex items-center gap-2"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
@@ -61,6 +66,7 @@
           <li>
             <a
               routerLink="/about"
+              (click)="scrollToTop($event, '/about')"
               class="hover:text-brand-quaternary transition-all hover:text-shadow-brand-quaternary cursor-pointer flex items-center gap-2"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
@@ -70,6 +76,7 @@
           <li>
             <a
               routerLink="/contact"
+              (click)="scrollToTop($event, '/contact')"
               class="hover:text-brand-quaternary transition-all hover:text-shadow-brand-quaternary cursor-pointer flex items-center gap-2"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
@@ -84,7 +91,7 @@
       <h3 class="text-white font-bold mb-6">{{ 'FOOTER.FOLLOW_US' | translate }}</h3>
       <div class="grid grid-cols-4 gap-3 w-fit">
         <a
-          href="https://www.facebook.com/radioornannandayure/"
+          [href]="'SOCIAL.FACEBOOK' | translate"
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
@@ -93,7 +100,7 @@
           <svg-icon name="facebook" class="w-5 h-5"></svg-icon>
         </a>
         <a
-          href="https://www.instagram.com/radioornannandayure/"
+          [href]="'SOCIAL.INSTAGRAM' | translate"
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
@@ -102,7 +109,7 @@
           <svg-icon name="instagram" class="w-5 h-5"></svg-icon>
         </a>
         <a
-          href="https://www.youtube.com/@radioornannandayure"
+          [href]="'SOCIAL.YOUTUBE' | translate"
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
@@ -111,7 +118,7 @@
           <svg-icon name="youtube" class="w-5 h-5"></svg-icon>
         </a>
         <a
-          href="https://open.spotify.com/show/1aZmACn7gBSoVyNDVl0ltY"
+          [href]="'SOCIAL.SPOTIFY' | translate"
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
@@ -120,7 +127,7 @@
           <svg-icon name="spotify" class="w-5 h-5"></svg-icon>
         </a>
         <a
-          href="https://www.tiktok.com/@ministerio_ornan?lang=es"
+          [href]="'SOCIAL.TIKTOK' | translate"
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
@@ -129,7 +136,7 @@
           <svg-icon name="tiktok" class="w-5 h-5"></svg-icon>
         </a>
         <a
-          href="https://www.whatsapp.com/channel/0029VbA1ifh1NCrXCaosEy2t"
+          [href]="'SOCIAL.WHATSAPP' | translate"
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
@@ -138,7 +145,7 @@
           <svg-icon name="whatsapp" class="w-5 h-5"></svg-icon>
         </a>
         <a
-          href="https://onlineradiobox.com/cr/ornannandayure/?cs=cr.ornannandayure"
+          [href]="'SOCIAL.RADIO_BOX' | translate"
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-quaternary/5 rounded-lg flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
@@ -194,13 +201,19 @@
         >© {{ currentYear }} {{ radioService.radioName() }}. {{ 'FOOTER.RIGHTS' | translate }}</span
       >
       <span class="hidden md:inline mx-2">•</span>
-      <a routerLink="/terms" class="hover:text-brand-quaternary transition-colors">{{
-        'TERMS.TITLE' | translate
-      }}</a>
+      <a
+        routerLink="/terms"
+        (click)="scrollToTop($event, '/terms')"
+        class="hover:text-brand-quaternary transition-colors"
+        >{{ 'TERMS.TITLE' | translate }}</a
+      >
       <span class="hidden md:inline mx-2">•</span>
-      <a routerLink="/privacy" class="hover:text-brand-quaternary transition-colors">{{
-        'PRIVACY.TITLE' | translate
-      }}</a>
+      <a
+        routerLink="/privacy"
+        (click)="scrollToTop($event, '/privacy')"
+        class="hover:text-brand-quaternary transition-colors"
+        >{{ 'PRIVACY.TITLE' | translate }}</a
+      >
     </p>
   </div>
 </footer>

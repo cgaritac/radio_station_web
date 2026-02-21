@@ -292,5 +292,22 @@
     "SECTION6_TITLE": "6. Privacidad de Menores",
     "SECTION6_TEXT": "Nuestro sitio no está dirigido a menores de 13 años. No recolectamos intencionalmente información de menores. Si detectamos que un menor nos ha enviado datos personales, procederemos a eliminarlos.",
     "LAST_UPDATE": "Última actualización"
+  },
+  "ERROR": {
+    "NOT_FOUND": {
+      "TITLE": "¡Vaya! Página no encontrada",
+      "DESCRIPTION": "Parece que la frecuencia que buscas no existe o ha sido movida. Intenta sintonizar de nuevo desde el inicio.",
+      "GO_HOME": "Volver al Inicio",
+      "GO_BACK": "Regresar"
+    }
+  },
+  "SOCIAL": {
+    "FACEBOOK": "https://www.facebook.com/radioornannandayure/",
+    "INSTAGRAM": "https://www.instagram.com/radioornannandayure/",
+    "YOUTUBE": "https://www.youtube.com/@radioornannandayure",
+    "SPOTIFY": "https://open.spotify.com/show/1aZmACn7gBSoVyNDVl0ltY",
+    "TIKTOK": "https://www.tiktok.com/@ministerio_ornan?lang=es",
+    "WHATSAPP": "https://www.whatsapp.com/channel/0029VbA1ifh1NCrXCaosEy2t",
+    "RADIO_BOX": "https://onlineradiobox.com/cr/ornannandayure/?cs=cr.ornannandayure"
   }
 }

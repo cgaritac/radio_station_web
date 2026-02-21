@@ -43,7 +43,7 @@
                 <p class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-1">
                   {{ 'CONTACT.PHONE' | translate }}
                 </p>
-                <p class="text-lg font-bold text-brand-primary">+506 1234-5678</p>
+                <p class="text-lg font-bold text-brand-primary">{{ 'FOOTER.PHONE' | translate }}</p>
               </div>
             </div>
 
@@ -59,7 +59,7 @@
                 <p class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-1">
                   {{ 'CONTACT.EMAIL' | translate }}
                 </p>
-                <p class="text-lg font-bold text-brand-primary">info@XXXXX.com</p>
+                <p class="text-lg font-bold text-brand-primary">{{ 'FOOTER.EMAIL' | translate }}</p>
               </div>
             </div>
 
@@ -75,7 +75,9 @@
                 <p class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-1">
                   {{ 'CONTACT.FIND_US' | translate }}
                 </p>
-                <p class="text-sm font-bold text-brand-primary">Av. XXX 123, Ciudad de XXXXX</p>
+                <p class="text-sm font-bold text-brand-primary">
+                  {{ 'FOOTER.ADDRESS' | translate }}
+                </p>
               </div>
             </div>
           </div>
@@ -87,25 +89,33 @@
             </p>
             <div class="flex gap-4">
               <a
-                href="#"
+                [href]="'SOCIAL.FACEBOOK' | translate"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center text-brand-primary hover:bg-brand-secondary hover:scale-110 transition-all border border-brand-primary/5"
               >
                 <svg-icon name="facebook" class="w-5 h-5"></svg-icon>
               </a>
               <a
-                href="#"
+                [href]="'SOCIAL.INSTAGRAM' | translate"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center text-brand-primary hover:bg-brand-secondary hover:scale-110 transition-all border border-brand-primary/5"
               >
                 <svg-icon name="instagram" class="w-5 h-5"></svg-icon>
               </a>
               <a
-                href="#"
+                [href]="'SOCIAL.YOUTUBE' | translate"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center text-brand-primary hover:bg-brand-secondary hover:scale-110 transition-all border border-brand-primary/5"
               >
                 <svg-icon name="youtube" class="w-5 h-5"></svg-icon>
               </a>
               <a
-                href="#"
+                [href]="'SOCIAL.TIKTOK' | translate"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center text-brand-primary hover:bg-brand-secondary hover:scale-110 transition-all border border-brand-primary/5"
               >
                 <svg-icon name="tiktok" class="w-5 h-5"></svg-icon>
@@ -219,7 +229,7 @@
     </div>
   </section>
 
-  <!-- Map Placeholder (Optional but premium) -->
+  <!-- Map Placeholder -->
   <section class="w-full py-24 bg-brand-tertiary/95">
     <div class="max-w-desktop mx-auto px-4">
       <!-- You can add a Google Maps iframe here later -->
