@@ -1,12 +1,10 @@
 {
-  "NAV": {
-    "HOME": "Inicio",
-    "SCHEDULE": "Horario",
-    "PODCASTS": "Estudios",
-    "NEWS": "Noticias",
-    "BLOG": "Blog",
-    "ABOUT": "Nosotros",
-    "CONTACT": "Contacto"
+  "BANNER": {
+    "ADVERTISE_TITLE": "¿Te gustaría anunciar tu actividad?",
+    "ADVERTISE_SUBTITLE": "Ayudamos a las iglesias locales y ministerios a difundir sus eventos y campañas evangelísticas en toda nuestra región.",
+    "ADVERTISE_TOOLTIP": "Anunciate",
+    "CONTACT_NOW": "Contactar ahora",
+    "DOWNLOAD_PRICES": "Descargar información"
   },
   "HERO": {
     "TEXT1": "SINTONIZA LA",
@@ -36,6 +34,24 @@
     "BIBLE_GATEWAY": "BibleGateway",
     "RETRY": "Reintentar"
   },
+  "LANG": {
+    "ES": "Español",
+    "EN": "Inglés"
+  },
+  "NAV": {
+    "HOME": "Inicio",
+    "SCHEDULE": "Horario",
+    "PODCASTS": "Estudios",
+    "NEWS": "Noticias",
+    "BLOG": "Blog",
+    "ABOUT": "Nosotros",
+    "CONTACT": "Contacto"
+  },
+  "NEWS": {
+    "TITLE": "COMUNIDAD",
+    "SUBTITLE": "Próximas Actividades",
+    "MORE_INFO": "MÁS INFORMACIÓN"
+  },
   "PLAYER": {
     "LIVE": "En Vivo:",
     "LIVE_STREAMING": "Transmisión en Vivo",
@@ -50,16 +66,5 @@
     "ADDRESS": "Av. XXX 123, Ciudad de XXXXX",
     "EMAIL": "info@XXXXX.com",
     "PHONE": "+506 12345678"
-  },
-  "LANG": {
-    "ES": "Español",
-    "EN": "Inglés"
-  },
-  "BANNER": {
-    "ADVERTISE_TITLE": "¿Te gustaría anunciar tu actividad?",
-    "ADVERTISE_SUBTITLE": "Ayudamos a las iglesias locales y ministerios a difundir sus eventos y campañas evangelísticas en toda nuestra región.",
-    "ADVERTISE_TOOLTIP": "Anunciate",
-    "CONTACT_NOW": "Contactar ahora",
-    "DOWNLOAD_PRICES": "Descargar información"
   }
 }

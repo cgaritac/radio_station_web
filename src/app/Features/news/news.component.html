@@ -1,6 +1,75 @@
 <!-- News -->
-<section class="flex items-center justify-center w-full bg-brand-tertiary/95">
-  <div class="p-4 text-center">
-    <h2>{{ 'HOME.NEWS_TITLE' | translate }}</h2>
+<section class="w-full pt-12 md:pt-24 md:pb-8 bg-brand-tertiary/95">
+  <div class="max-w-desktop mx-auto px-4 md:px-8">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row items-center justify-center mb-12 gap-6">
+      <div class="flex flex-col items-center gap-3">
+        <div class="flex items-center gap-3">
+          <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
+          <h2 class="text-base md:text-lg font-bold tracking-wide text-brand-primary/60 uppercase">
+            {{ 'NEWS.TITLE' | translate }}
+          </h2>
+        </div>
+        <h3 class="text-3xl md:text-5xl font-bold text-brand-primary tracking-tight">
+          {{ 'NEWS.SUBTITLE' | translate }}
+        </h3>
+      </div>
+    </div>
+    <!-- Activities Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
+      @for (activity of activities; track activity.title) {
+        <div
+          class="bg-brand-tertiary rounded-4xl overflow-hidden shadow-md flex flex-col h-full hover:shadow-xl transition-all duration-500 group border border-brand-primary/5"
+        >
+          <!-- Image Container -->
+          <div class="aspect-16/10 overflow-hidden relative">
+            <img
+              [src]="activity.image"
+              [alt]="activity.title"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-linear-to-t from-brand-primary/20 to-transparent"></div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 md:p-8 flex flex-col grow">
+            <!-- Date -->
+            <div class="flex items-center gap-2 mb-4">
+              <div class="m-1 bg-brand-secondary/10 rounded-lg text-brand-secondary">
+                <svg-icon name="clock" class="w-4 h-4"></svg-icon>
+              </div>
+              <span class="text-xs font-black uppercase tracking-widest text-brand-primary/60">
+                {{ activity.date }}
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h4
+              class="text-xl md:text-2xl font-extrabold text-brand-primary mb-4 leading-tight grow"
+            >
+              {{ activity.title }}
+            </h4>
+
+            <!-- Location -->
+            <div class="flex items-start gap-2 mb-8 text-brand-primary/50">
+              <svg-icon name="location" class="w-5 h-5 shrink-0 text-brand-secondary"></svg-icon>
+              <span class="text-sm font-semibold leading-relaxed">{{ activity.location }}</span>
+            </div>
+
+            <!-- Button -->
+            <div class="mt-auto">
+              <app-action-button
+                [text]="'NEWS.MORE_INFO' | translate"
+                color="secondary"
+                size="medium"
+                class="w-full"
+                style="display: block"
+              >
+              </app-action-button>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
   </div>
 </section>
