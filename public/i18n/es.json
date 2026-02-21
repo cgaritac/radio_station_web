@@ -300,5 +300,14 @@
       "GO_HOME": "Volver al Inicio",
       "GO_BACK": "Regresar"
     }
+  },
+  "SOCIAL": {
+    "FACEBOOK": "https://www.facebook.com/radioornannandayure/",
+    "INSTAGRAM": "https://www.instagram.com/radioornannandayure/",
+    "YOUTUBE": "https://www.youtube.com/@radioornannandayure",
+    "SPOTIFY": "https://open.spotify.com/show/1aZmACn7gBSoVyNDVl0ltY",
+    "TIKTOK": "https://www.tiktok.com/@ministerio_ornan?lang=es",
+    "WHATSAPP": "https://www.whatsapp.com/channel/0029VbA1ifh1NCrXCaosEy2t",
+    "RADIO_BOX": "https://onlineradiobox.com/cr/ornannandayure/?cs=cr.ornannandayure"
   }
 }
