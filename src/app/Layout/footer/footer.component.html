@@ -3,16 +3,7 @@
     <div
       class="col-span-1 tracking-wide flex flex-col items-center md:items-start text-center md:text-left"
     >
-      <a routerLink="/" class="group flex items-center gap-2 mb-6 cursor-pointer">
-        <svg-icon
-          name="radio"
-          class="text-brand-secondary group-hover:text-brand-quaternary w-10 h-10 transition-colors"
-        ></svg-icon>
-        <span
-          class="text-xl font-bold text-brand-tertiary group-hover:text-brand-quaternary translate-y-[2px]"
-          >{{ radioService.radioName() }}</span
-        >
-      </a>
+      <app-logo className="mb-6" />
       <p class="text-sm leading-relaxed">
         {{ 'FOOTER.DESCRIPTION' | translate }}
       </p>
@@ -198,6 +189,18 @@
   <div
     class="max-w-desktop px-4 mx-auto mt-12 pt-8 border-t border-brand-tertiary/5 text-center text-xs tracking-wide"
   >
-    <p>© {{ currentYear }} {{ radioService.radioName() }}. {{ 'FOOTER.RIGHTS' | translate }}</p>
+    <p class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-0">
+      <span
+        >© {{ currentYear }} {{ radioService.radioName() }}. {{ 'FOOTER.RIGHTS' | translate }}</span
+      >
+      <span class="hidden md:inline mx-2">•</span>
+      <a routerLink="/terms" class="hover:text-brand-quaternary transition-colors">{{
+        'TERMS.TITLE' | translate
+      }}</a>
+      <span class="hidden md:inline mx-2">•</span>
+      <a routerLink="/privacy" class="hover:text-brand-quaternary transition-colors">{{
+        'PRIVACY.TITLE' | translate
+      }}</a>
+    </p>
   </div>
 </footer>

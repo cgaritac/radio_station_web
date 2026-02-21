@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-terms',
+  selector: 'app-privacy',
   standalone: true,
   imports: [CommonModule, TranslateModule],
-  templateUrl: './terms.page.html',
-  styleUrl: './terms.page.css',
+  templateUrl: './privacy.page.html',
+  styleUrl: './privacy.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TermsPage {}
+export class PrivacyPage {}

@@ -252,5 +252,45 @@
         "EXCERPT": "Preparing for spiritual battle with the tools God has given us."
       }
     }
+  },
+  "TERMS": {
+    "TITLE": "TERMS OF USE",
+    "SUBTITLE": "Rules and conditions of our platform",
+    "SECTION1_TITLE": "1. Acceptance of Terms",
+    "SECTION1_TEXT": "By accessing and using this website, you agree to comply with these terms and conditions. If you do not agree with any part of these terms, we kindly ask you to not use our platform.",
+    "SECTION2_TITLE": "2. Signal and Content Use",
+    "SECTION2_TEXT": "Our radio broadcast and published content (articles, news, recordings) are for personal and non-commercial use. Unauthorized retransmission or commercial use of our content without prior written permission is prohibited.",
+    "SECTION3_TITLE": "3. Limitation of Liability",
+    "SECTION3_TEXT": "We do our best to keep the signal active and information updated. However, we are not responsible for technical interruptions beyond our control or for any decision made based on the content of our programming.",
+    "SECTION4_TITLE": "4. Modifications",
+    "SECTION4_TEXT": "We reserve the right to modify these terms at any time. Continued use of the site following such changes constitutes acceptance of the new terms.",
+    "SECTION5_TITLE": "5. Third-Party Services (Streaming)",
+    "SECTION5_TEXT": "Our audio signal may come from external servers. The site facilitates access to this content, but we are not responsible for the legality or accuracy of external transmissions.",
+    "SECTION6_TITLE": "6. Intellectual Property and DMCA",
+    "SECTION6_TEXT": "We respect copyright. If you believe any content on this site infringes your rights, please contact us at info@XXXXX.com with the details for review or removal.",
+    "SECTION7_TITLE": "7. User Submitted Content",
+    "SECTION7_TEXT": "By sending us prayer requests or messages, you grant us permission to mention or read them during our radio programming, unless you specify otherwise.",
+    "LAST_UPDATE": "Last update"
+  },
+  "PRIVACY": {
+    "TITLE": "PRIVACY POLICY",
+    "SUBTITLE": "How we protect your information",
+    "SECTION1_TITLE": "1. Information We Collect",
+    "SECTION1_TEXT": "Although we do not request user registration or login, we collect basic information in the following ways:",
+    "DATA_LIST_ITEM1": "Contact data: Name and message voluntarily sent through our Prayer Requests or Contact form.",
+    "DATA_LIST_ITEM2": "Technical Use: We store technical data in your browser (Local Storage) to improve your experience, such as the daily Bible verse or audio preferences.",
+    "DATA_LIST_ITEM3": "Cookies and Browsing: Information about how you interact with our site (pages visited, time spent).",
+    "SECTION2_TITLE": "2. Use of Information",
+    "SECTION2_TEXT": "The information we collect is used exclusively to respond to your prayer requests, improve platform stability, and better understand our audience's interests.",
+    "SECTION3_TITLE": "3. Third-Party Tools",
+    "SECTION3_TEXT": "We use external services to improve our offering:",
+    "SECTION3_ANALYTICS": "Google Analytics: We use this tool to analyze traffic. Google collects browsing data anonymously according to its own privacy policies.",
+    "SECTION4_TITLE": "4. Your Rights",
+    "SECTION4_TEXT": "You have the right to request the deletion of messages sent through our forms at any time by contacting us through the official means listed in the footer.",
+    "SECTION5_TITLE": "5. Data Erasure",
+    "SECTION5_TEXT": "Any user who has submitted personal information through our forms can request the complete erasure of such information from our records by sending an email to info@XXXXX.com.",
+    "SECTION6_TITLE": "6. Children's Privacy",
+    "SECTION6_TEXT": "Our site is not directed to children under 13. We do not knowingly collect information from minors. If we detect that a minor has sent us personal data, we will proceed to delete it.",
+    "LAST_UPDATE": "Last update"
   }
 }

@@ -7,6 +7,7 @@ import { NewsPage } from './Pages/news/news.page';
 import { SchedulePage } from './Pages/schedule/schedule.page';
 import { StudiesPage } from './Pages/studies/studies.page';
 import { ContactPage } from './Pages/contact/contact.page';
+import { PrivacyPage } from './Pages/privacy/privacy.page';
 
 export const routes: Routes = [
   {
@@ -40,5 +41,9 @@ export const routes: Routes = [
   {
     path: 'studies',
     component: StudiesPage,
+  },
+  {
+    path: 'privacy',
+    component: PrivacyPage,
   },
 ];
