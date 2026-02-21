@@ -22,7 +22,10 @@
             class="bg-white rounded-[40px] overflow-hidden shadow-2xl shadow-brand-primary/5 border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-500"
           >
             <!-- Image -->
-            <div class="relative aspect-video overflow-hidden">
+            <a
+              [routerLink]="['/news', item.id]"
+              class="relative block aspect-video overflow-hidden"
+            >
               <img
                 [src]="item.image"
                 [alt]="item.title | translate"
@@ -35,7 +38,7 @@
                   {{ item.category }}
                 </span>
               </div>
-            </div>
+            </a>
 
             <!-- Content -->
             <div class="p-8">
@@ -45,18 +48,20 @@
                 <svg-icon name="calendar" class="w-4 h-4"></svg-icon>
                 {{ item.date | translate }}
               </div>
-              <h3
-                class="text-2xl font-black text-brand-primary mb-4 leading-tight group-hover:text-brand-secondary transition-colors"
-              >
-                {{ item.title | translate }}
-              </h3>
+              <a [routerLink]="['/news', item.id]">
+                <h3
+                  class="text-2xl font-black text-brand-primary mb-4 leading-tight hover:text-brand-secondary transition-colors"
+                >
+                  {{ item.title | translate }}
+                </h3>
+              </a>
               <p class="text-brand-primary/60 text-sm leading-relaxed mb-8 line-clamp-3">
                 {{ item.excerpt | translate }}
               </p>
 
               <a
-                href="#"
-                class="inline-flex items-center gap-2 text-brand-primary font-black text-xs uppercase tracking-widest hover:text-brand-secondary transition-colors group/link"
+                [routerLink]="['/news', item.id]"
+                class="inline-flex items-center gap-2 text-brand-primary font-black text-xs uppercase tracking-widest hover:text-brand-secondary transition-colors group/link cursor-pointer"
               >
                 {{ 'NEWS_PAGE.READ_MORE' | translate }}
                 <svg-icon

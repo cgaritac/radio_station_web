@@ -41,7 +41,7 @@
   "NAV": {
     "HOME": "Home",
     "SCHEDULE": "Schedule",
-    "PODCASTS": "Bible Studies",
+    "PODCASTS": "Studies",
     "NEWS": "News",
     "BLOG": "Blog",
     "ABOUT": "About Us",
@@ -160,7 +160,8 @@
       "ITEM_1": {
         "TITLE": "New Transmission Antenna in Nandayure",
         "DATE": "February 18, 2026",
-        "EXCERPT": "We are happy to announce the installation of our new equipment that will allow a clearer signal throughout the region."
+        "EXCERPT": "We are happy to announce the installation of our new equipment that will allow a clearer signal throughout the region.",
+        "CONTENT": "We are pleased to announce that Radio Ornan has taken a giant step in its commitment to technical excellence. This week we finalized the installation of our new high-gain transmission antenna on the main hill of Nandayure.\n\nThis new equipment not only expands our coverage to areas that previously had reception difficulties but also significantly improves audio fidelity. Our technicians have worked hard to ensure that every home in the region receives a clear message without interference. This investment is thanks to the constant support of our audience and sponsors who believe in the impact of our signal."
       },
       "ITEM_2": {
         "TITLE": "'Open Heart' Aid Campaign Results",
@@ -184,7 +185,8 @@
       "ITEM_1": {
         "TITLE": "How to strengthen your prayer life this year",
         "CATEGORY": "Christian Life",
-        "EXCERPT": "Discover practical steps to maintain constant and deep communication with God in your daily life."
+        "EXCERPT": "Discover practical steps to maintain constant and deep communication with God in your daily life.",
+        "CONTENT": "Prayer is not simply a religious ritual; it is the breathing of the soul. In this article, we explore how to transform your life of communication with the Creator.\n\nFirst, consistency over intensity. It is more effective to dedicate 15 quality minutes daily than one hour once a week. Find a quiet place, eliminate distractions from your phone, and prepare to listen as much as talk.\n\nSecond, use the Word as a guide. When you don't know what to pray, open the Psalms. Let biblical truths shape your requests. You will see how your perspective shifts from your problems toward God's sovereignty."
       },
       "ITEM_2": {
         "TITLE": "The importance of community in faith",
@@ -239,7 +241,8 @@
       "ITEM_1": {
         "TITLE": "The Sermon on the Mount",
         "SERIES": "Matthew",
-        "EXCERPT": "A deep analysis of Jesus' teachings on character and the Kingdom of God."
+        "EXCERPT": "A deep analysis of Jesus' teachings on character and the Kingdom of God.",
+        "CONTENT": "The Sermon on the Mount is perhaps Jesus' most famous and profound discourse. In this study, we divide the beatitudes not as a list of commandments, but as a description of the character of a citizen of the Kingdom.\n\nJesus begins by confronting earthly expectations: the poor in spirit, those who mourn, the humble... they are the truly blessed. Through this study, we will learn how to apply these countercultural values in our modern society, being salt and light in a world that often walks in the opposite direction."
       },
       "ITEM_2": {
         "TITLE": "The Fruits of the Spirit",

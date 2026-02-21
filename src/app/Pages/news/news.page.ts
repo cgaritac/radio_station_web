@@ -1,6 +1,7 @@
-import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { BannerComponent } from '../../Shared/components/banner/banner.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
@@ -23,12 +24,14 @@ interface NewsItem {
     SvgIconComponent,
     BannerComponent,
     SectionHeaderComponent,
+    RouterLink,
   ],
   templateUrl: './news.page.html',
   styleUrl: './news.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NewsPage {
+  private translate = inject(TranslateService);
   newsItems = signal<NewsItem[]>([
     {
       id: '1',

@@ -4,6 +4,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import {
+  DetailModalComponent,
+  ModalDetail,
+} from '../../Shared/components/detail-modal/detail-modal.component';
 
 export interface Activity {
   id: string;
@@ -23,6 +27,7 @@ export interface Activity {
     SvgIconComponent,
     ActionButtonComponent,
     SectionHeaderComponent,
+    DetailModalComponent,
   ],
   templateUrl: './community.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -67,6 +72,13 @@ export class CommunityComponent {
   closeModal() {
     this.selectedActivity.set(null);
     document.body.style.overflow = 'auto';
+  }
+
+  getActivityDetails(activity: Activity): ModalDetail[] {
+    return [
+      { icon: 'clock', text: this.translate.instant(activity.date) },
+      { icon: 'location', text: this.translate.instant(activity.location) },
+    ];
   }
 
   getWhatsAppLink(activity: Activity): string {
