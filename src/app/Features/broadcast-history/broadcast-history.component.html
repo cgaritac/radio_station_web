@@ -1,4 +1,4 @@
-<section class="w-full py-12 md:py-20 bg-brand-tertiary/95">
+<section class="w-full pt-12 md:pt-24 md:pb-8 bg-brand-tertiary/95">
   <div class="max-w-desktop mx-auto px-4 md:px-8">
     <!-- Header -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -21,8 +21,8 @@
         <div class="space-y-4">
           @for (i of [1, 2, 3, 4, 5]; track i) {
             <div class="flex items-center gap-6 p-4 bg-gray-50 rounded-2xl animate-pulse">
-              <div class="w-16 h-6 bg-gray-200 rounded-full"></div>
-              <div class="flex-1 h-6 bg-gray-200 rounded-lg"></div>
+              <div class="w-14 h-14 bg-brand-sextary/30 rounded-full"></div>
+              <div class="flex-1 h-14 bg-brand-sextary/30 rounded-lg"></div>
             </div>
           }
         </div>
@@ -30,10 +30,10 @@
         <div class="text-center py-20 bg-gray-50 rounded-[40px]">
           <p class="text-brand-primary/60 font-medium">{{ error() }}</p>
           <button
-            (click)="loadSchedule()"
-            class="mt-4 text-brand-secondary font-bold hover:underline"
+            (click)="loadBroadcastHistory()"
+            class="mt-4 text-brand-primary font-bold cursor-pointer hover:underline"
           >
-            Reintentar
+            {{ 'HOME.RETRY' | translate }}
           </button>
         </div>
       } @else {
@@ -45,7 +45,7 @@
             ></div>
 
             @for (
-              item of schedule().slice(0, 6);
+              item of broadcastHistory().slice(0, 6);
               track item.id;
               let first = $first;
               let last = $last
@@ -53,7 +53,7 @@
               <div
                 class="group relative flex items-center md:items-center gap-6 md:gap-16 p-4 md:p-6 rounded-[24px] transition-all duration-300"
                 [ngClass]="{
-                  'bg-brand-primary': first,
+                  'bg-brand-primary/90': first,
                   'bg-brand-primary/4 hover:bg-brand-primary-light/5': !first,
                 }"
               >
