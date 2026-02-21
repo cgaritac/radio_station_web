@@ -9,6 +9,7 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
         class="flex items-center gap-3"
         [class.mb-4]="size() === 'large'"
         [class.mb-2]="size() === 'medium'"
+        [class.mb-4]="size() === 'small'"
       >
         <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
         <h2
@@ -16,6 +17,7 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
           class="text-brand-primary/60 font-bold tracking-[0.3em] uppercase"
           [class.text-sm]="size() === 'large'"
           [class.text-xs]="size() === 'medium'"
+          [class.text-xs]="size() === 'small'"
         >
           {{ title() }}
         </h2>
@@ -27,6 +29,8 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
         [class.md:text-6xl]="size() === 'large'"
         [class.text-3xl]="size() === 'medium'"
         [class.md:text-5xl]="size() === 'medium'"
+        [class.text-2xl]="size() === 'small'"
+        [class.md:text-4xl]="size() === 'small'"
         [class.mb-6]="!centered()"
         [class.mb-0]="centered()"
         [innerHTML]="subtitle()"
@@ -40,5 +44,5 @@ export class SectionHeaderComponent {
   subtitle = input.required<string>();
   centered = input<boolean>(false);
   id = input<string>('');
-  size = input<'medium' | 'large'>('medium');
+  size = input<'small' | 'medium' | 'large'>('medium');
 }

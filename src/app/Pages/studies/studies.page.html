@@ -75,9 +75,9 @@
                 </p>
 
                 <div class="pt-2 flex justify-center md:justify-start">
-                  <a
-                    href="#"
-                    class="inline-flex items-center gap-3 text-brand-primary font-black text-xs uppercase tracking-widest hover:text-brand-secondary transition-all group/link"
+                  <button
+                    (click)="openItem(item)"
+                    class="inline-flex items-center gap-3 text-brand-primary font-black text-xs uppercase tracking-widest hover:text-brand-secondary transition-all group/link cursor-pointer"
                   >
                     <span
                       class="underline decoration-brand-secondary/30 underline-offset-4 group-hover/link:decoration-brand-secondary transition-all"
@@ -92,7 +92,7 @@
                         class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform"
                       ></svg-icon>
                     </div>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -119,4 +119,18 @@
       />
     </div>
   </section>
+
+  <!-- Detail Modal -->
+  @if (selectedItem(); as item) {
+    <app-detail-modal
+      [image]="item.image"
+      [title]="item.title | translate"
+      [category]="'STUDIES_PAGE.TAG' | translate"
+      [description]="item.excerpt | translate"
+      [details]="getModalDetails(item)"
+      [actionText]="'STUDIES_PAGE.READ_MORE' | translate"
+      actionIcon="book"
+      (close)="closeModal()"
+    ></app-detail-modal>
+  }
 </div>

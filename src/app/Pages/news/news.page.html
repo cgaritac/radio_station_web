@@ -54,16 +54,16 @@
                 {{ item.excerpt | translate }}
               </p>
 
-              <a
-                href="#"
-                class="inline-flex items-center gap-2 text-brand-primary font-black text-xs uppercase tracking-widest hover:text-brand-secondary transition-colors group/link"
+              <button
+                (click)="openItem(item)"
+                class="inline-flex items-center gap-2 text-brand-primary font-black text-xs uppercase tracking-widest hover:text-brand-secondary transition-colors group/link cursor-pointer"
               >
                 {{ 'NEWS_PAGE.READ_MORE' | translate }}
                 <svg-icon
                   name="arrow-right"
                   class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"
                 ></svg-icon>
-              </a>
+              </button>
             </div>
           </article>
         }
@@ -88,4 +88,18 @@
       />
     </div>
   </section>
+
+  <!-- Detail Modal -->
+  @if (selectedItem(); as item) {
+    <app-detail-modal
+      [image]="item.image"
+      [title]="item.title | translate"
+      [category]="'NEWS_PAGE.TAG' | translate"
+      [description]="item.excerpt | translate"
+      [details]="getModalDetails(item)"
+      [actionText]="'NEWS_PAGE.READ_MORE' | translate"
+      actionIcon="arrow-right"
+      (close)="closeModal()"
+    ></app-detail-modal>
+  }
 </div>

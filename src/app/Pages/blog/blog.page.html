@@ -58,7 +58,10 @@
               </p>
 
               <div class="pt-4">
-                <a href="#" class="inline-flex items-center gap-4 group/btn">
+                <button
+                  (click)="openPost(post)"
+                  class="inline-flex items-center gap-4 group/btn cursor-pointer"
+                >
                   <div
                     class="w-12 h-12 rounded-full bg-brand-secondary flex items-center justify-center text-brand-primary shadow-lg shadow-brand-secondary/20 group-hover/btn:scale-110 transition-all"
                   >
@@ -67,7 +70,7 @@
                   <span class="font-black text-xs uppercase tracking-widest text-brand-primary">
                     {{ 'BLOG_PAGE.READ_ARTICLE' | translate }}
                   </span>
-                </a>
+                </button>
               </div>
             </div>
           </article>
@@ -118,4 +121,18 @@
       </div>
     </div>
   </section>
+
+  <!-- Detail Modal -->
+  @if (selectedPost(); as post) {
+    <app-detail-modal
+      [image]="post.image"
+      [title]="post.title | translate"
+      [category]="'BLOG_PAGE.TAG' | translate"
+      [description]="post.excerpt | translate"
+      [details]="getModalDetails(post)"
+      [actionText]="'BLOG_PAGE.READ_ARTICLE' | translate"
+      actionIcon="arrow-right"
+      (close)="closeModal()"
+    ></app-detail-modal>
+  }
 </div>
