@@ -8,6 +8,7 @@ import { SchedulePage } from './Pages/schedule/schedule.page';
 import { StudiesPage } from './Pages/studies/studies.page';
 import { ContactPage } from './Pages/contact/contact.page';
 import { PrivacyPage } from './Pages/privacy/privacy.page';
+import { NotFoundPage } from './Pages/not-found/not-found.page';
 
 export const routes: Routes = [
   {
@@ -45,5 +46,13 @@ export const routes: Routes = [
   {
     path: 'privacy',
     component: PrivacyPage,
+  },
+  {
+    path: 'not-found',
+    component: NotFoundPage,
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found',
   },
 ];

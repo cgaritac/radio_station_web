@@ -1,0 +1,60 @@
+<div class="pt-20">
+  <section
+    class="min-h-[80vh] flex flex-col items-center justify-center px-4 py-24 text-center bg-brand-tertiary/95 animate-fade-in font-primary"
+  >
+    <!-- 404 Text -->
+    <div class="relative mb-12">
+      <h1 class="text-9xl md:text-[14rem] font-black text-brand-primary/5 select-none leading-none">
+        404
+      </h1>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <h2
+          class="text-6xl md:text-8xl font-black text-brand-primary tracking-tighter drop-shadow-sm"
+        >
+          404
+        </h2>
+      </div>
+    </div>
+
+    <!-- Content Card -->
+    <div class="max-w-2xl px-4 relative z-10">
+      <div class="w-16 h-1 bg-brand-secondary mx-auto mb-8 rounded-full"></div>
+
+      <h3 class="text-3xl md:text-5xl font-extrabold text-brand-primary mb-6 leading-tight">
+        {{ 'ERROR.NOT_FOUND.TITLE' | translate }}
+      </h3>
+
+      <p
+        class="text-lg md:text-xl text-brand-primary/70 mb-12 leading-relaxed font-secondary max-w-lg mx-auto"
+      >
+        {{ 'ERROR.NOT_FOUND.DESCRIPTION' | translate }}
+      </p>
+
+      <!-- Navigation Buttons -->
+      <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+        <app-action-button
+          [text]="'ERROR.NOT_FOUND.GO_HOME' | translate"
+          color="primary"
+          size="large"
+          (click)="router.navigate(['/'])"
+        ></app-action-button>
+
+        <app-action-button
+          [text]="'ERROR.NOT_FOUND.GO_BACK' | translate"
+          color="secondary"
+          size="large"
+          (click)="$event.preventDefault(); history.back()"
+        ></app-action-button>
+      </div>
+    </div>
+
+    <!-- Decorative Bottom Detail -->
+    <div class="mt-24 opacity-10">
+      <div class="flex gap-2">
+        <div class="w-2 h-2 rounded-full bg-brand-primary"></div>
+        <div class="w-12 h-2 rounded-full bg-brand-primary"></div>
+        <div class="w-2 h-2 rounded-full bg-brand-primary"></div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -292,5 +292,13 @@
     "SECTION6_TITLE": "6. Children's Privacy",
     "SECTION6_TEXT": "Our site is not directed to children under 13. We do not knowingly collect information from minors. If we detect that a minor has sent us personal data, we will proceed to delete it.",
     "LAST_UPDATE": "Last update"
+  },
+  "ERROR": {
+    "NOT_FOUND": {
+      "TITLE": "Oops! Page not found",
+      "DESCRIPTION": "It seems the frequency you're looking for doesn't exist or has been moved. Try tuning in again from the home page.",
+      "GO_HOME": "Back Home",
+      "GO_BACK": "Go Back"
+    }
   }
 }
