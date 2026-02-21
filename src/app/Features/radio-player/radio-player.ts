@@ -1,11 +1,12 @@
-import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, signal } from '@angular/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { TranslateModule } from '@ngx-translate/core';
 import { RadioService } from '../../Core/services/radio.service';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-radio-player',
-  imports: [SvgIconComponent, TranslateModule],
+  imports: [SvgIconComponent, TranslateModule, NgClass],
   standalone: true,
   templateUrl: './radio-player.html',
   styleUrl: './radio-player.css',
@@ -13,4 +14,9 @@ import { RadioService } from '../../Core/services/radio.service';
 })
 export class RadioPlayer {
     protected readonly radioService = inject(RadioService);
+    protected readonly isMobileExpanded = signal(false);
+
+    protected toggleMobileExpanded(): void {
+        this.isMobileExpanded.update(v => !v);
+    }
 }

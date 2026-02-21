@@ -37,7 +37,8 @@
   },
   "PLAYER": {
     "LIVE": "Live:",
-    "LIVE_STREAMING": "Live Streaming"
+    "LIVE_STREAMING": "Live Streaming",
+    "CONTROLS": "RADIO PLAYER"
   },
   "FOOTER": {
     "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",

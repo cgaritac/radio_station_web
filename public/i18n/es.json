@@ -37,7 +37,8 @@
   },
   "PLAYER": {
     "LIVE": "En Vivo:",
-    "LIVE_STREAMING": "Transmisión en Vivo"
+    "LIVE_STREAMING": "Transmisión en Vivo",
+    "CONTROLS": "REPRODUCTOR"
   },
   "FOOTER": {
     "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",
