@@ -30,6 +30,7 @@ export class IconRegistryService {
     { name: 'speaker', path: 'icons/speaker.svg' },
     { name: 'info', path: 'icons/info.svg' },
     { name: 'link', path: 'icons/link.svg' },
+    { name: 'upArrow', path: 'icons/upArrow.svg' },
   ];
 
   preloadIcons(): void {

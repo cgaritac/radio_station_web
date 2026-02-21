@@ -1,6 +1,62 @@
-<div class="w-full px-4 py-4 sm:py-0">
+<div class="w-full px-4 py-2 sm:py-3 transition-all duration-500 ease-in-out">
+  <!-- Mobile Collapsed View -->
   <div
-    class="grid grid-cols-1 sm:grid-cols-3 items-center max-w-desktop mx-auto w-full gap-6 sm:gap-0"
+    class="flex sm:hidden items-center justify-between w-full cursor-pointer"
+    (click)="toggleMobileExpanded()"
+  >
+    @if (!isMobileExpanded()) {
+      <div class="flex items-center gap-3 overflow-hidden flex-1 group">
+        <div
+          class="w-10 h-10 flex items-center justify-center bg-brand-primary/60 border border-brand-secondary/20 rounded-full shrink-0 group-hover:bg-brand-primary/70 transition-all"
+          (click)="$event.stopPropagation(); radioService.togglePlay()"
+        >
+          <svg-icon
+            [name]="radioService.isPlaying() ? 'stop' : 'play'"
+            class="w-7 h-7 text-brand-secondary"
+            [class.ml-0.5]="!radioService.isPlaying()"
+          ></svg-icon>
+        </div>
+
+        <div class="flex flex-col overflow-hidden leading-tight">
+          <p class="text-[10px] font-bold text-brand-secondary uppercase tracking-wider opacity-90">
+            {{ 'PLAYER.LIVE' | translate }}
+          </p>
+          <p class="text-sm font-medium text-white truncate max-w-[calc(100vw-150px)]">
+            {{ radioService.trackInfo().title || '...' }}
+          </p>
+        </div>
+      </div>
+    } @else {
+      <div class="flex-1">
+        <span class="text-sm font-bold text-brand-tertiary/80 uppercase tracking-wide">
+          {{ 'PLAYER.CONTROLS' | translate }}
+        </span>
+      </div>
+    }
+
+    <div class="flex items-center gap-2">
+      <button
+        class="w-10 h-10 flex items-center justify-center focus:outline-none hover:bg-white/5 rounded-full transition-all border-none outline-none cursor-pointer"
+        aria-label="Toggle Player"
+      >
+        <svg-icon
+          [name]="isMobileExpanded() ? 'downArrow' : 'upArrow'"
+          class="w-9 h-9 text-brand-secondary flex items-center justify-center"
+        ></svg-icon>
+      </button>
+    </div>
+  </div>
+
+  <!-- Full Player (Desktop or Mobile Expanded) -->
+  <div
+    class="grid grid-cols-1 sm:grid-cols-3 items-center max-w-desktop mx-auto w-full gap-6 sm:gap-0 transition-all duration-300"
+    [ngClass]="{
+      hidden: !isMobileExpanded(),
+      'sm:grid': true,
+      grid: isMobileExpanded(),
+      'mt-2 pt-2 pb-6': isMobileExpanded(),
+      'sm:mt-0 sm:pt-0 sm:border-0 sm:pb-0': true,
+    }"
   >
     <!-- Track Info -->
     <div
