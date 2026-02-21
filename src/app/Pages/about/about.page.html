@@ -3,15 +3,12 @@
   <section class="w-full py-20 md:py-32 bg-brand-tertiary/95">
     <div class="max-w-desktop mx-auto px-4">
       <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
-          <h1 class="text-brand-primary/60 text-sm font-bold tracking-[0.3em] uppercase">
-            {{ 'ABOUT_US.TITLE' | translate }}
-          </h1>
-        </div>
-        <h2 class="text-4xl md:text-6xl font-extrabold text-brand-primary tracking-tight">
-          {{ 'ABOUT_US.SUBTITLE' | translate }}
-        </h2>
+        <app-section-header
+          [title]="'ABOUT_US.TITLE' | translate"
+          [subtitle]="'ABOUT_US.SUBTITLE' | translate"
+          [centered]="true"
+          size="large"
+        ></app-section-header>
       </div>
     </div>
   </section>
@@ -39,15 +36,10 @@
         <!-- Content -->
         <div class="flex flex-col gap-8">
           <div>
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-8 h-1 bg-brand-secondary rounded-full"></span>
-              <span class="text-xs font-black uppercase tracking-widest text-brand-primary/40">
-                {{ 'ABOUT_US.TAG' | translate }}
-              </span>
-            </div>
-            <h3 class="text-3xl md:text-4xl font-extrabold text-brand-primary mb-6 leading-tight">
-              {{ 'ABOUT_US.HISTORY_TITLE' | translate }}
-            </h3>
+            <app-section-header
+              [title]="'ABOUT_US.TAG' | translate"
+              [subtitle]="'ABOUT_US.HISTORY_TITLE' | translate"
+            ></app-section-header>
             <p class="text-lg text-brand-primary/70 leading-relaxed">
               {{ 'ABOUT_US.HISTORY_TEXT' | translate }}
             </p>

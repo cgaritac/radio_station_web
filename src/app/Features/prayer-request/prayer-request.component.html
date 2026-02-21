@@ -15,17 +15,10 @@
       <!-- Form Side -->
       <div class="w-full lg:w-1/2">
         <!-- Header -->
-        <div class="text-left mb-10">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
-            <h2 class="text-brand-primary/60 text-xs font-bold tracking-[0.3em] uppercase">
-              {{ 'PRAYER_REQUEST.TITLE' | translate }}
-            </h2>
-          </div>
-          <h3 class="text-3xl md:text-5xl font-bold text-brand-primary tracking-tight">
-            {{ 'PRAYER_REQUEST.SUBTITLE' | translate }}
-          </h3>
-        </div>
+        <app-section-header
+          [title]="'PRAYER_REQUEST.TITLE' | translate"
+          [subtitle]="'PRAYER_REQUEST.SUBTITLE' | translate"
+        ></app-section-header>
 
         <div
           class="bg-brand-primary/4 rounded-[40px] p-8 md:p-12 shadow-sm border border-brand-primary/5"

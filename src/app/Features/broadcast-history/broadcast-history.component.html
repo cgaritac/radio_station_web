@@ -2,17 +2,10 @@
   <div class="max-w-desktop mx-auto px-4 md:px-8">
     <!-- Header -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-      <div class="flex flex-col gap-3">
-        <div class="flex items-center gap-3">
-          <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
-          <h2 class="text-base md:text-lg font-bold tracking-wide text-brand-primary/60 uppercase">
-            {{ 'HOME.HISTORY_TITLE' | translate }}
-          </h2>
-        </div>
-        <h3 class="text-3xl md:text-5xl font-bold text-brand-primary tracking-tight">
-          {{ 'HOME.HISTORY_SUBTITLE' | translate }}
-        </h3>
-      </div>
+      <app-section-header
+        [title]="'HOME.HISTORY_TITLE' | translate"
+        [subtitle]="'HOME.HISTORY_SUBTITLE' | translate"
+      ></app-section-header>
     </div>
 
     <!-- Timeline/List Content -->

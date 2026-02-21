@@ -6,6 +6,7 @@
   <div
     class="flex flex-col md:flex-row p-6 md:p-12 text-start w-full max-w-desktop mx-auto min-h-96 gap-6 md:gap-12 bg-brand-primary/4 rounded-[40px]"
   >
+    <!-- Image Side -->
     <div
       id="verse-image"
       class="w-full md:w-2/5 aspect-video md:aspect-auto rounded-3xl overflow-hidden shadow-2xl"
@@ -18,22 +19,14 @@
         fetchpriority="high"
       />
     </div>
+
+    <!-- Text Side -->
     <div class="w-full md:w-3/5 p-4 md:p-6 flex flex-col justify-center">
-      <div class="flex items-center gap-3 mb-2">
-        <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
-        <h2
-          id="verse-title"
-          class="text-base md:text-lg font-bold tracking-wide text-brand-primary/60 uppercase"
-        >
-          {{ 'HOME.VERSE_TITLE' | translate }}
-        </h2>
-      </div>
-      <p
-        id="verse-subtitle"
-        class="text-3xl md:text-5xl tracking-tight font-bold text-brand-primary mb-6"
-      >
-        {{ 'HOME.VERSE_SUBTITLE' | translate }}
-      </p>
+      <app-section-header
+        [title]="'HOME.VERSE_TITLE' | translate"
+        [subtitle]="'HOME.VERSE_SUBTITLE' | translate"
+        id="verse"
+      ></app-section-header>
       <div id="verse-container" class="mt-2 text-brand-primary">
         @if (verseData()) {
           <div class="flex flex-col gap-4">
