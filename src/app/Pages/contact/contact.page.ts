@@ -4,23 +4,31 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
+import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, TranslateModule, ReactiveFormsModule, SvgIconComponent, ActionButtonComponent],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    ReactiveFormsModule,
+    SvgIconComponent,
+    ActionButtonComponent,
+    SectionHeaderComponent,
+  ],
   templateUrl: './contact.page.html',
   styleUrl: './contact.page.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactPage {
   private readonly fb = inject(FormBuilder);
-  
+
   readonly contactForm: FormGroup = this.fb.group({
     name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
     subject: ['', [Validators.required]],
-    message: ['', [Validators.required, Validators.minLength(10)]]
+    message: ['', [Validators.required, Validators.minLength(10)]],
   });
 
   readonly isSubmitting = signal(false);

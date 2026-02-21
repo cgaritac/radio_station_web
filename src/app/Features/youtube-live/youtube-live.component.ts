@@ -3,13 +3,20 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
+import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 
 @Component({
   selector: 'app-youtube-live',
   standalone: true,
-  imports: [CommonModule, TranslateModule, SvgIconComponent, ActionButtonComponent],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    SvgIconComponent,
+    ActionButtonComponent,
+    SectionHeaderComponent,
+  ],
   templateUrl: './youtube-live.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class YouTubeLiveComponent {
   readonly youtubeUrl = signal('https://www.youtube.com/@radioornannandayure');

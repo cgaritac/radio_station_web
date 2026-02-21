@@ -1,15 +1,12 @@
 <section class="w-full py-16 md:py-24 bg-brand-tertiary/95">
   <div class="container mx-auto px-4 max-w-desktop">
-    <div class="text-center mb-12">
-      <div class="flex items-center justify-center gap-3 mb-4">
-        <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
-        <h2 class="text-brand-primary/60 text-xs font-bold tracking-[0.3em] uppercase">
-          {{ 'SPONSORS.TAG' | translate }}
-        </h2>
-      </div>
-      <h3 class="text-3xl md:text-4xl font-bold text-brand-primary tracking-tight">
-        {{ 'SPONSORS.TITLE' | translate }}
-      </h3>
+    <!-- Header -->
+    <div class="mb-12">
+      <app-section-header
+        [title]="'SPONSORS.TAG' | translate"
+        [subtitle]="'SPONSORS.TITLE' | translate"
+        [centered]="true"
+      ></app-section-header>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">

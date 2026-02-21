@@ -3,15 +3,12 @@
   <section class="w-full py-20 md:py-32 bg-brand-tertiary/95">
     <div class="max-w-desktop mx-auto px-4">
       <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
-          <h1 class="text-brand-primary/60 text-sm font-bold tracking-[0.3em] uppercase">
-            {{ 'BLOG_PAGE.TITLE' | translate }}
-          </h1>
-        </div>
-        <h2 class="text-4xl md:text-6xl font-extrabold text-brand-primary tracking-tight">
-          {{ 'BLOG_PAGE.SUBTITLE' | translate }}
-        </h2>
+        <app-section-header
+          [title]="'BLOG_PAGE.TITLE' | translate"
+          [subtitle]="'BLOG_PAGE.SUBTITLE' | translate"
+          [centered]="true"
+          size="large"
+        ></app-section-header>
       </div>
     </div>
   </section>

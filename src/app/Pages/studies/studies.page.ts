@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { BannerComponent } from '../../Shared/components/banner/banner.component';
+import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 
 interface StudyItem {
   id: string;
@@ -16,10 +17,16 @@ interface StudyItem {
 @Component({
   selector: 'app-studies',
   standalone: true,
-  imports: [CommonModule, TranslateModule, SvgIconComponent, BannerComponent],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    SvgIconComponent,
+    BannerComponent,
+    SectionHeaderComponent,
+  ],
   templateUrl: './studies.page.html',
   styleUrl: './studies.page.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StudiesPage {
   studies = signal<StudyItem[]>([
@@ -28,24 +35,27 @@ export class StudiesPage {
       title: 'STUDIES_PAGE.ITEMS.ITEM_1.TITLE',
       series: 'STUDIES_PAGE.ITEMS.ITEM_1.SERIES',
       excerpt: 'STUDIES_PAGE.ITEMS.ITEM_1.EXCERPT',
-      image: 'https://images.unsplash.com/photo-1504052434467-813d1ef3933c?w=800&auto=format&fit=crop',
-      category: 'Nuevo Testamento'
+      image:
+        'https://images.unsplash.com/photo-1504052434467-813d1ef3933c?w=800&auto=format&fit=crop',
+      category: 'Nuevo Testamento',
     },
     {
       id: '2',
       title: 'STUDIES_PAGE.ITEMS.ITEM_2.TITLE',
       series: 'STUDIES_PAGE.ITEMS.ITEM_2.SERIES',
       excerpt: 'STUDIES_PAGE.ITEMS.ITEM_2.EXCERPT',
-      image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&auto=format&fit=crop',
-      category: 'Vida Cristiana'
+      image:
+        'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&auto=format&fit=crop',
+      category: 'Vida Cristiana',
     },
     {
       id: '3',
       title: 'STUDIES_PAGE.ITEMS.ITEM_3.TITLE',
       series: 'STUDIES_PAGE.ITEMS.ITEM_3.SERIES',
       excerpt: 'STUDIES_PAGE.ITEMS.ITEM_3.EXCERPT',
-      image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop',
-      category: 'Teología'
-    }
+      image:
+        'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop',
+      category: 'Teología',
+    },
   ]);
 }

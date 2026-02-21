@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 
 interface Sponsor {
   name: string;
@@ -11,9 +12,9 @@ interface Sponsor {
 @Component({
   selector: 'app-sponsors',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, SectionHeaderComponent],
   templateUrl: './sponsors.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SponsorsComponent {
   readonly sponsors = signal<Sponsor[]>([

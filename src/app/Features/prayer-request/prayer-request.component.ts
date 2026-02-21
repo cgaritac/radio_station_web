@@ -3,20 +3,27 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
+import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 
 @Component({
   selector: 'app-prayer-request',
   standalone: true,
-  imports: [CommonModule, TranslateModule, ReactiveFormsModule, ActionButtonComponent],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    ReactiveFormsModule,
+    ActionButtonComponent,
+    SectionHeaderComponent,
+  ],
   templateUrl: './prayer-request.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PrayerRequestComponent {
   private readonly fb = inject(FormBuilder);
-  
+
   readonly prayerForm: FormGroup = this.fb.group({
     name: [''],
-    request: ['', [Validators.required, Validators.minLength(10)]]
+    request: ['', [Validators.required, Validators.minLength(10)]],
   });
 
   readonly isSubmitting = signal(false);

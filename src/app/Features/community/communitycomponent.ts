@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
+import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 
 export interface Activity {
   id: string;
@@ -16,13 +17,19 @@ export interface Activity {
 @Component({
   selector: 'app-community',
   standalone: true,
-  imports: [CommonModule, TranslateModule, SvgIconComponent, ActionButtonComponent],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    SvgIconComponent,
+    ActionButtonComponent,
+    SectionHeaderComponent,
+  ],
   templateUrl: './community.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CommunityComponent {
   private translate = inject(TranslateService);
-  
+
   activities: Activity[] = [
     {
       id: 'ITEM_1',
@@ -30,7 +37,7 @@ export class CommunityComponent {
       date: 'COMMUNITY.ACTIVITIES.ITEM_1.DATE',
       location: 'COMMUNITY.ACTIVITIES.ITEM_1.LOCATION',
       description: 'COMMUNITY.ACTIVITIES.ITEM_1.DESCRIPTION',
-      image: 'images/community-people.jpg'
+      image: 'images/community-people.jpg',
     },
     {
       id: 'ITEM_2',
@@ -38,7 +45,7 @@ export class CommunityComponent {
       date: 'COMMUNITY.ACTIVITIES.ITEM_2.DATE',
       location: 'COMMUNITY.ACTIVITIES.ITEM_2.LOCATION',
       description: 'COMMUNITY.ACTIVITIES.ITEM_2.DESCRIPTION',
-      image: 'images/community-microphone.jpg'
+      image: 'images/community-microphone.jpg',
     },
     {
       id: 'ITEM_3',
@@ -46,8 +53,8 @@ export class CommunityComponent {
       date: 'COMMUNITY.ACTIVITIES.ITEM_3.DATE',
       location: 'COMMUNITY.ACTIVITIES.ITEM_3.LOCATION',
       description: 'COMMUNITY.ACTIVITIES.ITEM_3.DESCRIPTION',
-      image: 'images/community-helping.jpg'
-    }
+      image: 'images/community-helping.jpg',
+    },
   ];
 
   selectedActivity = signal<Activity | null>(null);
