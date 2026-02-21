@@ -50,7 +50,24 @@
   "NEWS": {
     "TITLE": "COMMUNITY",
     "SUBTITLE": "Upcoming Activities",
-    "MORE_INFO": "MORE INFORMATION"
+    "MORE_INFO": "MORE INFORMATION",
+    "ACTIVITIES": {
+      "ITEM_1": {
+        "TITLE": "United Prayer Service",
+        "DATE": "OCTOBER 15, 2026",
+        "LOCATION": "Central Plaza, Nandayure"
+      },
+      "ITEM_2": {
+        "TITLE": "Youth Meeting: \"Active Faith\"",
+        "DATE": "OCTOBER 22, 2026",
+        "LOCATION": "Municipal Auditorium"
+      },
+      "ITEM_3": {
+        "TITLE": "Social Outreach Campaign",
+        "DATE": "NOVEMBER 02, 2026",
+        "LOCATION": "La Esperanza Neighborhood"
+      }
+    }
   },
   "PLAYER": {
     "LIVE": "Live:",

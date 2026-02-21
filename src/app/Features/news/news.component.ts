@@ -14,21 +14,24 @@ import { ActionButtonComponent } from '../../Shared/components/action-button/act
 export class NewsComponent {
   activities = [
     {
-      title: 'Culto Unido de Oración',
-      date: '15 DE OCTUBRE, 2026',
-      location: 'Plaza Central, Nandayure',
+      id: 'ITEM_1',
+      title: 'NEWS.ACTIVITIES.ITEM_1.TITLE',
+      date: 'NEWS.ACTIVITIES.ITEM_1.DATE',
+      location: 'NEWS.ACTIVITIES.ITEM_1.LOCATION',
       image: 'images/news-people.jpg'
     },
     {
-      title: 'Reunión de Jóvenes: "Fe Activa"',
-      date: '22 DE OCTUBRE, 2026',
-      location: 'Auditorio Municipal',
+      id: 'ITEM_2',
+      title: 'NEWS.ACTIVITIES.ITEM_2.TITLE',
+      date: 'NEWS.ACTIVITIES.ITEM_2.DATE',
+      location: 'NEWS.ACTIVITIES.ITEM_2.LOCATION',
       image: 'images/news-microphone.jpg'
     },
     {
-      title: 'Campaña de Ayuda Social',
-      date: '02 DE NOVIEMBRE, 2026',
-      location: 'Barrio La Esperanza',
+      id: 'ITEM_3',
+      title: 'NEWS.ACTIVITIES.ITEM_3.TITLE',
+      date: 'NEWS.ACTIVITIES.ITEM_3.DATE',
+      location: 'NEWS.ACTIVITIES.ITEM_3.LOCATION',
       image: 'images/news-helping.jpg'
     }
   ];

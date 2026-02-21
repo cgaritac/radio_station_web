@@ -50,7 +50,24 @@
   "NEWS": {
     "TITLE": "COMUNIDAD",
     "SUBTITLE": "Próximas Actividades",
-    "MORE_INFO": "MÁS INFORMACIÓN"
+    "MORE_INFO": "MÁS INFORMACIÓN",
+    "ACTIVITIES": {
+      "ITEM_1": {
+        "TITLE": "Culto Unido de Oración",
+        "DATE": "15 DE OCTUBRE, 2026",
+        "LOCATION": "Plaza Central, Nandayure"
+      },
+      "ITEM_2": {
+        "TITLE": "Reunión de Jóvenes: \"Fe Activa\"",
+        "DATE": "22 DE OCTUBRE, 2026",
+        "LOCATION": "Auditorio Municipal"
+      },
+      "ITEM_3": {
+        "TITLE": "Campaña de Ayuda Social",
+        "DATE": "02 DE NOVIEMBRE, 2026",
+        "LOCATION": "Barrio La Esperanza"
+      }
+    }
   },
   "PLAYER": {
     "LIVE": "En Vivo:",
