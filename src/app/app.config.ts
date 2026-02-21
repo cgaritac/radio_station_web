@@ -1,4 +1,9 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideAppInitializer, inject } from '@angular/core';
+import {
+  ApplicationConfig,
+  provideBrowserGlobalErrorListeners,
+  provideAppInitializer,
+  inject,
+} from '@angular/core';
 import { IconRegistryService } from './Core/services/icon-registry.service';
 import { provideHttpClient, withJsonpSupport } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
@@ -9,9 +14,18 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { routes } from './app.routes';
 
 const getInitialLang = () => {
-  if (typeof window !== 'undefined' && window.navigator) {
-    const browserLang = window.navigator.language.split('-')[0];
-    return ['en', 'es'].includes(browserLang) ? browserLang : 'es';
+  if (typeof window !== 'undefined') {
+    // 1. Check LocalStorage
+    const savedLang = localStorage.getItem('user_lang');
+    if (savedLang && ['en', 'es'].includes(savedLang)) {
+      return savedLang;
+    }
+
+    // 2. Check Browser Language
+    if (window.navigator) {
+      const browserLang = window.navigator.language.split('-')[0];
+      return ['en', 'es'].includes(browserLang) ? browserLang : 'es';
+    }
   }
   return 'es';
 };
@@ -31,16 +45,16 @@ export const appConfig: ApplicationConfig = {
       const iconService = inject(IconRegistryService);
       const translate = inject(TranslateService);
       const initialLang = getInitialLang();
-      
+
       return Promise.all([
         iconService.preloadIcons(),
         new Promise((resolve) => {
           translate.use(initialLang).subscribe({
             next: () => resolve(true),
-            error: () => resolve(false)
+            error: () => resolve(false),
           });
-        })
+        }),
       ]);
-    })
-  ]
+    }),
+  ],
 };

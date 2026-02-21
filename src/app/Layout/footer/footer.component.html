@@ -198,6 +198,18 @@
   <div
     class="max-w-desktop px-4 mx-auto mt-12 pt-8 border-t border-brand-tertiary/5 text-center text-xs tracking-wide"
   >
-    <p>© {{ currentYear }} {{ radioService.radioName() }}. {{ 'FOOTER.RIGHTS' | translate }}</p>
+    <p class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-0">
+      <span
+        >© {{ currentYear }} {{ radioService.radioName() }}. {{ 'FOOTER.RIGHTS' | translate }}</span
+      >
+      <span class="hidden md:inline mx-2">•</span>
+      <a routerLink="/terms" class="hover:text-brand-quaternary transition-colors">{{
+        'TERMS.TITLE' | translate
+      }}</a>
+      <span class="hidden md:inline mx-2">•</span>
+      <a routerLink="/privacy" class="hover:text-brand-quaternary transition-colors">{{
+        'PRIVACY.TITLE' | translate
+      }}</a>
+    </p>
   </div>
 </footer>

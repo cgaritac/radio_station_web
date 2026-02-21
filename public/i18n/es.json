@@ -252,5 +252,45 @@
         "EXCERPT": "Preparándonos para la batalla espiritual con las herramientas que Dios nos ha dado."
       }
     }
+  },
+  "TERMS": {
+    "TITLE": "TÉRMINOS DE USO",
+    "SUBTITLE": "Reglas y condiciones de nuestra plataforma",
+    "SECTION1_TITLE": "1. Aceptación de los Términos",
+    "SECTION1_TEXT": "Al acceder y utilizar este sitio web, usted acepta cumplir con estos términos y condiciones. Si no está de acuerdo con alguna parte de estos términos, le pedimos amablemente que no utilice nuestra plataforma.",
+    "SECTION2_TITLE": "2. Uso de la Señal y Contenido",
+    "SECTION2_TEXT": "Nuestra transmisión de radio y el contenido publicado (artículos, noticias, grabaciones) son para uso personal y no comercial. Queda prohibida la retransmisión no autorizada o el uso comercial de nuestro contenido sin permiso previo por escrito.",
+    "SECTION3_TITLE": "3. Limitación de Responsabilidad",
+    "SECTION3_TEXT": "Hacemos nuestro mejor esfuerzo para mantener la señal activa y la información actualizada. Sin embargo, no nos hacemos responsables por interrupciones técnicas ajenas a nuestro control o por cualquier decisión tomada basada en el contenido de nuestra programación.",
+    "SECTION4_TITLE": "4. Modificaciones",
+    "SECTION4_TEXT": "Nos reservamos el derecho de modificar estos términos en cualquier momento. El uso continuado del sitio tras dichos cambios constituye la aceptación de los nuevos términos.",
+    "SECTION5_TITLE": "5. Servicios de Terceros (Streaming)",
+    "SECTION5_TEXT": "Nuestra señal de audio puede provenir de servidores externos. El sitio facilita el acceso a estos contenidos, pero no somos responsables de la legalidad o exactitud de las transmisiones externas.",
+    "SECTION6_TITLE": "6. Propiedad Intelectual y DMCA",
+    "SECTION6_TEXT": "Respetamos los derechos de autor. Si considera que algún contenido en este sitio infringe sus derechos, por favor contáctenos a info@XXXXX.com con los detalles para proceder a su revisión o retiro.",
+    "SECTION7_TITLE": "7. Contenido Enviado por el Usuario",
+    "SECTION7_TEXT": "Al enviarnos peticiones de oración o mensajes, usted nos otorga permiso para mencionarlos o leerlos durante nuestra programación radial, a menos que especifique lo contrario.",
+    "LAST_UPDATE": "Última actualización"
+  },
+  "PRIVACY": {
+    "TITLE": "POLÍTICA DE PRIVACIDAD",
+    "SUBTITLE": "Cómo protegemos tu información",
+    "SECTION1_TITLE": "1. Información que Recolectamos",
+    "SECTION1_TEXT": "Aunque no solicitamos registro de usuario ni login, recolectamos información básica de las siguientes maneras:",
+    "DATA_LIST_ITEM1": "Datos de contacto: Nombre y mensaje enviados voluntariamente a través de nuestro formulario de Peticiones de Oración o Contacto.",
+    "DATA_LIST_ITEM2": "Uso Técnico: Almacenamos datos técnicos en su navegador (Local Storage) para mejorar su experiencia, como el versículo bíblico del día o preferencias de audio.",
+    "DATA_LIST_ITEM3": "Cookies y Navegación: Información sobre cómo interactúa con nuestro sitio (páginas visitadas, tiempo de permanencia).",
+    "SECTION2_TITLE": "2. Uso de la Información",
+    "SECTION2_TEXT": "La información que recolectamos se utiliza exclusivamente para responder a sus solicitudes de oración, mejorar la estabilidad de la plataforma y entender mejor los intereses de nuestra audiencia.",
+    "SECTION3_TITLE": "3. Herramientas de Terceros",
+    "SECTION3_TEXT": "Utilizamos servicios externos para mejorar nuestra oferta:",
+    "SECTION3_ANALYTICS": "Google Analytics: Utilizamos esta herramienta para analizar el tráfico. Google recolecta datos de navegación de forma anónima de acuerdo con sus propias políticas de privacidad.",
+    "SECTION4_TITLE": "4. Sus Derechos",
+    "SECTION4_TEXT": "Usted tiene derecho a solicitar la eliminación de los mensajes enviados a través de nuestros formularios en cualquier momento contactándonos por los medios oficiales listados en el pie de página.",
+    "SECTION5_TITLE": "5. Borrado de Datos (Data Erasure)",
+    "SECTION5_TEXT": "Cualquier usuario que haya enviado información personal a través de nuestros formularios puede solicitar el borrado total de dicha información de nuestros registros enviando un correo a info@XXXXX.com.",
+    "SECTION6_TITLE": "6. Privacidad de Menores",
+    "SECTION6_TEXT": "Nuestro sitio no está dirigido a menores de 13 años. No recolectamos intencionalmente información de menores. Si detectamos que un menor nos ha enviado datos personales, procederemos a eliminarlos.",
+    "LAST_UPDATE": "Última actualización"
   }
 }

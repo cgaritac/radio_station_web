@@ -1,7 +1,15 @@
-import { Component, inject, HostListener, ElementRef, signal, effect, OnDestroy } from '@angular/core';
+import {
+  Component,
+  inject,
+  HostListener,
+  ElementRef,
+  signal,
+  effect,
+  OnDestroy,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { SvgIconComponent } from "angular-svg-icon";
+import { SvgIconComponent } from 'angular-svg-icon';
 
 @Component({
   selector: 'app-language-switcher',
@@ -14,8 +22,8 @@ import { SvgIconComponent } from "angular-svg-icon";
         class="flex items-center gap-2 px-3 py-1.5 rounded-2xl bg-brand-tertiary/10 hover:bg-brand-tertiary/10 backdrop-blur-md border border-brand-tertiary/10 transition-all text-sm font-medium text-brand-tertiary cursor-pointer"
       >
         <span class="uppercase">{{ currentLang }}</span>
-        <svg-icon 
-          name="downArrow" 
+        <svg-icon
+          name="downArrow"
           class="w-4 h-4 transition-transform duration-300"
           [class.rotate-180]="isOpen()"
         />
@@ -45,7 +53,7 @@ import { SvgIconComponent } from "angular-svg-icon";
         }
       </div>
     </div>
-  `
+  `,
 })
 export class LanguageSwitcherComponent implements OnDestroy {
   private translate = inject(TranslateService);
@@ -87,6 +95,7 @@ export class LanguageSwitcherComponent implements OnDestroy {
 
   switchLang(lang: string) {
     this.translate.use(lang);
+    localStorage.setItem('user_lang', lang);
     this.isOpen.set(false);
   }
 }
