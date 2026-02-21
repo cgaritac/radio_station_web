@@ -1,0 +1,68 @@
+<!-- Verse of the day -->
+<section
+  id="verse-section"
+  class="flex items-center justify-center w-full bg-brand-tertiary/95 pt-12 md:pt-24 md:pb-8"
+>
+  <div
+    class="flex flex-col md:flex-row p-6 md:p-12 text-start w-full max-w-desktop mx-auto min-h-96 gap-6 md:gap-12 bg-brand-primary/4 rounded-[40px]"
+  >
+    <div
+      id="verse-image"
+      class="w-full md:w-2/5 aspect-video md:aspect-auto rounded-3xl overflow-hidden shadow-2xl"
+    >
+      <img
+        src="images/home_bible.png"
+        alt="{{ 'HOME.VERSE_TITLE' | translate }}"
+        class="w-full h-full object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="w-full md:w-3/5 p-4 md:p-6 flex flex-col justify-center">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
+        <h2
+          id="verse-title"
+          class="text-base md:text-lg font-bold tracking-wide text-brand-primary/60 uppercase"
+        >
+          {{ 'HOME.VERSE_TITLE' | translate }}
+        </h2>
+      </div>
+      <p
+        id="verse-subtitle"
+        class="text-3xl md:text-5xl tracking-tight font-bold text-brand-primary mb-6"
+      >
+        {{ 'HOME.VERSE_SUBTITLE' | translate }}
+      </p>
+      <div id="verse-container" class="mt-2 text-brand-primary">
+        @if (verseData()) {
+          <div class="flex flex-col gap-4">
+            <p
+              class="text-brand-primary-light/60 text-xl md:text-2xl font-medium leading-tight italic"
+              [innerHTML]="verseData().text"
+            ></p>
+            <p class="text-brand-primary-light/70 font-bold text-base md:text-lg">
+              {{ verseData().display_ref }}
+            </p>
+            <footer class="mt-4 text-[10px] text-brand-sextary/80 text-right">
+              {{ 'HOME.POWERED_BY' | translate }}
+              <a
+                href="https://www.biblegateway.com"
+                target="_blank"
+                class="font-bold text-brand-primary/60 hover:text-brand-secondary transition-colors inline-flex items-center gap-1"
+                >{{ 'HOME.BIBLE_GATEWAY' | translate }}
+                <svg-icon name="link" class="w-2.5 h-2.5"></svg-icon>
+              </a>
+            </footer>
+          </div>
+        } @else {
+          <div class="h-32 flex items-center justify-center">
+            <div
+              class="w-8 h-8 border-4 border-brand-secondary border-t-transparent rounded-full animate-spin"
+            ></div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

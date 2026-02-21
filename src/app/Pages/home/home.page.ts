@@ -1,46 +1,29 @@
-import { Component, ChangeDetectionStrategy, inject, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import { HeroComponent } from '../../Features/hero/hero.component';
 import { RadioService } from '../../Core/services/radio.service';
-import { BibleService } from '../../Core/services/bible.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { BannerComponent } from '../../Shared/components/banner/banner.component';
-import { ScheduleComponent } from '../../Features/schedule/schedule.component';
-import { SvgIconComponent } from 'angular-svg-icon';
+import { BroadcastHistoryComponent } from '../../Features/broadcast-history/broadcast-history.component';
+import { VerseComponent } from '../../Features/verse/verse.component';
+import { NewsComponent } from '../../Features/news/news.component';
+import { TestimonialsComponent } from '../../Features/testimonials/testimonials.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, TranslateModule, BannerComponent, ScheduleComponent, SvgIconComponent],
+  imports: [
+    HeroComponent,
+    TranslateModule,
+    BannerComponent,
+    BroadcastHistoryComponent,
+    VerseComponent,
+    NewsComponent,
+    TestimonialsComponent
+  ],
   templateUrl: './home.page.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomePage implements OnInit {
+export class HomePage {
   protected readonly radioService = inject(RadioService);
   protected readonly translate = inject(TranslateService);
-  private readonly bibleService = inject(BibleService);
-  private readonly cdr = inject(ChangeDetectorRef);
-
-  verseData: any;
-
-  ngOnInit() {
-    this.loadVerse();
-    this.translate.onLangChange.subscribe(() => {
-      this.loadVerse();
-    });
-  }
-
-  private loadVerse() {
-    const lang = this.translate.getCurrentLang();
-    const version = lang === 'es' ? 'rvr1960' : 'NIV';
-
-    this.bibleService.getVerse(version).subscribe({
-      next: (votd) => {
-        this.verseData = votd;
-        this.cdr.markForCheck();
-      },
-      error: (err) => {
-        console.error('Error fetching verse:', err);
-      }
-    });
-  }
 }

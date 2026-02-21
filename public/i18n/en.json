@@ -1,12 +1,10 @@
 {
-  "NAV": {
-    "HOME": "Home",
-    "SCHEDULE": "Schedule",
-    "PODCASTS": "Studies",
-    "NEWS": "News",
-    "BLOG": "Blog",
-    "ABOUT": "About Us",
-    "CONTACT": "Contact"
+  "BANNER": {
+    "ADVERTISE_TITLE": "Would you like to advertise your activity?",
+    "ADVERTISE_SUBTITLE": "We help local churches and ministries spread their events and evangelistic campaigns across our entire region.",
+    "ADVERTISE_TOOLTIP": "Advertise",
+    "CONTACT_NOW": "Contact now",
+    "DOWNLOAD_PRICES": "Download Information"
   },
   "HERO": {
     "TEXT1": "TUNE IN TO THE",
@@ -33,7 +31,43 @@
     "VERSE_SUBTITLE": "Feed your Spirit",
     "TESTIMONIALS_TITLE": "Testimonials",
     "POWERED_BY": "Powered by",
-    "BIBLE_GATEWAY": "BibleGateway"
+    "BIBLE_GATEWAY": "BibleGateway",
+    "RETRY": "Retry"
+  },
+  "LANG": {
+    "ES": "Spanish",
+    "EN": "English"
+  },
+  "NAV": {
+    "HOME": "Home",
+    "SCHEDULE": "Schedule",
+    "PODCASTS": "Studies",
+    "NEWS": "News",
+    "BLOG": "Blog",
+    "ABOUT": "About Us",
+    "CONTACT": "Contact"
+  },
+  "NEWS": {
+    "TITLE": "COMMUNITY",
+    "SUBTITLE": "Upcoming Activities",
+    "MORE_INFO": "MORE INFORMATION",
+    "ACTIVITIES": {
+      "ITEM_1": {
+        "TITLE": "United Prayer Service",
+        "DATE": "OCTOBER 15, 2026",
+        "LOCATION": "Central Plaza, Nandayure"
+      },
+      "ITEM_2": {
+        "TITLE": "Youth Meeting: \"Active Faith\"",
+        "DATE": "OCTOBER 22, 2026",
+        "LOCATION": "Municipal Auditorium"
+      },
+      "ITEM_3": {
+        "TITLE": "Social Outreach Campaign",
+        "DATE": "NOVEMBER 02, 2026",
+        "LOCATION": "La Esperanza Neighborhood"
+      }
+    }
   },
   "PLAYER": {
     "LIVE": "Live:",
@@ -49,16 +83,5 @@
     "ADDRESS": "Av. XXX 123, Ciudad de XXXXX",
     "EMAIL": "info@XXXXX.com",
     "PHONE": "+506 12345678"
-  },
-  "LANG": {
-    "ES": "Spanish",
-    "EN": "English"
-  },
-  "BANNER": {
-    "ADVERTISE_TITLE": "Would you like to advertise your activity?",
-    "ADVERTISE_SUBTITLE": "We help local churches and ministries spread their events and evangelistic campaigns across our entire region.",
-    "ADVERTISE_TOOLTIP": "Advertise",
-    "CONTACT_NOW": "Contact now",
-    "DOWNLOAD_PRICES": "Download Information"
   }
 }

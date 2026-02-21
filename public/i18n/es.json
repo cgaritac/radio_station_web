@@ -1,12 +1,10 @@
 {
-  "NAV": {
-    "HOME": "Inicio",
-    "SCHEDULE": "Horario",
-    "PODCASTS": "Estudios",
-    "NEWS": "Noticias",
-    "BLOG": "Blog",
-    "ABOUT": "Nosotros",
-    "CONTACT": "Contacto"
+  "BANNER": {
+    "ADVERTISE_TITLE": "¿Te gustaría anunciar tu actividad?",
+    "ADVERTISE_SUBTITLE": "Ayudamos a las iglesias locales y ministerios a difundir sus eventos y campañas evangelísticas en toda nuestra región.",
+    "ADVERTISE_TOOLTIP": "Anunciate",
+    "CONTACT_NOW": "Contactar ahora",
+    "DOWNLOAD_PRICES": "Descargar información"
   },
   "HERO": {
     "TEXT1": "SINTONIZA LA",
@@ -33,7 +31,43 @@
     "VERSE_SUBTITLE": "Alimenta tu Espíritu",
     "TESTIMONIALS_TITLE": "Testimonios",
     "POWERED_BY": "Proporcionado por",
-    "BIBLE_GATEWAY": "BibleGateway"
+    "BIBLE_GATEWAY": "BibleGateway",
+    "RETRY": "Reintentar"
+  },
+  "LANG": {
+    "ES": "Español",
+    "EN": "Inglés"
+  },
+  "NAV": {
+    "HOME": "Inicio",
+    "SCHEDULE": "Horario",
+    "PODCASTS": "Estudios",
+    "NEWS": "Noticias",
+    "BLOG": "Blog",
+    "ABOUT": "Nosotros",
+    "CONTACT": "Contacto"
+  },
+  "NEWS": {
+    "TITLE": "COMUNIDAD",
+    "SUBTITLE": "Próximas Actividades",
+    "MORE_INFO": "MÁS INFORMACIÓN",
+    "ACTIVITIES": {
+      "ITEM_1": {
+        "TITLE": "Culto Unido de Oración",
+        "DATE": "15 DE OCTUBRE, 2026",
+        "LOCATION": "Plaza Central, Nandayure"
+      },
+      "ITEM_2": {
+        "TITLE": "Reunión de Jóvenes: \"Fe Activa\"",
+        "DATE": "22 DE OCTUBRE, 2026",
+        "LOCATION": "Auditorio Municipal"
+      },
+      "ITEM_3": {
+        "TITLE": "Campaña de Ayuda Social",
+        "DATE": "02 DE NOVIEMBRE, 2026",
+        "LOCATION": "Barrio La Esperanza"
+      }
+    }
   },
   "PLAYER": {
     "LIVE": "En Vivo:",
@@ -49,16 +83,5 @@
     "ADDRESS": "Av. XXX 123, Ciudad de XXXXX",
     "EMAIL": "info@XXXXX.com",
     "PHONE": "+506 12345678"
-  },
-  "LANG": {
-    "ES": "Español",
-    "EN": "Inglés"
-  },
-  "BANNER": {
-    "ADVERTISE_TITLE": "¿Te gustaría anunciar tu actividad?",
-    "ADVERTISE_SUBTITLE": "Ayudamos a las iglesias locales y ministerios a difundir sus eventos y campañas evangelísticas en toda nuestra región.",
-    "ADVERTISE_TOOLTIP": "Anunciate",
-    "CONTACT_NOW": "Contactar ahora",
-    "DOWNLOAD_PRICES": "Descargar información"
   }
 }
