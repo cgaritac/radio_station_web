@@ -5,7 +5,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { BannerComponent } from '../../Shared/components/banner/banner.component';
 import { BroadcastHistoryComponent } from '../../Features/broadcast-history/broadcast-history.component';
 import { VerseComponent } from '../../Features/verse/verse.component';
-import { NewsComponent } from '../../Features/news/news.component';
+import { CommunityComponent } from '../../Features/community/communitycomponent';
 import { TestimonialsComponent } from '../../Features/testimonials/testimonials.component';
 
 @Component({
@@ -17,7 +17,7 @@ import { TestimonialsComponent } from '../../Features/testimonials/testimonials.
     BannerComponent,
     BroadcastHistoryComponent,
     VerseComponent,
-    NewsComponent,
+    CommunityComponent,
     TestimonialsComponent
   ],
   templateUrl: './home.page.html',
