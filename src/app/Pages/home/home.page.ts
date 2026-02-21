@@ -6,7 +6,9 @@ import { BannerComponent } from '../../Shared/components/banner/banner.component
 import { BroadcastHistoryComponent } from '../../Features/broadcast-history/broadcast-history.component';
 import { VerseComponent } from '../../Features/verse/verse.component';
 import { CommunityComponent } from '../../Features/community/communitycomponent';
-import { TestimonialsComponent } from '../../Features/testimonials/testimonials.component';
+import { YouTubeLiveComponent } from '../../Features/youtube-live/youtube-live.component';
+import { PrayerRequestComponent } from '../../Features/prayer-request/prayer-request.component';
+import { SponsorsComponent } from '../../Features/sponsors/sponsors.component';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +20,9 @@ import { TestimonialsComponent } from '../../Features/testimonials/testimonials.
     BroadcastHistoryComponent,
     VerseComponent,
     CommunityComponent,
-    TestimonialsComponent
+    YouTubeLiveComponent,
+    PrayerRequestComponent,
+    SponsorsComponent
   ],
   templateUrl: './home.page.html',
   changeDetection: ChangeDetectionStrategy.OnPush

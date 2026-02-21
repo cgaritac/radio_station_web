@@ -66,6 +66,7 @@
                 size="medium"
                 class="w-full"
                 style="display: block"
+                (click)="openActivity(activity)"
               >
               </app-action-button>
             </div>
@@ -74,4 +75,94 @@
       }
     </div>
   </div>
+
+  <!-- Activity Modal -->
+  @if (selectedActivity(); as activity) {
+    <div
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6"
+      (click)="closeModal()"
+    >
+      <!-- Backdrop -->
+      <div class="absolute inset-0 bg-brand-primary/40 backdrop-blur-xl animate-fade-in"></div>
+
+      <!-- Modal Content -->
+      <div
+        class="relative bg-brand-tertiary w-full max-w-2xl rounded-4xl overflow-hidden shadow-2xl shadow-brand-primary/20 animate-scale-in"
+        (click)="$event.stopPropagation()"
+      >
+        <!-- Close Button -->
+        <button
+          (click)="closeModal()"
+          class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-brand-primary transition-all cursor-pointer"
+        >
+          <svg-icon name="close" class="w-5 h-5"></svg-icon>
+        </button>
+
+        <div class="flex flex-col md:flex-row h-full">
+          <!-- Image Section -->
+          <div class="md:w-5/12 aspect-square md:aspect-auto relative group">
+            <img
+              [src]="activity.image"
+              [alt]="activity.title | translate"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-linear-to-t from-brand-primary/40 to-transparent"></div>
+          </div>
+
+          <!-- Info Section -->
+          <div class="md:w-7/12 p-8 md:p-10 flex flex-col">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-1 bg-brand-secondary rounded-full"></span>
+              <span class="text-xs font-black uppercase tracking-widest text-brand-primary/40">
+                {{ 'COMMUNITY.MODAL.TITLE' | translate }}
+              </span>
+            </div>
+
+            <h3 class="text-2xl md:text-3xl font-extrabold text-brand-primary mb-4 leading-tight">
+              {{ activity.title | translate }}
+            </h3>
+
+            <!-- Details -->
+            <div class="space-y-3 mb-8">
+              <div class="flex items-center gap-3 text-brand-primary/60">
+                <div class="bg-brand-secondary/10 p-1.5 rounded-lg text-brand-secondary">
+                  <svg-icon name="clock" class="w-4 h-4"></svg-icon>
+                </div>
+                <span class="text-sm font-bold uppercase tracking-wide">{{
+                  activity.date | translate
+                }}</span>
+              </div>
+              <div class="flex items-start gap-3 text-brand-primary/60">
+                <div class="bg-brand-secondary/10 p-1.5 rounded-lg text-brand-secondary">
+                  <svg-icon name="location" class="w-4 h-4"></svg-icon>
+                </div>
+                <span class="text-sm font-semibold leading-relaxed">{{
+                  activity.location | translate
+                }}</span>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-brand-primary/70 leading-relaxed mb-10 grow">
+              {{ activity.description | translate }}
+            </p>
+
+            <!-- Actions -->
+            <div class="mt-auto">
+              <app-action-button
+                [text]="'COMMUNITY.MODAL.WHATSAPP_TEXT' | translate"
+                [link]="getWhatsAppLink(activity)"
+                color="secondary"
+                size="large"
+                class="w-full"
+                style="display: block"
+                icon="whatsapp"
+              >
+              </app-action-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
 </section>

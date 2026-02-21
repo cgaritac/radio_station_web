@@ -92,6 +92,7 @@
       bgColor="bg-brand-secondary"
       textColor="text-brand-primary"
       class="scale-90 md:scale-100 origin-right transition-transform"
+      routerLink="/contact"
     ></app-action-button>
   </div>
 
@@ -142,6 +143,13 @@
         routerLinkActive="!text-brand-secondary"
         class="text-brand-tertiary hover:text-brand-quaternary p-3 rounded-2xl hover:bg-brand-tertiary/5 transition-all font-medium text-lg"
         >{{ 'NAV.ABOUT' | translate }}</a
+      >
+      <a
+        routerLink="/contact"
+        (click)="isMenuOpen.set(false)"
+        routerLinkActive="!text-brand-secondary"
+        class="text-brand-tertiary hover:text-brand-quaternary p-3 rounded-2xl hover:bg-brand-tertiary/5 transition-all font-medium text-lg"
+        >{{ 'NAV.CONTACT' | translate }}</a
       >
     </div>
   }

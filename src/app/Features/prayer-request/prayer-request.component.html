@@ -1,0 +1,109 @@
+<section class="w-full py-16 md:py-24 bg-brand-tertiary/95">
+  <div class="container mx-auto px-4 max-w-desktop">
+    <div class="flex flex-col lg:flex-row gap-12 items-center">
+      <!-- Image Side (Hidden on mobile or stacked) -->
+      <div
+        class="w-full lg:w-1/2 aspect-square lg:aspect-auto lg:h-[600px] rounded-[40px] overflow-hidden shadow-2xl border border-brand-primary/5"
+      >
+        <img
+          src="images/community-praying.jpg"
+          alt="People praying"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Form Side -->
+      <div class="w-full lg:w-1/2">
+        <!-- Header -->
+        <div class="text-left mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
+            <h2 class="text-brand-primary/60 text-xs font-bold tracking-[0.3em] uppercase">
+              {{ 'PRAYER_REQUEST.TITLE' | translate }}
+            </h2>
+          </div>
+          <h3 class="text-3xl md:text-5xl font-bold text-brand-primary tracking-tight">
+            {{ 'PRAYER_REQUEST.SUBTITLE' | translate }}
+          </h3>
+        </div>
+
+        <div
+          class="bg-brand-primary/4 rounded-[40px] p-8 md:p-12 shadow-sm border border-brand-primary/5"
+        >
+          <form [formGroup]="prayerForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-6">
+            <!-- Name Field -->
+            <div class="text-left">
+              <label
+                class="block text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-2 ml-4"
+              >
+                {{ 'PRAYER_REQUEST.NAME_LABEL' | translate }}
+              </label>
+              <input
+                type="text"
+                formControlName="name"
+                [placeholder]="'PRAYER_REQUEST.NAME_PLACEHOLDER' | translate"
+                class="w-full bg-white border border-brand-primary/10 rounded-2xl px-6 py-4 text-brand-primary placeholder:text-brand-primary/30 focus:outline-none focus:border-brand-secondary/60 transition-colors shadow-sm"
+              />
+            </div>
+
+            <!-- Request Field -->
+            <div class="text-left">
+              <label
+                class="block text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-2 ml-4"
+              >
+                {{ 'PRAYER_REQUEST.REQUEST_LABEL' | translate }}
+              </label>
+              <textarea
+                rows="4"
+                formControlName="request"
+                [placeholder]="'PRAYER_REQUEST.REQUEST_PLACEHOLDER' | translate"
+                class="w-full bg-white border border-brand-primary/10 rounded-2xl px-6 py-4 text-brand-primary placeholder:text-brand-primary/30 focus:outline-none focus:border-brand-secondary/60 transition-colors shadow-sm resize-none"
+              ></textarea>
+              @if (
+                prayerForm.get('request')?.touched &&
+                prayerForm.get('request')?.errors?.['required']
+              ) {
+                <span class="text-brand-quinary text-xs mt-1 ml-4 italic"
+                  >Recomendado completar este campo</span
+                >
+              }
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-4">
+              <app-action-button
+                [text]="'PRAYER_REQUEST.SUBMIT' | translate"
+                [icon]="'mail'"
+                color="secondary"
+                size="large"
+                [disabled]="isSubmitting()"
+                class="w-full"
+                type="submit"
+              ></app-action-button>
+            </div>
+
+            <!-- Messages -->
+            @if (showSuccess()) {
+              <div
+                class="mt-4 p-4 bg-brand-quaternary/10 border border-brand-quaternary/20 rounded-2xl animate-fade-in"
+              >
+                <p class="text-brand-quaternary text-sm font-medium text-center">
+                  {{ 'PRAYER_REQUEST.SUCCESS' | translate }}
+                </p>
+              </div>
+            }
+            @if (showError()) {
+              <div
+                class="mt-4 p-4 bg-brand-quinary/10 border border-brand-quinary/20 rounded-2xl animate-fade-in"
+              >
+                <p class="text-brand-quinary text-sm font-medium text-center">
+                  {{ 'PRAYER_REQUEST.ERROR' | translate }}
+                </p>
+              </div>
+            }
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
