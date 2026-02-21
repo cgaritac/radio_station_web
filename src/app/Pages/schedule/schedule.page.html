@@ -1,1 +1,107 @@
-<p>schedule works!</p>
+<div class="pt-20">
+  <!-- Hero Section -->
+  <section class="w-full py-20 md:py-32 bg-brand-tertiary/95">
+    <div class="max-w-desktop mx-auto px-4">
+      <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
+          <h1 class="text-brand-primary/60 text-sm font-bold tracking-[0.3em] uppercase">
+            {{ 'SCHEDULE_PAGE.TITLE' | translate }}
+          </h1>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-extrabold text-brand-primary tracking-tight">
+          {{ 'SCHEDULE_PAGE.SUBTITLE' | translate }}
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="w-full py-24 bg-brand-tertiary/90 border-y border-brand-primary/5">
+    <div class="max-w-desktop mx-auto px-4 md:px-8">
+      <!-- Tabs -->
+      <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <button
+          (click)="setTab('MON_FRI')"
+          [class]="
+            activeTab() === 'MON_FRI'
+              ? 'bg-brand-secondary text-brand-primary shadow-xl shadow-brand-secondary/20'
+              : 'bg-white text-brand-primary/40 hover:text-brand-primary hover:bg-brand-primary/5 border border-brand-primary/5'
+          "
+          class="px-10 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300"
+        >
+          {{ 'SCHEDULE_PAGE.DAYS.MON_FRI' | translate }}
+        </button>
+        <button
+          (click)="setTab('SAT')"
+          [class]="
+            activeTab() === 'SAT'
+              ? 'bg-brand-secondary text-brand-primary shadow-xl shadow-brand-secondary/20'
+              : 'bg-white text-brand-primary/40 hover:text-brand-primary hover:bg-brand-primary/5 border border-brand-primary/5'
+          "
+          class="px-10 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300"
+        >
+          {{ 'SCHEDULE_PAGE.DAYS.SAT' | translate }}
+        </button>
+        <button
+          (click)="setTab('SUN')"
+          [class]="
+            activeTab() === 'SUN'
+              ? 'bg-brand-secondary text-brand-primary shadow-xl shadow-brand-secondary/20'
+              : 'bg-white text-brand-primary/40 hover:text-brand-primary hover:bg-brand-primary/5 border border-brand-primary/5'
+          "
+          class="px-10 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300"
+        >
+          {{ 'SCHEDULE_PAGE.DAYS.SUN' | translate }}
+        </button>
+      </div>
+
+      <!-- Schedule Table/List -->
+      <div class="max-w-4xl mx-auto space-y-6">
+        @for (item of scheduleItems(); track item.id) {
+          <div
+            class="bg-white rounded-[32px] p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-2xl shadow-brand-primary/5 border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-500"
+          >
+            <!-- Time -->
+            <div class="flex flex-col items-center md:items-start min-w-[180px]">
+              <div class="flex items-center gap-2 mb-2 text-brand-secondary">
+                <svg-icon name="clock" class="w-5 h-5"></svg-icon>
+                <span class="text-xs font-black uppercase tracking-widest">{{
+                  'HOME.LIVE_NOW' | translate
+                }}</span>
+              </div>
+              <p class="text-xl font-black text-brand-primary">{{ item.time | translate }}</p>
+            </div>
+
+            <!-- Divider -->
+            <div class="hidden md:block w-px h-16 bg-brand-primary/5"></div>
+
+            <!-- Program Info -->
+            <div class="flex-1 text-center md:text-left">
+              <h3
+                class="text-2xl font-black text-brand-primary mb-2 group-hover:text-brand-secondary transition-colors"
+              >
+                {{ item.title | translate }}
+              </h3>
+              <div
+                class="flex items-center justify-center md:justify-start gap-2 text-brand-primary/40"
+              >
+                <svg-icon name="person" class="w-4 h-4"></svg-icon>
+                <span class="text-sm font-bold">{{ item.host | translate }}</span>
+              </div>
+            </div>
+
+            <!-- Action -->
+            <div>
+              <div
+                class="w-14 h-14 bg-brand-primary/5 rounded-2xl flex items-center justify-center text-brand-primary group-hover:bg-brand-secondary group-hover:scale-110 transition-all cursor-pointer"
+              >
+                <svg-icon name="play" class="w-6 h-6"></svg-icon>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+</div>

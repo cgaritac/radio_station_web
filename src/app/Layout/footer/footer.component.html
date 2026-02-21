@@ -42,7 +42,7 @@
           </li>
           <li>
             <a
-              routerLink="/biblic-studies"
+              routerLink="/studies"
               class="hover:text-brand-quaternary transition-all hover:text-shadow-brand-quaternary cursor-pointer flex items-center gap-2"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
@@ -69,11 +69,20 @@
           </li>
           <li>
             <a
-              routerLink="/about-us"
+              routerLink="/about"
               class="hover:text-brand-quaternary transition-all hover:text-shadow-brand-quaternary cursor-pointer flex items-center gap-2"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
               {{ 'NAV.ABOUT' | translate }}
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/contact"
+              class="hover:text-brand-quaternary transition-all hover:text-shadow-brand-quaternary cursor-pointer flex items-center gap-2"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-quaternary/40"></span>
+              {{ 'NAV.CONTACT' | translate }}
             </a>
           </li>
         </ul>
@@ -186,7 +195,9 @@
     </div>
   </div>
 
-  <div class="max-w-desktop px-4 mx-auto mt-12 pt-8 border-t border-brand-tertiary/5 text-center text-xs tracking-wide">
+  <div
+    class="max-w-desktop px-4 mx-auto mt-12 pt-8 border-t border-brand-tertiary/5 text-center text-xs tracking-wide"
+  >
     <p>© {{ currentYear }} {{ radioService.radioName() }}. {{ 'FOOTER.RIGHTS' | translate }}</p>
   </div>
 </footer>

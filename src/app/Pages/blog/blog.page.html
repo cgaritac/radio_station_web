@@ -1,1 +1,124 @@
-<p>blog works!</p>
+<div class="pt-20">
+  <!-- Hero Section -->
+  <section class="w-full py-20 md:py-32 bg-brand-tertiary/95">
+    <div class="max-w-desktop mx-auto px-4">
+      <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
+          <h1 class="text-brand-primary/60 text-sm font-bold tracking-[0.3em] uppercase">
+            {{ 'BLOG_PAGE.TITLE' | translate }}
+          </h1>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-extrabold text-brand-primary tracking-tight">
+          {{ 'BLOG_PAGE.SUBTITLE' | translate }}
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Section -->
+  <section class="w-full py-24 bg-brand-tertiary/90 border-y border-brand-primary/5">
+    <div class="max-w-desktop mx-auto px-4 md:px-8">
+      <div class="flex flex-col gap-16">
+        @for (post of blogPosts(); track post.id) {
+          <article class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center group">
+            <!-- Image Area -->
+            <div
+              class="relative overflow-hidden rounded-[40px] aspect-video lg:aspect-square shadow-2xl shadow-brand-primary/5 border border-brand-primary/5"
+            >
+              <img
+                [src]="post.image"
+                [alt]="post.title | translate"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+              />
+              <div
+                class="absolute inset-0 bg-linear-to-t from-brand-primary/40 to-transparent"
+              ></div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="flex flex-col gap-6">
+              <div class="flex items-center gap-4">
+                <span
+                  class="px-4 py-1.5 bg-brand-primary/5 text-brand-secondary text-xs font-black uppercase tracking-widest rounded-full border border-brand-secondary/10"
+                >
+                  {{ post.category | translate }}
+                </span>
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-primary/10"></span>
+                <span class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest">
+                  {{ 'BLOG_PAGE.AUTHOR' | translate }} {{ post.author }}
+                </span>
+              </div>
+
+              <h3
+                class="text-3xl md:text-4xl font-black text-brand-primary leading-tight group-hover:text-brand-secondary transition-colors duration-300"
+              >
+                {{ post.title | translate }}
+              </h3>
+
+              <p class="text-brand-primary/60 text-lg leading-relaxed line-clamp-3">
+                {{ post.excerpt | translate }}
+              </p>
+
+              <div class="pt-4">
+                <a href="#" class="inline-flex items-center gap-4 group/btn">
+                  <div
+                    class="w-12 h-12 rounded-full bg-brand-secondary flex items-center justify-center text-brand-primary shadow-lg shadow-brand-secondary/20 group-hover/btn:scale-110 transition-all"
+                  >
+                    <svg-icon name="arrow-right" class="w-5 h-5"></svg-icon>
+                  </div>
+                  <span class="font-black text-xs uppercase tracking-widest text-brand-primary">
+                    {{ 'BLOG_PAGE.READ_ARTICLE' | translate }}
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Banner -->
+  <section class="w-full py-24 bg-brand-tertiary/95 border-t border-brand-primary/5">
+    <div class="max-w-desktop mx-auto px-4">
+      <div
+        class="relative bg-brand-primary rounded-[50px] p-10 md:p-20 overflow-hidden shadow-2xl shadow-brand-primary/20"
+      >
+        <!-- Decorative Elements -->
+        <div
+          class="absolute -top-24 -right-24 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute -bottom-24 -left-24 w-64 h-64 bg-brand-secondary/5 rounded-full blur-3xl"
+        ></div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="text-center lg:text-left">
+            <h3 class="text-3xl md:text-5xl font-black text-brand-tertiary mb-6 leading-tight">
+              Recibe reflexiones <br />
+              en tu <span class="text-brand-secondary italic">correo</span>
+            </h3>
+            <p class="text-brand-tertiary/60 text-lg">
+              Únete a nuestra lista de amigos y recibe contenido exclusivo cada semana para tu
+              crecimiento espiritual.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input
+              type="email"
+              placeholder="Tu correo electrónico"
+              class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-brand-tertiary placeholder:text-brand-tertiary/20 focus:outline-none focus:border-brand-secondary/60 transition-all font-medium"
+            />
+            <button
+              class="bg-brand-secondary text-brand-primary font-black uppercase tracking-widest px-10 py-4 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl shadow-brand-secondary/20 whitespace-nowrap"
+            >
+              Suscribirme
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

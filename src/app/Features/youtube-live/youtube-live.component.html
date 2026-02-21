@@ -1,0 +1,80 @@
+<section class="w-full py-16 md:py-24 bg-brand-tertiary/95">
+  <div class="container mx-auto px-4 max-w-desktop">
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+      <!-- Video Thumbnail Side -->
+      <div
+        class="relative w-full lg:w-1/2 group cursor-pointer aspect-video rounded-3xl overflow-hidden shadow-2xl border border-brand-primary/5"
+      >
+        <img
+          [src]="lastVideoThumbnail()"
+          [alt]="lastVideoTitle()"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+
+        <!-- Overlay -->
+        <div
+          class="absolute inset-0 bg-brand-primary/10 group-hover:bg-brand-primary/5 transition-colors duration-300"
+        ></div>
+
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div
+            class="w-20 h-20 bg-brand-quinary/90 rounded-full flex items-center justify-center shadow-2xl transform transition-transform duration-300 group-hover:scale-110"
+          >
+            <svg-icon name="play" [applyClass]="true" class="w-8 h-8 fill-white"></svg-icon>
+          </div>
+        </div>
+
+        <!-- Bottom Info Bar -->
+        <div
+          class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md border border-brand-primary/10 rounded-2xl p-4 transform transition-transform duration-300 group-hover:translate-y-[-4px]"
+        >
+          <p class="text-brand-primary/40 text-[10px] font-bold tracking-[0.2em] uppercase mb-1">
+            {{ 'YOUTUBE_LIVE.LAST_VIDEO' | translate }}
+          </p>
+          <h4 class="text-brand-primary font-bold text-sm md:text-base line-clamp-1">
+            {{ lastVideoTitle() }}
+          </h4>
+        </div>
+
+        <a [href]="youtubeUrl()" target="_blank" class="absolute inset-0"></a>
+      </div>
+
+      <!-- Content Side -->
+      <div class="w-full lg:w-1/2 flex flex-col items-start text-brand-primary">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
+          <span class="text-brand-primary/60 text-xs font-bold tracking-[0.3em] uppercase">
+            {{ 'YOUTUBE_LIVE.TAG' | translate }}
+          </span>
+        </div>
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-brand-primary">
+          {{ 'YOUTUBE_LIVE.TITLE_PART1' | translate }} <br />
+          <span class="text-brand-quinary">{{ 'YOUTUBE_LIVE.TITLE_PART2' | translate }}</span>
+        </h2>
+
+        <p class="text-brand-primary/70 text-lg leading-relaxed mb-8 max-w-xl">
+          {{ 'YOUTUBE_LIVE.DESCRIPTION' | translate }}
+        </p>
+
+        <div class="flex flex-wrap items-center gap-8">
+          <app-action-button
+            [text]="'YOUTUBE_LIVE.SUBSCRIBE' | translate"
+            [icon]="'youtube'"
+            color="primary"
+            size="large"
+            [link]="youtubeUrl()"
+          ></app-action-button>
+
+          <div class="flex flex-col">
+            <span class="text-2xl font-bold text-brand-primary">{{ subscriberCount() }}</span>
+            <span class="text-[10px] text-brand-primary/40 font-bold tracking-widest uppercase">{{
+              'YOUTUBE_LIVE.SUBSCRIBERS' | translate
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

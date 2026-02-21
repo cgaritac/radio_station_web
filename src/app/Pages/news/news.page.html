@@ -1,1 +1,94 @@
-<p>news works!</p>
+<div class="pt-20">
+  <!-- Hero Section -->
+  <section class="w-full py-20 md:py-32 bg-brand-tertiary/95">
+    <div class="max-w-desktop mx-auto px-4">
+      <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
+          <h1 class="text-brand-primary/60 text-sm font-bold tracking-[0.3em] uppercase">
+            {{ 'NEWS_PAGE.TITLE' | translate }}
+          </h1>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-extrabold text-brand-primary tracking-tight">
+          {{ 'NEWS_PAGE.SUBTITLE' | translate }}
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- News List Section -->
+  <section class="w-full py-24 bg-brand-tertiary/90 border-y border-brand-primary/5">
+    <div class="max-w-desktop mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        @for (item of newsItems(); track item.id) {
+          <article
+            class="bg-white rounded-[40px] overflow-hidden shadow-2xl shadow-brand-primary/5 border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-500"
+          >
+            <!-- Image -->
+            <div class="relative aspect-video overflow-hidden">
+              <img
+                [src]="item.image"
+                [alt]="item.title | translate"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="px-4 py-1.5 bg-brand-secondary text-brand-primary text-xs font-black uppercase tracking-widest rounded-full shadow-lg"
+                >
+                  {{ item.category }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-8">
+              <div
+                class="flex items-center gap-2 mb-4 text-brand-primary/40 text-xs font-bold uppercase tracking-widest"
+              >
+                <svg-icon name="calendar" class="w-4 h-4"></svg-icon>
+                {{ item.date | translate }}
+              </div>
+              <h3
+                class="text-2xl font-black text-brand-primary mb-4 leading-tight group-hover:text-brand-secondary transition-colors"
+              >
+                {{ item.title | translate }}
+              </h3>
+              <p class="text-brand-primary/60 text-sm leading-relaxed mb-8 line-clamp-3">
+                {{ item.excerpt | translate }}
+              </p>
+
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-brand-primary font-black text-xs uppercase tracking-widest hover:text-brand-secondary transition-colors group/link"
+              >
+                {{ 'NEWS_PAGE.READ_MORE' | translate }}
+                <svg-icon
+                  name="arrow-right"
+                  class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"
+                ></svg-icon>
+              </a>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="w-full py-16 bg-brand-tertiary/95 border-t border-brand-primary/5">
+    <div class="max-w-desktop mx-auto px-4">
+      <app-banner
+        [title]="'BANNER.ADVERTISE_TITLE' | translate"
+        [description]="'BANNER.ADVERTISE_SUBTITLE' | translate"
+        [primaryText]="'BANNER.CONTACT_NOW' | translate"
+        primaryLink="/contact"
+        primaryIcon="whatsapp"
+        iconName="microphone"
+        backgroundColor="bg-brand-primary"
+        textColor="text-brand-tertiary"
+        iconColor="text-brand-secondary"
+        [tooltip]="'BANNER.ADVERTISE_TOOLTIP' | translate"
+      />
+    </div>
+  </section>
+</div>

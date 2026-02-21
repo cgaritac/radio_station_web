@@ -1,0 +1,63 @@
+<section class="w-full py-16 md:py-24 bg-brand-tertiary/95">
+  <div class="container mx-auto px-4 max-w-desktop">
+    <div class="text-center mb-12">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
+        <h2 class="text-brand-primary/60 text-xs font-bold tracking-[0.3em] uppercase">
+          {{ 'SPONSORS.TAG' | translate }}
+        </h2>
+      </div>
+      <h3 class="text-3xl md:text-4xl font-bold text-brand-primary tracking-tight">
+        {{ 'SPONSORS.TITLE' | translate }}
+      </h3>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
+      @for (sponsor of sponsors(); track sponsor.name) {
+        <a
+          [href]="sponsor.link"
+          target="_blank"
+          class="group relative flex items-center justify-center p-8 bg-white border border-brand-primary/5 rounded-3xl hover:border-brand-secondary/40 transition-all duration-300 hover:scale-[1.05] shadow-sm hover:shadow-xl"
+          [ngClass]="{
+            'border-dashed border-brand-primary/10 bg-brand-primary/2': sponsor.logo === 'cta',
+          }"
+        >
+          <div
+            class="relative z-10 w-full aspect-square flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500"
+          >
+            <!-- Placeholder Logo or Name -->
+            @if (sponsor.logo === 'cta') {
+              <div class="text-center">
+                <span class="text-brand-secondary text-2xl font-black block leading-tight">+</span>
+                <span
+                  class="text-brand-primary/40 text-[10px] font-bold tracking-widest uppercase"
+                  >{{ sponsor.name | translate }}</span
+                >
+              </div>
+            } @else if (sponsor.logo === 'images/sponsor_placeholder.png') {
+              <div class="flex flex-col items-center gap-2">
+                <div
+                  class="w-12 h-12 bg-brand-primary/5 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-brand-primary/20 text-xl font-bold">{{
+                    sponsor.name.charAt(0)
+                  }}</span>
+                </div>
+                <span
+                  class="text-brand-primary/30 text-[10px] font-bold tracking-widest uppercase"
+                  >{{ sponsor.name }}</span
+                >
+              </div>
+            } @else {
+              <img
+                [src]="sponsor.logo"
+                [alt]="sponsor.name"
+                class="max-w-full max-h-full object-contain"
+              />
+            }
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+</section>

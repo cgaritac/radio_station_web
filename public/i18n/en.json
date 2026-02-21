@@ -41,7 +41,7 @@
   "NAV": {
     "HOME": "Home",
     "SCHEDULE": "Schedule",
-    "PODCASTS": "Studies",
+    "PODCASTS": "Bible Studies",
     "NEWS": "News",
     "BLOG": "Blog",
     "ABOUT": "About Us",
@@ -51,21 +51,30 @@
     "TITLE": "COMMUNITY",
     "SUBTITLE": "Upcoming Activities",
     "MORE_INFO": "MORE INFORMATION",
+    "MODAL": {
+      "TITLE": "Activity Details",
+      "WHATSAPP_TEXT": "Request information",
+      "WHATSAPP_MESSAGE": "Hi, I would like to receive more information about the activity: ",
+      "CLOSE": "Close"
+    },
     "ACTIVITIES": {
       "ITEM_1": {
         "TITLE": "United Prayer Service",
         "DATE": "OCTOBER 15, 2026",
-        "LOCATION": "Central Plaza, Nandayure"
+        "LOCATION": "Central Plaza, Nandayure",
+        "DESCRIPTION": "Join our community in a special night of intercession and prayer for our city. A time to strengthen our faith and seek God's presence together."
       },
       "ITEM_2": {
         "TITLE": "Youth Meeting: \"Active Faith\"",
         "DATE": "OCTOBER 22, 2026",
-        "LOCATION": "Municipal Auditorium"
+        "LOCATION": "Municipal Auditorium",
+        "DESCRIPTION": "A dynamic space for young people looking to live their faith in a practical way. We will have live music, inspiring talks, and an incredible time of fellowship."
       },
       "ITEM_3": {
         "TITLE": "Social Outreach Campaign",
         "DATE": "NOVEMBER 02, 2026",
-        "LOCATION": "La Esperanza Neighborhood"
+        "LOCATION": "La Esperanza Neighborhood",
+        "DESCRIPTION": "As the hands of Christ, we will be bringing basic supplies and hope to the most needy families in our region. Your help makes a difference!"
       }
     }
   },
@@ -83,5 +92,165 @@
     "ADDRESS": "Av. XXX 123, Ciudad de XXXXX",
     "EMAIL": "info@XXXXX.com",
     "PHONE": "+506 12345678"
+  },
+  "YOUTUBE_LIVE": {
+    "TAG": "YOUTUBE LIVE",
+    "TITLE_PART1": "Experience it in",
+    "TITLE_PART2": "REAL TIME",
+    "DESCRIPTION": "Don't just listen to us, join our visual broadcast! Interact with the community live, leave your prayer requests and be part of the Ornan Nandayure family from anywhere in the world.",
+    "SUBSCRIBE": "Subscribe",
+    "SUBSCRIBERS": "SUBSCRIBERS",
+    "LAST_VIDEO": "LATEST VIDEO"
+  },
+  "PRAYER_REQUEST": {
+    "TITLE": "PRAYER REQUEST",
+    "SUBTITLE": "Let us pray for you",
+    "NAME_LABEL": "Name (Optional)",
+    "NAME_PLACEHOLDER": "Enter your name",
+    "REQUEST_LABEL": "Your prayer request",
+    "REQUEST_PLACEHOLDER": "Write your need here...",
+    "SUBMIT": "Send request",
+    "SUCCESS": "Your request has been sent. We will be praying for you.",
+    "ERROR": "There was an error sending your request. Please try again."
+  },
+  "SPONSORS": {
+    "TAG": "ADVERTISING",
+    "TITLE": "Our Advertisers",
+    "SUBTITLE": "Support those who make this signal possible",
+    "YOUR_LOGO": "Your Logo Here"
+  },
+  "ABOUT_US": {
+    "TITLE": "ABOUT US",
+    "SUBTITLE": "Bringing hope and faith to every home",
+    "TAG": "OUR HISTORY",
+    "HISTORY_TITLE": "More than 10 years being your company",
+    "HISTORY_TEXT": "We were born with the purpose of connecting the community through faith. What began as a small local project is now a signal that reaches thousands of people, offering programming rich in values, inspiring music, and messages that transform lives.",
+    "MISSION_TITLE": "Our Mission",
+    "MISSION_TEXT": "Spread the message of hope through excellent communication, being a firm bridge between the community and Christian values for the spiritual strengthening of every listener.",
+    "VISION_TITLE": "Our Vision",
+    "VISION_TEXT": "Establish ourselves as the leading station in broadcasting spiritual and social content in the region, constantly innovating our platforms to reach new generations.",
+    "TEAM_TITLE": "Our Team",
+    "TEAM_SUBTITLE": "The voices behind the microphone"
+  },
+  "CONTACT": {
+    "TITLE": "CONTACT",
+    "SUBTITLE": "Do you have something to tell us?",
+    "TAG": "WE ARE HERE FOR YOU",
+    "INFO_TITLE": "Contact Information",
+    "INFO_SUBTITLE": "Other ways to connect with us",
+    "FORM_TITLE": "Send us a message",
+    "FORM_NAME": "Your Name",
+    "FORM_EMAIL": "Your Email",
+    "FORM_SUBJECT": "Subject",
+    "FORM_MESSAGE": "Message",
+    "FORM_SUBMIT": "Send Message",
+    "SUCCESS": "Thank you! Your message has been sent successfully.",
+    "ERROR": "An error occurred. Please try again.",
+    "FIND_US": "Find us at",
+    "FOLLOW_US": "Follow us on social media",
+    "PHONE": "Phone",
+    "EMAIL": "Email"
+  },
+  "NEWS_PAGE": {
+    "TITLE": "NEWS",
+    "SUBTITLE": "Updates and News",
+    "TAG": "LATEST",
+    "READ_MORE": "Read more",
+    "ITEMS": {
+      "ITEM_1": {
+        "TITLE": "New Transmission Antenna in Nandayure",
+        "DATE": "February 18, 2026",
+        "EXCERPT": "We are happy to announce the installation of our new equipment that will allow a clearer signal throughout the region."
+      },
+      "ITEM_2": {
+        "TITLE": "'Open Heart' Aid Campaign Results",
+        "DATE": "February 12, 2026",
+        "EXCERPT": "Thanks to your donations, we managed to impact more than 50 families last weekend."
+      },
+      "ITEM_3": {
+        "TITLE": "Upcoming Youth Praise Concert",
+        "DATE": "February 05, 2026",
+        "EXCERPT": "Local artists will join in a night of worship this coming Saturday in the central park."
+      }
+    }
+  },
+  "BLOG_PAGE": {
+    "TITLE": "BLOG",
+    "SUBTITLE": "Reflections and Studies",
+    "TAG": "EDIFICATION",
+    "READ_ARTICLE": "Read Article",
+    "AUTHOR": "By",
+    "ITEMS": {
+      "ITEM_1": {
+        "TITLE": "How to strengthen your prayer life this year",
+        "CATEGORY": "Christian Life",
+        "EXCERPT": "Discover practical steps to maintain constant and deep communication with God in your daily life."
+      },
+      "ITEM_2": {
+        "TITLE": "The importance of community in faith",
+        "CATEGORY": "Bible Study",
+        "EXCERPT": "We analyze what the scriptures say about mutual support and together growth as the body of Christ."
+      },
+      "ITEM_3": {
+        "TITLE": "Music that inspires the soul",
+        "CATEGORY": "Music",
+        "EXCERPT": "A selection of hymns and modern songs that have marked the history of our station."
+      }
+    }
+  },
+  "SCHEDULE_PAGE": {
+    "TITLE": "SCHEDULE",
+    "SUBTITLE": "Tune in to our daily programming",
+    "TAG": "PROGRAMMING",
+    "DAYS": {
+      "MON_FRI": "Monday to Friday",
+      "SAT": "Saturdays",
+      "SUN": "Sundays"
+    },
+    "ITEMS": {
+      "MORNING_PRAYER": {
+        "TITLE": "Dawn with God",
+        "TIME": "5:00 AM - 6:00 AM",
+        "HOST": "Pastor Andrés Pérez"
+      },
+      "FAITH_MUSIC": {
+        "TITLE": "Melodies of Faith",
+        "TIME": "8:00 AM - 10:00 AM",
+        "HOST": "María García"
+      },
+      "BIBLE_STUDY": {
+        "TITLE": "Word Study",
+        "TIME": "2:00 PM - 3:00 PM",
+        "HOST": "Ministerial Team"
+      },
+      "YOUTH_NIGHT": {
+        "TITLE": "Youth Night",
+        "TIME": "7:00 PM - 9:00 PM",
+        "HOST": "Youth Leaders"
+      }
+    }
+  },
+  "STUDIES_PAGE": {
+    "TITLE": "BIBLE STUDIES",
+    "SUBTITLE": "Deeper into God's Word",
+    "TAG": "SPIRITUAL LIBRARY",
+    "READ_MORE": "View Study",
+    "ITEMS": {
+      "ITEM_1": {
+        "TITLE": "The Sermon on the Mount",
+        "SERIES": "Matthew",
+        "EXCERPT": "A deep analysis of Jesus' teachings on character and the Kingdom of God."
+      },
+      "ITEM_2": {
+        "TITLE": "The Fruits of the Spirit",
+        "SERIES": "Galatians",
+        "EXCERPT": "How to live a life guided by the Holy Spirit in the midst of the modern world."
+      },
+      "ITEM_3": {
+        "TITLE": "The Armor of God",
+        "SERIES": "Ephesians",
+        "EXCERPT": "Preparing for spiritual battle with the tools God has given us."
+      }
+    }
   }
 }

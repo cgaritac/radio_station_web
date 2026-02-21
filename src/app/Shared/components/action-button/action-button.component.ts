@@ -26,10 +26,11 @@ import { SvgIconComponent } from 'angular-svg-icon';
       </a>
     } @else {
       <button
-        type="button"
+        [type]="type"
         [class]="buttonClasses"
         [ngClass]="variantClasses"
         [title]="tooltipText"
+        [disabled]="disabled"
       >
         @if (icon) {
           <svg-icon [name]="icon" [applyClass]="true" [class]="iconSizeClass"></svg-icon>
@@ -44,7 +45,13 @@ import { SvgIconComponent } from 'angular-svg-icon';
       </button>
     }
   `,
-  styles: []
+  styles: [`
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+  `]
 })
 export class ActionButtonComponent {
   @Input() text: string = '';
@@ -55,6 +62,8 @@ export class ActionButtonComponent {
   @Input() color: 'primary' | 'secondary' | 'accent' | 'tertiary' | 'quaternary' | 'quinary' | 'sextary' | 'transparent_dark' | 'transparent_light' = 'secondary';
   @Input() size: 'small' | 'medium' | 'large' = 'medium';
   @Input() showPulse: boolean = false;
+  @Input() disabled: boolean = false;
+  @Input() type: 'button' | 'submit' | 'reset' = 'button';
 
   @Input() bgColor: string = '';
   @Input() textColor: string = '';

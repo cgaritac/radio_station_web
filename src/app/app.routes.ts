@@ -6,6 +6,7 @@ import { TermsPage } from './Pages/terms/terms.page';
 import { NewsPage } from './Pages/news/news.page';
 import { SchedulePage } from './Pages/schedule/schedule.page';
 import { StudiesPage } from './Pages/studies/studies.page';
+import { ContactPage } from './Pages/contact/contact.page';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,10 @@ export const routes: Routes = [
   {
     path: 'about',
     component: AboutPage,
+  },
+  {
+    path: 'contact',
+    component: ContactPage,
   },
   {
     path: 'blog',

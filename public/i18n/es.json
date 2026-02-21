@@ -41,7 +41,7 @@
   "NAV": {
     "HOME": "Inicio",
     "SCHEDULE": "Horario",
-    "PODCASTS": "Estudios",
+    "PODCASTS": "Estudios Bíblicos",
     "NEWS": "Noticias",
     "BLOG": "Blog",
     "ABOUT": "Nosotros",
@@ -51,21 +51,30 @@
     "TITLE": "COMUNIDAD",
     "SUBTITLE": "Próximas Actividades",
     "MORE_INFO": "MÁS INFORMACIÓN",
+    "MODAL": {
+        "TITLE": "Detalles de la Actividad",
+        "WHATSAPP_TEXT": "Solicitar información",
+        "WHATSAPP_MESSAGE": "Hola, me gustaría recibir más información sobre la actividad: ",
+        "CLOSE": "Cerrar"
+    },
     "ACTIVITIES": {
       "ITEM_1": {
         "TITLE": "Culto Unido de Oración",
         "DATE": "15 DE OCTUBRE, 2026",
-        "LOCATION": "Plaza Central, Nandayure"
+        "LOCATION": "Plaza Central, Nandayure",
+        "DESCRIPTION": "Únete a nuestra comunidad en una noche especial de intercesión y clamor por nuestra ciudad. Un tiempo para fortalecer nuestra fe y buscar la presencia de Dios juntos."
       },
       "ITEM_2": {
         "TITLE": "Reunión de Jóvenes: \"Fe Activa\"",
         "DATE": "22 DE OCTUBRE, 2026",
-        "LOCATION": "Auditorio Municipal"
+        "LOCATION": "Auditorio Municipal",
+        "DESCRIPTION": "Un espacio dinámico para jóvenes que buscan vivir su fe de manera práctica. Tendremos música en vivo, charlas inspiradoras y un tiempo de convivencia increíble."
       },
       "ITEM_3": {
         "TITLE": "Campaña de Ayuda Social",
         "DATE": "02 DE NOVIEMBRE, 2026",
-        "LOCATION": "Barrio La Esperanza"
+        "LOCATION": "Barrio La Esperanza",
+        "DESCRIPTION": "Como manos de Cristo, estaremos llevando suministros básicos y esperanza a las familias más necesitadas de nuestra región. ¡Tu ayuda hace la diferencia!"
       }
     }
   },
@@ -83,5 +92,165 @@
     "ADDRESS": "Av. XXX 123, Ciudad de XXXXX",
     "EMAIL": "info@XXXXX.com",
     "PHONE": "+506 12345678"
+  },
+  "YOUTUBE_LIVE": {
+    "TAG": "YOUTUBE LIVE",
+    "TITLE_PART1": "Vívelo en",
+    "TITLE_PART2": "TIEMPO REAL",
+    "DESCRIPTION": "No solo nos escuches, ¡únete a nuestra transmisión visual! Interactúa con la comunidad en vivo, deja tus peticiones de oración y sé parte de la familia Ornan Nandayure desde cualquier lugar del mundo.",
+    "SUBSCRIBE": "Suscribirse",
+    "SUBSCRIBERS": "SUSCRIPTORES",
+    "LAST_VIDEO": "ÚLTIMO VIDEO"
+  },
+  "PRAYER_REQUEST": {
+    "TITLE": "SOLICITUD DE ORACIÓN",
+    "SUBTITLE": "Permítenos orar por ti",
+    "NAME_LABEL": "Nombre (Opcional)",
+    "NAME_PLACEHOLDER": "Ingresa tu nombre",
+    "REQUEST_LABEL": "Tu petición de oración",
+    "REQUEST_PLACEHOLDER": "Escribe aquí tu necesidad...",
+    "SUBMIT": "Enviar petición",
+    "SUCCESS": "Tu petición ha sido enviada. Estaremos orando por ti.",
+    "ERROR": "Hubo un error al enviar tu petición. Por favor reintenta."
+  },
+  "SPONSORS": {
+    "TAG": "PUBLICIDAD",
+    "TITLE": "Nuestros Anunciantes",
+    "SUBTITLE": "Apoya a quienes hacen posible esta señal",
+    "YOUR_LOGO": "Tu Logo Aquí"
+  },
+  "ABOUT_US": {
+    "TITLE": "SOBRE NOSOTROS",
+    "SUBTITLE": "Llevando esperanza y fe a cada hogar",
+    "TAG": "NUESTRA HISTORIA",
+    "HISTORY_TITLE": "Más de 10 años siendo tu compañía",
+    "HISTORY_TEXT": "Nacimos con el propósito de conectar a la comunidad a través de la fe. Lo que comenzó como un pequeño proyecto local, hoy es una señal que llega a miles de personas, ofreciendo una programación rica en valores, música inspiradora y mensajes que transforman vidas.",
+    "MISSION_TITLE": "Nuestra Misión",
+    "MISSION_TEXT": "Difundir el mensaje de esperanza a través de una comunicación de excelencia, siendo un puente firme entre la comunidad y los valores cristianos para el fortalecimiento espiritual de cada oyente.",
+    "VISION_TITLE": "Nuestra Visión",
+    "VISION_TEXT": "Consolidarnos como la emisora líder en difusión de contenido espiritual y social en la región, innovando constantemente en nuestras plataformas para alcanzar a las nuevas generaciones.",
+    "TEAM_TITLE": "Nuestro Equipo",
+    "TEAM_SUBTITLE": "Las voces detrás del micrófono"
+  },
+  "CONTACT": {
+    "TITLE": "CONTACTO",
+    "SUBTITLE": "¿Tienes algo que decirnos?",
+    "TAG": "ESTAMOS AQUÍ PARA TI",
+    "INFO_TITLE": "Información de Contacto",
+    "INFO_SUBTITLE": "Otras formas de conectar con nosotros",
+    "FORM_TITLE": "Envíanos un mensaje",
+    "FORM_NAME": "Tu Nombre",
+    "FORM_EMAIL": "Tu Correo Electrónico",
+    "FORM_SUBJECT": "Asunto",
+    "FORM_MESSAGE": "Mensaje",
+    "FORM_SUBMIT": "Enviar Mensaje",
+    "SUCCESS": "¡Gracias! Tu mensaje ha sido enviado correctamente.",
+    "ERROR": "Hubo un error. Por favor, intenta de nuevo.",
+    "FIND_US": "Encuéntranos en",
+    "FOLLOW_US": "Síguenos en redes",
+    "PHONE": "Teléfono",
+    "EMAIL": "Correo"
+  },
+  "NEWS_PAGE": {
+    "TITLE": "NOTICIAS",
+    "SUBTITLE": "Actualidad y Novedades",
+    "TAG": "LO ÚLTIMO",
+    "READ_MORE": "Leer más",
+    "ITEMS": {
+      "ITEM_1": {
+        "TITLE": "Nueva Antena de Transmisión en Nandayure",
+        "DATE": "18 de Febrero, 2026",
+        "EXCERPT": "Estamos felices de anunciar la instalación de nuestro nuevo equipo que permitirá una señal más clara en toda la región."
+      },
+      "ITEM_2": {
+        "TITLE": "Resultados de la Campaña de Ayuda 'Corazón Abierto'",
+        "DATE": "12 de Febrero, 2026",
+        "EXCERPT": "Gracias a sus donaciones, logramos impactar a más de 50 familias el pasado fin de semana."
+      },
+      "ITEM_3": {
+        "TITLE": "Próximo Concierto de Alabanza Juvenil",
+        "DATE": "05 de Febrero, 2026",
+        "EXCERPT": "Artistas locales se unirán en una noche de adoración este próximo sábado en el parque central."
+      }
+    }
+  },
+  "BLOG_PAGE": {
+    "TITLE": "BLOG",
+    "SUBTITLE": "Reflexiones y Estudios",
+    "TAG": "EDIFICACIÓN",
+    "READ_ARTICLE": "Leer Artículo",
+    "AUTHOR": "Por",
+    "ITEMS": {
+      "ITEM_1": {
+        "TITLE": "Cómo fortalecer tu vida de oración este año",
+        "CATEGORY": "Vida Cristiana",
+        "EXCERPT": "Descubre pasos prácticos para mantener una comunicación constante y profunda con Dios en tu día a día."
+      },
+      "ITEM_2": {
+        "TITLE": "La importancia de la comunidad en la fe",
+        "CATEGORY": "Estudio Bíblico",
+        "EXCERPT": "Analizamos lo que dicen las escrituras sobre el apoyo mutuo y el crecimiento conjunto como cuerpo de Cristo."
+      },
+      "ITEM_3": {
+        "TITLE": "Música que inspira el alma",
+        "CATEGORY": "Música",
+        "EXCERPT": "Una selección de himnos y canciones modernas que han marcado la historia de nuestra estación."
+      }
+    }
+  },
+  "SCHEDULE_PAGE": {
+    "TITLE": "HORARIO",
+    "SUBTITLE": "Sintoniza nuestra programación diaria",
+    "TAG": "PROGRAMACIÓN",
+    "DAYS": {
+      "MON_FRI": "Lunes a Viernes",
+      "SAT": "Sábados",
+      "SUN": "Domingos"
+    },
+    "ITEMS": {
+      "MORNING_PRAYER": {
+        "TITLE": "Amanecer con Dios",
+        "TIME": "5:00 AM - 6:00 AM",
+        "HOST": "Pastor Andrés Pérez"
+      },
+      "FAITH_MUSIC": {
+        "TITLE": "Melodías de Fe",
+        "TIME": "8:00 AM - 10:00 AM",
+        "HOST": "María García"
+      },
+      "BIBLE_STUDY": {
+        "TITLE": "Estudio de la Palabra",
+        "TIME": "2:00 PM - 3:00 PM",
+        "HOST": "Equipo Ministerial"
+      },
+      "YOUTH_NIGHT": {
+        "TITLE": "Noche de Jóvenes",
+        "TIME": "7:00 PM - 9:00 PM",
+        "HOST": "Líderes Juveniles"
+      }
+    }
+  },
+  "STUDIES_PAGE": {
+    "TITLE": "ESTUDIOS BÍBLICOS",
+    "SUBTITLE": "Profundiza en la Palabra de Dios",
+    "TAG": "BIBLIOTECA ESPIRITUAL",
+    "READ_MORE": "Ver Estudio",
+    "ITEMS": {
+      "ITEM_1": {
+        "TITLE": "El Sermón del Monte",
+        "SERIES": "Mateo",
+        "EXCERPT": "Un análisis profundo de las enseñanzas de Jesús sobre el carácter y el Reino de Dios."
+      },
+      "ITEM_2": {
+        "TITLE": "Los Frutos del Espíritu",
+        "SERIES": "Gálatas",
+        "EXCERPT": "Cómo vivir una vida guiada por el Espíritu Santo en medio del mundo moderno."
+      },
+      "ITEM_3": {
+        "TITLE": "La Armadura de Dios",
+        "SERIES": "Efesios",
+        "EXCERPT": "Preparándonos para la batalla espiritual con las herramientas que Dios nos ha dado."
+      }
+    }
   }
 }

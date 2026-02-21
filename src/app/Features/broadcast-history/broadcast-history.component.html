@@ -46,7 +46,7 @@
 
             @for (
               item of broadcastHistory().slice(0, 6);
-              track item.id;
+              track $index;
               let first = $first;
               let last = $last
             ) {
@@ -116,7 +116,7 @@
         </div>
 
         <!-- Source Reference Footer -->
-        <footer class=" pt-2 border-t border-brand-primary/5 text-center">
+        <footer class="pt-2 border-t border-brand-primary/5 text-center">
           <p class="text-[10px] text-brand-sextary/80">
             {{ 'HOME.SOURCE_INFO' | translate }}
             <a
