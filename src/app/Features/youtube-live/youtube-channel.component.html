@@ -1,0 +1,131 @@
+<section class="w-full py-16 md:py-24 bg-brand-tertiary/95">
+  <div class="container mx-auto px-4 max-w-desktop">
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+      <!-- Content Side -->
+      <div class="w-full lg:w-1/2 flex flex-col items-start text-brand-primary">
+        <!-- Header -->
+        <app-section-header
+          [title]="'YOUTUBE_CHANNEL.TAG' | translate"
+          [subtitle]="
+            ('YOUTUBE_CHANNEL.TITLE_PART1' | translate) +
+            '<br/><span class=\'text-brand-quinary\'>' +
+            ('YOUTUBE_CHANNEL.TITLE_PART2' | translate) +
+            '</span>'
+          "
+          size="medium"
+        ></app-section-header>
+
+        <p class="text-brand-primary/70 text-lg leading-relaxed mb-8 max-w-xl">
+          {{ 'YOUTUBE_CHANNEL.DESCRIPTION' | translate }}
+        </p>
+
+        <div class="flex flex-wrap items-center gap-8">
+          <app-action-button
+            [text]="'YOUTUBE_CHANNEL.SUBSCRIBE' | translate"
+            [icon]="'youtube'"
+            color="primary"
+            size="large"
+            [link]="subscribeUrl()"
+          ></app-action-button>
+
+          <div class="flex flex-col">
+            <span class="text-2xl font-bold text-brand-primary">{{
+              subscriberCount() | translate
+            }}</span>
+            <span class="text-[10px] text-brand-primary/40 font-bold tracking-widest uppercase">{{
+              'YOUTUBE_CHANNEL.SUBSCRIBERS' | translate
+            }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Side -->
+      <div
+        class="relative w-full lg:w-1/2 aspect-video rounded-3xl overflow-hidden shadow-2xl border border-brand-quaternary/50 bg-brand-primary"
+      >
+        @if (isLoading()) {
+          <!-- Loading State (Skeleton/Loader) -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-brand-primary/5"
+          >
+            <div class="relative w-16 h-16">
+              <div class="absolute inset-0 border-4 border-brand-quinary/20 rounded-full"></div>
+              <div
+                class="absolute inset-0 border-4 border-brand-quinary border-t-transparent rounded-full animate-spin"
+              ></div>
+            </div>
+            <p
+              class="text-brand-tertiary/40 text-[10px] font-bold tracking-[0.3em] uppercase animate-pulse"
+            >
+              {{ 'YOUTUBE_CHANNEL.LOADING' | translate }}
+            </p>
+          </div>
+        } @else {
+          @if (!showVideo()) {
+            <!-- Thumbnail Mode (Only if metadata was successfully loaded) -->
+            <div
+              (click)="playVideo()"
+              class="relative w-full h-full group cursor-pointer animate-fade-in"
+            >
+              <img
+                [src]="lastVideoThumbnail()"
+                [alt]="lastVideoTitle()"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-0 bg-brand-primary/10 group-hover:bg-brand-primary/5 transition-colors duration-300"
+              ></div>
+
+              <!-- Play Button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="w-20 h-20 bg-brand-quinary/90 rounded-full flex items-center justify-center shadow-2xl transform transition-transform duration-300 group-hover:scale-110"
+                >
+                  <svg-icon
+                    name="play"
+                    [applyClass]="true"
+                    class="w-8 h-8 fill-brand-tertiary"
+                  ></svg-icon>
+                </div>
+              </div>
+
+              <!-- Bottom Info Bar -->
+              <div
+                class="absolute bottom-6 left-6 right-6 bg-brand-tertiary/90 backdrop-blur-md border border-brand-primary/10 rounded-2xl p-4 transform transition-transform duration-300 group-hover:translate-y-[-4px]"
+              >
+                <p
+                  class="text-brand-primary/40 text-[10px] font-bold tracking-[0.2em] uppercase mb-1"
+                >
+                  {{ 'YOUTUBE_CHANNEL.LAST_VIDEO' | translate }}
+                </p>
+                <h4 class="text-brand-primary font-bold text-sm md:text-base line-clamp-1">
+                  {{ lastVideoTitle() }}
+                </h4>
+              </div>
+            </div>
+          } @else {
+            <!-- Embed Mode -->
+            <iframe
+              [src]="videoEmbedUrl()"
+              class="w-full h-full"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</section>

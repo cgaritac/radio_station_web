@@ -6,7 +6,6 @@ import { HeaderComponent } from './Layout/header/header.component';
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs';
-
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FooterComponent, HeaderComponent, CommonModule, RadioPlayer],
