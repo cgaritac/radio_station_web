@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { SvgIconComponent } from 'angular-svg-icon';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import { EmailService } from '../../Core/services/email.service';
 
 @Component({
   selector: 'app-contact',
@@ -23,6 +24,7 @@ import { SectionHeaderComponent } from '../../Shared/components/section-header/s
 })
 export class ContactPage {
   private readonly fb = inject(FormBuilder);
+  private readonly emailService = inject(EmailService);
 
   readonly contactForm: FormGroup = this.fb.group({
     name: ['', [Validators.required]],
@@ -35,7 +37,7 @@ export class ContactPage {
   readonly showSuccess = signal(false);
   readonly showError = signal(false);
 
-  onSubmit() {
+  async onSubmit() {
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
       return;
@@ -45,11 +47,15 @@ export class ContactPage {
     this.showSuccess.set(false);
     this.showError.set(false);
 
-    // Simulate API call
-    setTimeout(() => {
-      this.isSubmitting.set(false);
+    try {
+      await this.emailService.sendContactMessage(this.contactForm.value);
       this.showSuccess.set(true);
       this.contactForm.reset();
-    }, 1500);
+    } catch (error: any) {
+      console.error('Error sending contact message:', error);
+      this.showError.set(true);
+    } finally {
+      this.isSubmitting.set(false);
+    }
   }
 }

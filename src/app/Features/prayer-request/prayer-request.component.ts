@@ -4,6 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import { EmailService } from '../../Core/services/email.service';
 
 @Component({
   selector: 'app-prayer-request',
@@ -20,6 +21,7 @@ import { SectionHeaderComponent } from '../../Shared/components/section-header/s
 })
 export class PrayerRequestComponent {
   private readonly fb = inject(FormBuilder);
+  private readonly emailService = inject(EmailService);
 
   readonly prayerForm: FormGroup = this.fb.group({
     name: [''],
@@ -30,7 +32,7 @@ export class PrayerRequestComponent {
   readonly showSuccess = signal(false);
   readonly showError = signal(false);
 
-  onSubmit() {
+  async onSubmit() {
     if (this.prayerForm.invalid) {
       this.prayerForm.markAllAsTouched();
       return;
@@ -40,16 +42,15 @@ export class PrayerRequestComponent {
     this.showSuccess.set(false);
     this.showError.set(false);
 
-    const { name, request } = this.prayerForm.value;
-    const body = `Nombre: ${name || 'Anónimo'}\n\nPetición:\n${request}`;
-    const mailtoLink = `mailto:info@XXXXX.com?subject=Solicitud de oración&body=${encodeURIComponent(body)}`;
-
-    // Simulate sending or trigger mailto
-    setTimeout(() => {
-      window.location.href = mailtoLink;
-      this.isSubmitting.set(false);
+    try {
+      await this.emailService.sendPrayerRequest(this.prayerForm.value);
       this.showSuccess.set(true);
       this.prayerForm.reset();
-    }, 1000);
+    } catch (error: any) {
+      console.error('Error sending prayer request:', error);
+      this.showError.set(true);
+    } finally {
+      this.isSubmitting.set(false);
+    }
   }
 }
