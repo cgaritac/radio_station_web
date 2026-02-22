@@ -1,33 +1,33 @@
 {
   "BANNER": {
-    "ADVERTISE_TITLE": "¿Te gustaría anunciar tu actividad?",
-    "ADVERTISE_SUBTITLE": "Ayudamos a las iglesias locales y ministerios a difundir sus eventos y campañas evangelísticas en toda nuestra región.",
-    "ADVERTISE_TOOLTIP": "Anunciate",
+    "ADVERTISE_TITLE": "¿Deseas anunciar tu actividad?",
+    "ADVERTISE_SUBTITLE": "Ayudamos a las iglesias y ministerios locales a difundir sus eventos y campañas evangelísticas en toda nuestra región.",
+    "ADVERTISE_TOOLTIP": "Anunciar",
     "CONTACT_NOW": "Contactar ahora",
-    "DOWNLOAD_PRICES": "Descargar información"
+    "DOWNLOAD_PRICES": "Descargar Información"
   },
   "HERO": {
     "TEXT1": "SINTONIZA LA",
     "TEXT2": "FE",
-    "TEXT3": "Y",
+    "TEXT3": "Y LA",
     "TEXT4": "ESPERANZA",
     "SUBTITLE": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",
     "LISTEN_NOW": "ESCUCHAR AHORA",
     "STOP": "DETENER AHORA",
     "YOUTUBE": "VER EN YOUTUBE",
-    "STREAMING": "TRANSMITIENDO AHORA"
+    "STREAMING": "TRANSMITIENDO EN VIVO"
   },
   "HOME": {
     "BROADCASTING": "TRANSMITIENDO EN VIVO",
-    "PLAY_NOW": "REPRODUCIR AHORA",
+    "PLAY_NOW": "REPRODUCIR",
     "SCHEDULE_TITLE": "Programación",
-    "HISTORY_TITLE": "TRANSMISIÓN RECIENTE",
+    "HISTORY_TITLE": "RECIÉN TRANSMITIDO",
     "HISTORY_SUBTITLE": "Lo que se ha transmitido",
     "SOURCE_INFO": "Proporcionado por",
     "SOURCE_LINK": "Online Radio Box",
-    "LIVE_NOW": "EN VIVO",
+    "LIVE_NOW": "EN VIVO AHORA",
     "NEWS_TITLE": "Noticias",
-    "VERSE_TITLE": "VERSÍCULO DEL DÍA",
+    "VERSE_TITLE": "VERSÍCULO DIARIO",
     "VERSE_SUBTITLE": "Alimenta tu Espíritu",
     "TESTIMONIALS_TITLE": "Testimonios",
     "POWERED_BY": "Proporcionado por",
@@ -40,7 +40,7 @@
   },
   "NAV": {
     "HOME": "Inicio",
-    "SCHEDULE": "Horario",
+    "SCHEDULE": "Programación",
     "PODCASTS": "Estudios",
     "NEWS": "Noticias",
     "BLOG": "Blog",
@@ -52,23 +52,23 @@
     "SUBTITLE": "Próximas Actividades",
     "MORE_INFO": "MÁS INFORMACIÓN",
     "MODAL": {
-        "TITLE": "Detalles de la Actividad",
-        "WHATSAPP_TEXT": "Solicitar información",
-        "WHATSAPP_MESSAGE": "Hola, me gustaría recibir más información sobre la actividad: ",
-        "CLOSE": "Cerrar"
+      "TITLE": "Detalles de la Actividad",
+      "WHATSAPP_TEXT": "Solicitar información",
+      "WHATSAPP_MESSAGE": "Hola, me gustaría recibir más información sobre la actividad: ",
+      "CLOSE": "Cerrar"
     },
     "ACTIVITIES": {
       "ITEM_1": {
         "TITLE": "Culto Unido de Oración",
         "DATE": "15 DE OCTUBRE, 2026",
         "LOCATION": "Plaza Central, Nandayure",
-        "DESCRIPTION": "Únete a nuestra comunidad en una noche especial de intercesión y clamor por nuestra ciudad. Un tiempo para fortalecer nuestra fe y buscar la presencia de Dios juntos."
+        "DESCRIPTION": "Únase a nuestra comunidad en una noche especial de intercesión y oración por nuestra ciudad. Un tiempo para fortalecer nuestra fe y buscar juntos la presencia de Dios."
       },
       "ITEM_2": {
-        "TITLE": "Reunión de Jóvenes: \"Fe Activa\"",
+        "TITLE": "Encuentro Juvenil: \"Fe Activa\"",
         "DATE": "22 DE OCTUBRE, 2026",
         "LOCATION": "Auditorio Municipal",
-        "DESCRIPTION": "Un espacio dinámico para jóvenes que buscan vivir su fe de manera práctica. Tendremos música en vivo, charlas inspiradoras y un tiempo de convivencia increíble."
+        "DESCRIPTION": "Un espacio dinámico para jóvenes que buscan vivir su fe de manera práctica. Tendremos música en vivo, charlas inspiradoras y un tiempo increíble de compañerismo."
       },
       "ITEM_3": {
         "TITLE": "Campaña de Ayuda Social",
@@ -87,43 +87,46 @@
     "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut efficitur mauris. Sed in accumsan est, at vehicula urna.",
     "MENU": "Menú",
     "FOLLOW_US": "Síguenos",
-    "CONTACT_US": "Contáctanos",
+    "CONTACT_US": "Contáctenos",
     "RIGHTS": "Todos los derechos reservados.",
     "ADDRESS": "Av. XXX 123, Ciudad de XXXXX",
     "EMAIL": "info@XXXXX.com",
     "PHONE": "+506 12345678"
   },
-  "YOUTUBE_LIVE": {
-    "TAG": "YOUTUBE LIVE",
+  "YOUTUBE_CHANNEL": {
+    "TAG": "CANAL DE YOUTUBE",
     "TITLE_PART1": "Vívelo en",
     "TITLE_PART2": "TIEMPO REAL",
-    "DESCRIPTION": "No solo nos escuches, ¡únete a nuestra transmisión visual! Interactúa con la comunidad en vivo, deja tus peticiones de oración y sé parte de la familia Ornan Nandayure desde cualquier lugar del mundo.",
+    "DESCRIPTION": "No solo nos escuches, ¡únete a nuestra transmisión visual! Interactúa con la comunidad, deja tus peticiones de oración y sé parte de la familia Ornan Nandayure desde cualquier parte del mundo.",
     "SUBSCRIBE": "Suscribirse",
     "SUBSCRIBERS": "SUSCRIPTORES",
-    "LAST_VIDEO": "ÚLTIMO VIDEO"
+    "LAST_VIDEO": "ÚLTIMO VIDEO",
+    "AMOUNT_SUBSCRIBERS": "362",
+    "VIDEO_TITLE": "Radio Ornan Nandayure",
+    "LOADING": "Conectando con YouTube..."
   },
   "PRAYER_REQUEST": {
-    "TITLE": "SOLICITUD DE ORACIÓN",
-    "SUBTITLE": "Permítenos orar por ti",
+    "TITLE": "PETICIÓN DE ORACIÓN",
+    "SUBTITLE": "Permítanos orar por usted",
     "NAME_LABEL": "Nombre (Opcional)",
-    "NAME_PLACEHOLDER": "Ingresa tu nombre",
-    "REQUEST_LABEL": "Tu petición de oración",
-    "REQUEST_PLACEHOLDER": "Escribe aquí tu necesidad...",
+    "NAME_PLACEHOLDER": "Ingrese su nombre",
+    "REQUEST_LABEL": "Su petición de oración",
+    "REQUEST_PLACEHOLDER": "Escriba su necesidad aquí...",
     "SUBMIT": "Enviar petición",
-    "SUCCESS": "Tu petición ha sido enviada. Estaremos orando por ti.",
-    "ERROR": "Hubo un error al enviar tu petición. Por favor reintenta."
+    "SUCCESS": "Su petición ha sido enviada. Estaremos orando por usted.",
+    "ERROR": "Hubo un error al enviar su petición. Por favor, intente de nuevo."
   },
   "SPONSORS": {
     "TAG": "PUBLICIDAD",
-    "TITLE": "Nuestros Anunciantes",
-    "SUBTITLE": "Apoya a quienes hacen posible esta señal",
+    "TITLE": "Nuestros Patrocinadores",
+    "SUBTITLE": "Apoye a quienes hacen posible esta señal",
     "YOUR_LOGO": "Tu Logo Aquí"
   },
   "ABOUT_US": {
     "TITLE": "SOBRE NOSOTROS",
     "SUBTITLE": "Llevando esperanza y fe a cada hogar",
     "TAG": "NUESTRA HISTORIA",
-    "HISTORY_TITLE": "Más de 10 años siendo tu compañía",
+    "HISTORY_TITLE": "Más de 10 años siendo su compañía",
     "HISTORY_TEXT": "Nacimos con el propósito de conectar a la comunidad a través de la fe. Lo que comenzó como un pequeño proyecto local, hoy es una señal que llega a miles de personas, ofreciendo una programación rica en valores, música inspiradora y mensajes que transforman vidas.",
     "MISSION_TITLE": "Nuestra Misión",
     "MISSION_TEXT": "Difundir el mensaje de esperanza a través de una comunicación de excelencia, siendo un puente firme entre la comunidad y los valores cristianos para el fortalecimiento espiritual de cada oyente.",
@@ -134,22 +137,22 @@
   },
   "CONTACT": {
     "TITLE": "CONTACTO",
-    "SUBTITLE": "¿Tienes algo que decirnos?",
-    "TAG": "ESTAMOS AQUÍ PARA TI",
+    "SUBTITLE": "¿Tiene algo que decirnos?",
+    "TAG": "ESTAMOS AQUÍ PARA USTED",
     "INFO_TITLE": "Información de Contacto",
     "INFO_SUBTITLE": "Otras formas de conectar con nosotros",
-    "FORM_TITLE": "Envíanos un mensaje",
-    "FORM_NAME": "Tu Nombre",
-    "FORM_EMAIL": "Tu Correo Electrónico",
+    "FORM_TITLE": "Envíenos un mensaje",
+    "FORM_NAME": "Su Nombre",
+    "FORM_EMAIL": "Su Correo Electrónico",
     "FORM_SUBJECT": "Asunto",
     "FORM_MESSAGE": "Mensaje",
     "FORM_SUBMIT": "Enviar Mensaje",
-    "SUCCESS": "¡Gracias! Tu mensaje ha sido enviado correctamente.",
-    "ERROR": "Hubo un error. Por favor, intenta de nuevo.",
+    "SUCCESS": "¡Gracias! Su mensaje ha sido enviado con éxito.",
+    "ERROR": "Ocurrió un error. Por favor, intente de nuevo.",
     "FIND_US": "Encuéntranos en",
-    "FOLLOW_US": "Síguenos en redes",
+    "FOLLOW_US": "Síguenos en redes sociales",
     "PHONE": "Teléfono",
-    "EMAIL": "Correo"
+    "EMAIL": "Correo electrónico"
   },
   "NEWS_PAGE": {
     "TITLE": "NOTICIAS",
@@ -161,7 +164,7 @@
         "TITLE": "Nueva Antena de Transmisión en Nandayure",
         "DATE": "18 de Febrero, 2026",
         "EXCERPT": "Estamos felices de anunciar la instalación de nuestro nuevo equipo que permitirá una señal más clara en toda la región.",
-        "CONTENT": "Nos complace anunciar que Radio Ornan ha dado un paso gigante en su compromiso con la excelencia técnica. Esta semana finalizamos la instalación de nuestra nueva antena de transmisión de alta ganancia en el cerro principal de Nandayure.\n\nEste nuevo equipo no solo expande nuestra cobertura a zonas que anteriormente tenían dificultades de recepción, sino que también mejora significativamente la fidelidad del audio. Nuestros técnicos han trabajado arduamente para asegurar que cada hogar en la región reciba un mensaje claro y sin interferencias. Esta inversión es gracias al apoyo constante de nuestra audiencia y patrocinadores que creen en el impacto de nuestra señal."
+        "CONTENT": "Nos complace anunciar que Radio Ornan ha dado un paso gigante en su compromiso con la excelencia técnica. Esta semana finalizamos la instalación de nuestra nueva antena de transmisión de alta ganancia en el cerro principal de Nandayure.\n\nEste nuevo equipo no solo amplía nuestra cobertura a zonas que antes tenían dificultades de recepción, sino que también mejora significativamente la fidelidad del audio. Nuestros técnicos han trabajado arduamente para asegurar que cada hogar de la región reciba un mensaje claro y sin interferencias. Esta inversión es gracias al apoyo constante de nuestra audiencia y patrocinadores que creen en el impacto de nuestra señal."
       },
       "ITEM_2": {
         "TITLE": "Resultados de la Campaña de Ayuda 'Corazón Abierto'",
@@ -169,9 +172,9 @@
         "EXCERPT": "Gracias a sus donaciones, logramos impactar a más de 50 familias el pasado fin de semana."
       },
       "ITEM_3": {
-        "TITLE": "Próximo Concierto de Alabanza Juvenil",
+        "TITLE": "Próximo Concierto Juvenil de Alabanza",
         "DATE": "05 de Febrero, 2026",
-        "EXCERPT": "Artistas locales se unirán en una noche de adoración este próximo sábado en el parque central."
+        "EXCERPT": "Artistas locales se unirán en una noche de adoración el próximo sábado en el parque central."
       }
     }
   },
@@ -186,7 +189,7 @@
         "TITLE": "Cómo fortalecer tu vida de oración este año",
         "CATEGORY": "Vida Cristiana",
         "EXCERPT": "Descubre pasos prácticos para mantener una comunicación constante y profunda con Dios en tu día a día.",
-        "CONTENT": "La oración no es simplemente un rito religioso, es el respirar del alma. En este artículo exploramos cómo transformar tu vida de comunicación con el Creador.\n\nPrimero, la constancia sobre la intensidad. Es más efectivo dedicar 15 minutos diarios de calidad que una hora una vez a la semana. Busca un lugar tranquilo, elimina las distracciones de tu teléfono y prepárate para escuchar tanto como para hablar.\n\nSegundo, utiliza la Palabra como guía. Cuando no sepas qué orar, abre los Salmos. Deja que las verdades bíblicas den forma a tus peticiones. Verás cómo tu perspectiva cambia de tus problemas hacia la soberanía de Dios."
+        "CONTENT": "La oración no es simplemente un ritual religioso; es el respirar del alma. En este artículo exploramos cómo transformar tu vida de comunicación con el Creador.\n\nPrimero, la constancia sobre la intensidad. Es más efectivo dedicar 15 minutos de calidad diarios que una hora una vez a la semana. Busca un lugar tranquilo, elimina las distracciones del celular y prepárate para escuchar tanto como para hablar.\n\nSegundo, usa la Palabra como guía. Cuando no sepas qué orar, abre los Salmos. Deja que las verdades bíblicas den forma a tus peticiones. Verás cómo tu perspectiva cambia de tus problemas hacia la soberanía de Dios."
       },
       "ITEM_2": {
         "TITLE": "La importancia de la comunidad en la fe",
@@ -196,13 +199,13 @@
       "ITEM_3": {
         "TITLE": "Música que inspira el alma",
         "CATEGORY": "Música",
-        "EXCERPT": "Una selección de himnos y canciones modernas que han marcado la historia de nuestra estación."
+        "EXCERPT": "Una selección de himnos y canciones modernas que han marcado la historia de nuestra emisora."
       }
     }
   },
   "SCHEDULE_PAGE": {
-    "TITLE": "HORARIO",
-    "SUBTITLE": "Sintoniza nuestra programación diaria",
+    "TITLE": "PROGRAMACIÓN",
+    "SUBTITLE": "Sintonice nuestra programación diaria",
     "TAG": "PROGRAMACIÓN",
     "DAYS": {
       "MON_FRI": "Lunes a Viernes",
@@ -226,15 +229,15 @@
         "HOST": "Equipo Ministerial"
       },
       "YOUTH_NIGHT": {
-        "TITLE": "Noche de Jóvenes",
+        "TITLE": "Noche Juvenil",
         "TIME": "7:00 PM - 9:00 PM",
-        "HOST": "Líderes Juveniles"
+        "HOST": "Líderes de Jóvenes"
       }
     }
   },
   "STUDIES_PAGE": {
     "TITLE": "ESTUDIOS BÍBLICOS",
-    "SUBTITLE": "Profundiza en la Palabra de Dios",
+    "SUBTITLE": "Profundizando en la Palabra de Dios",
     "TAG": "BIBLIOTECA ESPIRITUAL",
     "READ_MORE": "Ver Estudio",
     "ITEMS": {
@@ -242,7 +245,7 @@
         "TITLE": "El Sermón del Monte",
         "SERIES": "Mateo",
         "EXCERPT": "Un análisis profundo de las enseñanzas de Jesús sobre el carácter y el Reino de Dios.",
-        "CONTENT": "El Sermón del Monte es quizás el discurso más famoso y profundo de Jesús. En este estudio, dividimos las bienaventuranzas no como una lista de mandamientos, sino como una descripción del carácter de un ciudadano del Reino.\n\nJesús comienza confrontando las expectativas terrenales: los pobres en espíritu, los que lloran, los humildes... son ellos los verdaderos bendecidos. A través de este estudio, aprenderemos cómo aplicar estos valores contraculturales en nuestra sociedad moderna, siendo sal y luz en un mundo que a menudo camina en la dirección opuesta."
+        "CONTENT": "El Sermón del Monte es quizás el discurso más famoso y profundo de Jesús. En este estudio, desglosamos las bienaventuranzas no como una lista de mandamientos, sino como una descripción del carácter de un ciudadano del Reino.\n\nJesús comienza confrontando las expectativas terrenales: los pobres en espíritu, los que lloran, los humildes... ellos son los verdaderamente dichosos. A través de este estudio aprenderemos cómo aplicar estos valores contraculturales en nuestra sociedad moderna, siendo sal y luz en un mundo que a menudo camina en dirección opuesta."
       },
       "ITEM_2": {
         "TITLE": "Los Frutos del Espíritu",
@@ -259,41 +262,41 @@
   "TERMS": {
     "TITLE": "TÉRMINOS DE USO",
     "SUBTITLE": "Reglas y condiciones de nuestra plataforma",
-    "SECTION1_TITLE": "1. Aceptación de los Términos",
+    "SECTION1_TITLE": "1. Aceptación de Términos",
     "SECTION1_TEXT": "Al acceder y utilizar este sitio web, usted acepta cumplir con estos términos y condiciones. Si no está de acuerdo con alguna parte de estos términos, le pedimos amablemente que no utilice nuestra plataforma.",
     "SECTION2_TITLE": "2. Uso de la Señal y Contenido",
-    "SECTION2_TEXT": "Nuestra transmisión de radio y el contenido publicado (artículos, noticias, grabaciones) son para uso personal y no comercial. Queda prohibida la retransmisión no autorizada o el uso comercial de nuestro contenido sin permiso previo por escrito.",
+    "SECTION2_TEXT": "Nuestra transmisión de radio y el contenido publicado (artículos, noticias, grabaciones) son para uso personal y no comercial. Está prohibida la retransmisión no autorizada o el uso comercial de nuestro contenido sin permiso previo por escrito.",
     "SECTION3_TITLE": "3. Limitación de Responsabilidad",
-    "SECTION3_TEXT": "Hacemos nuestro mejor esfuerzo para mantener la señal activa y la información actualizada. Sin embargo, no nos hacemos responsables por interrupciones técnicas ajenas a nuestro control o por cualquier decisión tomada basada en el contenido de nuestra programación.",
+    "SECTION3_TEXT": "Hacemos nuestro mejor esfuerzo por mantener la señal activa y la información actualizada. Sin embargo, no nos hacemos responsables por interrupciones técnicas fuera de nuestro control ni por cualquier decisión tomada basada en el contenido de nuestra programación.",
     "SECTION4_TITLE": "4. Modificaciones",
     "SECTION4_TEXT": "Nos reservamos el derecho de modificar estos términos en cualquier momento. El uso continuado del sitio tras dichos cambios constituye la aceptación de los nuevos términos.",
     "SECTION5_TITLE": "5. Servicios de Terceros (Streaming)",
-    "SECTION5_TEXT": "Nuestra señal de audio puede provenir de servidores externos. El sitio facilita el acceso a estos contenidos, pero no somos responsables de la legalidad o exactitud de las transmisiones externas.",
+    "SECTION5_TEXT": "Nuestra señal de audio puede provenir de servidores externos. El sitio facilita el acceso a este contenido, pero no somos responsables por la legalidad o precisión de las transmisiones externas.",
     "SECTION6_TITLE": "6. Propiedad Intelectual y DMCA",
-    "SECTION6_TEXT": "Respetamos los derechos de autor. Si considera que algún contenido en este sitio infringe sus derechos, por favor contáctenos a info@XXXXX.com con los detalles para proceder a su revisión o retiro.",
-    "SECTION7_TITLE": "7. Contenido Enviado por el Usuario",
+    "SECTION6_TEXT": "Respetamos los derechos de autor. Si considera que algún contenido en este sitio infringe sus derechos, por favor contáctenos en info@XXXXX.com con los detalles para su revisión o retiro.",
+    "SECTION7_TITLE": "7. Contenido Enviado por Usuarios",
     "SECTION7_TEXT": "Al enviarnos peticiones de oración o mensajes, usted nos otorga permiso para mencionarlos o leerlos durante nuestra programación radial, a menos que especifique lo contrario.",
     "LAST_UPDATE": "Última actualización"
   },
   "PRIVACY": {
     "TITLE": "POLÍTICA DE PRIVACIDAD",
-    "SUBTITLE": "Cómo protegemos tu información",
-    "SECTION1_TITLE": "1. Información que Recolectamos",
-    "SECTION1_TEXT": "Aunque no solicitamos registro de usuario ni login, recolectamos información básica de las siguientes maneras:",
-    "DATA_LIST_ITEM1": "Datos de contacto: Nombre y mensaje enviados voluntariamente a través de nuestro formulario de Peticiones de Oración o Contacto.",
+    "SUBTITLE": "Cómo protegemos su información",
+    "SECTION1_TITLE": "1. Información que Recopilamos",
+    "SECTION1_TEXT": "Aunque no solicitamos registro ni inicio de sesión de usuarios, recopilamos información básica de las siguientes maneras:",
+    "DATA_LIST_ITEM1": "Datos de contacto: Nombre y mensaje enviado voluntariamente a través de nuestro formulario de Peticiones de Oración o Contacto.",
     "DATA_LIST_ITEM2": "Uso Técnico: Almacenamos datos técnicos en su navegador (Local Storage) para mejorar su experiencia, como el versículo bíblico del día o preferencias de audio.",
     "DATA_LIST_ITEM3": "Cookies y Navegación: Información sobre cómo interactúa con nuestro sitio (páginas visitadas, tiempo de permanencia).",
     "SECTION2_TITLE": "2. Uso de la Información",
-    "SECTION2_TEXT": "La información que recolectamos se utiliza exclusivamente para responder a sus solicitudes de oración, mejorar la estabilidad de la plataforma y entender mejor los intereses de nuestra audiencia.",
+    "SECTION2_TEXT": "La información que recopilamos se utiliza exclusivamente para responder a sus peticiones de oración, mejorar la estabilidad de la plataforma y entender mejor los intereses de nuestra audiencia.",
     "SECTION3_TITLE": "3. Herramientas de Terceros",
     "SECTION3_TEXT": "Utilizamos servicios externos para mejorar nuestra oferta:",
-    "SECTION3_ANALYTICS": "Google Analytics: Utilizamos esta herramienta para analizar el tráfico. Google recolecta datos de navegación de forma anónima de acuerdo con sus propias políticas de privacidad.",
+    "SECTION3_ANALYTICS": "Google Analytics: Utilizamos esta herramienta para analizar el tráfico. Google recopila datos de navegación de forma anónima según sus propias políticas de privacidad.",
     "SECTION4_TITLE": "4. Sus Derechos",
-    "SECTION4_TEXT": "Usted tiene derecho a solicitar la eliminación de los mensajes enviados a través de nuestros formularios en cualquier momento contactándonos por los medios oficiales listados en el pie de página.",
-    "SECTION5_TITLE": "5. Borrado de Datos (Data Erasure)",
-    "SECTION5_TEXT": "Cualquier usuario que haya enviado información personal a través de nuestros formularios puede solicitar el borrado total de dicha información de nuestros registros enviando un correo a info@XXXXX.com.",
+    "SECTION4_TEXT": "Usted tiene derecho a solicitar la eliminación de los mensajes enviados a través de nuestros formularios en cualquier momento, contactándonos por los medios oficiales listados en el pie de página.",
+    "SECTION5_TITLE": "5. Eliminación de Datos",
+    "SECTION5_TEXT": "Cualquier usuario que haya enviado información personal a través de nuestros formularios puede solicitar la eliminación completa de dicha información de nuestros registros enviando un correo a info@XXXXX.com.",
     "SECTION6_TITLE": "6. Privacidad de Menores",
-    "SECTION6_TEXT": "Nuestro sitio no está dirigido a menores de 13 años. No recolectamos intencionalmente información de menores. Si detectamos que un menor nos ha enviado datos personales, procederemos a eliminarlos.",
+    "SECTION6_TEXT": "Nuestro sitio no está dirigido a niños menores de 13 años. No recopilamos información de menores a sabiendas. Si detectamos que un menor nos ha enviado datos personales, procederemos a su eliminación.",
     "LAST_UPDATE": "Última actualización"
   },
   "ERROR": {
@@ -303,14 +306,5 @@
       "GO_HOME": "Volver al Inicio",
       "GO_BACK": "Regresar"
     }
-  },
-  "SOCIAL": {
-    "FACEBOOK": "https://www.facebook.com/radioornannandayure/",
-    "INSTAGRAM": "https://www.instagram.com/radioornannandayure/",
-    "YOUTUBE": "https://www.youtube.com/@radioornannandayure",
-    "SPOTIFY": "https://open.spotify.com/show/1aZmACn7gBSoVyNDVl0ltY",
-    "TIKTOK": "https://www.tiktok.com/@ministerio_ornan?lang=es",
-    "WHATSAPP": "https://www.whatsapp.com/channel/0029VbA1ifh1NCrXCaosEy2t",
-    "RADIO_BOX": "https://onlineradiobox.com/cr/ornannandayure/?cs=cr.ornannandayure"
   }
 }

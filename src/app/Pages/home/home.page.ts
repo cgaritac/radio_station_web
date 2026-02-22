@@ -6,7 +6,7 @@ import { BannerComponent } from '../../Shared/components/banner/banner.component
 import { BroadcastHistoryComponent } from '../../Features/broadcast-history/broadcast-history.component';
 import { VerseComponent } from '../../Features/verse/verse.component';
 import { CommunityComponent } from '../../Features/community/communitycomponent';
-import { YouTubeLiveComponent } from '../../Features/youtube-live/youtube-live.component';
+import { YouTubeChannelComponent } from '../../Features/youtube-live/youtube-channel.component';
 import { PrayerRequestComponent } from '../../Features/prayer-request/prayer-request.component';
 import { SponsorsComponent } from '../../Features/sponsors/sponsors.component';
 
@@ -20,7 +20,7 @@ import { SponsorsComponent } from '../../Features/sponsors/sponsors.component';
     BroadcastHistoryComponent,
     VerseComponent,
     CommunityComponent,
-    YouTubeLiveComponent,
+    YouTubeChannelComponent,
     PrayerRequestComponent,
     SponsorsComponent
   ],

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- URL Home -->
+  <!-- Radio XXXXX Sitemap -->
   <url>
     <loc>https://tudominio.com/</loc>
     <lastmod>2026-02-21</lastmod>
@@ -8,7 +8,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Schedule -->
   <url>
     <loc>https://tudominio.com/schedule</loc>
     <lastmod>2026-02-21</lastmod>
@@ -16,15 +15,13 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Bible Studies -->
   <url>
     <loc>https://tudominio.com/studies</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
-  <!-- News -->
   <url>
     <loc>https://tudominio.com/news</loc>
     <lastmod>2026-02-21</lastmod>
@@ -32,15 +29,13 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog -->
   <url>
     <loc>https://tudominio.com/blog</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- About Us -->
   <url>
     <loc>https://tudominio.com/about</loc>
     <lastmod>2026-02-21</lastmod>
@@ -48,7 +43,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Contact -->
   <url>
     <loc>https://tudominio.com/contact</loc>
     <lastmod>2026-02-21</lastmod>
@@ -56,7 +50,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Terms -->
   <url>
     <loc>https://tudominio.com/terms</loc>
     <lastmod>2026-02-21</lastmod>
@@ -64,7 +57,6 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Privacy -->
   <url>
     <loc>https://tudominio.com/privacy</loc>
     <lastmod>2026-02-21</lastmod>

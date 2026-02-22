@@ -1,0 +1,16 @@
+{
+  "name": "Radio XXXXX",
+  "short_name": "Radio XXXXX",
+  "description": "Sintoniza la fe y la esperanza. Radio cristiana transmitiendo desde XXXXXX.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#032441",
+  "theme_color": "#032441",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
