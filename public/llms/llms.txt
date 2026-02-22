@@ -1,0 +1,18 @@
+# Radio XXXXX - LLM Context
+
+## Description
+Informative and spiritual platform for Radio XXXXX, a Christian radio station based in XXXXXX, XXXXXX, XXXXXX.
+
+## Target Audience
+Christians looking for spiritual growth, biblical studies, and local community news in the XXXXXX area.
+
+## Key Sections
+- /: Home with live player and highlights.
+- /schedule: Daily programming of pastors and hosts.
+- /studies: Deep biblical studies (Matthew, Galatians, Ephesians).
+- /news: Local updates and station activities.
+- /blog: Spiritual reflections and edification articles.
+- /about: History, mission, and vision of the station.
+
+## Purpose
+To connect the community through faith, offering a bridge between spiritual values and daily life.

@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Disallow: /tmp/
+Disallow: /admin/
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap
+Sitemap: https://tudominio.com/sitemap.xml
