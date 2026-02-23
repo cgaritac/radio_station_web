@@ -1,84 +1,162 @@
 # Radio Station Web Platform
 
-A premium, modern, and feature-rich web application designed for community-focused radio stations. This platform provides a seamless listening experience with a sleek aesthetic, emphasizing values, community engagement, and high-quality broadcasting.
+A high-performance, modern, and feature-rich web application designed for professional radio stations and community broadcasting. Built with the latest technologies, this platform delivers a premium listening experience with integrated content management and community engagement tools.
 
-## Features
+---
 
-- **Live Stream Player**: A robust audio player with real-time streaming capabilities, volume control, and intuitive playback management.
-- **Multilingual Support**: Fully localized in multiple languages (English and Spanish) to reach a diverse audience.
-- **Modern UI/UX**: Crafted with a premium design aesthetic using Tailwind CSS, ensuring responsiveness across all devices.
-- **Broadcast Schedule**: Keep your audience informed with a dynamic daily and weekly programming schedule.
-- **Content Hub**: Dedicated sections for News and Blog posts to share updates and stories.
-- **Values-Based Content**: Includes specialized sections for educational "Studies" and community-focused series.
+## Vision
 
-## Technical Highlights
+To provide radio stations with a robust, scalable, and aesthetically superior digital presence. This platform is engineered for high performance, accessibility, and a seamless user experience across mobile, tablet, and desktop devices.
 
-- **Angular 21+**: Built using the latest Angular features for peak performance and maintainability.
-- **Signals-Based State Management**: Leveraging Angular Signals (`signal`, `computed`, `effect`) for reactive and efficient state handling.
-- **Standalone Architecture**: 100% standalone components, promoting modularity and reducing boilerplate.
-- **Modern Control Flow**: Utilizing the new `@if`, `@for`, and `@switch` syntax for cleaner templates.
-- **Optimal Performance**: Implements `ChangeDetectionStrategy.OnPush` across all components.
-- **Tailwind CSS 4.0**: Styling powered by the latest Tailwind utility-first framework for rapid and consistent design.
+## Core Features
+
+### Seamless Audio Experience
+
+- **Advanced Live Stream Player**: Custom-built audio engine supporting real-time HLS/Icecast streams with metadata synchronization.
+- **Broadcast History**: Automated "Recently Played" tracking to keep listeners engaged with the station's playlist history.
+- **Dynamic Programming Schedule**: Comprehensive weekly schedule management, allowing listeners to browse daily shows and upcoming events.
+
+### Integrated Content Management
+
+- **Dynamic Content Hub**: Robust sections for News, Blog posts, and Biblical/Educational Studies.
+- **SEO-Optimized Detail Pages**: Dynamic routing (/:type/:id) for deep-linking and search engine visibility.
+- **Multilingual Support (i18n)**: Full localization support for English and Spanish, easily extensible to any language.
+
+### Community and Engagement
+
+- **Prayer Request System**: A dedicated, user-friendly interface for community members to submit requests.
+- **Contact Center**: Professional inquiry forms integrated with EmailJS for instant communication without a backend.
+- **Sponsors Showcase**: Dedicated space to feature partners, sponsors, and community supporters with premium styling.
+- **Daily Inspiration**: "Verse of the Day" feature with local storage caching for optimal performance.
+
+### Technical Excellence
+
+- **Angular 21+ Architecture**: Built using the absolute latest features of the Angular ecosystem.
+- **Reactive State Management**: 100% Signal-based logic for efficient, granular updates.
+- **Tailwind CSS 4.0 Styling**: Powered by the newest utility-first framework for a fast, responsive, and maintainable design system.
+- **Modern Control Flow**: Utilizing @if, @for, and @switch for clean and readable templates.
+- **OnPush Change Detection**: Maximized performance across all components.
+
+---
+
+## Project Architecture
+
+This project follows a Feature-Driven Architecture, promoting high modularity and scalability.
+
+```text
+src/app/
+├── Core/          # Global singletons (Guards, Interceptors, Global Services)
+├── Features/      # Domain-specific logic (Player, Schedule, History, Verse)
+├── Shared/        # Reusable UI components, pipes, and directives
+├── Pages/         # Routed views and page-level orchestration
+└── Layout/        # Application shell (Header, Footer, Navigation)
+```
 
 ## Tech Stack
 
-- **Framework**: [Angular](https://angular.io/) (Latest Version)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **State Management & Logic**: RxJS
-- **Internationalization**: [NGX-Translate](http://www.ngx-translate.com/)
+- **Framework**: Angular 21
+- **Styling**: Tailwind CSS 4.0
+- **Logical Streams**: Angular Signals & RxJS
+- **Internationalization**: NGX-Translate
+- **Email Engine**: EmailJS
 - **Icons**: Angular SVG Icon
 
-## Getting Started
+---
 
-### Prerequisites
+## Configuration and Setup
 
-- Node.js (Latest LTS recommended)
-- Yarn or NPM
+The application uses environment variables for easy configuration across different environments.
+
+### Environment Variables (.env)
+
+Create a .env file in the root directory. Below is the complete list of required variables:
+
+```env
+# Radio Configuration
+NG_APP_RADIO_NAME="Your Radio Station"
+NG_APP_STREAM_URL=https://stream.your-station.com/live
+NG_APP_METADATA_URL=https://api.your-station.com/metadata
+NG_APP_HISTORY_URL=https://api.your-station.com/history
+
+# Bible Verse API
+NG_APP_BIBLE_GATEWAY_URL=https://www.biblegateway.com/votd/get/
+
+# YouTube Integration
+NG_APP_YOUTUBE_CHANNEL_ID=your_channel_id
+NG_APP_YOUTUBE_UPLOADS_PLAYLIST_ID=your_playlist_id
+NG_APP_CORS_PROXY_URL=https://api.allorigins.win/get?url=
+NG_APP_YOUTUBE_EMBED_URL=https://www.youtube.com/embed
+NG_APP_YOUTUBE_THUMBNAIL_URL=https://img.youtube.com/vi
+NG_APP_YOUTUBE_FEEDS_URL=https://www.youtube.com/feeds/videos.xml?channel_id=
+
+# Social Media Links
+NG_APP_FACEBOOK_URL=https://www.facebook.com/yourstation
+NG_APP_INSTAGRAM_URL=https://www.instagram.com/yourstation
+NG_APP_YOUTUBE_URL=https://www.youtube.com/@yourstation
+NG_APP_SPOTIFY_URL=https://open.spotify.com/show/yourshow
+NG_APP_TIKTOK_URL=https://www.tiktok.com/@yourstation
+NG_APP_WHATSAPP_URL=https://www.whatsapp.com/channel/your-id
+NG_APP_WHATSAPP_DIRECT_URL=https://wa.me/yournumber
+NG_APP_RADIO_BOX_URL=https://onlineradiobox.com/your-station/
+
+# EmailJS Configuration
+NG_APP__EMAILJS_SERVICE_ID=your_service_id
+NG_APP__EMAILJS_PUBLIC_KEY=your_public_key
+NG_APP__EMAILJS_CONTACT_TEMPLATE_ID=your_contact_template
+NG_APP__EMAILJS_PRAYER_TEMPLATE_ID=your_prayer_template
+```
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/radio-station-web.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd radio-station-web
-   ```
-3. Install dependencies:
-   ```bash
-   yarn install
-   # or
-   npm install
-   ```
+1.  **Clone the Repo**:
+    ```bash
+    git clone https://github.com/your-username/radio-station-web.git
+    ```
+2.  **Install Dependencies**:
+    ```bash
+    yarn install
+    # or
+    npm install
+    ```
 
-### Development Server
+### Development
 
-Run the following command to start the development server:
+Start the development server:
 
 ```bash
 yarn dev
-# or
-npm run dev
 ```
 
-The application will be available at `http://localhost:4200/`.
+The app will be available at http://localhost:4200/.
 
-## Building for Production
+---
 
-To create a production-ready bundle, run:
+## Deployment
 
-```bash
-yarn build
-# or
-npm run build
-```
+The project is optimized for deployment on platforms like Vercel or Netlify.
 
-The build artifacts will be stored in the `dist/` directory.
+1.  Configure your environment variables in the deployment dashboard.
+2.  Run the production build:
+    ```bash
+    yarn build
+    ```
+3.  The build artifacts will be located in the dist/ directory.
+
+---
+
+## Content Management Guide
+
+To add new content (News, Blog, or Studies):
+
+1.  Add the item to the corresponding JSON or Service providing the data.
+2.  The application will automatically generate the detail page via the dynamic route :type/:id.
+3.  Ensure images are placed in public/assets/ or provided via a valid external URL.
+
+---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
