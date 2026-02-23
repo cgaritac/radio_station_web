@@ -25,7 +25,7 @@
     "HISTORY_SUBTITLE": "Lo que se ha transmitido",
     "SOURCE_INFO": "Proporcionado por",
     "SOURCE_LINK": "Online Radio Box",
-    "LIVE_NOW": "EN VIVO AHORA",
+    "LIVE_NOW": "EN VIVO",
     "NEWS_TITLE": "Noticias",
     "VERSE_TITLE": "VERSÍCULO DIARIO",
     "VERSE_SUBTITLE": "Alimenta tu Espíritu",
@@ -61,8 +61,8 @@
       "ITEM_1": {
         "TITLE": "Culto Unido de Oración",
         "DATE": "15 DE OCTUBRE, 2026",
-        "LOCATION": "Plaza Central, Nandayure",
-        "DESCRIPTION": "Únase a nuestra comunidad en una noche especial de intercesión y oración por nuestra ciudad. Un tiempo para fortalecer nuestra fe y buscar juntos la presencia de Dios."
+        "LOCATION": "Plaza Central",
+        "DESCRIPTION": "Únase a nuestra comunidad en una noche especial de intercesión y oración. Un tiempo para fortalecer nuestra fe y buscar juntos la presencia de Dios."
       },
       "ITEM_2": {
         "TITLE": "Encuentro Juvenil: \"Fe Activa\"",
@@ -97,12 +97,13 @@
     "TAG": "CANAL DE YOUTUBE",
     "TITLE_PART1": "Vívelo en",
     "TITLE_PART2": "TIEMPO REAL",
-    "DESCRIPTION": "No solo nos escuches, ¡únete a nuestra transmisión visual! Interactúa con la comunidad, deja tus peticiones de oración y sé parte de la familia Ornan Nandayure desde cualquier parte del mundo.",
+    "DESCRIPTION": "No solo nos escuches, ¡únete a nuestra transmisión visual! Interactúa con la comunidad, deja tus peticiones de oración y sé parte de nuestra familia desde cualquier parte del mundo.",
     "SUBSCRIBE": "Suscribirse",
     "SUBSCRIBERS": "SUSCRIPTORES",
     "LAST_VIDEO": "ÚLTIMO VIDEO",
     "AMOUNT_SUBSCRIBERS": "362",
-    "VIDEO_TITLE": "Radio Ornan Nandayure",
+    "VIDEO_TITLE": "Radio en Vivo",
+    "TITLE_FALLBACK": "Nuestra Señal en Vivo",
     "LOADING": "Conectando con YouTube..."
   },
   "PRAYER_REQUEST": {
@@ -161,10 +162,10 @@
     "READ_MORE": "Leer más",
     "ITEMS": {
       "ITEM_1": {
-        "TITLE": "Nueva Antena de Transmisión en Nandayure",
+        "TITLE": "Nueva Antena de Transmisión",
         "DATE": "18 de Febrero, 2026",
         "EXCERPT": "Estamos felices de anunciar la instalación de nuestro nuevo equipo que permitirá una señal más clara en toda la región.",
-        "CONTENT": "Nos complace anunciar que Radio Ornan ha dado un paso gigante en su compromiso con la excelencia técnica. Esta semana finalizamos la instalación de nuestra nueva antena de transmisión de alta ganancia en el cerro principal de Nandayure.\n\nEste nuevo equipo no solo amplía nuestra cobertura a zonas que antes tenían dificultades de recepción, sino que también mejora significativamente la fidelidad del audio. Nuestros técnicos han trabajado arduamente para asegurar que cada hogar de la región reciba un mensaje claro y sin interferencias. Esta inversión es gracias al apoyo constante de nuestra audiencia y patrocinadores que creen en el impacto de nuestra señal."
+        "CONTENT": "Nos complace anunciar que nuestra emisora ha dado un paso gigante en su compromiso con la excelencia técnica. Esta semana finalizamos la instalación de nuestra nueva antena de transmisión de alta ganancia en el cerro principal de la región.\n\nEste nuevo equipo no solo amplía nuestra cobertura a zonas que antes tenían dificultades de recepción, sino que también mejora significativamente la fidelidad del audio. Nuestros técnicos han trabajado arduamente para asegurar que cada hogar de la región reciba un mensaje claro y sin interferencias. Esta inversión es gracias al apoyo constante de nuestra audiencia y patrocinadores que creen en el impacto de nuestra señal."
       },
       "ITEM_2": {
         "TITLE": "Resultados de la Campaña de Ayuda 'Corazón Abierto'",

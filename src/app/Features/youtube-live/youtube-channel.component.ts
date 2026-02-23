@@ -33,7 +33,8 @@ export class YouTubeChannelComponent implements OnInit {
   private readonly youtubeService = inject(YouTubeService);
   private readonly radioService = inject(RadioService);
 
-  private readonly uploadsPlaylistIdEnv = (import.meta as any).env.NG_APP_YOUTUBE_UPLOADS_PLAYLIST_ID;
+  private readonly uploadsPlaylistIdEnv = (import.meta as any).env
+    .NG_APP_YOUTUBE_UPLOADS_PLAYLIST_ID;
   private readonly embedBaseUrlEnv = (import.meta as any).env.NG_APP_YOUTUBE_EMBED_URL;
 
   readonly subscribeUrl = computed(() => {
@@ -42,16 +43,18 @@ export class YouTubeChannelComponent implements OnInit {
   });
 
   readonly subscriberCount = signal('YOUTUBE_CHANNEL.AMOUNT_SUBSCRIBERS');
-  readonly lastVideoTitle = signal('');
-  readonly lastVideoThumbnail = signal('');
+  readonly lastVideoTitle = signal('YOUTUBE_CHANNEL.TITLE_FALLBACK');
+  readonly lastVideoThumbnail = signal('images/community-microphone.jpg');
   readonly playlistId = signal(this.uploadsPlaylistIdEnv);
 
   readonly isLoading = signal(true);
   readonly showVideo = signal(false);
+  readonly shouldAutoplay = signal(false);
 
   readonly videoEmbedUrl = computed<SafeResourceUrl>(() => {
     if (!this.embedBaseUrlEnv) return this.sanitizer.bypassSecurityTrustResourceUrl('');
-    const url = `${this.embedBaseUrlEnv}?listType=playlist&list=${this.playlistId()}&autoplay=1&rel=0`;
+    const autoplay = this.shouldAutoplay() ? '1' : '0';
+    const url = `${this.embedBaseUrlEnv}?listType=playlist&list=${this.playlistId()}&autoplay=${autoplay}&rel=0`;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   });
 
@@ -71,18 +74,16 @@ export class YouTubeChannelComponent implements OnInit {
       if (videoInfo) {
         this.lastVideoTitle.set(videoInfo.title);
         this.lastVideoThumbnail.set(videoInfo.thumbnail);
-      } else {
-        this.showVideo.set(true);
       }
     } catch (error) {
       console.error('Failed to load latest YouTube video', error);
-      this.showVideo.set(true);
     } finally {
       this.isLoading.set(false);
     }
   }
 
   playVideo(): void {
+    this.shouldAutoplay.set(true);
     this.showVideo.set(true);
   }
 }

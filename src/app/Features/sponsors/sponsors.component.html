@@ -14,36 +14,39 @@
         <a
           [href]="sponsor.link"
           target="_blank"
-          class="group relative flex items-center justify-center p-8 bg-white border border-brand-primary/5 rounded-3xl hover:border-brand-secondary/40 transition-all duration-300 hover:scale-[1.05] shadow-sm hover:shadow-xl"
+          class="group relative flex flex-col items-center justify-center p-8 border border-brand-primary/5 rounded-3xl transition-all duration-300 hover:scale-[1.05] shadow-sm hover:shadow-xl"
           [ngClass]="{
             'border-dashed border-brand-primary/10 bg-brand-primary/2': sponsor.logo === 'cta',
+            'bg-brand-primary': sponsor.name === 'CGC Solutions',
+            'bg-white hover:bg-brand-primary/2':
+              sponsor.name !== 'CGC Solutions' && sponsor.logo !== 'cta',
           }"
         >
           <div
-            class="relative z-10 w-full aspect-square flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500"
+            class="relative z-10 w-full aspect-square flex items-center justify-center transition-all duration-500 mb-4"
+            [class.grayscale]="sponsor.logo === 'images/sponsor_placeholder.png'"
+            [class.group-hover:grayscale-0]="sponsor.logo === 'images/sponsor_placeholder.png'"
           >
-            <!-- Placeholder Logo or Name -->
             @if (sponsor.logo === 'cta') {
               <div class="text-center">
                 <span class="text-brand-secondary text-2xl font-black block leading-tight">+</span>
-                <span
-                  class="text-brand-primary/40 text-[10px] font-bold tracking-widest uppercase"
-                  >{{ sponsor.name | translate }}</span
-                >
+              </div>
+            } @else if (sponsor.logo.startsWith('icon:')) {
+              <div
+                class="w-16 h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center"
+              >
+                <svg-icon
+                  [name]="sponsor.logo.split(':')[1]"
+                  class="w-10 h-10 text-brand-primary"
+                ></svg-icon>
               </div>
             } @else if (sponsor.logo === 'images/sponsor_placeholder.png') {
-              <div class="flex flex-col items-center gap-2">
-                <div
-                  class="w-12 h-12 bg-brand-primary/5 rounded-full flex items-center justify-center"
-                >
-                  <span class="text-brand-primary/20 text-xl font-bold">{{
-                    sponsor.name.charAt(0)
-                  }}</span>
-                </div>
-                <span
-                  class="text-brand-primary/30 text-[10px] font-bold tracking-widest uppercase"
-                  >{{ sponsor.name }}</span
-                >
+              <div
+                class="w-16 h-16 bg-brand-primary/5 rounded-full flex items-center justify-center"
+              >
+                <span class="text-brand-primary/20 text-2xl font-bold">{{
+                  sponsor.name.charAt(0)
+                }}</span>
               </div>
             } @else {
               <img
@@ -53,6 +56,17 @@
               />
             }
           </div>
+
+          <!-- label -->
+          <span
+            class="text-[10px] font-bold tracking-widest uppercase text-center block"
+            [ngClass]="{
+              'text-brand-secondary': sponsor.name === 'CGC Solutions',
+              'text-brand-primary': sponsor.name !== 'CGC Solutions',
+            }"
+          >
+            {{ sponsor.name | translate }}
+          </span>
         </a>
       }
     </div>
