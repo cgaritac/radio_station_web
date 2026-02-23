@@ -97,12 +97,13 @@
     "TAG": "YOUTUBE CHANNEL",
     "TITLE_PART1": "Experience it in",
     "TITLE_PART2": "REAL TIME",
-    "DESCRIPTION": "Don't just listen to us, join our visual broadcast! Interact with the community, leave your prayer requests and be part of the Ornan Nandayure family from anywhere in the world.",
+    "DESCRIPTION": "Don't just listen to us, join our visual broadcast! Interact with the community, leave your prayer requests and be part of our family from anywhere in the world.",
     "SUBSCRIBE": "Subscribe",
     "SUBSCRIBERS": "SUBSCRIBERS",
     "LAST_VIDEO": "LATEST VIDEO",
     "AMOUNT_SUBSCRIBERS": "362",
-    "VIDEO_TITLE": "Radio Ornan Nandayure",
+    "VIDEO_TITLE": "Radio Live",
+    "TITLE_FALLBACK": "Our Live Stream",
     "LOADING": "Connecting to YouTube..."
   },
   "PRAYER_REQUEST": {
@@ -164,7 +165,7 @@
         "TITLE": "New Transmission Antenna in Nandayure",
         "DATE": "February 18, 2026",
         "EXCERERPT": "We are happy to announce the installation of our new equipment that will allow a clearer signal throughout the region.",
-        "CONTENT": "We are pleased to announce that Radio Ornan has taken a giant step in its commitment to technical excellence. This week we finalized the installation of our new high-gain transmission antenna on the main hill of Nandayure.\n\nThis new equipment not only expands our coverage to areas that previously had reception difficulties but also significantly improves audio fidelity. Our technicians have worked hard to ensure that every home in the region receives a clear message without interference. This investment is thanks to the constant support of our audience and sponsors who believe in the impact of our signal."
+        "CONTENT": "We are pleased to announce that our radio station has taken a giant step in its commitment to technical excellence. This week we finalized the installation of our new high-gain transmission antenna on the main hill of the region.\n\nThis new equipment not only expands our coverage to areas that previously had reception difficulties but also significantly improves audio fidelity. Our technicians have worked hard to ensure that every home in the region receives a clear message without interference. This investment is thanks to the constant support of our audience and sponsors who believe in the impact of our signal."
       },
       "ITEM_2": {
         "TITLE": "'Open Heart' Aid Campaign Results",
