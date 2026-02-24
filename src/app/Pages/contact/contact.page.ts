@@ -6,6 +6,7 @@ import { SvgIconComponent } from 'angular-svg-icon';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 import { EmailService } from '../../Core/services/email.service';
+import { RadioService } from '../../Core/services/radio.service';
 
 @Component({
   selector: 'app-contact',
@@ -25,6 +26,7 @@ import { EmailService } from '../../Core/services/email.service';
 export class ContactPage {
   private readonly fb = inject(FormBuilder);
   private readonly emailService = inject(EmailService);
+  protected readonly radioService = inject(RadioService);
 
   readonly contactForm: FormGroup = this.fb.group({
     name: ['', [Validators.required]],

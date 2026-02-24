@@ -35,6 +35,7 @@ export class RadioService {
     tiktok: (import.meta as any).env.NG_APP_TIKTOK_URL,
     whatsapp: (import.meta as any).env.NG_APP_WHATSAPP_URL,
     radioBox: (import.meta as any).env.NG_APP_RADIO_BOX_URL,
+    googleMaps: (import.meta as any).env.NG_APP_GOOGLE_MAPS_SEARCH_URL,
   };
 
   constructor() {
