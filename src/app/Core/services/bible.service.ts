@@ -8,6 +8,7 @@ import { Observable, map, of } from 'rxjs';
 export class BibleService {
   private readonly http = inject(HttpClient);
   private readonly baseUrl = (import.meta as any).env.NG_APP_BIBLE_GATEWAY_URL;
+  readonly homeUrl = (import.meta as any).env.NG_APP_BIBLE_GATEWAY_HOME_URL;
   private readonly CACHE_KEY = 'daily_bible_verse_v2';
 
   getVerse(version: string): Observable<any> {

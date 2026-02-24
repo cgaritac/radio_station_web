@@ -6,7 +6,7 @@ import { Injectable, signal, effect, computed } from '@angular/core';
 export class RadioService {
   private readonly streamUrl = (import.meta as any).env.NG_APP_STREAM_URL;
   private readonly metadataUrl = (import.meta as any).env.NG_APP_METADATA_URL;
-  private readonly _radioName = (import.meta as any).env.NG_APP_RADIO_NAME || 'Radio Station';
+  private readonly _radioName = (import.meta as any).env.NG_APP_RADIO_NAME;
 
   private audio: HTMLAudioElement | null = null;
   private eventSource: EventSource | null = null;

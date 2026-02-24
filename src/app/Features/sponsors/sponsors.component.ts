@@ -22,7 +22,7 @@ export class SponsorsComponent {
     {
       name: 'CGC Solutions',
       logo: 'images/cgc-logo.png',
-      link: (import.meta as any).env.NG_APP_WHATSAPP_URL || 'https://wa.me/yournumber',
+      link: (import.meta as any).env.NG_APP_CGC_URL,
     },
     { name: 'Tech Sphere', logo: 'icon:microphone', link: '#' },
     { name: 'Pure Audio', logo: 'icon:speaker', link: '#' },
