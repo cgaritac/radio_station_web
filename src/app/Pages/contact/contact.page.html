@@ -31,13 +31,14 @@
 
           <!-- Contact Cards -->
           <div class="space-y-6">
-            <div
-              class="flex items-center gap-5 p-6 bg-brand-primary/5 rounded-3xl border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-300"
+            <a
+              [href]="'tel:' + ('FOOTER.PHONE' | translate)"
+              class="flex items-center gap-5 p-6 bg-brand-primary/5 rounded-3xl border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-300 no-underline"
             >
               <div
-                class="w-14 h-14 bg-brand-secondary/10 rounded-2xl flex items-center justify-center text-brand-secondary group-hover:scale-110 transition-transform"
+                class="rounded-2xl flex items-center justify-center text-brand-quaternary group-hover:scale-110 transition-transform"
               >
-                <svg-icon name="phone" class="w-6 h-6"></svg-icon>
+                <svg-icon name="phone" class="w-12 h-12"></svg-icon>
               </div>
               <div>
                 <p class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-1">
@@ -45,15 +46,16 @@
                 </p>
                 <p class="text-lg font-bold text-brand-primary">{{ 'FOOTER.PHONE' | translate }}</p>
               </div>
-            </div>
+            </a>
 
-            <div
-              class="flex items-center gap-5 p-6 bg-brand-primary/5 rounded-3xl border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-300"
+            <a
+              [href]="'mailto:' + ('FOOTER.EMAIL' | translate)"
+              class="flex items-center gap-5 p-6 bg-brand-primary/5 rounded-3xl border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-300 no-underline"
             >
               <div
-                class="w-14 h-14 bg-brand-secondary/10 rounded-2xl flex items-center justify-center text-brand-secondary group-hover:scale-110 transition-transform"
+                class="rounded-2xl flex items-center justify-center text-brand-quaternary group-hover:scale-110 transition-transform"
               >
-                <svg-icon name="mail" class="w-6 h-6"></svg-icon>
+                <svg-icon name="mail" class="w-12 h-12"></svg-icon>
               </div>
               <div>
                 <p class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-1">
@@ -61,15 +63,18 @@
                 </p>
                 <p class="text-lg font-bold text-brand-primary">{{ 'FOOTER.EMAIL' | translate }}</p>
               </div>
-            </div>
+            </a>
 
-            <div
-              class="flex items-center gap-5 p-6 bg-brand-primary/5 rounded-3xl border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-300"
+            <a
+              [href]="radioService.socialLinks.googleMaps + ('FOOTER.ADDRESS' | translate)"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-5 p-6 bg-brand-primary/5 rounded-3xl border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-300 no-underline"
             >
               <div
-                class="w-14 h-14 bg-brand-secondary/10 rounded-2xl flex items-center justify-center text-brand-secondary group-hover:scale-110 transition-transform"
+                class="rounded-2xl flex items-center justify-center text-brand-quaternary group-hover:scale-110 transition-transform"
               >
-                <svg-icon name="location" class="w-6 h-6"></svg-icon>
+                <svg-icon name="location" class="w-12 h-12"></svg-icon>
               </div>
               <div>
                 <p class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-1">
@@ -79,7 +84,7 @@
                   {{ 'FOOTER.ADDRESS' | translate }}
                 </p>
               </div>
-            </div>
+            </a>
           </div>
 
           <!-- Socials -->
