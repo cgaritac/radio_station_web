@@ -1,12 +1,22 @@
-import { Component, ChangeDetectionStrategy, signal, inject } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  signal,
+  inject,
+  computed,
+  OnInit,
+  OnDestroy,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 import { EmailService } from '../../Core/services/email.service';
 import { RadioService } from '../../Core/services/radio.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
@@ -23,10 +33,34 @@ import { RadioService } from '../../Core/services/radio.service';
   styleUrl: './contact.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactPage {
+export class ContactPage implements OnInit, OnDestroy {
   private readonly fb = inject(FormBuilder);
   private readonly emailService = inject(EmailService);
+  private readonly sanitizer = inject(DomSanitizer);
+  private readonly translateService = inject(TranslateService);
   protected readonly radioService = inject(RadioService);
+
+  private langSub?: Subscription;
+
+  readonly mapUrl = signal<SafeResourceUrl>(this.sanitizer.bypassSecurityTrustResourceUrl(''));
+
+  ngOnInit() {
+    this.updateMapUrl();
+    this.langSub = this.translateService.onLangChange.subscribe(() => {
+      this.updateMapUrl();
+    });
+  }
+
+  ngOnDestroy() {
+    this.langSub?.unsubscribe();
+  }
+
+  private updateMapUrl() {
+    const address = this.translateService.instant('FOOTER.ADDRESS');
+    const baseUrl = this.radioService.socialLinks.googleMapsEmbed;
+    const url = `${baseUrl}${encodeURIComponent(address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+    this.mapUrl.set(this.sanitizer.bypassSecurityTrustResourceUrl(url));
+  }
 
   readonly contactForm: FormGroup = this.fb.group({
     name: ['', [Validators.required]],
