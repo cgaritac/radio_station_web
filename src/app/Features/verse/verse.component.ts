@@ -20,7 +20,7 @@ import { SectionHeaderComponent } from '../../Shared/components/section-header/s
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class VerseComponent implements OnInit {
-  private readonly bibleService = inject(BibleService);
+  protected readonly bibleService = inject(BibleService);
   private readonly translate = inject(TranslateService);
   private readonly cdr = inject(ChangeDetectorRef);
 
