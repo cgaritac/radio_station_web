@@ -23,6 +23,8 @@ export class BroadcastHistoryService {
 
   getBroadcastHistory(): Observable<BroadcastHistoryEntry[]> {
     const randomUrl = `${this.apiUrl}&rnd=${Math.random()}`; // Random parameter to avoid caching
-    return this.http.get<BroadcastHistoryResponse>(randomUrl).pipe(map((response) => response.playlist));
+    return this.http
+      .get<BroadcastHistoryResponse>(randomUrl)
+      .pipe(map((response) => response.playlist));
   }
 }
