@@ -1,0 +1,69 @@
+<div class="flex flex-col gap-12">
+  <div>
+    <app-section-header
+      [title]="'CONTACT.TAG' | translate"
+      [subtitle]="'CONTACT.INFO_TITLE' | translate"
+    ></app-section-header>
+    <p class="text-brand-primary/60 leading-relaxed mb-8">
+      {{ 'CONTACT.INFO_SUBTITLE' | translate }}
+    </p>
+  </div>
+
+  <!-- Contact Cards -->
+  <div class="space-y-6">
+    <a
+      [href]="'tel:' + ('FOOTER.PHONE' | translate)"
+      class="flex items-center gap-5 p-6 bg-brand-primary/5 rounded-3xl border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-300 no-underline"
+    >
+      <div
+        class="rounded-2xl flex items-center justify-center text-brand-quaternary group-hover:scale-110 transition-transform"
+      >
+        <svg-icon name="phone" class="w-12 h-12"></svg-icon>
+      </div>
+      <div>
+        <p class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-1">
+          {{ 'CONTACT.PHONE' | translate }}
+        </p>
+        <p class="text-lg font-bold text-brand-primary">{{ 'FOOTER.PHONE' | translate }}</p>
+      </div>
+    </a>
+
+    <a
+      [href]="'mailto:' + ('FOOTER.EMAIL' | translate)"
+      class="flex items-center gap-5 p-6 bg-brand-primary/5 rounded-3xl border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-300 no-underline"
+    >
+      <div
+        class="rounded-2xl flex items-center justify-center text-brand-quaternary group-hover:scale-110 transition-transform"
+      >
+        <svg-icon name="mail" class="w-12 h-12"></svg-icon>
+      </div>
+      <div>
+        <p class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-1">
+          {{ 'CONTACT.EMAIL' | translate }}
+        </p>
+        <p class="text-lg font-bold text-brand-primary">{{ 'FOOTER.EMAIL' | translate }}</p>
+      </div>
+    </a>
+
+    <a
+      [href]="radioService.socialLinks.googleMaps + ('FOOTER.ADDRESS' | translate)"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-5 p-6 bg-brand-primary/5 rounded-3xl border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-300 no-underline"
+    >
+      <div
+        class="rounded-2xl flex items-center justify-center text-brand-quaternary group-hover:scale-110 transition-transform"
+      >
+        <svg-icon name="location" class="w-12 h-12"></svg-icon>
+      </div>
+      <div>
+        <p class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest mb-1">
+          {{ 'CONTACT.FIND_US' | translate }}
+        </p>
+        <p class="text-sm font-bold text-brand-primary">
+          {{ 'FOOTER.ADDRESS' | translate }}
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
