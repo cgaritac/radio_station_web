@@ -4,6 +4,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { BannerComponent } from '../../Shared/components/banner/banner.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import { PageHeroComponent } from '../../Shared/components/page-hero/page-hero.component';
+import { StudioTourComponent } from '../../Features/studio-tour/studio-tour.component';
 
 interface TeamMember {
   name: string;
@@ -20,6 +22,8 @@ interface TeamMember {
     SvgIconComponent,
     BannerComponent,
     SectionHeaderComponent,
+    PageHeroComponent,
+    StudioTourComponent,
   ],
   templateUrl: './about.page.html',
   styleUrl: './about.page.css',

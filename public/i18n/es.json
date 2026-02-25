@@ -130,7 +130,7 @@
     "TITLE": "SOBRE NOSOTROS",
     "SUBTITLE": "Llevando esperanza y fe a cada hogar",
     "TAG": "NUESTRA HISTORIA",
-    "HISTORY_TITLE": "Más de 10 años siendo su compañía",
+    "HISTORY_TITLE": "Más de XX años siendo su compañía",
     "HISTORY_TEXT": "Nacimos con el propósito de conectar a la comunidad a través de la fe. Lo que comenzó como un pequeño proyecto local, hoy es una señal que llega a miles de personas, ofreciendo una programación rica en valores, música inspiradora y mensajes que transforman vidas.",
     "MISSION_TITLE": "Nuestra Misión",
     "MISSION_TEXT": "Difundir el mensaje de esperanza a través de una comunicación de excelencia, siendo un puente firme entre la comunidad y los valores cristianos para el fortalecimiento espiritual de cada oyente.",
@@ -138,6 +138,14 @@
     "VISION_TEXT": "Consolidarnos como la emisora líder en difusión de contenido espiritual y social en la región, innovando constantemente en nuestras plataformas para alcanzar a las nuevas generaciones.",
     "TEAM_TITLE": "Nuestro Equipo",
     "TEAM_SUBTITLE": "Las voces detrás del micrófono"
+  },
+  "STUDIO_TOUR": {
+    "TAG": "NUESTRAS INSTALACIONES",
+    "TITLE_PART1": "Conozca",
+    "TITLE_PART2": "Nuestra Cabina",
+    "DESCRIPTION": "Le invitamos a realizar un recorrido por el corazón de nuestra radio. Descubra el lugar donde nace la magia de la comunicación y cómo nos preparamos cada día para llevarle el mejor mensaje.",
+    "WATCH_ON_YOUTUBE": "Ver en YouTube",
+    "VIDEO_LABEL": "Recorrido por la Cabina"
   },
   "CONTACT": {
     "TITLE": "CONTACTO",
