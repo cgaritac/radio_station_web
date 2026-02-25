@@ -1,22 +1,11 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  signal,
-  inject,
-  computed,
-  OnInit,
-  OnDestroy,
-} from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { SvgIconComponent } from 'angular-svg-icon';
-import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
-import { EmailService } from '../../Core/services/email.service';
-import { RadioService } from '../../Core/services/radio.service';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { Subscription } from 'rxjs';
+import { TranslateModule } from '@ngx-translate/core';
+import { ContactFormComponent } from '../../Features/contact-form/contact-form.component';
+import { ContactInfoComponent } from '../../Shared/components/contact-info/contact-info.component';
+import { SocialLinksComponent } from '../../Shared/components/social-links/social-links.component';
+import { LocationMapComponent } from '../../Shared/components/location-map/location-map.component';
+import { PageHeroComponent } from '../../Shared/components/page-hero/page-hero.component';
 
 @Component({
   selector: 'app-contact',
@@ -24,74 +13,14 @@ import { Subscription } from 'rxjs';
   imports: [
     CommonModule,
     TranslateModule,
-    ReactiveFormsModule,
-    SvgIconComponent,
-    ActionButtonComponent,
-    SectionHeaderComponent,
+    ContactFormComponent,
+    ContactInfoComponent,
+    SocialLinksComponent,
+    LocationMapComponent,
+    PageHeroComponent,
   ],
   templateUrl: './contact.page.html',
   styleUrl: './contact.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactPage implements OnInit, OnDestroy {
-  private readonly fb = inject(FormBuilder);
-  private readonly emailService = inject(EmailService);
-  private readonly sanitizer = inject(DomSanitizer);
-  private readonly translateService = inject(TranslateService);
-  protected readonly radioService = inject(RadioService);
-
-  private langSub?: Subscription;
-
-  readonly mapUrl = signal<SafeResourceUrl>(this.sanitizer.bypassSecurityTrustResourceUrl(''));
-
-  ngOnInit() {
-    this.updateMapUrl();
-    this.langSub = this.translateService.onLangChange.subscribe(() => {
-      this.updateMapUrl();
-    });
-  }
-
-  ngOnDestroy() {
-    this.langSub?.unsubscribe();
-  }
-
-  private updateMapUrl() {
-    const address = this.translateService.instant('FOOTER.ADDRESS');
-    const baseUrl = this.radioService.socialLinks.googleMapsEmbed;
-    const url = `${baseUrl}${encodeURIComponent(address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
-    this.mapUrl.set(this.sanitizer.bypassSecurityTrustResourceUrl(url));
-  }
-
-  readonly contactForm: FormGroup = this.fb.group({
-    name: ['', [Validators.required]],
-    email: ['', [Validators.required, Validators.email]],
-    subject: ['', [Validators.required]],
-    message: ['', [Validators.required, Validators.minLength(10)]],
-  });
-
-  readonly isSubmitting = signal(false);
-  readonly showSuccess = signal(false);
-  readonly showError = signal(false);
-
-  async onSubmit() {
-    if (this.contactForm.invalid) {
-      this.contactForm.markAllAsTouched();
-      return;
-    }
-
-    this.isSubmitting.set(true);
-    this.showSuccess.set(false);
-    this.showError.set(false);
-
-    try {
-      await this.emailService.sendContactMessage(this.contactForm.value);
-      this.showSuccess.set(true);
-      this.contactForm.reset();
-    } catch (error: any) {
-      console.error('Error sending contact message:', error);
-      this.showError.set(true);
-    } finally {
-      this.isSubmitting.set(false);
-    }
-  }
-}
+export class ContactPage {}

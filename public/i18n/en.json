@@ -130,7 +130,7 @@
     "TITLE": "ABOUT US",
     "SUBTITLE": "Bringing hope and faith to every home",
     "TAG": "OUR HISTORY",
-    "HISTORY_TITLE": "More than 10 years being your company",
+    "HISTORY_TITLE": "More than XX years being your company",
     "HISTORY_TEXT": "We were born with the purpose of connecting the community through faith. What began as a small local project is now a signal that reaches thousands of people, offering programming rich in values, inspiring music, and messages that transform lives.",
     "MISSION_TITLE": "Our Mission",
     "MISSION_TEXT": "Spread the message of hope through excellent communication, being a firm bridge between the community and Christian values for the spiritual strengthening of every listener.",
@@ -138,6 +138,14 @@
     "VISION_TEXT": "Establish ourselves as the leading station in broadcasting spiritual and social content in the region, constantly innovating our platforms to reach new generations.",
     "TEAM_TITLE": "Our Team",
     "TEAM_SUBTITLE": "The voices behind the microphone"
+  },
+  "STUDIO_TOUR": {
+    "TAG": "OUR FACILITIES",
+    "TITLE_PART1": "Get to Know",
+    "TITLE_PART2": "Our Studio",
+    "DESCRIPTION": "We invite you to take a tour through the heart of our radio. Discover the place where the magic of communication is born and how we prepare every day to bring you the best message.",
+    "WATCH_ON_YOUTUBE": "Watch on YouTube",
+    "VIDEO_LABEL": "Studio Booth Tour"
   },
   "CONTACT": {
     "TITLE": "CONTACT",

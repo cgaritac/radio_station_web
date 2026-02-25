@@ -1,0 +1,134 @@
+<div
+  class="relative bg-white rounded-[40px] p-8 md:p-12 shadow-2xl shadow-brand-primary/5 border border-brand-primary/5"
+>
+  <h3 class="text-3xl font-extrabold text-brand-primary mb-10">
+    {{ 'CONTACT.FORM_TITLE' | translate }}
+  </h3>
+
+  <form
+    [formGroup]="contactForm"
+    (ngSubmit)="onSubmit()"
+    class="grid grid-cols-1 md:grid-cols-2 gap-6"
+  >
+    <!-- Name -->
+    <div class="flex flex-col gap-2">
+      <label class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest ml-4">{{
+        'CONTACT.FORM_NAME' | translate
+      }}</label>
+      <input
+        type="text"
+        formControlName="name"
+        [placeholder]="'CONTACT.FORM_NAME' | translate"
+        class="w-full bg-brand-primary/2 border border-brand-primary/10 rounded-2xl px-6 py-4 text-brand-primary placeholder:text-brand-primary/20 focus:outline-none focus:border-brand-secondary/60 transition-colors"
+      />
+      @if (contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required']) {
+        <span class="text-brand-quinary text-xs mt-1 ml-4 italic">
+          {{ 'CONTACT.VALIDATION.REQUIRED' | translate }}
+        </span>
+      }
+    </div>
+
+    <!-- Email -->
+    <div class="flex flex-col gap-2">
+      <label class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest ml-4">{{
+        'CONTACT.FORM_EMAIL' | translate
+      }}</label>
+      <input
+        type="email"
+        formControlName="email"
+        [placeholder]="'CONTACT.FORM_EMAIL' | translate"
+        class="w-full bg-brand-primary/2 border border-brand-primary/10 rounded-2xl px-6 py-4 text-brand-primary placeholder:text-brand-primary/20 focus:outline-none focus:border-brand-secondary/60 transition-colors"
+      />
+      @if (contactForm.get('email')?.touched && contactForm.get('email')?.errors) {
+        <span class="text-brand-quinary text-xs mt-1 ml-4 italic">
+          @if (contactForm.get('email')?.errors?.['required']) {
+            {{ 'CONTACT.VALIDATION.REQUIRED' | translate }}
+          } @else if (contactForm.get('email')?.errors?.['email']) {
+            {{ 'CONTACT.VALIDATION.EMAIL' | translate }}
+          }
+        </span>
+      }
+    </div>
+
+    <!-- Subject -->
+    <div class="flex flex-col gap-2 md:col-span-2">
+      <label class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest ml-4">{{
+        'CONTACT.FORM_SUBJECT' | translate
+      }}</label>
+      <input
+        type="text"
+        formControlName="subject"
+        [placeholder]="'CONTACT.FORM_SUBJECT' | translate"
+        class="w-full bg-brand-primary/2 border border-brand-primary/10 rounded-2xl px-6 py-4 text-brand-primary placeholder:text-brand-primary/20 focus:outline-none focus:border-brand-secondary/60 transition-colors"
+      />
+      @if (
+        contactForm.get('subject')?.touched && contactForm.get('subject')?.errors?.['required']
+      ) {
+        <span class="text-brand-quinary text-xs mt-1 ml-4 italic">
+          {{ 'CONTACT.VALIDATION.REQUIRED' | translate }}
+        </span>
+      }
+    </div>
+
+    <!-- Message -->
+    <div class="flex flex-col gap-2 md:col-span-2">
+      <label class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest ml-4">{{
+        'CONTACT.FORM_MESSAGE' | translate
+      }}</label>
+      <textarea
+        rows="6"
+        formControlName="message"
+        [placeholder]="'CONTACT.FORM_MESSAGE' | translate"
+        class="w-full bg-brand-primary/2 border border-brand-primary/10 rounded-2xl px-6 py-4 text-brand-primary placeholder:text-brand-primary/20 focus:outline-none focus:border-brand-secondary/60 transition-colors resize-none"
+      ></textarea>
+      @if (contactForm.get('message')?.touched && contactForm.get('message')?.errors) {
+        <span class="text-brand-quinary text-xs mt-1 ml-4 italic">
+          @if (contactForm.get('message')?.errors?.['required']) {
+            {{ 'CONTACT.VALIDATION.REQUIRED' | translate }}
+          } @else if (contactForm.get('message')?.errors?.['minlength']) {
+            {{
+              'CONTACT.VALIDATION.MIN_LENGTH'
+                | translate
+                  : {
+                      min: contactForm.get('message')?.errors?.['minlength'].requiredLength,
+                    }
+            }}
+          }
+        </span>
+      }
+    </div>
+
+    <!-- Submit -->
+    <div class="md:col-span-2 mt-4">
+      <app-action-button
+        [text]="'CONTACT.FORM_SUBMIT' | translate"
+        [icon]="'mail'"
+        color="secondary"
+        size="large"
+        [disabled]="isSubmitting()"
+        class="w-full md:w-auto"
+        style="display: block"
+        [showPulse]="isSubmitting()"
+        type="submit"
+      ></app-action-button>
+    </div>
+
+    <!-- Messages -->
+    @if (showSuccess()) {
+      <div
+        class="md:col-span-2 py-1 px-3 bg-brand-quaternary/10 border border-brand-quaternary/20 rounded-2xl animate-fade-in text-center absolute bottom-26 right-12"
+      >
+        <p class="text-brand-quaternary text-sm font-medium">
+          {{ 'CONTACT.SUCCESS' | translate }}
+        </p>
+      </div>
+    }
+    @if (showError()) {
+      <div
+        class="md:col-span-2 py-1 px-3 bg-brand-quinary/10 border border-brand-quinary/20 rounded-2xl animate-fade-in text-center absolute bottom-26 right-12"
+      >
+        <p class="text-brand-quinary text-sm font-medium">{{ 'CONTACT.ERROR' | translate }}</p>
+      </div>
+    }
+  </form>
+</div>
