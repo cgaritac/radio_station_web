@@ -115,7 +115,10 @@
     "REQUEST_PLACEHOLDER": "Escriba su necesidad aquí...",
     "SUBMIT": "Enviar petición",
     "SUCCESS": "Su petición ha sido enviada. Estaremos orando por usted.",
-    "ERROR": "Hubo un error al enviar su petición. Por favor, intente de nuevo."
+    "ERROR": "Hubo un error al enviar su petición. Por favor, intente de nuevo.",
+    "VALIDATION": {
+      "REQUIRED": "Este campo es requerido"
+    }
   },
   "SPONSORS": {
     "TAG": "PUBLICIDAD",
@@ -153,7 +156,12 @@
     "FIND_US": "Encuéntranos en",
     "FOLLOW_US": "Síguenos en redes sociales",
     "PHONE": "Teléfono",
-    "EMAIL": "Correo electrónico"
+    "EMAIL": "Email",
+    "VALIDATION": {
+      "REQUIRED": "Este campo es requerido",
+      "EMAIL": "Ingrese un correo electrónico válido",
+      "MIN_LENGTH": "Debe tener al menos {{min}} caracteres"
+    }
   },
   "NEWS_PAGE": {
     "TITLE": "NOTICIAS",

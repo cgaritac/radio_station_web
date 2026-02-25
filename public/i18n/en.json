@@ -115,7 +115,10 @@
     "REQUEST_PLACEHOLDER": "Write your need here...",
     "SUBMIT": "Send request",
     "SUCCESS": "Your request has been sent. We will be praying for you.",
-    "ERROR": "There was an error sending your request. Please try again."
+    "ERROR": "There was an error sending your request. Please try again.",
+    "VALIDATION": {
+      "REQUIRED": "This field is required"
+    }
   },
   "SPONSORS": {
     "TAG": "ADVERTISING",
@@ -153,7 +156,12 @@
     "FIND_US": "Find us at",
     "FOLLOW_US": "Follow us on social media",
     "PHONE": "Phone",
-    "EMAIL": "Email"
+    "EMAIL": "Email",
+    "VALIDATION": {
+      "REQUIRED": "This field is required",
+      "EMAIL": "Enter a valid email address",
+      "MIN_LENGTH": "Must be at least {{min}} characters"
+    }
   },
   "NEWS_PAGE": {
     "TITLE": "NEWS",
