@@ -20,7 +20,7 @@ interface Sponsor {
 export class SponsorsComponent {
   readonly sponsors = signal<Sponsor[]>([
     {
-      name: 'CGC Solutions',
+      name: 'CGC Full Stack',
       logo: 'images/cgc-logo.png',
       link: (import.meta as any).env.NG_APP_CGC_URL,
     },
