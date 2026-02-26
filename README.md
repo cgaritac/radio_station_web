@@ -29,6 +29,12 @@ To provide radio stations with a robust, scalable, and aesthetically superior di
 - **Sponsors Showcase**: Dedicated space to feature partners, sponsors, and community supporters with premium styling.
 - **Daily Inspiration**: "Verse of the Day" feature with local storage caching for optimal performance.
 
+### Visual & Interactive Content
+
+- **Virtual Studio Tour**: Interactive showcase of the station's facilities and broadcast environment.
+- **Team & Voices Showcase**: Dedicated profiles for presenters, DJs, and staff members.
+- **Live Video Integration**: Integrated YouTube Live streaming capabilities for hybrid broadcasts.
+
 ### Technical Excellence
 
 - **Angular 21+ Architecture**: Built using the absolute latest features of the Angular ecosystem.
@@ -60,12 +66,13 @@ src/app/
 - **Internationalization**: NGX-Translate
 - **Email Engine**: EmailJS
 - **Icons**: Angular SVG Icon
+- **Unit Testing**: Vitest 4.0
 
 ---
 
 ## Configuration and Setup
 
-The application uses environment variables for easy configuration across different environments.
+The application uses environment variables for easy configuration across different environments, powered by `@ngx-env/builder`.
 
 ### Environment Variables (.env)
 
@@ -80,6 +87,7 @@ NG_APP_HISTORY_URL=https://api.your-station.com/history
 
 # Bible Verse API
 NG_APP_BIBLE_GATEWAY_URL=https://www.biblegateway.com/votd/get/
+NG_APP_BIBLE_GATEWAY_HOME_URL=https://www.biblegateway.com
 
 # YouTube Integration
 NG_APP_YOUTUBE_CHANNEL_ID=your_channel_id
@@ -98,6 +106,13 @@ NG_APP_TIKTOK_URL=https://www.tiktok.com/@yourstation
 NG_APP_WHATSAPP_URL=https://www.whatsapp.com/channel/your-id
 NG_APP_WHATSAPP_DIRECT_URL=https://wa.me/yournumber
 NG_APP_RADIO_BOX_URL=https://onlineradiobox.com/your-station/
+
+# Sponsors
+NG_APP_CGC_URL=https://cgarita.web.app/
+
+# Google Maps
+NG_APP_GOOGLE_MAPS_SEARCH_URL=https://www.google.com/maps/search/?api=1&query=
+NG_APP_GOOGLE_MAPS_EMBED_URL=https://maps.google.com/maps?q=
 
 # EmailJS Configuration
 NG_APP__EMAILJS_SERVICE_ID=your_service_id
