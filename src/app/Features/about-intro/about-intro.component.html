@@ -1,0 +1,47 @@
+<section class="w-full py-24 bg-brand-tertiary/90 border-y border-brand-primary/5">
+  <div class="max-w-desktop mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Image Container -->
+      <div class="relative group">
+        <div
+          class="absolute -inset-4 bg-brand-quaternary/15 rounded-[40px] blur-2xl group-hover:bg-brand-secondary/30 transition-all duration-700"
+        ></div>
+        <div
+          class="relative aspect-square lg:aspect-auto lg:h-[600px] rounded-[40px] overflow-hidden shadow-2xl border border-brand-primary/5"
+        >
+          <img
+            src="images/community-people.jpg"
+            [alt]="'ABOUT_US.TITLE' | translate"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+          />
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="flex flex-col gap-8">
+        <div>
+          <app-section-header
+            [title]="'ABOUT_US.TAG' | translate"
+            [subtitle]="'ABOUT_US.HISTORY_TITLE' | translate"
+          ></app-section-header>
+          <p class="text-lg text-brand-primary/70 leading-relaxed">
+            {{ 'ABOUT_US.HISTORY_TEXT' | translate }}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+          <app-icon-feature
+            icon="radio"
+            [title]="'ABOUT_US.MISSION_TITLE' | translate"
+            [text]="'ABOUT_US.MISSION_TEXT' | translate"
+          ></app-icon-feature>
+          <app-icon-feature
+            icon="info"
+            [title]="'ABOUT_US.VISION_TITLE' | translate"
+            [text]="'ABOUT_US.VISION_TEXT' | translate"
+          ></app-icon-feature>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

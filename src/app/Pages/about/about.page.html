@@ -6,131 +6,14 @@
   ></app-page-hero>
 
   <!-- History & Vision -->
-  <section class="w-full py-24 bg-brand-tertiary/90 border-y border-brand-primary/5">
-    <div class="max-w-desktop mx-auto px-4 md:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Image Container -->
-        <div class="relative group">
-          <div
-            class="absolute -inset-4 bg-brand-quaternary/15 rounded-[40px] blur-2xl group-hover:bg-brand-secondary/30 transition-all duration-700"
-          ></div>
-          <div
-            class="relative aspect-square lg:aspect-auto lg:h-[600px] rounded-[40px] overflow-hidden shadow-2xl border border-brand-primary/5"
-          >
-            <img
-              src="images/community-people.jpg"
-              [alt]="'ABOUT_US.TITLE' | translate"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-            />
-          </div>
-        </div>
-
-        <!-- Content -->
-        <div class="flex flex-col gap-8">
-          <div>
-            <app-section-header
-              [title]="'ABOUT_US.TAG' | translate"
-              [subtitle]="'ABOUT_US.HISTORY_TITLE' | translate"
-            ></app-section-header>
-            <p class="text-lg text-brand-primary/70 leading-relaxed">
-              {{ 'ABOUT_US.HISTORY_TEXT' | translate }}
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-            <div class="p-8 bg-brand-primary/5 rounded-3xl border border-brand-primary/5">
-              <div class="rounded-2xl flex items-center justify-start text-brand-quaternary mb-6">
-                <svg-icon name="radio" class="w-12 h-12"></svg-icon>
-              </div>
-              <h4 class="text-xl font-bold text-brand-primary mb-3">
-                {{ 'ABOUT_US.MISSION_TITLE' | translate }}
-              </h4>
-              <p class="text-sm text-brand-primary/60 leading-relaxed">
-                {{ 'ABOUT_US.MISSION_TEXT' | translate }}
-              </p>
-            </div>
-            <div class="p-8 bg-brand-primary/5 rounded-3xl border border-brand-primary/5">
-              <div class="rounded-2xl flex items-center justify-start text-brand-quaternary mb-6">
-                <svg-icon name="info" class="w-12 h-12"></svg-icon>
-              </div>
-              <h4 class="text-xl font-bold text-brand-primary mb-3">
-                {{ 'ABOUT_US.VISION_TITLE' | translate }}
-              </h4>
-              <p class="text-sm text-brand-primary/60 leading-relaxed">
-                {{ 'ABOUT_US.VISION_TEXT' | translate }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <app-about-intro></app-about-intro>
 
   <!-- Team Section -->
-  <section class="w-full py-24 bg-brand-tertiary/95">
-    <div class="max-w-desktop mx-auto px-4">
-      <div class="flex flex-col gap-8 mb-16">
-        <app-section-header
-          [title]="'ABOUT_US.TEAM_TITLE' | translate"
-          [subtitle]="'ABOUT_US.TEAM_SUBTITLE' | translate"
-          [centered]="true"
-        ></app-section-header>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        @for (member of team(); track member.name) {
-          <div class="group">
-            <div
-              class="relative overflow-hidden rounded-[32px] aspect-4/5 mb-6 shadow-xl border border-brand-primary/5"
-            >
-              <img
-                [src]="member.image"
-                [alt]="member.name"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div
-                class="absolute inset-0 bg-linear-to-t from-brand-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              ></div>
-            </div>
-            <h4 class="text-2xl font-bold text-brand-primary text-center mb-1">
-              {{ member.name }}
-            </h4>
-            <p class="text-brand-secondary font-bold text-center text-sm uppercase tracking-widest">
-              {{ member.role }}
-            </p>
-          </div>
-        }
-      </div>
-    </div>
-  </section>
+  <app-team-grid></app-team-grid>
 
   <!-- Studio Tour Section -->
   <app-studio-tour></app-studio-tour>
 
-  <!-- CTA Banner -->
-  <section
-    id="advertise-banner"
-    class="flex flex-col items-center justify-center w-full bg-brand-tertiary/95 px-4 py-8"
-  >
-    <app-banner
-      [title]="'BANNER.ADVERTISE_TITLE' | translate"
-      [description]="'BANNER.ADVERTISE_SUBTITLE' | translate"
-      [primaryText]="'BANNER.CONTACT_NOW' | translate"
-      [tooltip]="'BANNER.ADVERTISE_TOOLTIP' | translate"
-      primaryLink="/contact"
-      primaryIcon="mail"
-      [secondaryText]="'BANNER.DOWNLOAD_PRICES' | translate"
-      secondaryLink="XXXXX"
-      secondaryIcon="info"
-      iconName="speaker"
-      backgroundColor="bg-brand-quaternary"
-      textColor="text-brand-primary"
-      iconColor="text-brand-primary/30"
-      buttonColor="bg-brand-primary"
-      buttonTextColor="text-brand-primary"
-      width="max-w-desktop mx-auto"
-      height="h-full"
-    ></app-banner>
-    <!-- TODO: Add the link to the price list -->
-  </section>
+  <!-- Advertise Banner -->
+  <app-advertise-banner></app-advertise-banner>
 </div>
