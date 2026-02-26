@@ -17,9 +17,9 @@
           class="group relative flex flex-col items-center justify-center p-8 border border-brand-primary/5 rounded-3xl transition-all duration-300 hover:scale-[1.05] shadow-sm hover:shadow-xl"
           [ngClass]="{
             'border-dashed border-brand-primary/10 bg-brand-primary/2': sponsor.logo === 'cta',
-            'bg-brand-primary': sponsor.name === 'CGC Solutions',
-            'bg-white hover:bg-brand-primary/2':
-              sponsor.name !== 'CGC Solutions' && sponsor.logo !== 'cta',
+            'bg-brand-primary': sponsor.name === cgc_sponsor,
+            'bg-brand-tertiary hover:bg-brand-primary/2':
+              sponsor.name !== cgc_sponsor && sponsor.logo !== 'cta',
           }"
         >
           <div
@@ -61,8 +61,8 @@
           <span
             class="text-[10px] font-bold tracking-widest uppercase text-center block"
             [ngClass]="{
-              'text-brand-secondary': sponsor.name === 'CGC Solutions',
-              'text-brand-primary': sponsor.name !== 'CGC Solutions',
+              'text-brand-secondary': sponsor.name === cgc_sponsor,
+              'text-brand-primary': sponsor.name !== cgc_sponsor,
             }"
           >
             {{ sponsor.name | translate }}

@@ -1,4 +1,4 @@
-<section class="w-full py-16 md:py-24 bg-brand-tertiary/90 border-y border-brand-primary/5">
+<section class="w-full py-16 md:py-24 bg-brand-tertiary/95">
   <div class="container mx-auto px-4 max-w-desktop">
     <div class="flex flex-col lg:flex-row items-center gap-12">
       <!-- Content Side -->
@@ -21,7 +21,7 @@
         <app-action-button
           [text]="'STUDIO_TOUR.WATCH_ON_YOUTUBE' | translate"
           [icon]="'youtube'"
-          color="quaternary"
+          color="secondary"
           size="large"
           [link]="'https://www.youtube.com/watch?v=kWFIp12-Do0'"
         ></app-action-button>
@@ -29,7 +29,7 @@
 
       <!-- Video Side -->
       <div
-        class="relative w-full lg:w-1/2 aspect-video rounded-[40px] overflow-hidden shadow-2xl border border-brand-primary/5 bg-brand-primary"
+        class="relative w-full lg:w-1/2 aspect-video rounded-[40px] overflow-hidden shadow-2xl border border-brand-quaternary bg-brand-primary"
       >
         @if (!showVideo()) {
           <div
@@ -50,7 +50,7 @@
             <!-- Play Button -->
             <div class="absolute inset-0 flex items-center justify-center">
               <div
-                class="w-20 h-20 bg-brand-quaternary rounded-full flex items-center justify-center shadow-2xl transform transition-transform duration-300 group-hover:scale-110"
+                class="w-20 h-20 bg-brand-quinary rounded-full flex items-center justify-center shadow-2xl transform transition-transform duration-300 group-hover:scale-110"
               >
                 <div class="translate-x-1">
                   <svg-icon
