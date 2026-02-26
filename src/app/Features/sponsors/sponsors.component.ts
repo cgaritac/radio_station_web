@@ -18,6 +18,7 @@ interface Sponsor {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SponsorsComponent {
+  readonly cgc_sponsor = 'CGC Full Stack';
   readonly sponsors = signal<Sponsor[]>([
     {
       name: 'CGC Full Stack',
