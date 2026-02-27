@@ -29,8 +29,22 @@ export const routes: Routes = [
     component: BlogPage,
   },
   {
+    path: 'blog/category/:category',
+    component: BlogPage,
+  },
+  {
+    path: 'blog/:category/:id',
+    component: ItemDetailPage,
+    data: { type: 'blog' },
+  },
+  {
     path: 'terms',
     component: TermsPage,
+  },
+  {
+    path: 'news/:id',
+    component: ItemDetailPage,
+    data: { type: 'news' },
   },
   {
     path: 'news',
@@ -39,6 +53,11 @@ export const routes: Routes = [
   {
     path: 'schedule',
     component: SchedulePage,
+  },
+  {
+    path: 'studies/:id',
+    component: ItemDetailPage,
+    data: { type: 'studies' },
   },
   {
     path: 'studies',

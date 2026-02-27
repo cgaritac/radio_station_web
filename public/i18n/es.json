@@ -199,6 +199,12 @@
     "TITLE": "BLOG",
     "SUBTITLE": "Reflexiones y Estudios",
     "TAG": "EDIFICACIÓN",
+    "CATEGORIES": {
+      "ALL": "Todos",
+      "CHRISTIAN_LIFE": "Vida Cristiana",
+      "BIBLE_STUDY": "Estudio Bíblico",
+      "MUSIC": "Música"
+    },
     "READ_ARTICLE": "Leer Artículo",
     "AUTHOR": "Por",
     "ITEMS": {

@@ -41,7 +41,7 @@ export class ItemDetailPage implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
-      const type = params.get('type') || '';
+      const type = params.get('type') || this.route.snapshot.data['type'] || '';
       const id = params.get('id') || '';
       this.itemType.set(type);
       this.itemId.set(id);
@@ -95,9 +95,9 @@ export class ItemDetailPage implements OnInit {
   private getImageFor(type: string, id: string): string {
     const images: Record<string, Record<string, string>> = {
       blog: {
-        '1': 'https://images.unsplash.com/photo-1504052434467-813d1ef3933c?w=1600',
-        '2': 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1600',
-        '3': 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1600',
+        '1': 'images/blog-prayer.png',
+        '2': 'images/blog-community.png',
+        '3': 'images/blog-music.png',
       },
       news: {
         '1': 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1600',
