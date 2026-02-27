@@ -1,17 +1,9 @@
 <div class="pt-20">
   <!-- Hero Section -->
-  <section class="w-full py-20 md:py-32 bg-brand-tertiary/95">
-    <div class="max-w-desktop mx-auto px-4">
-      <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
-        <app-section-header
-          [title]="'BLOG_PAGE.TITLE' | translate"
-          [subtitle]="'BLOG_PAGE.SUBTITLE' | translate"
-          [centered]="true"
-          size="large"
-        ></app-section-header>
-      </div>
-    </div>
-  </section>
+  <app-page-hero
+    [title]="'BLOG_PAGE.TITLE' | translate"
+    [subtitle]="'BLOG_PAGE.SUBTITLE' | translate"
+  ></app-page-hero>
 
   <!-- Blog Posts Section -->
   <section class="w-full py-24 bg-brand-tertiary/90 border-y border-brand-primary/5">
