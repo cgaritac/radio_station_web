@@ -175,6 +175,12 @@
     "TITLE": "NOTICIAS",
     "SUBTITLE": "Actualidad y Novedades",
     "TAG": "LO ÚLTIMO",
+    "CATEGORIES": {
+      "ALL": "Todos",
+      "RADIO": "Radio",
+      "COMMUNITY": "Comunidad",
+      "EVENTS": "Eventos"
+    },
     "READ_MORE": "Leer más",
     "ITEMS": {
       "ITEM_1": {
@@ -262,6 +268,12 @@
     "TITLE": "ESTUDIOS BÍBLICOS",
     "SUBTITLE": "Profundizando en la Palabra de Dios",
     "TAG": "BIBLIOTECA ESPIRITUAL",
+    "CATEGORIES": {
+      "ALL": "Todos",
+      "NEW_TESTAMENT": "Nuevo Testamento",
+      "CHRISTIAN_LIFE": "Vida Cristiana",
+      "THEOLOGY": "Teología"
+    },
     "READ_MORE": "Ver Estudio",
     "ITEMS": {
       "ITEM_1": {

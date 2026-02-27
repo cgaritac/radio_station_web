@@ -42,26 +42,34 @@ export const routes: Routes = [
     component: TermsPage,
   },
   {
-    path: 'news/:id',
-    component: ItemDetailPage,
-    data: { type: 'news' },
-  },
-  {
     path: 'news',
     component: NewsPage,
+  },
+  {
+    path: 'news/category/:category',
+    component: NewsPage,
+  },
+  {
+    path: 'news/:category/:id',
+    component: ItemDetailPage,
+    data: { type: 'news' },
   },
   {
     path: 'schedule',
     component: SchedulePage,
   },
   {
-    path: 'studies/:id',
-    component: ItemDetailPage,
-    data: { type: 'studies' },
-  },
-  {
     path: 'studies',
     component: StudiesPage,
+  },
+  {
+    path: 'studies/category/:category',
+    component: StudiesPage,
+  },
+  {
+    path: 'studies/:category/:id',
+    component: ItemDetailPage,
+    data: { type: 'studies' },
   },
   {
     path: 'privacy',

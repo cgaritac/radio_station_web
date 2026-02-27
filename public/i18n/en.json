@@ -175,6 +175,12 @@
     "TITLE": "NEWS",
     "SUBTITLE": "Updates and News",
     "TAG": "LATEST",
+    "CATEGORIES": {
+      "ALL": "All",
+      "RADIO": "Radio",
+      "COMMUNITY": "Community",
+      "EVENTS": "Events"
+    },
     "READ_MORE": "Read more",
     "ITEMS": {
       "ITEM_1": {
@@ -262,6 +268,12 @@
     "TITLE": "BIBLE STUDIES",
     "SUBTITLE": "Deeper into God's Word",
     "TAG": "SPIRITUAL LIBRARY",
+    "CATEGORIES": {
+      "ALL": "All",
+      "NEW_TESTAMENT": "New Testament",
+      "CHRISTIAN_LIFE": "Christian Life",
+      "THEOLOGY": "Theology"
+    },
     "READ_MORE": "View Study",
     "ITEMS": {
       "ITEM_1": {

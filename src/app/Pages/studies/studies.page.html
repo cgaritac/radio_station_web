@@ -4,7 +4,7 @@
     <div class="max-w-desktop mx-auto px-4">
       <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
         <app-section-header
-          [title]="'STUDIES_PAGE.TITLE' | translate"
+          [title]="heroTitle() | translate"
           [subtitle]="'STUDIES_PAGE.SUBTITLE' | translate"
           [centered]="true"
           size="large"
@@ -16,15 +16,43 @@
   <!-- Studies List Section (Redesigned) -->
   <section class="w-full py-24 bg-brand-tertiary/90 border-y border-brand-primary/5">
     <div class="max-w-desktop mx-auto px-4 md:px-8">
+      <!-- Category Selection -->
+      <div class="flex flex-wrap justify-center gap-4 mb-20">
+        <a
+          [routerLink]="['/studies']"
+          class="px-8 py-3 rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300 border"
+          [ngClass]="
+            selectedCategorySlug() === 'all'
+              ? 'bg-brand-secondary text-brand-primary border-brand-secondary shadow-lg shadow-brand-secondary/20'
+              : 'bg-transparent text-brand-primary/40 border-brand-primary/10 hover:border-brand-quaternary hover:text-brand-primary/65 hover:bg-brand-quaternary/20'
+          "
+        >
+          {{ 'STUDIES_PAGE.CATEGORIES.ALL' | translate }}
+        </a>
+        @for (cat of categories(); track cat.slug) {
+          <a
+            [routerLink]="['/studies/category', cat.slug]"
+            class="px-8 py-3 rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300 border"
+            [ngClass]="
+              selectedCategorySlug() === cat.slug
+                ? 'bg-brand-secondary text-brand-primary border-brand-secondary shadow-lg shadow-brand-secondary/20'
+                : 'bg-transparent text-brand-primary/40 border-brand-primary/10 hover:border-brand-quaternary hover:text-brand-primary/65 hover:bg-brand-quaternary/20'
+            "
+          >
+            {{ cat.label | translate }}
+          </a>
+        }
+      </div>
+
       <div class="flex flex-col gap-8 max-w-5xl mx-auto">
-        @for (item of studies(); track item.id) {
+        @for (item of filteredStudies(); track item.id) {
           <article
             class="bg-white rounded-[40px] overflow-hidden shadow-xl shadow-brand-primary/5 border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-500 p-4 md:p-6"
           >
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <!-- Thumbnail/Icon Area -->
               <a
-                [routerLink]="['/studies', item.id]"
+                [routerLink]="['/studies', item.categorySlug, item.id]"
                 class="relative w-full md:w-64 aspect-video md:aspect-square shrink-0 rounded-[32px] overflow-hidden shadow-lg block group/img"
               >
                 <img
@@ -50,11 +78,12 @@
               <!-- Text Content Area -->
               <div class="flex-1 flex flex-col gap-4 text-center md:text-left">
                 <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
-                  <span
-                    class="px-4 py-1.5 bg-brand-secondary/10 text-brand-secondary text-xs font-black uppercase tracking-widest rounded-full"
+                  <a
+                    [routerLink]="['/studies/category', item.categorySlug]"
+                    class="px-4 py-1.5 bg-brand-secondary/10 text-brand-secondary text-xs font-black uppercase tracking-widest rounded-full hover:bg-brand-secondary hover:text-brand-primary transition-all duration-300"
                   >
                     {{ item.category }}
-                  </span>
+                  </a>
                   <div
                     class="flex items-center gap-2 text-brand-primary/30 text-xs font-bold uppercase tracking-widest"
                   >
@@ -63,7 +92,7 @@
                   </div>
                 </div>
 
-                <a [routerLink]="['/studies', item.id]">
+                <a [routerLink]="['/studies', item.categorySlug, item.id]">
                   <h3
                     class="text-2xl md:text-3xl font-black text-brand-primary leading-tight hover:text-brand-secondary transition-colors"
                   >
@@ -79,7 +108,7 @@
 
                 <div class="pt-2 flex justify-center md:justify-start">
                   <a
-                    [routerLink]="['/studies', item.id]"
+                    [routerLink]="['/studies', item.categorySlug, item.id]"
                     class="inline-flex items-center gap-3 text-brand-primary font-black text-xs uppercase tracking-widest hover:text-brand-secondary transition-all group/link cursor-pointer"
                   >
                     <span
