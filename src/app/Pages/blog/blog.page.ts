@@ -18,7 +18,14 @@ interface BlogPost {
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CommonModule, TranslateModule, SvgIconComponent, RouterLink, PageHeroComponent, AdvertiseBannerComponent],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    SvgIconComponent,
+    RouterLink,
+    PageHeroComponent,
+    AdvertiseBannerComponent,
+  ],
   templateUrl: './blog.page.html',
   styleUrl: './blog.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -31,8 +38,7 @@ export class BlogPage {
       title: 'BLOG_PAGE.ITEMS.ITEM_1.TITLE',
       category: 'BLOG_PAGE.ITEMS.ITEM_1.CATEGORY',
       excerpt: 'BLOG_PAGE.ITEMS.ITEM_1.EXCERPT',
-      image:
-        'https://images.unsplash.com/photo-1504052434467-813d1ef3933c?w=800&auto=format&fit=crop',
+      image: 'images/blog-prayer.png',
       author: 'Andrés Pérez',
     },
     {
@@ -40,8 +46,7 @@ export class BlogPage {
       title: 'BLOG_PAGE.ITEMS.ITEM_2.TITLE',
       category: 'BLOG_PAGE.ITEMS.ITEM_2.CATEGORY',
       excerpt: 'BLOG_PAGE.ITEMS.ITEM_2.EXCERPT',
-      image:
-        'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&auto=format&fit=crop',
+      image: 'images/blog-community.png',
       author: 'María García',
     },
     {
@@ -49,8 +54,7 @@ export class BlogPage {
       title: 'BLOG_PAGE.ITEMS.ITEM_3.TITLE',
       category: 'BLOG_PAGE.ITEMS.ITEM_3.CATEGORY',
       excerpt: 'BLOG_PAGE.ITEMS.ITEM_3.EXCERPT',
-      image:
-        'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop',
+      image: 'images/blog-music.png',
       author: 'Juan Rodríguez',
     },
   ]);
