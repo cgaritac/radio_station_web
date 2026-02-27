@@ -29,6 +29,15 @@ export const routes: Routes = [
     component: BlogPage,
   },
   {
+    path: 'blog/category/:category',
+    component: BlogPage,
+  },
+  {
+    path: 'blog/:category/:id',
+    component: ItemDetailPage,
+    data: { type: 'blog' },
+  },
+  {
     path: 'terms',
     component: TermsPage,
   },
@@ -37,12 +46,30 @@ export const routes: Routes = [
     component: NewsPage,
   },
   {
+    path: 'news/category/:category',
+    component: NewsPage,
+  },
+  {
+    path: 'news/:category/:id',
+    component: ItemDetailPage,
+    data: { type: 'news' },
+  },
+  {
     path: 'schedule',
     component: SchedulePage,
   },
   {
     path: 'studies',
     component: StudiesPage,
+  },
+  {
+    path: 'studies/category/:category',
+    component: StudiesPage,
+  },
+  {
+    path: 'studies/:category/:id',
+    component: ItemDetailPage,
+    data: { type: 'studies' },
   },
   {
     path: 'privacy',
