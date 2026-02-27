@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
-import { BannerComponent } from '../../Shared/components/banner/banner.component';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
 
 interface NewsItem {
   id: string;
@@ -22,7 +22,7 @@ interface NewsItem {
     CommonModule,
     TranslateModule,
     SvgIconComponent,
-    BannerComponent,
+    AdvertiseBannerComponent,
     SectionHeaderComponent,
     RouterLink,
   ],
