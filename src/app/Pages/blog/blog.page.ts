@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { PageHeroComponent } from '../../Shared/components/page-hero/page-hero.component';
+import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
 
 interface BlogPost {
   id: string;
@@ -17,7 +18,7 @@ interface BlogPost {
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CommonModule, TranslateModule, SvgIconComponent, RouterLink, PageHeroComponent],
+  imports: [CommonModule, TranslateModule, SvgIconComponent, RouterLink, PageHeroComponent, AdvertiseBannerComponent],
   templateUrl: './blog.page.html',
   styleUrl: './blog.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
