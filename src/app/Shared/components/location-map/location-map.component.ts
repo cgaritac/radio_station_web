@@ -11,11 +11,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
 import { RadioService } from '../../../Core/services/radio.service';
+import { SectionHeaderComponent } from '../section-header/section-header.component';
 
 @Component({
   selector: 'app-location-map',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, SectionHeaderComponent],
   templateUrl: './location-map.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

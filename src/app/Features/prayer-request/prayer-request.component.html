@@ -36,11 +36,13 @@
               >
                 {{ 'PRAYER_REQUEST.NAME_LABEL' | translate }}
               </label>
-              id="prayer-name-input" type="text" formControlName="name"
-              [placeholder]="'PRAYER_REQUEST.NAME_PLACEHOLDER' | translate" class="w-full bg-white
-              border border-brand-primary/10 rounded-2xl px-6 py-4 text-brand-primary
-              placeholder:text-brand-primary/30 focus:outline-none focus:border-brand-secondary/60
-              transition-colors shadow-sm" />
+              <input
+                id="prayer-name-input"
+                type="text"
+                formControlName="name"
+                [placeholder]="'PRAYER_REQUEST.NAME_PLACEHOLDER' | translate"
+                class="w-full bg-white border border-brand-primary/10 rounded-2xl px-6 py-4 text-brand-primary placeholder:text-brand-primary/30 focus:outline-none focus:border-brand-secondary/60 transition-colors shadow-sm"
+              />
             </div>
 
             <!-- Request Field -->
@@ -62,7 +64,7 @@
                 prayerForm.get('request')?.errors?.['required']
               ) {
                 <span class="text-brand-quinary text-xs mt-1 ml-4 italic">{{
-                  'PRAYER_REQUEST.REQUIRED_FIELD' | translate
+                  'PRAYER_REQUEST.VALIDATION.REQUIRED' | translate
                 }}</span>
               }
             </div>

@@ -163,6 +163,8 @@
   },
   "CONTACT": {
     "TITLE": "CONTACTO",
+    "MAP_TITLE": "Nuestra Ubicación",
+    "MAP_SUBTITLE": "Encuentrenos en",
     "SUBTITLE": "¿Tiene algo que decirnos?",
     "TAG": "ESTAMOS AQUÍ PARA USTED",
     "INFO_TITLE": "Información de Contacto",
