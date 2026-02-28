@@ -1,4 +1,11 @@
-import { Component, ChangeDetectionStrategy, signal, inject, computed } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  signal,
+  inject,
+  computed,
+  OnInit,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
@@ -8,6 +15,7 @@ import {
   ScheduleCardComponent,
   WeekSchedule,
 } from '../../Features/schedule-card/schedule-card.component';
+import { SeoService } from '../../Core/services/seo.service';
 
 @Component({
   selector: 'app-schedule',
@@ -23,8 +31,16 @@ import {
   styleUrl: './schedule.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SchedulePage {
+export class SchedulePage implements OnInit {
   radioService = inject(RadioService);
+  private readonly seoService = inject(SeoService);
+
+  ngOnInit() {
+    this.seoService.updateMetaTags({
+      titleKey: 'SEO.SCHEDULE_TITLE',
+      descriptionKey: 'SEO.SCHEDULE_DESCRIPTION',
+    });
+  }
 
   activeTab = signal('WEEK_1');
 

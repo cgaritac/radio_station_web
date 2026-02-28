@@ -1,7 +1,8 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import { SeoService } from '../../Core/services/seo.service';
 
 @Component({
   selector: 'app-privacy',
@@ -11,4 +12,13 @@ import { SectionHeaderComponent } from '../../Shared/components/section-header/s
   styleUrl: './privacy.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PrivacyPage {}
+export class PrivacyPage implements OnInit {
+  private readonly seoService = inject(SeoService);
+
+  ngOnInit() {
+    this.seoService.updateMetaTags({
+      titleKey: 'SEO.PRIVACY_TITLE',
+      descriptionKey: 'SEO.PRIVACY_DESCRIPTION',
+    });
+  }
+}

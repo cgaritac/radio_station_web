@@ -37,7 +37,7 @@
     <div class="flex items-center gap-2">
       <button
         class="w-10 h-10 flex items-center justify-center focus:outline-none hover:bg-white/5 rounded-full transition-all border-none outline-none cursor-pointer"
-        aria-label="Toggle Player"
+        [attr.aria-label]="'ACCESSIBILITY.TOGGLE_PLAYER' | translate"
       >
         <svg-icon
           [name]="isMobileExpanded() ? 'downArrow' : 'upArrow'"

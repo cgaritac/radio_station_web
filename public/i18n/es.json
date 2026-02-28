@@ -383,5 +383,44 @@
       "GO_BACK": "Regresar"
     }
   },
-  "RADIO_SLOGAN": "VIVA"
+  "RADIO_SLOGAN": "VIVA",
+  "SEO": {
+    "DEFAULT_TITLE": "Sintoniza la Fe y la Esperanza",
+    "HOME_TITLE": "Inicio",
+    "HOME_DESCRIPTION": "Sintoniza Radio XXXXX online. Música cristiana, programas de fe y esperanza las 24 horas del día. Únete a nuestra comunidad.",
+    "ABOUT_TITLE": "Sobre Nosotros",
+    "ABOUT_DESCRIPTION": "Conoce la historia, misión y visión de Radio XXXXX. Somos un equipo apasionado por llevar el mensaje de esperanza a través de la radio.",
+    "CONTACT_TITLE": "Contacto",
+    "CONTACT_DESCRIPTION": "¿Tienes alguna duda o petición de oración? Ponte en contacto con Radio XXXXX. Estamos aquí para escucharte y servirte.",
+    "SCHEDULE_TITLE": "Programación",
+    "SCHEDULE_DESCRIPTION": "Consulta nuestra programación semanal. Programas de estudio bíblico, música de adoración y espacios de comunidad para fortalecer tu fe.",
+    "NEWS_TITLE": "Noticias",
+    "NEWS_DESCRIPTION": "Mantente informado con las últimas noticias de nuestra comunidad, eventos especiales y novedades de Radio XXXXX.",
+    "BLOG_TITLE": "Blog",
+    "BLOG_DESCRIPTION": "Explora nuestros artículos de reflexión, estudios bíblicos y noticias sobre música cristiana. Un espacio para crecer juntos en la fe.",
+    "STUDIES_TITLE": "Estudios Bíblicos",
+    "STUDIES_DESCRIPTION": "Profundiza en la Palabra de Dios con nuestra serie de estudios bíblicos, enseñanzas teológicas y recursos para la vida cristiana.",
+    "TERMS_TITLE": "Términos y Condiciones",
+    "TERMS_DESCRIPTION": "Lee nuestros términos y condiciones de uso. Información importante sobre el uso de nuestro sitio web y servicios.",
+    "PRIVACY_TITLE": "Política de Privacidad",
+    "PRIVACY_DESCRIPTION": "Conoce cómo protegemos tu información personal. Nuestra política de privacidad detalla la recopilación y uso de tus datos."
+  },
+  "ACCESSIBILITY": {
+    "SKIP_TO_CONTENT": "Saltar al contenido principal",
+    "MAIN_NAVIGATION": "Navegación principal",
+    "MOBILE_MENU_TOGGLE": "Alternar menú móvil",
+    "FOOTER_NAVIGATION": "Menú del pie de página",
+    "FACEBOOK_LINK": "Facebook",
+    "INSTAGRAM_LINK": "Instagram",
+    "YOUTUBE_LINK": "YouTube",
+    "SPOTIFY_LINK": "Spotify",
+    "TIKTOK_LINK": "TikTok",
+    "WHATSAPP_LINK": "WhatsApp",
+    "RADIO_BOX_LINK": "Radio Box",
+    "ADDRESS_LABEL": "Dirección",
+    "EMAIL_LABEL": "Correo electrónico",
+    "PHONE_LABEL": "Teléfono",
+    "TOGGLE_PLAYER": "Alternar reproductor",
+    "PLAY_STOP": "Reproducir / Detener"
+  }
 }

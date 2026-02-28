@@ -383,5 +383,44 @@
       "GO_BACK": "Go Back"
     }
   },
-  "RADIO_SLOGAN": "LIVE"
+  "RADIO_SLOGAN": "LIVE",
+  "SEO": {
+    "DEFAULT_TITLE": "Tune in to Faith and Hope",
+    "HOME_TITLE": "Home",
+    "HOME_DESCRIPTION": "Tune in to Radio XXXXX online. Christian music, programs of faith and hope 24 hours a day. Join our community.",
+    "ABOUT_TITLE": "About Us",
+    "ABOUT_DESCRIPTION": "Discover the history, mission, and vision of Radio XXXXX. We are a team passionate about bringing the message of hope through radio.",
+    "CONTACT_TITLE": "Contact",
+    "CONTACT_DESCRIPTION": "Do you have any questions or prayer requests? Get in touch with Radio XXXXX. We are here to listen and serve you.",
+    "SCHEDULE_TITLE": "Schedule",
+    "SCHEDULE_DESCRIPTION": "Check our weekly schedule. Bible study programs, worship music, and community spaces to strengthen your faith.",
+    "NEWS_TITLE": "News",
+    "NEWS_DESCRIPTION": "Stay informed with the latest news from our community, special events, and updates from Radio XXXXX.",
+    "BLOG_TITLE": "Blog",
+    "BLOG_DESCRIPTION": "Explore our reflection articles, Bible studies, and Christian music news. A space to grow together in faith.",
+    "STUDIES_TITLE": "Bible Studies",
+    "STUDIES_DESCRIPTION": "Deepen your knowledge of God's Word with our series of Bible studies, theological teachings, and resources for Christian living.",
+    "TERMS_TITLE": "Terms and Conditions",
+    "TERMS_DESCRIPTION": "Read our terms and conditions of use. Important information about the use of our website and services.",
+    "PRIVACY_TITLE": "Privacy Policy",
+    "PRIVACY_DESCRIPTION": "Learn how we protect your personal information. Our privacy policy details the collection and use of your data."
+  },
+  "ACCESSIBILITY": {
+    "SKIP_TO_CONTENT": "Skip to main content",
+    "MAIN_NAVIGATION": "Main navigation",
+    "MOBILE_MENU_TOGGLE": "Toggle mobile menu",
+    "FOOTER_NAVIGATION": "Footer navigation",
+    "FACEBOOK_LINK": "Facebook",
+    "INSTAGRAM_LINK": "Instagram",
+    "YOUTUBE_LINK": "YouTube",
+    "SPOTIFY_LINK": "Spotify",
+    "TIKTOK_LINK": "TikTok",
+    "WHATSAPP_LINK": "WhatsApp",
+    "RADIO_BOX_LINK": "Radio Box",
+    "ADDRESS_LABEL": "Address",
+    "EMAIL_LABEL": "Email",
+    "PHONE_LABEL": "Phone",
+    "TOGGLE_PLAYER": "Toggle player",
+    "PLAY_STOP": "Play / Stop"
+  }
 }

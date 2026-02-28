@@ -4,12 +4,19 @@ import { RadioPlayer } from './Features/radio-player/radio-player';
 import { FooterComponent } from './Layout/footer/footer.component';
 import { HeaderComponent } from './Layout/header/header.component';
 import { CommonModule } from '@angular/common';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AnalyticsService } from './Core/services/analytics.service';
 import { filter } from 'rxjs';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FooterComponent, HeaderComponent, CommonModule, RadioPlayer],
+  imports: [
+    RouterOutlet,
+    FooterComponent,
+    HeaderComponent,
+    CommonModule,
+    RadioPlayer,
+    TranslateModule,
+  ],
   standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.css',
