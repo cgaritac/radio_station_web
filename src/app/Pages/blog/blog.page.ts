@@ -1,12 +1,13 @@
 import { Component, ChangeDetectionStrategy, signal, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { SvgIconComponent } from 'angular-svg-icon';
 import { PageHeroComponent } from '../../Shared/components/page-hero/page-hero.component';
 import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
+import { CategoryFilterComponent } from '../../Shared/components/category-filter/category-filter.component';
+import { BlogListComponent } from '../../Features/blog-list/blog-list.component';
 
 interface BlogPost {
   id: string;
@@ -29,10 +30,10 @@ interface Category {
   imports: [
     CommonModule,
     TranslateModule,
-    SvgIconComponent,
-    RouterLink,
     PageHeroComponent,
     AdvertiseBannerComponent,
+    CategoryFilterComponent,
+    BlogListComponent,
   ],
   templateUrl: './blog.page.html',
   styleUrl: './blog.page.css',
@@ -43,9 +44,9 @@ export class BlogPage {
   private translate = inject(TranslateService);
 
   categories = signal<Category[]>([
-    { slug: 'vida-cristiana', label: 'BLOG_PAGE.CATEGORIES.CHRISTIAN_LIFE' },
-    { slug: 'estudio-biblico', label: 'BLOG_PAGE.CATEGORIES.BIBLE_STUDY' },
-    { slug: 'musica', label: 'BLOG_PAGE.CATEGORIES.MUSIC' },
+    { slug: 'christian-life', label: 'BLOG_PAGE.CATEGORIES.CHRISTIAN_LIFE' },
+    { slug: 'bible-study', label: 'BLOG_PAGE.CATEGORIES.BIBLE_STUDY' },
+    { slug: 'music', label: 'BLOG_PAGE.CATEGORIES.MUSIC' },
   ]);
 
   selectedCategorySlug = toSignal(
@@ -68,7 +69,7 @@ export class BlogPage {
       id: '1',
       title: 'BLOG_PAGE.ITEMS.ITEM_1.TITLE',
       category: 'BLOG_PAGE.CATEGORIES.CHRISTIAN_LIFE',
-      categorySlug: 'vida-cristiana',
+      categorySlug: 'christian-life',
       excerpt: 'BLOG_PAGE.ITEMS.ITEM_1.EXCERPT',
       image: 'images/blog-prayer.png',
       author: 'Andrés Pérez',
@@ -77,7 +78,7 @@ export class BlogPage {
       id: '2',
       title: 'BLOG_PAGE.ITEMS.ITEM_2.TITLE',
       category: 'BLOG_PAGE.CATEGORIES.BIBLE_STUDY',
-      categorySlug: 'estudio-biblico',
+      categorySlug: 'bible-study',
       excerpt: 'BLOG_PAGE.ITEMS.ITEM_2.EXCERPT',
       image: 'images/blog-community.png',
       author: 'María García',
@@ -86,7 +87,7 @@ export class BlogPage {
       id: '3',
       title: 'BLOG_PAGE.ITEMS.ITEM_3.TITLE',
       category: 'BLOG_PAGE.CATEGORIES.MUSIC',
-      categorySlug: 'musica',
+      categorySlug: 'music',
       excerpt: 'BLOG_PAGE.ITEMS.ITEM_3.EXCERPT',
       image: 'images/blog-music.png',
       author: 'Juan Rodríguez',
