@@ -144,20 +144,24 @@
             ></div>
 
             <h4 class="text-2xl font-black mb-6 relative z-10">
-              {{ 'COMMON.LISTEN_LIVE' | translate }}
+              {{ 'COMMON.LISTEN_LIVE_TITLE' | translate }}
             </h4>
             <p class="text-brand-primary mb-8 relative z-10 leading-relaxed">
               {{ 'COMMON.LISTEN_LIVE_DESCRIPTION' | translate }}
             </p>
 
             <app-action-button
-              text="{{ 'COMMON.LISTEN_LIVE' | translate }}"
+              [text]="
+                radioService.isPlaying()
+                  ? ('HERO.STOP' | translate)
+                  : ('COMMON.LISTEN_LIVE_BUTTON' | translate)
+              "
               color="secondary"
               size="large"
+              [icon]="radioService.isPlaying() ? 'stop' : 'play'"
               class="w-full relative z-10"
               style="display: block"
-              routerLink="/"
-              (click)="scrollToTop()"
+              (click)="radioService.togglePlay(); $event.stopPropagation()"
             ></app-action-button>
           </div>
 
@@ -177,8 +181,8 @@
               size="medium"
               class="w-full"
               style="display: block"
-              routerLink="/contact"
-              (click)="scrollToTop()"
+              routerLink="/"
+              fragment="prayer-request-form"
             ></app-action-button>
           </div>
         </div>

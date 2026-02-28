@@ -9,7 +9,8 @@
   "COMMON": {
     "BACK_TO": "Back to",
     "SHARE_CONTENT": "Share this content",
-    "LISTEN_LIVE": "Listen Live",
+    "LISTEN_LIVE_TITLE": "Listen Live",
+    "LISTEN_LIVE_BUTTON": "LISTEN LIVE",
     "LISTEN_LIVE_DESCRIPTION": "Follow our signal in real time and be part of our community of faith.",
     "PRAYER_REQUEST": "Prayer Request",
     "PRAYER_REQUEST_DESCRIPTION": "Do you need us to pray for you? Leave us your message and our team will join in prayer."

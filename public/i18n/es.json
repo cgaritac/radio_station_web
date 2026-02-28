@@ -9,7 +9,8 @@
   "COMMON": {
     "BACK_TO": "Volver a",
     "SHARE_CONTENT": "Compartir este contenido",
-    "LISTEN_LIVE": "Escuchar en Vivo",
+    "LISTEN_LIVE_TITLE": "Escuchar en vivo",
+    "LISTEN_LIVE_BUTTON": "ESCUCHAR EN VIVO",
     "LISTEN_LIVE_DESCRIPTION": "Sigue nuestra señal en tiempo real y sé parte de nuestra comunidad de fe.",
     "PRAYER_REQUEST": "Petición de Oración",
     "PRAYER_REQUEST_DESCRIPTION": "¿Necesitas que oremos por ti? Déjanos tu mensaje y nuestro equipo se unirá en oración."
