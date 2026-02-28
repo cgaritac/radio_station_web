@@ -40,6 +40,7 @@ interface Category {
 })
 export class BlogPage {
   private route = inject(ActivatedRoute);
+  private translate = inject(TranslateService);
 
   categories = signal<Category[]>([
     { slug: 'vida-cristiana', label: 'BLOG_PAGE.CATEGORIES.CHRISTIAN_LIFE' },
@@ -54,10 +55,12 @@ export class BlogPage {
   heroTitle = computed(() => {
     const categorySlug = this.selectedCategorySlug();
     if (!categorySlug || categorySlug === 'all') {
-      return 'BLOG_PAGE.TITLE';
+      return this.translate.instant('BLOG_PAGE.TITLE');
     }
     const category = this.categories().find((c) => c.slug === categorySlug);
-    return category ? category.label : 'BLOG_PAGE.TITLE';
+    return category
+      ? this.translate.instant('BLOG_PAGE.TITLE') + ': ' + this.translate.instant(category.label)
+      : this.translate.instant('BLOG_PAGE.TITLE');
   });
 
   blogPosts = signal<BlogPost[]>([

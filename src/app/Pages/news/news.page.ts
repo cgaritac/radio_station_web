@@ -40,6 +40,7 @@ interface Category {
 })
 export class NewsPage {
   private route = inject(ActivatedRoute);
+  private translate = inject(TranslateService);
 
   categories = signal<Category[]>([
     { slug: 'radio', label: 'NEWS_PAGE.CATEGORIES.RADIO' },
@@ -54,10 +55,12 @@ export class NewsPage {
   heroTitle = computed(() => {
     const categorySlug = this.selectedCategorySlug();
     if (!categorySlug || categorySlug === 'all') {
-      return 'NEWS_PAGE.TITLE';
+      return this.translate.instant('NEWS_PAGE.TITLE');
     }
     const category = this.categories().find((c) => c.slug === categorySlug);
-    return category ? category.label : 'NEWS_PAGE.TITLE';
+    return category
+      ? this.translate.instant('NEWS_PAGE.TITLE') + ': ' + this.translate.instant(category.label)
+      : this.translate.instant('NEWS_PAGE.TITLE');
   });
 
   newsItems = signal<NewsItem[]>([
@@ -66,9 +69,8 @@ export class NewsPage {
       title: 'NEWS_PAGE.ITEMS.ITEM_1.TITLE',
       date: 'NEWS_PAGE.ITEMS.ITEM_1.DATE',
       excerpt: 'NEWS_PAGE.ITEMS.ITEM_1.EXCERPT',
-      image:
-        'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&auto=format&fit=crop',
-      category: 'Radio',
+      image: 'images/news-radio.png',
+      category: 'NEWS_PAGE.CATEGORIES.RADIO',
       categorySlug: 'radio',
     },
     {
@@ -76,9 +78,8 @@ export class NewsPage {
       title: 'NEWS_PAGE.ITEMS.ITEM_2.TITLE',
       date: 'NEWS_PAGE.ITEMS.ITEM_2.DATE',
       excerpt: 'NEWS_PAGE.ITEMS.ITEM_2.EXCERPT',
-      image:
-        'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&auto=format&fit=crop',
-      category: 'Comunidad',
+      image: 'images/news-community.png',
+      category: 'NEWS_PAGE.CATEGORIES.COMMUNITY',
       categorySlug: 'comunidad',
     },
     {
@@ -86,9 +87,8 @@ export class NewsPage {
       title: 'NEWS_PAGE.ITEMS.ITEM_3.TITLE',
       date: 'NEWS_PAGE.ITEMS.ITEM_3.DATE',
       excerpt: 'NEWS_PAGE.ITEMS.ITEM_3.EXCERPT',
-      image:
-        'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&auto=format&fit=crop',
-      category: 'Eventos',
+      image: 'images/news-events.png',
+      category: 'NEWS_PAGE.CATEGORIES.EVENTS',
       categorySlug: 'eventos',
     },
   ]);
