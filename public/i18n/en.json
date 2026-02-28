@@ -258,35 +258,15 @@
     }
   },
   "SCHEDULE_PAGE": {
-    "TITLE": "SCHEDULE",
-    "SUBTITLE": "Tune in to our daily programming",
-    "TAG": "PROGRAMMING",
-    "DAYS": {
-      "MON_FRI": "Monday to Friday",
-      "SAT": "Saturdays",
-      "SUN": "Sundays"
-    },
-    "ITEMS": {
-      "MORNING_PRAYER": {
-        "TITLE": "Dawn with God",
-        "TIME": "5:00 AM - 6:00 AM",
-        "HOST": "Pastor Andrés Pérez"
-      },
-      "FAITH_MUSIC": {
-        "TITLE": "Melodies of Faith",
-        "TIME": "8:00 AM - 10:00 AM",
-        "HOST": "María García"
-      },
-      "BIBLE_STUDY": {
-        "TITLE": "Word Study",
-        "TIME": "2:00 PM - 3:00 PM",
-        "HOST": "Ministerial Team"
-      },
-      "YOUTH_NIGHT": {
-        "TITLE": "Youth Night",
-        "TIME": "7:00 PM - 9:00 PM",
-        "HOST": "Youth Leaders"
-      }
+    "TITLE": "SPECIAL PROGRAMMING",
+    "SUBTITLE": "Monthly Special Programs Schedule",
+    "TAG": "MONTHLY EVENTS",
+    "NOTE": "* Special programming subject to change without prior notice. Tune in to Radio XXXXX for more local updates.",
+    "WEEKS": {
+      "WEEK_1": "Week 1",
+      "WEEK_2": "Week 2",
+      "WEEK_3": "Week 3",
+      "WEEK_4": "Week 4"
     }
   },
   "STUDIES_PAGE": {
@@ -377,5 +357,6 @@
       "GO_HOME": "Back Home",
       "GO_BACK": "Go Back"
     }
-  }
+  },
+  "RADIO_SLOGAN": "LIVE"
 }

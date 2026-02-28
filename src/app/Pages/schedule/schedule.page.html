@@ -1,11 +1,11 @@
 <div class="pt-20">
   <!-- Hero Section -->
-  <section class="w-full py-20 md:py-32 bg-brand-tertiary/95">
+  <section class="w-full py-20 md:py-32 bg-brand-tertiary">
     <div class="max-w-desktop mx-auto px-4">
       <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
         <app-section-header
           [title]="'SCHEDULE_PAGE.TITLE' | translate"
-          [subtitle]="'SCHEDULE_PAGE.SUBTITLE' | translate"
+          subtitle="Programación de Programas Especiales del Mes"
           [centered]="true"
           size="large"
         ></app-section-header>
@@ -14,90 +14,136 @@
   </section>
 
   <!-- Content Section -->
-  <section class="w-full py-24 bg-brand-tertiary/90 border-y border-brand-primary/5">
+  <section class="w-full py-24 bg-brand-tertiary/95">
     <div class="max-w-desktop mx-auto px-4 md:px-8">
-      <!-- Tabs -->
-      <div class="flex flex-wrap justify-center gap-4 mb-16">
-        <button
-          (click)="setTab('MON_FRI')"
-          [class]="
-            activeTab() === 'MON_FRI'
-              ? 'bg-brand-secondary text-brand-primary shadow-xl shadow-brand-secondary/20'
-              : 'bg-white text-brand-primary/40 hover:text-brand-primary hover:bg-brand-primary/5 border border-brand-primary/5'
-          "
-          class="px-10 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300"
-        >
-          {{ 'SCHEDULE_PAGE.DAYS.MON_FRI' | translate }}
-        </button>
-        <button
-          (click)="setTab('SAT')"
-          [class]="
-            activeTab() === 'SAT'
-              ? 'bg-brand-secondary text-brand-primary shadow-xl shadow-brand-secondary/20'
-              : 'bg-white text-brand-primary/40 hover:text-brand-primary hover:bg-brand-primary/5 border border-brand-primary/5'
-          "
-          class="px-10 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300"
-        >
-          {{ 'SCHEDULE_PAGE.DAYS.SAT' | translate }}
-        </button>
-        <button
-          (click)="setTab('SUN')"
-          [class]="
-            activeTab() === 'SUN'
-              ? 'bg-brand-secondary text-brand-primary shadow-xl shadow-brand-secondary/20'
-              : 'bg-white text-brand-primary/40 hover:text-brand-primary hover:bg-brand-primary/5 border border-brand-primary/5'
-          "
-          class="px-10 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all duration-300"
-        >
-          {{ 'SCHEDULE_PAGE.DAYS.SUN' | translate }}
-        </button>
+      <!-- Week Tabs -->
+      <div class="flex flex-wrap justify-center gap-4 mb-20">
+        @for (week of weeks(); track week.id) {
+          <button
+            (click)="setTab(week.id)"
+            [class]="
+              activeTab() === week.id
+                ? (week.color === 'green'
+                    ? 'bg-brand-quaternary text-white shadow-brand-quaternary/20'
+                    : 'bg-brand-primary text-white shadow-brand-primary/20') + ' shadow-2xl scale-105'
+                : 'bg-brand-tertiary text-brand-primary/40 hover:text-brand-primary border border-brand-primary/5'
+            "
+            class="px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest transition-all duration-500 min-w-[140px] cursor-pointer"
+          >
+            {{ week.label }}
+          </button>
+        }
       </div>
 
-      <!-- Schedule Table/List -->
-      <div class="max-w-4xl mx-auto space-y-6">
-        @for (item of scheduleItems(); track item.id) {
+      <!-- Schedule Card -->
+      <div
+        class="rounded-[64px] overflow-hidden shadow-2xl transition-all duration-700"
+        [ngClass]="currentWeek()?.color === 'green' ? 'bg-brand-quaternary' : 'bg-brand-primary'"
+      >
+        <div class="flex flex-col lg:flex-row min-h-[700px] relative">
+          <!-- Side Label (Desktop) -->
           <div
-            class="bg-white rounded-[32px] p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-2xl shadow-brand-primary/5 border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-500"
+            class="hidden lg:flex items-center justify-center p-12 lg:p-16 border-r border-brand-tertiary/10"
           >
-            <!-- Time -->
-            <div class="flex flex-col items-center md:items-start min-w-[180px]">
-              <div class="flex items-center gap-2 mb-2 text-brand-secondary">
-                <svg-icon name="clock" class="w-5 h-5"></svg-icon>
-                <span class="text-xs font-black uppercase tracking-widest">{{
-                  'HOME.LIVE_NOW' | translate
-                }}</span>
-              </div>
-              <p class="text-xl font-black text-brand-primary">{{ item.time | translate }}</p>
+            <h2
+              class="text-8xl font-black text-brand-tertiary/10 whitespace-nowrap rotate-180 [writing-mode:vertical-lr] tracking-tighter uppercase italic"
+            >
+              {{ currentWeek()?.label }}
+            </h2>
+          </div>
+
+          <!-- Programs List -->
+          <div class="flex-1 p-8 md:p-16 lg:p-20 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+              @for (day of currentWeek()?.days; track day.dayNumber) {
+                <div class="space-y-8">
+                  <!-- Day Header -->
+                  <div class="flex items-baseline gap-4 text-white">
+                    <span class="text-3xl md:text-4xl font-black uppercase tracking-tight">{{
+                      day.dayName
+                    }}</span>
+                    <span class="text-6xl font-black opacity-30">{{ day.dayNumber }}</span>
+                  </div>
+
+                  <!-- Programs -->
+                  <div class="space-y-6">
+                    @for (program of day.programs; track program.title) {
+                      <div
+                        class="bg-brand-tertiary/10 backdrop-blur-xl rounded-[32px] p-8 border border-brand-tertiary/10 group hover:bg-brand-tertiary transition-all duration-500 hover:translate-x-2"
+                      >
+                        <div class="flex flex-col gap-3">
+                          <h3
+                            class="text-xl font-black text-brand-tertiary group-hover:text-brand-primary transition-colors leading-tight"
+                          >
+                            {{ program.title }}
+                          </h3>
+                          <div class="flex items-center gap-2">
+                            <div
+                              class="w-8 h-8 rounded-full bg-brand-tertiary/10 flex items-center justify-center group-hover:bg-brand-primary/5"
+                            >
+                              <svg-icon
+                                name="clock"
+                                class="w-4 h-4 text-brand-tertiary group-hover:text-[#98bf3c]"
+                              ></svg-icon>
+                            </div>
+                            <span
+                              class="text-sm font-black text-brand-tertiary/50 group-hover:text-brand-primary/40 uppercase tracking-[0.2em]"
+                            >
+                              {{ program.time }}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    }
+                  </div>
+                </div>
+              }
             </div>
 
-            <!-- Divider -->
-            <div class="hidden md:block w-px h-16 bg-brand-primary/5"></div>
-
-            <!-- Program Info -->
-            <div class="flex-1 text-center md:text-left">
-              <h3
-                class="text-2xl font-black text-brand-primary mb-2 group-hover:text-brand-secondary transition-colors"
-              >
-                {{ item.title | translate }}
-              </h3>
+            <!-- Host Image Section -->
+            <div
+              class="mt-20 lg:mt-32 relative h-[300px] md:h-[400px] -mx-8 md:-mx-16 lg:-mx-20 -mb-8 md:-mb-16 lg:-mb-20 overflow-hidden"
+            >
               <div
-                class="flex items-center justify-center md:justify-start gap-2 text-brand-primary/40"
-              >
-                <svg-icon name="person" class="w-4 h-4"></svg-icon>
-                <span class="text-sm font-bold">{{ item.host | translate }}</span>
-              </div>
-            </div>
-
-            <!-- Action -->
-            <div>
+                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"
+              ></div>
+              @if (currentWeek()?.image) {
+                <img
+                  [src]="currentWeek()?.image"
+                  class="w-full h-full object-cover object-center transform scale-110 hover:scale-100 transition-transform duration-1000"
+                  alt="Radio Hosts"
+                />
+              }
+              <!-- Decorative curved overlay -->
               <div
-                class="w-14 h-14 bg-brand-primary/5 rounded-2xl flex items-center justify-center text-brand-primary group-hover:bg-brand-secondary group-hover:scale-110 transition-all cursor-pointer"
-              >
-                <svg-icon name="play" class="w-6 h-6"></svg-icon>
-              </div>
+                class="absolute -top-1 left-0 right-0 h-24 bg-gradient-to-b z-20"
+                [ngClass]="currentWeek()?.color === 'green' ? 'from-[#98bf3c]' : 'from-[#002b4d]'"
+              ></div>
             </div>
           </div>
-        }
+
+          <!-- Floating Branding -->
+          <div
+            class="absolute top-12 right-12 hidden lg:flex flex-col items-end pointer-events-none opacity-20"
+          >
+            <span class="text-2xl font-black text-brand-tertiary uppercase italic tracking-widest"
+              >{{radioService.radioName()}}</span
+            >
+            <span class="text-6xl font-black text-brand-tertiary uppercase italic leading-none"
+              >{{ 'RADIO_SLOGAN' | translate }}</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Info -->
+      <div class="mt-20 flex flex-col items-center gap-6">
+        <div class="w-20 h-1 bg-brand-primary/10 rounded-full"></div>
+        <p
+          class="text-brand-primary/40 font-bold uppercase tracking-[0.3em] text-[10px] text-center max-w-md leading-relaxed"
+        >
+          {{ 'SCHEDULE_PAGE.NOTE' | translate }}
+        </p>
       </div>
     </div>
   </section>
