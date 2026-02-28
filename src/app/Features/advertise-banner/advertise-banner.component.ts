@@ -20,7 +20,7 @@ import { BannerComponent } from '../../Shared/components/banner/banner.component
         primaryLink="/contact"
         primaryIcon="mail"
         [secondaryText]="'BANNER.DOWNLOAD_PRICES' | translate"
-        secondaryLink="XXXXX"
+        [secondaryLink]="brochureLink"
         secondaryIcon="info"
         iconName="speaker"
         backgroundColor="bg-brand-quaternary"
@@ -31,9 +31,10 @@ import { BannerComponent } from '../../Shared/components/banner/banner.component
         width="max-w-desktop mx-auto"
         height="h-full"
       ></app-banner>
-      <!-- TODO: Add the link to the price list -->
     </section>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AdvertiseBannerComponent {}
+export class AdvertiseBannerComponent {
+  readonly brochureLink = (import.meta as any).env.NG_APP_ADVERTISE_BROCHURE_URL;
+}

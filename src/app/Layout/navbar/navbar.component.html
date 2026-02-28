@@ -1,8 +1,9 @@
-<nav class="relative flex items-center justify-between py-1.5">
+<nav id="main-nav" class="relative flex items-center justify-between py-1.5">
   <!-- Mobile Toggle Button -->
   <button
     (click)="toggleMenu()"
     class="md:hidden text-brand-tertiary backdrop-blur-md hover:text-brand-secondary border border-brand-tertiary/10 rounded-xl transition-colors px-2 py-1 -ml-2 mr-2 select-none hamburger-trigger"
+    id="mobile-menu-toggle"
     aria-label="Toggle menu"
   >
     @if (!isMenuOpen()) {
@@ -42,41 +43,50 @@
   </button>
 
   <!-- Desktop Navigation -->
-  <div class="hidden md:flex items-center text-lg tracking-wide lg:gap-8 md:gap-4 sm:gap-1">
+  <div
+    id="desktop-nav"
+    class="hidden md:flex items-center text-lg tracking-wide lg:gap-8 md:gap-4 sm:gap-1"
+  >
     <a
       routerLink="/"
       routerLinkActive="!text-brand-secondary"
       [routerLinkActiveOptions]="{ exact: true }"
+      id="nav-home"
       class="text-brand-tertiary hover:text-brand-quaternary hover:text-shadow-brand-quaternary transition-all font-medium"
       >{{ 'NAV.HOME' | translate }}</a
     >
     <a
       routerLink="/schedule"
       routerLinkActive="!text-brand-secondary"
+      id="nav-schedule"
       class="text-brand-tertiary hover:text-brand-quaternary hover:text-shadow-brand-quaternary transition-all font-medium"
       >{{ 'NAV.SCHEDULE' | translate }}</a
     >
     <a
       routerLink="/studies"
       routerLinkActive="!text-brand-secondary"
+      id="nav-studies"
       class="text-brand-tertiary hover:text-brand-quaternary hover:text-shadow-brand-quaternary transition-all font-medium"
       >{{ 'NAV.PODCASTS' | translate }}</a
     >
     <a
       routerLink="/news"
       routerLinkActive="!text-brand-secondary"
+      id="nav-news"
       class="text-brand-tertiary hover:text-brand-quaternary hover:text-shadow-brand-quaternary transition-all font-medium"
       >{{ 'NAV.NEWS' | translate }}</a
     >
     <a
       routerLink="/blog"
       routerLinkActive="!text-brand-secondary"
+      id="nav-blog"
       class="text-brand-tertiary hover:text-brand-quaternary hover:text-shadow-brand-quaternary transition-all font-medium"
       >{{ 'NAV.BLOG' | translate }}</a
     >
     <a
       routerLink="/about"
       routerLinkActive="!text-brand-secondary"
+      id="nav-about"
       class="text-brand-tertiary hover:text-brand-quaternary hover:text-shadow-brand-quaternary transition-all font-medium mr-4"
       >{{ 'NAV.ABOUT' | translate }}</a
     >
@@ -92,6 +102,7 @@
       bgColor="bg-brand-secondary"
       textColor="text-brand-primary"
       class="scale-90 md:scale-100 origin-right transition-transform"
+      id="nav-contact-btn"
       routerLink="/contact"
     ></app-action-button>
   </div>

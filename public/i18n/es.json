@@ -146,7 +146,12 @@
     "VISION_TITLE": "Nuestra Visión",
     "VISION_TEXT": "Consolidarnos como la emisora líder en difusión de contenido espiritual y social en la región, innovando constantemente en nuestras plataformas para alcanzar a las nuevas generaciones.",
     "TEAM_TITLE": "Nuestro Equipo",
-    "TEAM_SUBTITLE": "Las voces detrás del micrófono"
+    "TEAM_SUBTITLE": "Las voces detrás del micrófono",
+    "TEAM_MEMBERS": {
+      "MEMBER_1": { "NAME": "Director General", "ROLE": "Administración" },
+      "MEMBER_2": { "NAME": "Locutora Principal", "ROLE": "Programación" },
+      "MEMBER_3": { "NAME": "Productor Técnico", "ROLE": "Operaciones" }
+    }
   },
   "STUDIO_TOUR": {
     "TAG": "NUESTRAS INSTALACIONES",
@@ -279,7 +284,7 @@
       "JONCLEY": "Pan Diario del Ministerio Joncley",
       "TERTULIANDO": "Tertuliando con el Invitado Especial",
       "FAMILY": "Hablemos de Familia",
-      "NANDAYURE": "Nandayure Zona Azul para el Mundo",
+      "ZONE_PROGRAM": "Nuestra Zona para el Mundo",
       "EXPRESSION": "Expresión Musical",
       "HOPE": "Hay Esperanza en Jesús",
       "EDIFICA": "Edifica tu Vida",

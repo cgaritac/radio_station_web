@@ -23,7 +23,7 @@
           [icon]="'youtube'"
           color="secondary"
           size="large"
-          [link]="'https://www.youtube.com/watch?v=kWFIp12-Do0'"
+          [link]="watchUrl"
         ></app-action-button>
       </div>
 
@@ -52,13 +52,11 @@
               <div
                 class="w-20 h-20 bg-brand-quinary rounded-full flex items-center justify-center shadow-2xl transform transition-transform duration-300 group-hover:scale-110"
               >
-                <div class="translate-x-1">
-                  <svg-icon
-                    name="play"
-                    [applyClass]="true"
-                    class="w-8 h-8 fill-brand-primary"
-                  ></svg-icon>
-                </div>
+                <svg-icon
+                  name="play"
+                  [applyClass]="true"
+                  class="w-8 h-8 fill-brand-primary"
+                ></svg-icon>
               </div>
             </div>
 

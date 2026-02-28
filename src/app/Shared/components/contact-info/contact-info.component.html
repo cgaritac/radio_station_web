@@ -46,7 +46,8 @@
     </a>
 
     <a
-      [href]="radioService.socialLinks.googleMaps + ('FOOTER.ADDRESS' | translate)"
+      id="contact-map-link"
+      [href]="radioService.socialLinks.googleMaps + radioService.radioAddress()"
       target="_blank"
       rel="noopener noreferrer"
       class="flex items-center gap-5 p-6 bg-brand-primary/5 rounded-3xl border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-300 no-underline"

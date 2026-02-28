@@ -109,11 +109,15 @@
         </div>
 
         <!-- Source Reference Footer -->
-        <footer class="pt-2 border-t border-brand-primary/5 text-center">
+        <footer
+          id="broadcast-history-footer"
+          class="pt-2 border-t border-brand-primary/5 text-center"
+        >
           <p class="text-[10px] text-brand-sextary/80">
             {{ 'HOME.SOURCE_INFO' | translate }}
             <a
-              href="https://onlineradiobox.com/cr/ornannandayure/playlist/"
+              id="source-link"
+              [href]="radioService.socialLinks.radioBox"
               target="_blank"
               class="font-bold text-brand-primary/60 hover:text-brand-secondary transition-colors inline-flex items-center gap-1"
             >

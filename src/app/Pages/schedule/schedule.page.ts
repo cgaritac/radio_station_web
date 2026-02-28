@@ -48,7 +48,7 @@ export class SchedulePage {
           dayNumber: 2,
           programs: [
             { title: 'SCHEDULE_PAGE.PROGRAMS.FAMILY', time: '2:00PM' },
-            { title: 'SCHEDULE_PAGE.PROGRAMS.NANDAYURE', time: '4:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.ZONE_PROGRAM', time: '4:00PM' },
           ],
         },
       ],
@@ -85,7 +85,7 @@ export class SchedulePage {
           dayNumber: 9,
           programs: [
             { title: 'SCHEDULE_PAGE.PROGRAMS.FAMILY', time: '2:00PM' },
-            { title: 'SCHEDULE_PAGE.PROGRAMS.NANDAYURE', time: '4:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.ZONE_PROGRAM', time: '4:00PM' },
           ],
         },
       ],
@@ -119,7 +119,7 @@ export class SchedulePage {
           dayNumber: 16,
           programs: [
             { title: 'SCHEDULE_PAGE.PROGRAMS.FAMILY', time: '2:00PM' },
-            { title: 'SCHEDULE_PAGE.PROGRAMS.NANDAYURE', time: '4:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.ZONE_PROGRAM', time: '4:00PM' },
           ],
         },
         {
@@ -161,7 +161,7 @@ export class SchedulePage {
           dayNumber: 23,
           programs: [
             { title: 'SCHEDULE_PAGE.PROGRAMS.FAMILY', time: '2:00PM' },
-            { title: 'SCHEDULE_PAGE.PROGRAMS.NANDAYURE', time: '4:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.ZONE_PROGRAM', time: '4:00PM' },
           ],
         },
       ],

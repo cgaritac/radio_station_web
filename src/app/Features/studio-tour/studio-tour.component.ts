@@ -22,18 +22,23 @@ import { ActionButtonComponent } from '../../Shared/components/action-button/act
 export class StudioTourComponent {
   private readonly sanitizer = inject(DomSanitizer);
 
-  private readonly videoId = 'kWFIp12-Do0';
+  private readonly videoId = (import.meta as any).env.NG_APP_STUDIO_TOUR_VIDEO_ID;
+  private readonly youtubeEmbedBase = (import.meta as any).env.NG_APP_YOUTUBE_EMBED_URL;
+  private readonly youtubeThumbnailBase = (import.meta as any).env.NG_APP_YOUTUBE_THUMBNAIL_URL;
+  private readonly youtubeWatchBase = (import.meta as any).env.NG_APP_YOUTUBE_WATCH_URL;
 
   readonly showVideo = signal(false);
   readonly shouldAutoplay = signal(false);
 
   readonly videoEmbedUrl = computed<SafeResourceUrl>(() => {
     const autoplay = this.shouldAutoplay() ? '1' : '0';
-    const url = `https://www.youtube.com/embed/${this.videoId}?autoplay=${autoplay}&rel=0`;
+    const url = `${this.youtubeEmbedBase}/${this.videoId}?autoplay=${autoplay}&rel=0`;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   });
 
-  readonly thumbnailurl = `https://img.youtube.com/vi/${this.videoId}/maxresdefault.jpg`;
+  readonly thumbnailurl = `${this.youtubeThumbnailBase}/${this.videoId}/maxresdefault.jpg`;
+
+  readonly watchUrl = `${this.youtubeWatchBase}${this.videoId}`;
 
   playVideo(): void {
     this.shouldAutoplay.set(true);
