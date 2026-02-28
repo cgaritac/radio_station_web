@@ -17,124 +17,17 @@
   <section class="w-full py-24 bg-brand-tertiary/95">
     <div class="max-w-desktop mx-auto px-4 md:px-8">
       <!-- Week Tabs -->
-      <div class="flex flex-wrap justify-center gap-4 mb-20">
-        @for (week of weeks(); track week.id) {
-          <button
-            (click)="setTab(week.id)"
-            [class]="
-              activeTab() === week.id
-                ? (week.color === 'green'
-                    ? 'bg-brand-quaternary text-white shadow-brand-quaternary/20'
-                    : 'bg-brand-primary text-white shadow-brand-primary/20') + ' shadow-2xl scale-105'
-                : 'bg-brand-tertiary text-brand-primary/40 hover:text-brand-primary border border-brand-primary/5'
-            "
-            class="px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest transition-all duration-500 min-w-[140px] cursor-pointer"
-          >
-            {{ week.label }}
-          </button>
-        }
-      </div>
+      <app-schedule-tabs
+        [weeks]="weeks()"
+        [activeId]="activeTab()"
+        (tabChange)="setTab($event)"
+      ></app-schedule-tabs>
 
       <!-- Schedule Card -->
-      <div
-        class="rounded-[64px] overflow-hidden shadow-2xl transition-all duration-700"
-        [ngClass]="currentWeek()?.color === 'green' ? 'bg-brand-quaternary' : 'bg-brand-primary'"
-      >
-        <div class="flex flex-col lg:flex-row min-h-[700px] relative">
-          <!-- Side Label (Desktop) -->
-          <div
-            class="hidden lg:flex items-center justify-center p-12 lg:p-16 border-r border-brand-tertiary/10"
-          >
-            <h2
-              class="text-8xl font-black text-brand-tertiary/10 whitespace-nowrap rotate-180 [writing-mode:vertical-lr] tracking-tighter uppercase italic"
-            >
-              {{ currentWeek()?.label }}
-            </h2>
-          </div>
-
-          <!-- Programs List -->
-          <div class="flex-1 p-8 md:p-16 lg:p-20 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-              @for (day of currentWeek()?.days; track day.dayNumber) {
-                <div class="space-y-8">
-                  <!-- Day Header -->
-                  <div class="flex items-baseline gap-4 text-white">
-                    <span class="text-3xl md:text-4xl font-black uppercase tracking-tight">{{
-                      day.dayName
-                    }}</span>
-                    <span class="text-6xl font-black opacity-30">{{ day.dayNumber }}</span>
-                  </div>
-
-                  <!-- Programs -->
-                  <div class="space-y-6">
-                    @for (program of day.programs; track program.title) {
-                      <div
-                        class="bg-brand-tertiary/10 backdrop-blur-xl rounded-[32px] p-8 border border-brand-tertiary/10 group hover:bg-brand-tertiary transition-all duration-500 hover:translate-x-2"
-                      >
-                        <div class="flex flex-col gap-3">
-                          <h3
-                            class="text-xl font-black text-brand-tertiary group-hover:text-brand-primary transition-colors leading-tight"
-                          >
-                            {{ program.title }}
-                          </h3>
-                          <div class="flex items-center gap-2">
-                            <div
-                              class="w-8 h-8 rounded-full bg-brand-tertiary/10 flex items-center justify-center group-hover:bg-brand-primary/5"
-                            >
-                              <svg-icon
-                                name="clock"
-                                class="w-4 h-4 text-brand-tertiary group-hover:text-[#98bf3c]"
-                              ></svg-icon>
-                            </div>
-                            <span
-                              class="text-sm font-black text-brand-tertiary/50 group-hover:text-brand-primary/40 uppercase tracking-[0.2em]"
-                            >
-                              {{ program.time }}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    }
-                  </div>
-                </div>
-              }
-            </div>
-
-            <!-- Host Image Section -->
-            <div
-              class="mt-20 lg:mt-32 relative h-[300px] md:h-[400px] -mx-8 md:-mx-16 lg:-mx-20 -mb-8 md:-mb-16 lg:-mb-20 overflow-hidden"
-            >
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"
-              ></div>
-              @if (currentWeek()?.image) {
-                <img
-                  [src]="currentWeek()?.image"
-                  class="w-full h-full object-cover object-center transform scale-110 hover:scale-100 transition-transform duration-1000"
-                  alt="Radio Hosts"
-                />
-              }
-              <!-- Decorative curved overlay -->
-              <div
-                class="absolute -top-1 left-0 right-0 h-24 bg-gradient-to-b z-20"
-                [ngClass]="currentWeek()?.color === 'green' ? 'from-[#98bf3c]' : 'from-[#002b4d]'"
-              ></div>
-            </div>
-          </div>
-
-          <!-- Floating Branding -->
-          <div
-            class="absolute top-12 right-12 hidden lg:flex flex-col items-end pointer-events-none opacity-20"
-          >
-            <span class="text-2xl font-black text-brand-tertiary uppercase italic tracking-widest"
-              >{{radioService.radioName()}}</span
-            >
-            <span class="text-6xl font-black text-brand-tertiary uppercase italic leading-none"
-              >{{ 'RADIO_SLOGAN' | translate }}</span
-            >
-          </div>
-        </div>
-      </div>
+      <app-schedule-card
+        [week]="currentWeek()"
+        [radioName]="radioService.radioName()"
+      ></app-schedule-card>
 
       <!-- Footer Info -->
       <div class="mt-20 flex flex-col items-center gap-6">

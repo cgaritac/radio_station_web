@@ -1,33 +1,24 @@
-import { Component, ChangeDetectionStrategy, signal, inject } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { SvgIconComponent } from 'angular-svg-icon';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 import { RadioService } from '../../Core/services/radio.service';
-
-interface Program {
-  title: string;
-  time: string;
-}
-
-interface DaySchedule {
-  dayName: string;
-  dayNumber: number;
-  programs: Program[];
-}
-
-interface WeekSchedule {
-  id: string;
-  label: string;
-  days: DaySchedule[];
-  color: 'green' | 'blue';
-  image: string;
-}
+import { ScheduleTabsComponent } from '../../Shared/components/schedule-tabs/schedule-tabs.component';
+import {
+  ScheduleCardComponent,
+  WeekSchedule,
+} from '../../Features/schedule-card/schedule-card.component';
 
 @Component({
   selector: 'app-schedule',
   standalone: true,
-  imports: [CommonModule, TranslateModule, SvgIconComponent, SectionHeaderComponent],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    SectionHeaderComponent,
+    ScheduleTabsComponent,
+    ScheduleCardComponent,
+  ],
   templateUrl: './schedule.page.html',
   styleUrl: './schedule.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -40,144 +31,144 @@ export class SchedulePage {
   weeks = signal<WeekSchedule[]>([
     {
       id: 'WEEK_1',
-      label: 'SEMANA 1',
+      label: 'SCHEDULE_PAGE.WEEKS.WEEK_1',
       color: 'green',
       image: 'images/radio_host_studio_green.png',
       days: [
         {
-          dayName: 'JUEVES',
+          dayName: 'SCHEDULE_PAGE.DAYS.THURSDAY',
           dayNumber: 1,
           programs: [
-            { title: 'PAN DIARIO DEL MINISTERIO JONCLEY', time: '1:30PM' },
-            { title: 'TERTULIANDO CON EL INVITADO ESPECIAL', time: '3:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.JONCLEY', time: '1:30PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.TERTULIANDO', time: '3:00PM' },
           ],
         },
         {
-          dayName: 'VIERNES',
+          dayName: 'SCHEDULE_PAGE.DAYS.FRIDAY',
           dayNumber: 2,
           programs: [
-            { title: 'HABLEMOS DE FAMILIA', time: '2:00PM' },
-            { title: 'NANDAYURE ZONA AZUL PARA EL MUNDO', time: '4:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.FAMILY', time: '2:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.NANDAYURE', time: '4:00PM' },
           ],
         },
       ],
     },
     {
       id: 'WEEK_2',
-      label: 'SEMANA 2',
+      label: 'SCHEDULE_PAGE.WEEKS.WEEK_2',
       color: 'blue',
       image: 'images/radio_host_studio_blue.png',
       days: [
         {
-          dayName: 'LUNES',
+          dayName: 'SCHEDULE_PAGE.DAYS.MONDAY',
           dayNumber: 5,
           programs: [
-            { title: 'EXPRESIÓN MUSICAL', time: '3:00PM' },
-            { title: 'HAY ESPERANZA EN JESÚS', time: '4:30PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.EXPRESSION', time: '3:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.HOPE', time: '4:30PM' },
           ],
         },
         {
-          dayName: 'MIÉRCOLES',
+          dayName: 'SCHEDULE_PAGE.DAYS.WEDNESDAY',
           dayNumber: 7,
           programs: [
-            { title: 'EDIFICA TU VIDA', time: '2:00PM' },
-            { title: 'NECESIDAD DE ORAR POR USTED', time: '3:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.EDIFICA', time: '2:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.PRAYER', time: '3:00PM' },
           ],
         },
         {
-          dayName: 'JUEVES',
+          dayName: 'SCHEDULE_PAGE.DAYS.THURSDAY',
           dayNumber: 8,
-          programs: [{ title: 'TERTULIANDO CON EL INVITADO ESPECIAL', time: '3:00PM' }],
+          programs: [{ title: 'SCHEDULE_PAGE.PROGRAMS.TERTULIANDO', time: '3:00PM' }],
         },
         {
-          dayName: 'VIERNES',
+          dayName: 'SCHEDULE_PAGE.DAYS.FRIDAY',
           dayNumber: 9,
           programs: [
-            { title: 'HABLEMOS DE FAMILIA', time: '2:00PM' },
-            { title: 'NANDAYURE ZONA AZUL PARA EL MUNDO', time: '4:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.FAMILY', time: '2:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.NANDAYURE', time: '4:00PM' },
           ],
         },
       ],
     },
     {
       id: 'WEEK_3',
-      label: 'SEMANA 3',
+      label: 'SCHEDULE_PAGE.WEEKS.WEEK_3',
       color: 'green',
       image: 'images/radio_host_studio_green.png',
       days: [
         {
-          dayName: 'LUNES',
+          dayName: 'SCHEDULE_PAGE.DAYS.MONDAY',
           dayNumber: 12,
-          programs: [{ title: 'HAY ESPERANZA EN JESÚS', time: '4:30PM' }],
+          programs: [{ title: 'SCHEDULE_PAGE.PROGRAMS.HOPE', time: '4:30PM' }],
         },
         {
-          dayName: 'MIÉRCOLES',
+          dayName: 'SCHEDULE_PAGE.DAYS.WEDNESDAY',
           dayNumber: 14,
           programs: [
-            { title: 'EDIFICA TU VIDA', time: '2:00PM' },
-            { title: 'NECESIDAD DE ORAR POR USTED', time: '3:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.EDIFICA', time: '2:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.PRAYER', time: '3:00PM' },
           ],
         },
         {
-          dayName: 'JUEVES',
+          dayName: 'SCHEDULE_PAGE.DAYS.THURSDAY',
           dayNumber: 15,
-          programs: [{ title: 'TERTULIANDO CON EL INVITADO ESPECIAL', time: '3:00PM' }],
+          programs: [{ title: 'SCHEDULE_PAGE.PROGRAMS.TERTULIANDO', time: '3:00PM' }],
         },
         {
-          dayName: 'VIERNES',
+          dayName: 'SCHEDULE_PAGE.DAYS.FRIDAY',
           dayNumber: 16,
           programs: [
-            { title: 'HABLEMOS DE FAMILIA', time: '2:00PM' },
-            { title: 'NANDAYURE ZONA AZUL PARA EL MUNDO', time: '4:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.FAMILY', time: '2:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.NANDAYURE', time: '4:00PM' },
           ],
         },
         {
-          dayName: 'SÁBADO',
+          dayName: 'SCHEDULE_PAGE.DAYS.SATURDAY',
           dayNumber: 17,
-          programs: [{ title: 'EL MENSAJE INCREÍBLE DE LA BIBLIA', time: '3:00PM' }],
+          programs: [{ title: 'SCHEDULE_PAGE.PROGRAMS.MESSAGE', time: '3:00PM' }],
         },
       ],
     },
     {
       id: 'WEEK_4',
-      label: 'SEMANA 4',
+      label: 'SCHEDULE_PAGE.WEEKS.WEEK_4',
       color: 'blue',
       image: 'images/radio_host_studio_blue.png',
       days: [
         {
-          dayName: 'LUNES',
+          dayName: 'SCHEDULE_PAGE.DAYS.MONDAY',
           dayNumber: 19,
           programs: [
-            { title: 'EXPRESIÓN MUSICAL', time: '3:00PM' },
-            { title: 'HAY ESPERANZA EN JESÚS', time: '4:30PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.EXPRESSION', time: '3:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.HOPE', time: '4:30PM' },
           ],
         },
         {
-          dayName: 'MIÉRCOLES',
+          dayName: 'SCHEDULE_PAGE.DAYS.WEDNESDAY',
           dayNumber: 21,
           programs: [
-            { title: 'EDIFICA TU VIDA', time: '2:00PM' },
-            { title: 'NECESIDAD DE ORAR POR USTED', time: '3:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.EDIFICA', time: '2:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.PRAYER', time: '3:00PM' },
           ],
         },
         {
-          dayName: 'JUEVES',
+          dayName: 'SCHEDULE_PAGE.DAYS.THURSDAY',
           dayNumber: 22,
-          programs: [{ title: 'TERTULIANDO CON EL INVITADO ESPECIAL', time: '3:00PM' }],
+          programs: [{ title: 'SCHEDULE_PAGE.PROGRAMS.TERTULIANDO', time: '3:00PM' }],
         },
         {
-          dayName: 'VIERNES',
+          dayName: 'SCHEDULE_PAGE.DAYS.FRIDAY',
           dayNumber: 23,
           programs: [
-            { title: 'HABLEMOS DE FAMILIA', time: '2:00PM' },
-            { title: 'NANDAYURE ZONA AZUL PARA EL MUNDO', time: '4:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.FAMILY', time: '2:00PM' },
+            { title: 'SCHEDULE_PAGE.PROGRAMS.NANDAYURE', time: '4:00PM' },
           ],
         },
       ],
     },
   ]);
 
-  currentWeek = () => this.weeks().find((w) => w.id === this.activeTab());
+  currentWeek = computed(() => this.weeks().find((w) => w.id === this.activeTab()));
 
   setTab(tab: string) {
     this.activeTab.set(tab);
