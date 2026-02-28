@@ -26,9 +26,9 @@ export class SeoService implements OnDestroy {
   private translate = inject(TranslateService);
   private readonly env = (import.meta as any).env;
 
-  private readonly siteName = this.env.NG_APP_SITE_NAME;
+  private readonly siteName = this.env.NG_APP_RADIO_NAME;
   private readonly defaultDescriptionKey = 'SEO.HOME_DESCRIPTION';
-  private readonly baseUrl = this.env.NG_APP_BASE_URL;
+  private readonly baseUrl = this.env.NG_APP_RADIO_URL;
 
   private lastConfig?: SeoConfig;
   private langChangeSub?: Subscription;
