@@ -6,6 +6,14 @@
     "CONTACT_NOW": "Contact now",
     "DOWNLOAD_PRICES": "Download Information"
   },
+  "COMMON": {
+    "BACK_TO": "Back to",
+    "SHARE_CONTENT": "Share this content",
+    "LISTEN_LIVE": "Listen Live",
+    "LISTEN_LIVE_DESCRIPTION": "Follow our signal in real time and be part of our community of faith.",
+    "PRAYER_REQUEST": "Prayer Request",
+    "PRAYER_REQUEST_DESCRIPTION": "Do you need us to pray for you? Leave us your message and our team will join in prayer."
+  },
   "HERO": {
     "TEXT1": "TUNE IN TO THE",
     "TEXT2": "FAITH",
@@ -186,18 +194,26 @@
       "ITEM_1": {
         "TITLE": "New Transmission Antenna in Nandayure",
         "DATE": "February 18, 2026",
-        "EXCERERPT": "We are happy to announce the installation of our new equipment that will allow a clearer signal throughout the region.",
+        "AUTHOR": "Tech Team",
+        "CATEGORY": "Radio",
+        "EXCERPT": "We are happy to announce the installation of our new equipment that will allow a clearer signal throughout the region.",
         "CONTENT": "We are pleased to announce that our radio station has taken a giant step in its commitment to technical excellence. This week we finalized the installation of our new high-gain transmission antenna on the main hill of the region.\n\nThis new equipment not only expands our coverage to areas that previously had reception difficulties but also significantly improves audio fidelity. Our technicians have worked hard to ensure that every home in the region receives a clear message without interference. This investment is thanks to the constant support of our audience and sponsors who believe in the impact of our signal."
       },
       "ITEM_2": {
         "TITLE": "'Open Heart' Aid Campaign Results",
         "DATE": "February 12, 2026",
-        "EXCERPT": "Thanks to your donations, we managed to impact more than 50 families last weekend."
+        "AUTHOR": "Editorial Team",
+        "CATEGORY": "Community",
+        "EXCERPT": "Thanks to your donations, we managed to impact more than 50 families last weekend.",
+        "CONTENT": "The 'Open Heart' campaign has been a resounding success. Thanks to the generosity of our listeners, we managed to collect basic supplies and funds to support families in deplorable conditions.\n\nThe radio's team of volunteers traveled to the most needy areas to personally deliver the donations. It was a time of great blessing where we not only shared bread but also a word of faith and hope. Thank you for being part of this miracle!"
       },
       "ITEM_3": {
         "TITLE": "Upcoming Youth Praise Concert",
         "DATE": "February 05, 2026",
-        "EXCERPT": "Local artists will join in a night of worship this coming Saturday in the central park."
+        "AUTHOR": "Radio Events",
+        "CATEGORY": "Events",
+        "EXCERPT": "Local artists will join in a night of worship this coming Saturday in the central park.",
+        "CONTENT": "Get ready for an unforgettable night! This coming Saturday we will have our great youth praise concert. A space designed for new generations to worship together in spirit and truth.\n\nWe will have the participation of several local bands and an inspiring message for today's youth. Admission is free and we hope you bring a friend to share this special time of music and fellowship."
       }
     }
   },
@@ -216,19 +232,27 @@
     "ITEMS": {
       "ITEM_1": {
         "TITLE": "How to strengthen your prayer life this year",
+        "DATE": "February 20, 2026",
+        "AUTHOR": "Pastor Andrés Pérez",
         "CATEGORY": "Christian Life",
         "EXCERPT": "Discover practical steps to maintain constant and deep communication with God in your daily life.",
         "CONTENT": "Prayer is not simply a religious ritual; it is the breathing of the soul. In this article, we explore how to transform your life of communication with the Creator.\n\nFirst, consistency over intensity. It is more effective to dedicate 15 quality minutes daily than one hour once a week. Find a quiet place, eliminate distractions from your phone, and prepare to listen as much as talk.\n\nSecond, use the Word as a guide. When you don't know what to pray, open the Psalms. Let biblical truths shape your requests. You will see how your perspective shifts from your problems toward God's sovereignty."
       },
       "ITEM_2": {
         "TITLE": "The importance of community in faith",
+        "DATE": "February 15, 2026",
+        "AUTHOR": "María García",
         "CATEGORY": "Bible Study",
-        "EXCERPT": "We analyze what the scriptures say about mutual support and together growth as the body of Christ."
+        "EXCERPT": "We analyze what the scriptures say about mutual support and together growth as the body of Christ.",
+        "CONTENT": "We were not created to walk alone. The Bible teaches us that we are one body in Christ and that we need each other to grow and persevere.\n\nIn the Christian community, we find comfort in trials, correction in error, and strength in weakness. This article delves into the 'one another' commandments found in the New Testament, reminding us that our faith is best lived and strengthened when we are united."
       },
       "ITEM_3": {
         "TITLE": "Music that inspires the soul",
+        "DATE": "February 10, 2026",
+        "AUTHOR": "Music Director",
         "CATEGORY": "Music",
-        "EXCERPT": "A selection of hymns and modern songs that have marked the history of our station."
+        "EXCERPT": "A selection of hymns and modern songs that have marked the history of our station.",
+        "CONTENT": "Music has the unique ability to reach the deepest parts of the human heart. At the radio station, we carefully select each song to ensure the message is faithful to the Word and edifying for the listener.\n\nFrom classic hymns that have lasted for centuries to contemporary praise ballads, we explore how these compositions have served as the soundtrack for our audience's battles and victories. Discover the story behind your favorite tracks."
       }
     }
   },
@@ -278,19 +302,30 @@
     "ITEMS": {
       "ITEM_1": {
         "TITLE": "The Sermon on the Mount",
+        "DATE": "February 25, 2026",
+        "AUTHOR": "Study Team",
+        "CATEGORY": "New Testament",
         "SERIES": "Matthew",
         "EXCERPT": "A deep analysis of Jesus' teachings on character and the Kingdom of God.",
         "CONTENT": "The Sermon on the Mount is perhaps Jesus' most famous and profound discourse. In this study, we divide the beatitudes not as a list of commandments, but as a description of the character of a citizen of the Kingdom.\n\nJesus begins by confronting earthly expectations: the poor in spirit, those who mourn, the humble... they are the truly blessed. Through this study, we will learn how to apply these countercultural values in our modern society, being salt and light in a world that often walks in the opposite direction."
       },
       "ITEM_2": {
         "TITLE": "The Fruits of the Spirit",
+        "DATE": "February 18, 2026",
+        "AUTHOR": "Study Team",
+        "CATEGORY": "Christian Life",
         "SERIES": "Galatians",
-        "EXCERPT": "How to live a life guided by the Holy Spirit in the midst of the modern world."
+        "EXCERPT": "How to live a life guided by the Holy Spirit in the midst of the modern world.",
+        "CONTENT": "In Galatians 5, Paul presents us with the contrast between the works of the flesh and the fruit of the Spirit. This study focuses on how to allow the Holy Spirit to transform our inner selves.\n\nLove, joy, peace, patience... these are not qualities we produce by our own effort, but the result of abiding in the vine that is Christ. We will learn to die to our selfish nature so that Jesus' character shines through us in every daily action."
       },
       "ITEM_3": {
         "TITLE": "The Armor of God",
+        "DATE": "February 11, 2026",
+        "AUTHOR": "Study Team",
+        "CATEGORY": "Theology",
         "SERIES": "Ephesians",
-        "EXCERPT": "Preparing for spiritual battle with the tools God has given us."
+        "EXCERPT": "Preparing for spiritual battle with the tools God has given us.",
+        "CONTENT": "We are in a constant battle, but not against flesh and blood. Ephesians 6 provides us with the necessary equipment to stand firm against the enemy's schemes.\n\nWe explore the meaning of each piece: the belt of truth, the breastplate of righteousness, the footwear of peace, the shield of faith, the helmet of salvation, and the sword of the Spirit. We will understand that our victory has already been won on the cross and our job is to daily clothe ourselves with the Lord's strength."
       }
     }
   },

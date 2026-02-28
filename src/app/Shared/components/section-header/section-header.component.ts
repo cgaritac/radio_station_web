@@ -14,7 +14,9 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
         <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
         <h2
           [id]="id() ? id() + '-title' : null"
-          class="text-brand-primary/60 font-bold tracking-[0.3em] uppercase"
+          class="font-bold tracking-[0.3em] uppercase"
+          [class.text-brand-primary/60]="color() === 'primary'"
+          [class.text-brand-tertiary/60]="color() === 'tertiary'"
           [class.text-sm]="size() === 'large'"
           [class.text-xs]="size() === 'medium'"
           [class.text-xs]="size() === 'small'"
@@ -24,7 +26,9 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
       </div>
       <h3
         [id]="id() ? id() + '-subtitle' : null"
-        class="font-extrabold text-brand-primary tracking-tight"
+        class="font-extrabold tracking-tight"
+        [class.text-brand-primary]="color() === 'primary'"
+        [class.text-brand-tertiary]="color() === 'tertiary'"
         [class.text-4xl]="size() === 'large'"
         [class.md:text-6xl]="size() === 'large'"
         [class.text-3xl]="size() === 'medium'"
@@ -45,4 +49,5 @@ export class SectionHeaderComponent {
   centered = input<boolean>(false);
   id = input<string>('');
   size = input<'small' | 'medium' | 'large'>('medium');
+  color = input<'primary' | 'tertiary'>('primary');
 }
