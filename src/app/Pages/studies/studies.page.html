@@ -4,7 +4,7 @@
     <div class="max-w-desktop mx-auto px-4">
       <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
         <app-section-header
-          [title]="heroTitle() | translate"
+          [title]="heroTitle()"
           [subtitle]="'STUDIES_PAGE.SUBTITLE' | translate"
           [centered]="true"
           size="large"
@@ -44,10 +44,10 @@
         }
       </div>
 
-      <div class="flex flex-col gap-8 max-w-5xl mx-auto">
+      <div class="flex flex-col gap-8">
         @for (item of filteredStudies(); track item.id) {
           <article
-            class="bg-white rounded-[40px] overflow-hidden shadow-xl shadow-brand-primary/5 border border-brand-primary/5 group hover:border-brand-secondary/30 transition-all duration-500 p-4 md:p-6"
+            class="bg-white rounded-[40px] overflow-hidden shadow-xl shadow-brand-primary/5 border border-brand-primary/5 group hover:border-brand-quaternary/50 hover:shadow-brand-quaternary/20 hover:scale-102 transition-all duration-500 p-4 md:p-6"
           >
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <!-- Thumbnail/Icon Area -->
@@ -80,9 +80,9 @@
                 <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
                   <a
                     [routerLink]="['/studies/category', item.categorySlug]"
-                    class="px-4 py-1.5 bg-brand-secondary/10 text-brand-secondary text-xs font-black uppercase tracking-widest rounded-full hover:bg-brand-secondary hover:text-brand-primary transition-all duration-300"
+                    class="px-4 py-1.5 text-brand-quaternary/80 border border-brand-quaternary/30 text-xs font-black uppercase tracking-widest rounded-full hover:bg-brand-secondary hover:text-brand-primary transition-all duration-300"
                   >
-                    {{ item.category }}
+                    {{ item.category | translate }}
                   </a>
                   <div
                     class="flex items-center gap-2 text-brand-primary/30 text-xs font-bold uppercase tracking-widest"
@@ -94,7 +94,7 @@
 
                 <a [routerLink]="['/studies', item.categorySlug, item.id]">
                   <h3
-                    class="text-2xl md:text-3xl font-black text-brand-primary leading-tight hover:text-brand-secondary transition-colors"
+                    class="text-2xl md:text-3xl font-black text-brand-primary leading-tight hover:text-brand-quaternary transition-colors"
                   >
                     {{ item.title | translate }}
                   </h3>
@@ -121,7 +121,7 @@
                     >
                       <svg-icon
                         name="arrow-right"
-                        class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform"
+                        class="w-3 h-3 group-hover/link:translate-x-1 group-hover/link:text-brand-primary transition-transform"
                       ></svg-icon>
                     </div>
                   </a>

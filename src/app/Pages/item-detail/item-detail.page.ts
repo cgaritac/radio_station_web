@@ -100,14 +100,14 @@ export class ItemDetailPage implements OnInit {
         '3': 'images/blog-music.png',
       },
       news: {
-        '1': 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1600',
-        '2': 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1600',
-        '3': 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1600',
+        '1': 'images/news-radio.png',
+        '2': 'images/news-community.png',
+        '3': 'images/news-events.png',
       },
       studies: {
-        '1': 'https://images.unsplash.com/photo-1504052434467-813d1ef3933c?w=1600',
-        '2': 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1600',
-        '3': 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1600',
+        '1': 'images/studies-new-testament.png',
+        '2': 'images/studies-vida.png',
+        '3': 'images/studies-teologia.png',
       },
     };
     return images[type]?.[id] || '';
