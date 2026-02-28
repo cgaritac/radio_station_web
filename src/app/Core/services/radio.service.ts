@@ -4,10 +4,10 @@ import { Injectable, signal, effect, computed } from '@angular/core';
   providedIn: 'root',
 })
 export class RadioService {
-  private readonly streamUrl = (import.meta as any).env.NG_APP_STREAM_URL;
-  private readonly metadataUrl = (import.meta as any).env.NG_APP_METADATA_URL;
-  private readonly _radioName = (import.meta as any).env.NG_APP_RADIO_NAME;
-  private readonly _radioAddress = (import.meta as any).env.NG_APP_RADIO_ADDRESS;
+  private readonly streamUrl = (import.meta as any).env.NG_APP_STREAM_URL || '';
+  private readonly metadataUrl = (import.meta as any).env.NG_APP_METADATA_URL || '';
+  private readonly _radioName = (import.meta as any).env.NG_APP_RADIO_NAME || 'Radio Name';
+  private readonly _radioAddress = (import.meta as any).env.NG_APP_RADIO_ADDRESS || '';
 
   private audio: HTMLAudioElement | null = null;
   private eventSource: EventSource | null = null;
@@ -30,16 +30,20 @@ export class RadioService {
   });
 
   readonly socialLinks = {
-    facebook: (import.meta as any).env.NG_APP_FACEBOOK_URL,
-    instagram: (import.meta as any).env.NG_APP_INSTAGRAM_URL,
-    youtube: (import.meta as any).env.NG_APP_YOUTUBE_URL,
-    youtubeWatch: (import.meta as any).env.NG_APP_YOUTUBE_WATCH_URL,
-    spotify: (import.meta as any).env.NG_APP_SPOTIFY_URL,
-    tiktok: (import.meta as any).env.NG_APP_TIKTOK_URL,
-    whatsapp: (import.meta as any).env.NG_APP_WHATSAPP_URL,
-    radioBox: (import.meta as any).env.NG_APP_RADIO_BOX_URL,
-    googleMaps: (import.meta as any).env.NG_APP_GOOGLE_MAPS_SEARCH_URL,
-    googleMapsEmbed: (import.meta as any).env.NG_APP_GOOGLE_MAPS_EMBED_URL,
+    facebook: (import.meta as any).env.NG_APP_FACEBOOK_URL || '#',
+    instagram: (import.meta as any).env.NG_APP_INSTAGRAM_URL || '#',
+    youtube: (import.meta as any).env.NG_APP_YOUTUBE_URL || '#',
+    youtubeWatch:
+      (import.meta as any).env.NG_APP_YOUTUBE_WATCH_URL || 'https://www.youtube.com/watch?v=',
+    spotify: (import.meta as any).env.NG_APP_SPOTIFY_URL || '#',
+    tiktok: (import.meta as any).env.NG_APP_TIKTOK_URL || '#',
+    whatsapp: (import.meta as any).env.NG_APP_WHATSAPP_URL || '#',
+    radioBox: (import.meta as any).env.NG_APP_RADIO_BOX_URL || '#',
+    googleMaps:
+      (import.meta as any).env.NG_APP_GOOGLE_MAPS_SEARCH_URL ||
+      'https://www.google.com/maps/search/?api=1&query=',
+    googleMapsEmbed:
+      (import.meta as any).env.NG_APP_GOOGLE_MAPS_EMBED_URL || 'https://maps.google.com/maps?q=',
   };
 
   constructor() {
