@@ -1,9 +1,22 @@
-<div class="pt-20">
+<div class="">
   <!-- Hero / Header Section -->
-  <section class="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+  <section class="relative w-full h-[60vh] md:h-[70vh] overflow-hidden bg-brand-primary">
+    <!-- Image Loading Skeleton (Behind) -->
+    <div
+      class="absolute inset-0 skeleton transition-opacity duration-700"
+      [class.opacity-0]="imageLoaded()"
+    ></div>
+
     <!-- Background Image -->
     <div class="absolute inset-0">
-      <img [src]="image()" [alt]="title()" class="w-full h-full object-cover" />
+      <img
+        [src]="image()"
+        [alt]="title() | translate"
+        class="w-full h-full object-cover"
+        [class.animate-fade-in]="imageLoaded()"
+        [class.opacity-0]="!imageLoaded()"
+        (load)="onImageLoad()"
+      />
       <div class="absolute inset-0 bg-brand-primary/60 backdrop-blur-[2px]"></div>
       <div
         class="absolute inset-0 bg-linear-to-t from-brand-primary via-brand-primary/20 to-transparent"
@@ -12,13 +25,14 @@
 
     <!-- Content Over Image -->
     <div
-      class="relative h-full max-w-desktop mx-auto px-4 flex flex-col justify-end pb-12 md:pb-24"
+      class="relative h-full max-w-desktop mx-auto px-4 flex flex-col justify-end pb-12 md:pb-24 pt-32"
     >
       <div class="max-w-4xl">
         <app-section-header
-          [title]="subtitle()"
-          [subtitle]="title()"
+          [title]="subtitle() | translate"
+          [subtitle]="title() | translate"
           size="large"
+          color="tertiary"
           class="mb-8"
         ></app-section-header>
 
@@ -27,25 +41,33 @@
           @if (date()) {
             <div class="flex items-center gap-2">
               <svg-icon name="calendar" class="w-5 h-5 text-brand-secondary"></svg-icon>
-              <span class="text-sm font-bold uppercase tracking-widest">{{ date() }}</span>
+              <span class="text-sm font-bold uppercase tracking-widest">{{
+                date() | translate
+              }}</span>
             </div>
           }
           @if (author()) {
             <div class="flex items-center gap-2">
               <svg-icon name="person" class="w-5 h-5 text-brand-secondary"></svg-icon>
-              <span class="text-sm font-bold uppercase tracking-widest">{{ author() }}</span>
+              <span class="text-sm font-bold uppercase tracking-widest">{{
+                author() | translate
+              }}</span>
             </div>
           }
           @if (category()) {
             <div class="flex items-center gap-2">
               <svg-icon name="info" class="w-5 h-5 text-brand-secondary"></svg-icon>
-              <span class="text-sm font-bold uppercase tracking-widest">{{ category() }}</span>
+              <span class="text-sm font-bold uppercase tracking-widest">{{
+                category() | translate
+              }}</span>
             </div>
           }
           @if (series()) {
             <div class="flex items-center gap-2">
               <svg-icon name="radio" class="w-5 h-5 text-brand-secondary"></svg-icon>
-              <span class="text-sm font-bold uppercase tracking-widest">{{ series() }}</span>
+              <span class="text-sm font-bold uppercase tracking-widest">{{
+                series() | translate
+              }}</span>
             </div>
           }
         </div>
@@ -71,14 +93,15 @@
                 name="arrow-right"
                 class="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform"
               ></svg-icon>
-              Volver a {{ itemType() | titlecase }}
+              {{ 'COMMON.BACK_TO' | translate }}
+              {{ itemType().toUpperCase() + '_PAGE.TITLE' | translate }}
             </button>
 
             <!-- Body Text -->
             <div
               class="prose prose-lg max-w-none text-brand-primary/80 leading-[1.8] whitespace-pre-line"
             >
-              {{ content() }}
+              {{ content() | translate }}
             </div>
 
             <!-- Share Section -->
@@ -86,18 +109,22 @@
               class="mt-16 pt-12 border-t border-brand-primary/5 flex flex-col md:flex-row items-center justify-between gap-8"
             >
               <p class="text-brand-primary font-bold uppercase tracking-widest text-sm">
-                ¿Te gustó este contenido? Compártelo
+                {{ 'COMMON.SHARE_CONTENT' | translate }}
               </p>
               <div class="flex gap-4">
                 <a
-                  href="#"
-                  class="w-12 h-12 bg-brand-primary/5 rounded-2xl flex items-center justify-center text-brand-primary hover:bg-brand-secondary hover:scale-110 transition-all"
+                  [href]="radioService.socialLinks.facebook"
+                  target="_blank"
+                  rel="noopener noreferrer#"
+                  class="w-12 h-12 bg-brand-primary/5 rounded-2xl flex items-center justify-center text-brand-primary hover:bg-brand-quaternary/80 hover:scale-110 transition-all"
                 >
                   <svg-icon name="facebook" class="w-6 h-6"></svg-icon>
                 </a>
                 <a
-                  href="#"
-                  class="w-12 h-12 bg-brand-primary/5 rounded-2xl flex items-center justify-center text-brand-primary hover:bg-brand-secondary hover:scale-110 transition-all"
+                  [href]="radioService.socialLinks.whatsapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-12 h-12 bg-brand-primary/5 rounded-2xl flex items-center justify-center text-brand-primary hover:bg-brand-quaternary/80 hover:scale-110 transition-all"
                 >
                   <svg-icon name="whatsapp" class="w-6 h-6"></svg-icon>
                 </a>
@@ -110,25 +137,31 @@
         <div class="lg:col-span-4 space-y-8">
           <!-- Sidebar Box -->
           <div
-            class="bg-brand-primary rounded-[40px] p-8 md:p-10 text-brand-tertiary overflow-hidden relative group"
+            class="bg-brand-quaternary rounded-[40px] p-8 md:p-10 text-brand-primary overflow-hidden relative group"
           >
             <div
               class="absolute -top-12 -right-12 w-48 h-48 bg-brand-secondary/10 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"
             ></div>
 
-            <h4 class="text-2xl font-black mb-6 relative z-10">Escúchanos en vivo</h4>
-            <p class="text-brand-tertiary/60 mb-8 relative z-10 leading-relaxed">
-              Sigue nuestra señal en tiempo real y sé parte de nuestra comunidad de fe.
+            <h4 class="text-2xl font-black mb-6 relative z-10">
+              {{ 'COMMON.LISTEN_LIVE_TITLE' | translate }}
+            </h4>
+            <p class="text-brand-primary mb-8 relative z-10 leading-relaxed">
+              {{ 'COMMON.LISTEN_LIVE_DESCRIPTION' | translate }}
             </p>
 
             <app-action-button
-              text="Escuchar Ahora"
+              [text]="
+                radioService.isPlaying()
+                  ? ('HERO.STOP' | translate)
+                  : ('COMMON.LISTEN_LIVE_BUTTON' | translate)
+              "
               color="secondary"
               size="large"
+              [icon]="radioService.isPlaying() ? 'stop' : 'play'"
               class="w-full relative z-10"
               style="display: block"
-              routerLink="/"
-              (click)="scrollToTop()"
+              (click)="radioService.togglePlay(); $event.stopPropagation()"
             ></app-action-button>
           </div>
 
@@ -136,18 +169,20 @@
           <div
             class="bg-white rounded-[40px] p-8 border border-brand-primary/5 shadow-xl shadow-brand-primary/5"
           >
-            <h4 class="text-lg font-black text-brand-primary mb-6">Petición de Oración</h4>
+            <h4 class="text-lg font-black text-brand-primary mb-6">
+              {{ 'COMMON.PRAYER_REQUEST' | translate }}
+            </h4>
             <p class="text-sm text-brand-primary/60 mb-8">
-              ¿Necesitas que oremos por ti? Déjanos tu mensaje y nuestro equipo se unirá en oración.
+              {{ 'COMMON.PRAYER_REQUEST_DESCRIPTION' | translate }}
             </p>
             <app-action-button
-              text="Pedir Oración"
+              text="{{ 'COMMON.PRAYER_REQUEST' | translate }}"
               color="primary"
               size="medium"
               class="w-full"
               style="display: block"
-              routerLink="/contact"
-              (click)="scrollToTop()"
+              routerLink="/"
+              fragment="prayer-request-form"
             ></app-action-button>
           </div>
         </div>

@@ -6,6 +6,15 @@
     "CONTACT_NOW": "Contactar ahora",
     "DOWNLOAD_PRICES": "Descargar Información"
   },
+  "COMMON": {
+    "BACK_TO": "Volver a",
+    "SHARE_CONTENT": "Compartir este contenido",
+    "LISTEN_LIVE_TITLE": "Escuchar en vivo",
+    "LISTEN_LIVE_BUTTON": "ESCUCHAR EN VIVO",
+    "LISTEN_LIVE_DESCRIPTION": "Sigue nuestra señal en tiempo real y sé parte de nuestra comunidad de fe.",
+    "PRAYER_REQUEST": "Petición de Oración",
+    "PRAYER_REQUEST_DESCRIPTION": "¿Necesitas que oremos por ti? Déjanos tu mensaje y nuestro equipo se unirá en oración."
+  },
   "HERO": {
     "TEXT1": "SINTONIZA LA",
     "TEXT2": "FE",
@@ -186,18 +195,26 @@
       "ITEM_1": {
         "TITLE": "Nueva Antena de Transmisión",
         "DATE": "18 de Febrero, 2026",
+        "AUTHOR": "Equipo Técnico",
+        "CATEGORY": "Radio",
         "EXCERPT": "Estamos felices de anunciar la instalación de nuestro nuevo equipo que permitirá una señal más clara en toda la región.",
         "CONTENT": "Nos complace anunciar que nuestra emisora ha dado un paso gigante en su compromiso con la excelencia técnica. Esta semana finalizamos la instalación de nuestra nueva antena de transmisión de alta ganancia en el cerro principal de la región.\n\nEste nuevo equipo no solo amplía nuestra cobertura a zonas que antes tenían dificultades de recepción, sino que también mejora significativamente la fidelidad del audio. Nuestros técnicos han trabajado arduamente para asegurar que cada hogar de la región reciba un mensaje claro y sin interferencias. Esta inversión es gracias al apoyo constante de nuestra audiencia y patrocinadores que creen en el impacto de nuestra señal."
       },
       "ITEM_2": {
         "TITLE": "Resultados de la Campaña de Ayuda 'Corazón Abierto'",
         "DATE": "12 de Febrero, 2026",
-        "EXCERPT": "Gracias a sus donaciones, logramos impactar a más de 50 familias el pasado fin de semana."
+        "AUTHOR": "Redacción",
+        "CATEGORY": "Comunidad",
+        "EXCERPT": "Gracias a sus donaciones, logramos impactar a más de 50 familias el pasado fin de semana.",
+        "CONTENT": "La campaña 'Corazón Abierto' ha sido un rotundo éxito. Gracias a la generosidad de nuestros oyentes, logramos recaudar suministros básicos y fondos para apoyar a familias en condiciones deplorables.\n\nEl equipo de voluntarios de la radio se desplazó a las zonas más necesitadas para hacer entrega personal de las donaciones. Fue un tiempo de gran bendición donde no solo compartimos pan, sino también una palabra de fe y esperanza. ¡Gracias por ser parte de este milagro!"
       },
       "ITEM_3": {
         "TITLE": "Próximo Concierto Juvenil de Alabanza",
         "DATE": "05 de Febrero, 2026",
-        "EXCERPT": "Artistas locales se unirán en una noche de adoración el próximo sábado en el parque central."
+        "AUTHOR": "Eventos Radio",
+        "CATEGORY": "Eventos",
+        "EXCERPT": "Artistas locales se unirán en una noche de adoración el próximo sábado en el parque central.",
+        "CONTENT": "¡Prepárate para una noche inolvidable! El próximo sábado tendremos nuestro gran concierto juvenil de alabanza. Un espacio diseñado para que las nuevas generaciones adoren juntas en espíritu y verdad.\n\nContaremos con la participación de varias bandas locales y un mensaje inspirador para los jóvenes de hoy. La entrada es gratuita y esperamos que traigas a un amigo para compartir este tiempo especial de música y compañerismo."
       }
     }
   },
@@ -216,52 +233,40 @@
     "ITEMS": {
       "ITEM_1": {
         "TITLE": "Cómo fortalecer tu vida de oración este año",
+        "DATE": "20 de Febrero, 2026",
+        "AUTHOR": "Pastor Andrés Pérez",
         "CATEGORY": "Vida Cristiana",
         "EXCERPT": "Descubre pasos prácticos para mantener una comunicación constante y profunda con Dios en tu día a día.",
         "CONTENT": "La oración no es simplemente un ritual religioso; es el respirar del alma. En este artículo exploramos cómo transformar tu vida de comunicación con el Creador.\n\nPrimero, la constancia sobre la intensidad. Es más efectivo dedicar 15 minutos de calidad diarios que una hora una vez a la semana. Busca un lugar tranquilo, elimina las distracciones del celular y prepárate para escuchar tanto como para hablar.\n\nSegundo, usa la Palabra como guía. Cuando no sepas qué orar, abre los Salmos. Deja que las verdades bíblicas den forma a tus peticiones. Verás cómo tu perspectiva cambia de tus problemas hacia la soberanía de Dios."
       },
       "ITEM_2": {
         "TITLE": "La importancia de la comunidad en la fe",
+        "DATE": "15 de Febrero, 2026",
+        "AUTHOR": "María García",
         "CATEGORY": "Estudio Bíblico",
-        "EXCERPT": "Analizamos lo que dicen las escrituras sobre el apoyo mutuo y el crecimiento conjunto como cuerpo de Cristo."
+        "EXCERPT": "Analizamos lo que dicen las escrituras sobre el apoyo mutuo y el crecimiento conjunto como cuerpo de Cristo.",
+        "CONTENT": "No fuimos creados para caminar solos. La Biblia nos enseña que somos un solo cuerpo en Cristo y que nos necesitamos unos a otros para crecer y perseverar.\n\nEn la comunidad cristiana encontramos el consuelo en las pruebas, la corrección en el error y la fuerza en la debilidad. Este artículo profundiza en los mandamientos de 'unos a otros' que encontramos en el Nuevo Testamento, recordándonos que nuestra fe se vive y se fortalece mejor cuando estamos unidos."
       },
       "ITEM_3": {
         "TITLE": "Música que inspira el alma",
+        "DATE": "10 de Febrero, 2026",
+        "AUTHOR": "Director Musical",
         "CATEGORY": "Música",
-        "EXCERPT": "Una selección de himnos y canciones modernas que han marcado la historia de nuestra emisora."
+        "EXCERPT": "Una selección de himnos y canciones modernas que han marcado la historia de nuestra emisora.",
+        "CONTENT": "La música tiene la capacidad única de llegar a lo más profundo del corazón humano. En la radio, seleccionamos cuidadosamente cada canción para asegurar que el mensaje sea fiel a la Palabra y edificante para el oyente.\n\nDesde los himnos clásicos que han perdurado por siglos hasta las baladas contemporáneas de alabanza, exploramos cómo estas composiciones han servido como banda sonora para las batallas y victorias de nuestra audiencia. Descubre la historia detrás de tus temas favoritos."
       }
     }
   },
   "SCHEDULE_PAGE": {
-    "TITLE": "PROGRAMACIÓN",
-    "SUBTITLE": "Sintonice nuestra programación diaria",
-    "TAG": "PROGRAMACIÓN",
-    "DAYS": {
-      "MON_FRI": "Lunes a Viernes",
-      "SAT": "Sábados",
-      "SUN": "Domingos"
-    },
-    "ITEMS": {
-      "MORNING_PRAYER": {
-        "TITLE": "Amanecer con Dios",
-        "TIME": "5:00 AM - 6:00 AM",
-        "HOST": "Pastor Andrés Pérez"
-      },
-      "FAITH_MUSIC": {
-        "TITLE": "Melodías de Fe",
-        "TIME": "8:00 AM - 10:00 AM",
-        "HOST": "María García"
-      },
-      "BIBLE_STUDY": {
-        "TITLE": "Estudio de la Palabra",
-        "TIME": "2:00 PM - 3:00 PM",
-        "HOST": "Equipo Ministerial"
-      },
-      "YOUTH_NIGHT": {
-        "TITLE": "Noche Juvenil",
-        "TIME": "7:00 PM - 9:00 PM",
-        "HOST": "Líderes de Jóvenes"
-      }
+    "TITLE": "PROGRAMACIÓN ESPECIAL",
+    "SUBTITLE": "Programación de Programas Especiales del Mes",
+    "TAG": "EVENTOS DEL MES",
+    "NOTE": "* Programación especial sujeta a cambios sin previo aviso. Sintoniza Radio XXXXX para más actualizaciones locales.",
+    "WEEKS": {
+      "WEEK_1": "Semana 1",
+      "WEEK_2": "Semana 2",
+      "WEEK_3": "Semana 3",
+      "WEEK_4": "Semana 4"
     }
   },
   "STUDIES_PAGE": {
@@ -278,19 +283,30 @@
     "ITEMS": {
       "ITEM_1": {
         "TITLE": "El Sermón del Monte",
+        "DATE": "25 de Febrero, 2026",
+        "AUTHOR": "Equipo de Estudios",
+        "CATEGORY": "Nuevo Testamento",
         "SERIES": "Mateo",
         "EXCERPT": "Un análisis profundo de las enseñanzas de Jesús sobre el carácter y el Reino de Dios.",
         "CONTENT": "El Sermón del Monte es quizás el discurso más famoso y profundo de Jesús. En este estudio, desglosamos las bienaventuranzas no como una lista de mandamientos, sino como una descripción del carácter de un ciudadano del Reino.\n\nJesús comienza confrontando las expectativas terrenales: los pobres en espíritu, los que lloran, los humildes... ellos son los verdaderamente dichosos. A través de este estudio aprenderemos cómo aplicar estos valores contraculturales en nuestra sociedad moderna, siendo sal y luz en un mundo que a menudo camina en dirección opuesta."
       },
       "ITEM_2": {
         "TITLE": "Los Frutos del Espíritu",
+        "DATE": "18 de Febrero, 2026",
+        "AUTHOR": "Equipo de Estudios",
+        "CATEGORY": "Vida Cristiana",
         "SERIES": "Gálatas",
-        "EXCERPT": "Cómo vivir una vida guiada por el Espíritu Santo en medio del mundo moderno."
+        "EXCERPT": "Cómo vivir una vida guiada por el Espíritu Santo en medio del mundo moderno.",
+        "CONTENT": "En Gálatas 5, Pablo nos presenta el contraste entre las obras de la carne y el fruto del Espíritu. Este estudio se enfoca en cómo permitir que el Espíritu Santo transforme nuestro interior.\n\nAmor, gozo, paz, paciencia... no son cualidades que producimos por esfuerzo propio, sino el resultado natural de permanecer en la vid que es Cristo. Aprenderemos a morir a nuestra naturaleza egoísta para que el carácter de Jesús brille a través de nosotros en cada acción cotidiana."
       },
       "ITEM_3": {
         "TITLE": "La Armadura de Dios",
+        "DATE": "11 de Febrero, 2026",
+        "AUTHOR": "Equipo de Estudios",
+        "CATEGORY": "Teología",
         "SERIES": "Efesios",
-        "EXCERPT": "Preparándonos para la batalla espiritual con las herramientas que Dios nos ha dado."
+        "EXCERPT": "Preparándonos para la batalla espiritual con las herramientas que Dios nos ha dado.",
+        "CONTENT": "Estamos en una batalla constante, pero no contra sangre y carne. Efesios 6 nos provee el equipo necesario para mantenernos firmes contra las asechanzas del enemigo.\n\nExploramos el significado de cada pieza: el cinturón de la verdad, la coraza de justicia, el calzado de la paz, el escudo de la fe, el casco de la salvación y la espada del Espíritu. Entenderemos que nuestra victoria ya ha sido ganada en la cruz y nuestra labor es vestirnos diariamente de la fortaleza del Señor."
       }
     }
   },
@@ -341,5 +357,6 @@
       "GO_HOME": "Volver al Inicio",
       "GO_BACK": "Regresar"
     }
-  }
+  },
+  "RADIO_SLOGAN": "VIVA"
 }

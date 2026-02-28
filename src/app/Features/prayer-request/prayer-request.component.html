@@ -1,4 +1,4 @@
-<section class="w-full py-16 md:py-24 bg-brand-tertiary/95">
+<section id="prayer-request-form" class="w-full py-16 md:py-24 bg-brand-tertiary/95">
   <div class="container mx-auto px-4 max-w-desktop">
     <div class="flex flex-col lg:flex-row gap-12 items-center">
       <!-- Image Side (Hidden on mobile or stacked) -->
@@ -56,9 +56,9 @@
                 prayerForm.get('request')?.touched &&
                 prayerForm.get('request')?.errors?.['required']
               ) {
-                <span class="text-brand-quinary text-xs mt-1 ml-4 italic"
-                  >{{ 'PRAYER_REQUEST.REQUIRED_FIELD' | translate }}</span
-                >
+                <span class="text-brand-quinary text-xs mt-1 ml-4 italic">{{
+                  'PRAYER_REQUEST.REQUIRED_FIELD' | translate
+                }}</span>
               }
             </div>
 

@@ -1,10 +1,19 @@
-import { Component, ChangeDetectionStrategy, signal, inject, OnInit } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  signal,
+  inject,
+  OnInit,
+  DestroyRef,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
+import { RadioService } from '../../Core/services/radio.service';
 
 @Component({
   selector: 'app-item-detail',
@@ -22,12 +31,14 @@ import { ActionButtonComponent } from '../../Shared/components/action-button/act
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ItemDetailPage implements OnInit {
+  radioService = inject(RadioService);
   private route = inject(ActivatedRoute);
-  private router = inject(Router);
   private translate = inject(TranslateService);
+  private destroyRef = inject(DestroyRef);
 
   itemType = signal<string>('');
   itemId = signal<string>('');
+  imageLoaded = signal<boolean>(false);
 
   // Data
   title = signal<string>('');
@@ -40,56 +51,43 @@ export class ItemDetailPage implements OnInit {
   series = signal<string>('');
 
   ngOnInit() {
-    this.route.paramMap.subscribe((params) => {
+    this.route.paramMap.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((params) => {
       const type = params.get('type') || this.route.snapshot.data['type'] || '';
       const id = params.get('id') || '';
       this.itemType.set(type);
       this.itemId.set(id);
       this.loadData(type, id);
     });
+
+    this.translate.onLangChange.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
+      this.loadData(this.itemType(), this.itemId());
+    });
   }
 
   private loadData(type: string, id: string) {
+    if (!type || !id) return;
+    this.imageLoaded.set(false);
     const section = type.toUpperCase() + '_PAGE';
     const baseKey = `${section}.ITEMS.ITEM_${id}`;
 
-    // Get Title to check if exists
-    const title = this.translate.instant(`${baseKey}.TITLE`);
-    if (title === `${baseKey}.TITLE`) {
-      // If we are in another language and haven't loaded it yet, instant might fail.
-      // But usually it's loaded. Let's assume for now.
-    }
+    // Set translation keys instead of instant translations for reactivity
+    this.title.set(`${baseKey}.TITLE`);
+    this.subtitle.set(`${section}.TAG`);
+    this.content.set(`${baseKey}.CONTENT`);
 
-    this.title.set(title);
-    this.subtitle.set(this.translate.instant(`${section}.TAG`));
-    this.content.set(this.translate.instant(`${baseKey}.CONTENT`));
+    // Helper to only set the key if the translation exists
+    const getOptionalKey = (key: string) => {
+      const translation = this.translate.instant(key);
+      return translation !== key ? key : '';
+    };
 
-    // Category
-    const cat = this.translate.instant(`${baseKey}.CATEGORY`);
-    this.category.set(cat !== `${baseKey}.CATEGORY` ? cat : '');
+    // For metadata, the key is set if it exists in the translation file
+    this.category.set(getOptionalKey(`${baseKey}.CATEGORY`));
+    this.date.set(getOptionalKey(`${baseKey}.DATE`));
+    this.series.set(getOptionalKey(`${baseKey}.SERIES`));
+    this.author.set(getOptionalKey(`${baseKey}.AUTHOR`));
 
-    // Date
-    const d = this.translate.instant(`${baseKey}.DATE`);
-    this.date.set(d !== `${baseKey}.DATE` ? d : '');
-
-    // Series
-    const s = this.translate.instant(`${baseKey}.SERIES`);
-    this.series.set(s !== `${baseKey}.SERIES` ? s : '');
-
-    // Author - we'll check if it exists in translation, otherwise use hardcoded if we had any
-    const a = this.translate.instant(`${baseKey}.AUTHOR`);
-    this.author.set(a !== `${baseKey}.AUTHOR` ? a : '');
-
-    // Image logic - this is tricky because images were in the component signals
-    // I'll need to mapping them or move them to JSON too.
     this.image.set(this.getImageFor(type, id));
-
-    // If content is still the key, use excerpt as fallback or a placeholder
-    if (this.content() === `${baseKey}.CONTENT`) {
-      this.content().startsWith(`${baseKey}.CONTENT`) &&
-        this.content().length === `${baseKey}.CONTENT`.length;
-      this.content.set(this.translate.instant(`${baseKey}.EXCERPT`));
-    }
   }
 
   private getImageFor(type: string, id: string): string {
@@ -111,6 +109,10 @@ export class ItemDetailPage implements OnInit {
       },
     };
     return images[type]?.[id] || '';
+  }
+
+  onImageLoad() {
+    this.imageLoaded.set(true);
   }
 
   scrollToTop() {
