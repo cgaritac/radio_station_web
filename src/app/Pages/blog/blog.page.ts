@@ -1,4 +1,11 @@
-import { Component, ChangeDetectionStrategy, signal, inject, computed } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  signal,
+  inject,
+  computed,
+  OnInit,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -8,6 +15,7 @@ import { PageHeroComponent } from '../../Shared/components/page-hero/page-hero.c
 import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
 import { CategoryFilterComponent } from '../../Shared/components/category-filter/category-filter.component';
 import { BlogListComponent } from '../../Features/blog-list/blog-list.component';
+import { SeoService } from '../../Core/services/seo.service';
 
 interface BlogPost {
   id: string;
@@ -39,9 +47,17 @@ interface Category {
   styleUrl: './blog.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlogPage {
+export class BlogPage implements OnInit {
   private route = inject(ActivatedRoute);
   private translate = inject(TranslateService);
+  private readonly seoService = inject(SeoService);
+
+  ngOnInit() {
+    this.seoService.updateMetaTags({
+      titleKey: 'SEO.BLOG_TITLE',
+      descriptionKey: 'SEO.BLOG_DESCRIPTION',
+    });
+  }
 
   categories = signal<Category[]>([
     { slug: 'christian-life', label: 'BLOG_PAGE.CATEGORIES.CHRISTIAN_LIFE' },

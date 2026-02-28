@@ -13,7 +13,10 @@
     </div>
 
     <div class="flex justify-center md:justify-center tracking-wide">
-      <div class="flex flex-col items-center md:items-start">
+      <nav
+        class="flex flex-col items-center md:items-start"
+        [attr.aria-label]="'ACCESSIBILITY.FOOTER_NAVIGATION' | translate"
+      >
         <h3 class="text-white font-bold mb-6">{{ 'FOOTER.MENU' | translate }}</h3>
         <ul class="space-y-3 text-sm">
           <li>
@@ -87,7 +90,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
 
     <div class="tracking-wide flex flex-col items-center md:items-start">
@@ -99,7 +102,8 @@
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-xl flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
           id="social-facebook"
-          title="Facebook"
+          [attr.aria-label]="'ACCESSIBILITY.FACEBOOK_LINK' | translate"
+          [title]="'ACCESSIBILITY.FACEBOOK_LINK' | translate"
         >
           <svg-icon name="facebook" class="w-5 h-5"></svg-icon>
         </a>
@@ -109,7 +113,8 @@
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-xl flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
           id="social-instagram"
-          title="Instagram"
+          [attr.aria-label]="'ACCESSIBILITY.INSTAGRAM_LINK' | translate"
+          [title]="'ACCESSIBILITY.INSTAGRAM_LINK' | translate"
         >
           <svg-icon name="instagram" class="w-5 h-5"></svg-icon>
         </a>
@@ -119,7 +124,8 @@
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-xl flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
           id="social-youtube"
-          title="YouTube"
+          [attr.aria-label]="'ACCESSIBILITY.YOUTUBE_LINK' | translate"
+          [title]="'ACCESSIBILITY.YOUTUBE_LINK' | translate"
         >
           <svg-icon name="youtube" class="w-5 h-5"></svg-icon>
         </a>
@@ -128,7 +134,8 @@
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-xl flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
-          title="Spotify"
+          [attr.aria-label]="'ACCESSIBILITY.SPOTIFY_LINK' | translate"
+          [title]="'ACCESSIBILITY.SPOTIFY_LINK' | translate"
         >
           <svg-icon name="spotify" class="w-5 h-5"></svg-icon>
         </a>
@@ -137,7 +144,8 @@
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-xl flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
-          title="TikTok"
+          [attr.aria-label]="'ACCESSIBILITY.TIKTOK_LINK' | translate"
+          [title]="'ACCESSIBILITY.TIKTOK_LINK' | translate"
         >
           <svg-icon name="tiktok" class="w-5 h-5"></svg-icon>
         </a>
@@ -146,7 +154,8 @@
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-tertiary/5 rounded-xl flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
-          title="WhatsApp"
+          [attr.aria-label]="'ACCESSIBILITY.WHATSAPP_LINK' | translate"
+          [title]="'ACCESSIBILITY.WHATSAPP_LINK' | translate"
         >
           <svg-icon name="whatsapp" class="w-5 h-5"></svg-icon>
         </a>
@@ -155,7 +164,8 @@
           target="_blank"
           rel="noopener noreferrer"
           class="w-10 h-10 bg-brand-quaternary/5 rounded-xl flex items-center justify-center hover:bg-brand-quaternary hover:text-brand-primary hover:shadow-md hover:shadow-brand-quaternary/50 hover:scale-115 transition-all group"
-          title="Radio Box"
+          [attr.aria-label]="'ACCESSIBILITY.RADIO_BOX_LINK' | translate"
+          [title]="'ACCESSIBILITY.RADIO_BOX_LINK' | translate"
         >
           <svg-icon name="microphone" class="w-5 h-5"></svg-icon>
         </a>
@@ -168,7 +178,9 @@
         <a
           [href]="radioService.socialLinks.googleMaps + ('FOOTER.ADDRESS' | translate)"
           target="_blank"
-          title="{{ 'FOOTER.ADDRESS' | translate }}"
+          [attr.aria-label]="
+            ('ACCESSIBILITY.ADDRESS_LABEL' | translate) + ': ' + ('FOOTER.ADDRESS' | translate)
+          "
           rel="noopener noreferrer"
           class="flex items-center gap-2 hover:text-brand-quaternary transition-all"
         >
@@ -178,7 +190,9 @@
         <a
           [href]="'mailto:' + ('FOOTER.EMAIL' | translate)"
           target="_blank"
-          title="{{ 'FOOTER.EMAIL' | translate }}"
+          [attr.aria-label]="
+            ('ACCESSIBILITY.EMAIL_LABEL' | translate) + ': ' + ('FOOTER.EMAIL' | translate)
+          "
           rel="noopener noreferrer"
           class="flex items-center gap-2 hover:text-brand-quaternary transition-all"
         >
@@ -188,7 +202,9 @@
         <a
           [href]="'tel:' + ('FOOTER.PHONE' | translate)"
           target="_blank"
-          title="{{ 'FOOTER.PHONE' | translate }}"
+          [attr.aria-label]="
+            ('ACCESSIBILITY.PHONE_LABEL' | translate) + ': ' + ('FOOTER.PHONE' | translate)
+          "
           rel="noopener noreferrer"
           class="flex items-center gap-2 hover:text-brand-quaternary transition-all"
         >

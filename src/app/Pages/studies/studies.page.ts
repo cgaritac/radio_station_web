@@ -1,4 +1,11 @@
-import { Component, ChangeDetectionStrategy, signal, inject, computed } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  signal,
+  inject,
+  computed,
+  OnInit,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -8,6 +15,7 @@ import { SectionHeaderComponent } from '../../Shared/components/section-header/s
 import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
 import { CategoryFilterComponent } from '../../Shared/components/category-filter/category-filter.component';
 import { StudiesListComponent } from '../../Features/studies-list/studies-list.component';
+import { SeoService } from '../../Core/services/seo.service';
 
 interface StudyItem {
   id: string;
@@ -39,9 +47,17 @@ interface Category {
   styleUrl: './studies.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StudiesPage {
+export class StudiesPage implements OnInit {
   private route = inject(ActivatedRoute);
   private translate = inject(TranslateService);
+  private readonly seoService = inject(SeoService);
+
+  ngOnInit() {
+    this.seoService.updateMetaTags({
+      titleKey: 'SEO.STUDIES_TITLE',
+      descriptionKey: 'SEO.STUDIES_DESCRIPTION',
+    });
+  }
 
   categories = signal<Category[]>([
     { slug: 'new-testament', label: 'STUDIES_PAGE.CATEGORIES.NEW_TESTAMENT' },

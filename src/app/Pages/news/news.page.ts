@@ -1,4 +1,11 @@
-import { Component, ChangeDetectionStrategy, signal, inject, computed } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  signal,
+  inject,
+  computed,
+  OnInit,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -8,6 +15,7 @@ import { SectionHeaderComponent } from '../../Shared/components/section-header/s
 import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
 import { CategoryFilterComponent } from '../../Shared/components/category-filter/category-filter.component';
 import { NewsGridComponent } from '../../Features/news-grid/news-grid.component';
+import { SeoService } from '../../Core/services/seo.service';
 
 interface NewsItem {
   id: string;
@@ -39,9 +47,17 @@ interface Category {
   styleUrl: './news.page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NewsPage {
+export class NewsPage implements OnInit {
   private route = inject(ActivatedRoute);
   private translate = inject(TranslateService);
+  private readonly seoService = inject(SeoService);
+
+  ngOnInit() {
+    this.seoService.updateMetaTags({
+      titleKey: 'SEO.NEWS_TITLE',
+      descriptionKey: 'SEO.NEWS_DESCRIPTION',
+    });
+  }
 
   categories = signal<Category[]>([
     { slug: 'radio', label: 'NEWS_PAGE.CATEGORIES.RADIO' },

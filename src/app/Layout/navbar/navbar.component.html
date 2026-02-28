@@ -1,10 +1,17 @@
-<nav id="main-nav" class="relative flex items-center justify-between py-1.5">
+<nav
+  id="main-nav"
+  class="relative flex items-center justify-between py-1.5"
+  role="navigation"
+  [attr.aria-label]="'ACCESSIBILITY.MAIN_NAVIGATION' | translate"
+>
   <!-- Mobile Toggle Button -->
   <button
     (click)="toggleMenu()"
     class="md:hidden text-brand-tertiary backdrop-blur-md hover:text-brand-secondary border border-brand-tertiary/10 rounded-xl transition-colors px-2 py-1 -ml-2 mr-2 select-none hamburger-trigger"
     id="mobile-menu-toggle"
-    aria-label="Toggle menu"
+    [attr.aria-label]="'ACCESSIBILITY.MOBILE_MENU_TOGGLE' | translate"
+    [attr.aria-expanded]="isMenuOpen()"
+    aria-controls="mobile-navigation"
   >
     @if (!isMenuOpen()) {
       <svg
@@ -110,6 +117,7 @@
   <!-- Mobile Menu Overlay -->
   @if (isMenuOpen()) {
     <div
+      id="mobile-navigation"
       class="absolute top-full left-0 right-0 z-100 mt-1.5 py-6 px-4 flex flex-col gap-4 bg-brand-primary-light/25 border border-brand-tertiary/10 rounded-2xl shadow-2xl md:hidden animate-fade-down mobile-menu-panel transform-gpu"
     >
       <a

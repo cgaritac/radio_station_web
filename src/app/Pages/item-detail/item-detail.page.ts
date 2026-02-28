@@ -14,6 +14,7 @@ import { SvgIconComponent } from 'angular-svg-icon';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
 import { RadioService } from '../../Core/services/radio.service';
+import { SeoService } from '../../Core/services/seo.service';
 
 @Component({
   selector: 'app-item-detail',
@@ -35,6 +36,7 @@ export class ItemDetailPage implements OnInit {
   private route = inject(ActivatedRoute);
   private translate = inject(TranslateService);
   private destroyRef = inject(DestroyRef);
+  private seoService = inject(SeoService);
 
   itemType = signal<string>('');
   itemId = signal<string>('');
@@ -88,6 +90,16 @@ export class ItemDetailPage implements OnInit {
     this.author.set(getOptionalKey(`${baseKey}.AUTHOR`));
 
     this.image.set(this.getImageFor(type, id));
+
+    // Update SEO
+    this.translate.get([this.title(), this.content()]).subscribe((translations) => {
+      this.seoService.updateMetaTags({
+        title: translations[this.title()],
+        description: translations[this.content()].substring(0, 160) + '...',
+        image: this.image(),
+        type: 'article',
+      });
+    });
   }
 
   private getImageFor(type: string, id: string): string {
