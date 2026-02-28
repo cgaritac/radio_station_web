@@ -35,21 +35,22 @@ export class BroadcastHistoryService {
 
     const currentUrl = urlObj.toString();
     const fetchHistory = (url: string) => {
-      const targetUrl = this.proxyUrl ? `${this.proxyUrl}${url}` : url;
-      return this.http.get<any>(targetUrl).pipe(
+      const proxy = this.proxyUrl;
+      const targetUrl = proxy ? `${proxy}${encodeURIComponent(url)}` : url;
+
+      return this.http.get(targetUrl, { responseType: 'text' }).pipe(
         map((response) => {
-          let data = response;
-          if (response && response.contents) {
-            try {
-              data = JSON.parse(response.contents);
-            } catch (e) {
-              console.error('Error parsing proxy contents:', e);
-            }
+          try {
+            const parsed = JSON.parse(response);
+            const data = parsed.contents ? JSON.parse(parsed.contents) : parsed;
+            return (data.playlist as BroadcastHistoryEntry[]) || [];
+          } catch (e) {
+            console.error('Error parsing history JSON:', e);
+            return [];
           }
-          return (data.playlist as BroadcastHistoryEntry[]) || [];
         }),
         catchError((err) => {
-          console.error(`Error loading history from ${url}:`, err);
+          console.error(`Error loading history from proxy for ${url}:`, err);
           return of([]);
         }),
       );
@@ -58,7 +59,7 @@ export class BroadcastHistoryService {
     return fetchHistory(currentUrl).pipe(
       switchMap((playlist) => {
         if (playlist.length === 0) {
-          const yesterdayUrl = currentUrl.replace('/playlist/', '/playlist/1/');
+          const yesterdayUrl = currentUrl.replace('/playlist/?', '/playlist/1/?');
           return fetchHistory(yesterdayUrl);
         }
         return of(playlist);

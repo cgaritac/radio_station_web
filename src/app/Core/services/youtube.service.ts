@@ -48,7 +48,6 @@ export class YouTubeService {
       const rawResponse = await lastValueFrom(this.http.get(targetUrl, { responseType: 'text' }));
 
       let xmlString = rawResponse;
-
       if (rawResponse.trim().startsWith('{')) {
         try {
           const json = JSON.parse(rawResponse);
@@ -56,12 +55,19 @@ export class YouTubeService {
             xmlString = json.contents;
           }
         } catch (e) {
-          // Not JSON or parse failed, treat as raw XML/Text
+          // Is not a valid JSON, treat as XML direct
         }
       }
 
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+      let xmlDoc: Document;
+      try {
+        const parser = new DOMParser();
+        xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+      } catch (e) {
+        console.error('Error parsing XML response from YouTube feed:', e);
+        return null;
+      }
+
       const entries = xmlDoc.getElementsByTagName('entry');
 
       if (entries.length > 0) {
