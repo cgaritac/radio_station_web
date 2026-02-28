@@ -24,11 +24,9 @@ export class SeoService implements OnDestroy {
   private meta = inject(Meta);
   private router = inject(Router);
   private translate = inject(TranslateService);
-  private readonly env = (import.meta as any).env;
-
-  private readonly siteName = this.env.NG_APP_RADIO_NAME;
+  private readonly siteName = (import.meta as any).env.NG_APP_RADIO_NAME || 'Radio';
   private readonly defaultDescriptionKey = 'SEO.HOME_DESCRIPTION';
-  private readonly baseUrl = this.env.NG_APP_RADIO_URL;
+  private readonly baseUrl = (import.meta as any).env.NG_APP_RADIO_URL || '';
 
   private lastConfig?: SeoConfig;
   private langChangeSub?: Subscription;
