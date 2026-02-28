@@ -33,33 +33,49 @@ export class YouTubeService {
 
   async getLatestVideo(): Promise<YouTubeVideoInfo | null> {
     try {
-      if (!this.channelId || !this.proxyUrl) {
-        console.warn('YouTube channel ID or Proxy URL missing in environment variables');
+      const channel = this.channelId;
+      const proxy = this.proxyUrl;
+      const feeds = this.feedsBaseUrl;
+
+      if (!channel || !proxy || !feeds) {
+        console.warn('YouTube configuration missing in environment variables');
         return null;
       }
 
-      const rssUrl = `${this.feedsBaseUrl}${this.channelId}`;
-      const response: any = await lastValueFrom(
-        this.http.get(`${this.proxyUrl}${encodeURIComponent(rssUrl)}`),
-      );
+      const rssUrl = `${feeds}${channel}`;
+      const targetUrl = `${proxy}${encodeURIComponent(rssUrl)}`;
 
-      if (response?.contents) {
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(response.contents, 'text/xml');
-        const entries = xmlDoc.getElementsByTagName('entry');
+      const rawResponse = await lastValueFrom(this.http.get(targetUrl, { responseType: 'text' }));
 
-        if (entries.length > 0) {
-          const latestEntry = entries[0];
-          const title = latestEntry.getElementsByTagName('title')[0]?.textContent || '';
-          const videoId = latestEntry.getElementsByTagName('yt:videoId')[0]?.textContent || '';
+      let xmlString = rawResponse;
 
-          return {
-            title: title,
-            thumbnail: `${this.thumbnailBaseUrl}/${videoId}/maxresdefault.jpg`,
-            videoId: videoId,
-          };
+      if (rawResponse.trim().startsWith('{')) {
+        try {
+          const json = JSON.parse(rawResponse);
+          if (json.contents) {
+            xmlString = json.contents;
+          }
+        } catch (e) {
+          // Not JSON or parse failed, treat as raw XML/Text
         }
       }
+
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+      const entries = xmlDoc.getElementsByTagName('entry');
+
+      if (entries.length > 0) {
+        const latestEntry = entries[0];
+        const title = latestEntry.getElementsByTagName('title')[0]?.textContent || '';
+        const videoId = latestEntry.getElementsByTagName('yt:videoId')[0]?.textContent || '';
+
+        return {
+          title: title,
+          thumbnail: `${this.thumbnailBaseUrl}/${videoId}/maxresdefault.jpg`,
+          videoId: videoId,
+        };
+      }
+
       return null;
     } catch (error) {
       console.error('Error fetching latest YouTube video:', error);
