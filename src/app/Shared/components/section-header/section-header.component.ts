@@ -8,8 +8,8 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
       <div
         class="flex items-center gap-3"
         [class.mb-4]="size() === 'large'"
-        [class.mb-2]="size() === 'medium'"
-        [class.mb-4]="size() === 'small'"
+        [class.mb-3]="size() === 'medium'"
+        [class.mb-2]="size() === 'small'"
       >
         <span class="w-12 h-1 bg-brand-secondary rounded-full"></span>
         <h2
