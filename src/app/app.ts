@@ -5,6 +5,7 @@ import { FooterComponent } from './Layout/footer/footer.component';
 import { HeaderComponent } from './Layout/header/header.component';
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
+import { AnalyticsService } from './Core/services/analytics.service';
 import { filter } from 'rxjs';
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { filter } from 'rxjs';
 export class App implements OnInit {
   private translate = inject(TranslateService);
   private router = inject(Router);
+  private analytics = inject(AnalyticsService);
   isScrolled = false;
 
   constructor() {
@@ -23,9 +25,12 @@ export class App implements OnInit {
   }
 
   ngOnInit() {
-    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    });
+    this.analytics.init();
+    this.router.events
+      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      });
   }
 
   @HostListener('window:scroll', [])

@@ -7,11 +7,13 @@ export class RadioService {
   private readonly streamUrl = (import.meta as any).env.NG_APP_STREAM_URL;
   private readonly metadataUrl = (import.meta as any).env.NG_APP_METADATA_URL;
   private readonly _radioName = (import.meta as any).env.NG_APP_RADIO_NAME;
+  private readonly _radioAddress = (import.meta as any).env.NG_APP_RADIO_ADDRESS;
 
   private audio: HTMLAudioElement | null = null;
   private eventSource: EventSource | null = null;
 
   readonly radioName = signal(this._radioName);
+  readonly radioAddress = signal(this._radioAddress);
   readonly isPlaying = signal(false);
   readonly volume = signal(5);
   readonly isMuted = signal(false);
@@ -31,6 +33,7 @@ export class RadioService {
     facebook: (import.meta as any).env.NG_APP_FACEBOOK_URL,
     instagram: (import.meta as any).env.NG_APP_INSTAGRAM_URL,
     youtube: (import.meta as any).env.NG_APP_YOUTUBE_URL,
+    youtubeWatch: (import.meta as any).env.NG_APP_YOUTUBE_WATCH_URL,
     spotify: (import.meta as any).env.NG_APP_SPOTIFY_URL,
     tiktok: (import.meta as any).env.NG_APP_TIKTOK_URL,
     whatsapp: (import.meta as any).env.NG_APP_WHATSAPP_URL,

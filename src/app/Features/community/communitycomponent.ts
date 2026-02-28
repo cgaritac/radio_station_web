@@ -82,7 +82,7 @@ export class CommunityComponent {
   }
 
   getWhatsAppLink(activity: Activity): string {
-    const baseUrl = 'https://wa.me/50612345678'; // Use the phone number from footer/config
+    const baseUrl = (import.meta as any).env.NG_APP_WHATSAPP_DIRECT_URL;
     const baseMessage = this.translate.instant('COMMUNITY.MODAL.WHATSAPP_MESSAGE');
     const title = this.translate.instant(activity.title);
     const fullMessage = encodeURIComponent(`${baseMessage}${title}`);

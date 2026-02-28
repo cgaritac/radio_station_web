@@ -70,8 +70,8 @@
       "ITEM_1": {
         "TITLE": "United Prayer Service",
         "DATE": "OCTOBER 15, 2026",
-        "LOCATION": "Central Plaza, Nandayure",
-        "DESCRIPTION": "Join our community in a special night of intercession and prayer for our city. A time to strengthen our faith and seek God's presence together."
+        "LOCATION": "Central Plaza",
+        "DESCRIPTION": "Join our community in a special night of intercession and prayer. A time to strengthen our faith and seek God's presence together."
       },
       "ITEM_2": {
         "TITLE": "Youth Meeting: \"Active Faith\"",
@@ -146,7 +146,12 @@
     "VISION_TITLE": "Our Vision",
     "VISION_TEXT": "Establish ourselves as the leading station in broadcasting spiritual and social content in the region, constantly innovating our platforms to reach new generations.",
     "TEAM_TITLE": "Our Team",
-    "TEAM_SUBTITLE": "The voices behind the microphone"
+    "TEAM_SUBTITLE": "The voices behind the microphone",
+    "TEAM_MEMBERS": {
+      "MEMBER_1": { "NAME": "General Director", "ROLE": "Administration" },
+      "MEMBER_2": { "NAME": "Main Announcer", "ROLE": "Programming" },
+      "MEMBER_3": { "NAME": "Technical Producer", "ROLE": "Operations" }
+    }
   },
   "STUDIO_TOUR": {
     "TAG": "OUR FACILITIES",
@@ -193,7 +198,7 @@
     "READ_MORE": "Read more",
     "ITEMS": {
       "ITEM_1": {
-        "TITLE": "New Transmission Antenna in Nandayure",
+        "TITLE": "New Transmission Antenna",
         "DATE": "February 18, 2026",
         "AUTHOR": "Tech Team",
         "CATEGORY": "Radio",
@@ -279,7 +284,7 @@
       "JONCLEY": "Ministry Joncley's Daily Bread",
       "TERTULIANDO": "Chatting with Special Guest",
       "FAMILY": "Let's Talk About Family",
-      "NANDAYURE": "Nandayure Blue Zone for the World",
+      "ZONE_PROGRAM": "Our Zone for the World",
       "EXPRESSION": "Musical Expression",
       "HOPE": "There is Hope in Jesus",
       "EDIFICA": "Build Your Life",

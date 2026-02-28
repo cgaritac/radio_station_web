@@ -23,7 +23,12 @@
         <div
           class="bg-brand-primary/4 rounded-[40px] p-8 md:p-12 shadow-sm border border-brand-primary/5"
         >
-          <form [formGroup]="prayerForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-6">
+          <form
+            id="prayer-form"
+            [formGroup]="prayerForm"
+            (ngSubmit)="onSubmit()"
+            class="flex flex-col gap-6"
+          >
             <!-- Name Field -->
             <div class="text-left">
               <label
@@ -31,12 +36,11 @@
               >
                 {{ 'PRAYER_REQUEST.NAME_LABEL' | translate }}
               </label>
-              <input
-                type="text"
-                formControlName="name"
-                [placeholder]="'PRAYER_REQUEST.NAME_PLACEHOLDER' | translate"
-                class="w-full bg-white border border-brand-primary/10 rounded-2xl px-6 py-4 text-brand-primary placeholder:text-brand-primary/30 focus:outline-none focus:border-brand-secondary/60 transition-colors shadow-sm"
-              />
+              id="prayer-name-input" type="text" formControlName="name"
+              [placeholder]="'PRAYER_REQUEST.NAME_PLACEHOLDER' | translate" class="w-full bg-white
+              border border-brand-primary/10 rounded-2xl px-6 py-4 text-brand-primary
+              placeholder:text-brand-primary/30 focus:outline-none focus:border-brand-secondary/60
+              transition-colors shadow-sm" />
             </div>
 
             <!-- Request Field -->
@@ -47,6 +51,7 @@
                 {{ 'PRAYER_REQUEST.REQUEST_LABEL' | translate }}
               </label>
               <textarea
+                id="prayer-request-textarea"
                 rows="4"
                 formControlName="request"
                 [placeholder]="'PRAYER_REQUEST.REQUEST_PLACEHOLDER' | translate"
@@ -65,6 +70,7 @@
             <!-- Submit Button -->
             <div class="mt-4">
               <app-action-button
+                id="prayer-submit-btn"
                 [text]="'PRAYER_REQUEST.SUBMIT' | translate"
                 [icon]="'mail'"
                 color="secondary"

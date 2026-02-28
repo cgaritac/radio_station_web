@@ -40,7 +40,7 @@ export class LocationMapComponent implements OnInit, OnDestroy {
   }
 
   private updateMapUrl() {
-    const address = this.translateService.instant('FOOTER.ADDRESS');
+    const address = this.radioService.radioAddress();
     const baseUrl = this.radioService.socialLinks.googleMapsEmbed;
     const url = `${baseUrl}${encodeURIComponent(address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
     this.mapUrl.set(this.sanitizer.bypassSecurityTrustResourceUrl(url));

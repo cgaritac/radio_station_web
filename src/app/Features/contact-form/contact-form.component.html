@@ -6,6 +6,7 @@
   </h3>
 
   <form
+    id="contact-form"
     [formGroup]="contactForm"
     (ngSubmit)="onSubmit()"
     class="grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -16,6 +17,7 @@
         'CONTACT.FORM_NAME' | translate
       }}</label>
       <input
+        id="contact-name-input"
         type="text"
         formControlName="name"
         [placeholder]="'CONTACT.FORM_NAME' | translate"
@@ -34,6 +36,7 @@
         'CONTACT.FORM_EMAIL' | translate
       }}</label>
       <input
+        id="contact-email-input"
         type="email"
         formControlName="email"
         [placeholder]="'CONTACT.FORM_EMAIL' | translate"
@@ -56,6 +59,7 @@
         'CONTACT.FORM_SUBJECT' | translate
       }}</label>
       <input
+        id="contact-subject-input"
         type="text"
         formControlName="subject"
         [placeholder]="'CONTACT.FORM_SUBJECT' | translate"
@@ -76,6 +80,7 @@
         'CONTACT.FORM_MESSAGE' | translate
       }}</label>
       <textarea
+        id="contact-message-textarea"
         rows="6"
         formControlName="message"
         [placeholder]="'CONTACT.FORM_MESSAGE' | translate"
@@ -101,6 +106,7 @@
     <!-- Submit -->
     <div class="md:col-span-2 mt-4">
       <app-action-button
+        id="contact-submit-btn"
         [text]="'CONTACT.FORM_SUBMIT' | translate"
         [icon]="'mail'"
         color="secondary"

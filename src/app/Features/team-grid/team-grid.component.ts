@@ -19,20 +19,20 @@ interface TeamMember {
 export class TeamGridComponent {
   team = signal<TeamMember[]>([
     {
-      name: 'Andrés Pérez',
-      role: 'Director General',
+      name: 'ABOUT_US.TEAM_MEMBERS.MEMBER_1.NAME',
+      role: 'ABOUT_US.TEAM_MEMBERS.MEMBER_1.ROLE',
       image:
         'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop',
     },
     {
-      name: 'María García',
-      role: 'Locutora Principal',
+      name: 'ABOUT_US.TEAM_MEMBERS.MEMBER_2.NAME',
+      role: 'ABOUT_US.TEAM_MEMBERS.MEMBER_2.ROLE',
       image:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop',
     },
     {
-      name: 'Juan Rodríguez',
-      role: 'Productor Técnico',
+      name: 'ABOUT_US.TEAM_MEMBERS.MEMBER_3.NAME',
+      role: 'ABOUT_US.TEAM_MEMBERS.MEMBER_3.ROLE',
       image:
         'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop',
     },
