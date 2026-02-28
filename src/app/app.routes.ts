@@ -1,15 +1,5 @@
 import { Routes } from '@angular/router';
 import { HomePage } from './Pages/home/home.page';
-import { AboutPage } from './Pages/about/about.page';
-import { BlogPage } from './Pages/blog/blog.page';
-import { TermsPage } from './Pages/terms/terms.page';
-import { NewsPage } from './Pages/news/news.page';
-import { SchedulePage } from './Pages/schedule/schedule.page';
-import { StudiesPage } from './Pages/studies/studies.page';
-import { ContactPage } from './Pages/contact/contact.page';
-import { PrivacyPage } from './Pages/privacy/privacy.page';
-import { NotFoundPage } from './Pages/not-found/not-found.page';
-import { ItemDetailPage } from './Pages/item-detail/item-detail.page';
 
 export const routes: Routes = [
   {
@@ -18,70 +8,70 @@ export const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutPage,
+    loadComponent: () => import('./Pages/about/about.page').then(m => m.AboutPage),
   },
   {
     path: 'contact',
-    component: ContactPage,
+    loadComponent: () => import('./Pages/contact/contact.page').then(m => m.ContactPage),
   },
   {
     path: 'blog',
-    component: BlogPage,
+    loadComponent: () => import('./Pages/blog/blog.page').then(m => m.BlogPage),
   },
   {
     path: 'blog/category/:category',
-    component: BlogPage,
+    loadComponent: () => import('./Pages/blog/blog.page').then(m => m.BlogPage),
   },
   {
     path: 'blog/:category/:id',
-    component: ItemDetailPage,
+    loadComponent: () => import('./Pages/item-detail/item-detail.page').then(m => m.ItemDetailPage),
     data: { type: 'blog' },
   },
   {
     path: 'terms',
-    component: TermsPage,
+    loadComponent: () => import('./Pages/terms/terms.page').then(m => m.TermsPage),
   },
   {
     path: 'news',
-    component: NewsPage,
+    loadComponent: () => import('./Pages/news/news.page').then(m => m.NewsPage),
   },
   {
     path: 'news/category/:category',
-    component: NewsPage,
+    loadComponent: () => import('./Pages/news/news.page').then(m => m.NewsPage),
   },
   {
     path: 'news/:category/:id',
-    component: ItemDetailPage,
+    loadComponent: () => import('./Pages/item-detail/item-detail.page').then(m => m.ItemDetailPage),
     data: { type: 'news' },
   },
   {
     path: 'schedule',
-    component: SchedulePage,
+    loadComponent: () => import('./Pages/schedule/schedule.page').then(m => m.SchedulePage),
   },
   {
     path: 'studies',
-    component: StudiesPage,
+    loadComponent: () => import('./Pages/studies/studies.page').then(m => m.StudiesPage),
   },
   {
     path: 'studies/category/:category',
-    component: StudiesPage,
+    loadComponent: () => import('./Pages/studies/studies.page').then(m => m.StudiesPage),
   },
   {
     path: 'studies/:category/:id',
-    component: ItemDetailPage,
+    loadComponent: () => import('./Pages/item-detail/item-detail.page').then(m => m.ItemDetailPage),
     data: { type: 'studies' },
   },
   {
     path: 'privacy',
-    component: PrivacyPage,
+    loadComponent: () => import('./Pages/privacy/privacy.page').then(m => m.PrivacyPage),
   },
   {
     path: ':type/:id',
-    component: ItemDetailPage,
+    loadComponent: () => import('./Pages/item-detail/item-detail.page').then(m => m.ItemDetailPage),
   },
   {
     path: 'not-found',
-    component: NotFoundPage,
+    loadComponent: () => import('./Pages/not-found/not-found.page').then(m => m.NotFoundPage),
   },
   {
     path: '**',
