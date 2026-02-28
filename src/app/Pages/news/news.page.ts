@@ -1,12 +1,13 @@
 import { Component, ChangeDetectionStrategy, signal, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { SvgIconComponent } from 'angular-svg-icon';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
+import { CategoryFilterComponent } from '../../Shared/components/category-filter/category-filter.component';
+import { NewsGridComponent } from '../../Features/news-grid/news-grid.component';
 
 interface NewsItem {
   id: string;
@@ -29,10 +30,10 @@ interface Category {
   imports: [
     CommonModule,
     TranslateModule,
-    SvgIconComponent,
     AdvertiseBannerComponent,
     SectionHeaderComponent,
-    RouterLink,
+    CategoryFilterComponent,
+    NewsGridComponent,
   ],
   templateUrl: './news.page.html',
   styleUrl: './news.page.css',
@@ -44,8 +45,8 @@ export class NewsPage {
 
   categories = signal<Category[]>([
     { slug: 'radio', label: 'NEWS_PAGE.CATEGORIES.RADIO' },
-    { slug: 'comunidad', label: 'NEWS_PAGE.CATEGORIES.COMMUNITY' },
-    { slug: 'eventos', label: 'NEWS_PAGE.CATEGORIES.EVENTS' },
+    { slug: 'community', label: 'NEWS_PAGE.CATEGORIES.COMMUNITY' },
+    { slug: 'events', label: 'NEWS_PAGE.CATEGORIES.EVENTS' },
   ]);
 
   selectedCategorySlug = toSignal(
@@ -80,7 +81,7 @@ export class NewsPage {
       excerpt: 'NEWS_PAGE.ITEMS.ITEM_2.EXCERPT',
       image: 'images/news-community.png',
       category: 'NEWS_PAGE.CATEGORIES.COMMUNITY',
-      categorySlug: 'comunidad',
+      categorySlug: 'community',
     },
     {
       id: '3',
@@ -89,7 +90,7 @@ export class NewsPage {
       excerpt: 'NEWS_PAGE.ITEMS.ITEM_3.EXCERPT',
       image: 'images/news-events.png',
       category: 'NEWS_PAGE.CATEGORIES.EVENTS',
-      categorySlug: 'eventos',
+      categorySlug: 'events',
     },
   ]);
 

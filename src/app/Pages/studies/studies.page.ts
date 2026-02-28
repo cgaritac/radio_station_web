@@ -1,12 +1,13 @@
 import { Component, ChangeDetectionStrategy, signal, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { SvgIconComponent } from 'angular-svg-icon';
 import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
 import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
+import { CategoryFilterComponent } from '../../Shared/components/category-filter/category-filter.component';
+import { StudiesListComponent } from '../../Features/studies-list/studies-list.component';
 
 interface StudyItem {
   id: string;
@@ -29,10 +30,10 @@ interface Category {
   imports: [
     CommonModule,
     TranslateModule,
-    SvgIconComponent,
     AdvertiseBannerComponent,
     SectionHeaderComponent,
-    RouterLink,
+    CategoryFilterComponent,
+    StudiesListComponent,
   ],
   templateUrl: './studies.page.html',
   styleUrl: './studies.page.css',
@@ -43,9 +44,9 @@ export class StudiesPage {
   private translate = inject(TranslateService);
 
   categories = signal<Category[]>([
-    { slug: 'nuevo-testamento', label: 'STUDIES_PAGE.CATEGORIES.NEW_TESTAMENT' },
-    { slug: 'vida-cristiana', label: 'STUDIES_PAGE.CATEGORIES.CHRISTIAN_LIFE' },
-    { slug: 'teologia', label: 'STUDIES_PAGE.CATEGORIES.THEOLOGY' },
+    { slug: 'new-testament', label: 'STUDIES_PAGE.CATEGORIES.NEW_TESTAMENT' },
+    { slug: 'christian-life', label: 'STUDIES_PAGE.CATEGORIES.CHRISTIAN_LIFE' },
+    { slug: 'theology', label: 'STUDIES_PAGE.CATEGORIES.THEOLOGY' },
   ]);
 
   selectedCategorySlug = toSignal(
@@ -71,7 +72,7 @@ export class StudiesPage {
       excerpt: 'STUDIES_PAGE.ITEMS.ITEM_1.EXCERPT',
       image: 'images/studies-new-testament.png',
       category: 'STUDIES_PAGE.CATEGORIES.NEW_TESTAMENT',
-      categorySlug: 'nuevo-testamento',
+      categorySlug: 'new-testament',
     },
     {
       id: '2',
@@ -80,7 +81,7 @@ export class StudiesPage {
       excerpt: 'STUDIES_PAGE.ITEMS.ITEM_2.EXCERPT',
       image: 'images/studies-vida.png',
       category: 'STUDIES_PAGE.CATEGORIES.CHRISTIAN_LIFE',
-      categorySlug: 'vida-cristiana',
+      categorySlug: 'christian-life',
     },
     {
       id: '3',
@@ -89,7 +90,7 @@ export class StudiesPage {
       excerpt: 'STUDIES_PAGE.ITEMS.ITEM_3.EXCERPT',
       image: 'images/studies-teologia.png',
       category: 'STUDIES_PAGE.CATEGORIES.THEOLOGY',
-      categorySlug: 'teologia',
+      categorySlug: 'theology',
     },
   ]);
 

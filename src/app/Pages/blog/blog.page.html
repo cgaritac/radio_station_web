@@ -6,100 +6,18 @@
   ></app-page-hero>
 
   <!-- Blog Posts Section -->
-  <section class="w-full py-24 bg-brand-tertiary/90 ">
+  <section class="w-full py-24 bg-brand-tertiary/90">
     <div class="max-w-desktop mx-auto px-4 md:px-8">
       <!-- Category Selection -->
-      <div class="flex flex-wrap justify-center gap-4 mb-20">
-        <a
-          [routerLink]="['/blog']"
-          class="px-8 py-3 rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300 border"
-          [ngClass]="
-            selectedCategorySlug() === 'all'
-              ? 'bg-brand-secondary text-brand-primary border-brand-secondary shadow-lg shadow-brand-secondary/20'
-              : 'bg-transparent text-brand-primary/40 border-brand-primary/10 hover:border-brand-quaternary hover:text-brand-primary/65 hover:bg-brand-quaternary/20'
-          "
-        >
-          {{ 'BLOG_PAGE.CATEGORIES.ALL' | translate }}
-        </a>
-        @for (cat of categories(); track cat.slug) {
-          <a
-            [routerLink]="['/blog/category', cat.slug]"
-            class="px-8 py-3 rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300 border"
-            [ngClass]="
-              selectedCategorySlug() === cat.slug
-                ? 'bg-brand-secondary text-brand-primary border-brand-secondary shadow-lg shadow-brand-secondary/20'
-                : 'bg-transparent text-brand-primary/40 border-brand-primary/10 hover:border-brand-quaternary hover:text-brand-primary/65 hover:bg-brand-quaternary/20'
-            "
-          >
-            {{ cat.label | translate }}
-          </a>
-        }
-      </div>
+      <app-category-filter
+        basePath="/blog"
+        [categories]="categories()"
+        [selectedSlug]="selectedCategorySlug() || 'all'"
+        allLabel="BLOG_PAGE.CATEGORIES.ALL"
+      ></app-category-filter>
 
-      <div class="flex flex-col gap-16">
-        @for (post of filteredPosts(); track post.id) {
-          <article class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center group">
-            <!-- Image Area -->
-            <a
-              [routerLink]="['/blog', post.categorySlug, post.id]"
-              class="relative block overflow-hidden rounded-[40px] aspect-video lg:aspect-square shadow-2xl shadow-brand-primary/5 border border-brand-primary/5 group"
-            >
-              <img
-                [src]="post.image"
-                [alt]="post.title | translate"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-              />
-              <div
-                class="absolute inset-0 bg-linear-to-t from-brand-primary/40 to-transparent"
-              ></div>
-            </a>
-
-            <!-- Content Area -->
-            <div class="flex flex-col gap-6">
-              <div class="flex items-center gap-4">
-                <a
-                  [routerLink]="['/blog/category', post.categorySlug]"
-                  class="px-4 py-1.5 text-brand-quaternary text-[10px] font-black uppercase tracking-widest rounded-full border border-brand-quaternary hover:bg-brand-secondary hover:text-brand-primary transition-all duration-300"
-                >
-                  {{ post.category | translate }}
-                </a>
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-primary/10"></span>
-                <span class="text-xs font-bold text-brand-primary/40 uppercase tracking-widest">
-                  {{ 'BLOG_PAGE.AUTHOR' | translate }} {{ post.author }}
-                </span>
-              </div>
-
-              <a [routerLink]="['/blog', post.categorySlug, post.id]">
-                <h3
-                  class="text-3xl md:text-4xl font-black text-brand-primary leading-tight hover:text-brand-quaternary transition-colors duration-300"
-                >
-                  {{ post.title | translate }}
-                </h3>
-              </a>
-
-              <p class="text-brand-primary/60 text-lg leading-relaxed line-clamp-3">
-                {{ post.excerpt | translate }}
-              </p>
-
-              <div class="pt-4">
-                <a
-                  [routerLink]="['/blog', post.categorySlug, post.id]"
-                  class="inline-flex items-center gap-4 group/btn cursor-pointer"
-                >
-                  <div
-                    class="w-12 h-12 rounded-full bg-brand-secondary flex items-center justify-center text-brand-primary shadow-lg shadow-brand-secondary/20 group-hover/btn:scale-110 transition-all"
-                  >
-                    <svg-icon name="arrow-right" class="w-5 h-5"></svg-icon>
-                  </div>
-                  <span class="font-black text-xs uppercase tracking-widest text-brand-primary">
-                    {{ 'BLOG_PAGE.READ_ARTICLE' | translate }}
-                  </span>
-                </a>
-              </div>
-            </div>
-          </article>
-        }
-      </div>
+      <!-- Blog List -->
+      <app-blog-list [items]="filteredPosts()"></app-blog-list>
     </div>
   </section>
 
