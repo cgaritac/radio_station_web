@@ -31,7 +31,25 @@ export class YouTubeService {
     return (import.meta as any).env.NG_APP_YOUTUBE_FEEDS_URL;
   }
 
+  private readonly CACHE_KEY = 'yt_latest_video_cache';
+  private readonly CACHE_TTL = 3600000; // 1 hour in ms
+
   async getLatestVideo(): Promise<YouTubeVideoInfo | null> {
+    // 1. Try to get from cache
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const cached = localStorage.getItem(this.CACHE_KEY);
+      if (cached) {
+        try {
+          const { data, timestamp } = JSON.parse(decodeURIComponent(atob(cached)));
+          if (Date.now() - timestamp < this.CACHE_TTL) {
+            return data;
+          }
+        } catch (e) {
+          localStorage.removeItem(this.CACHE_KEY);
+        }
+      }
+    }
+
     try {
       const channel = this.channelId;
       const proxy = this.proxyUrl;
@@ -75,11 +93,26 @@ export class YouTubeService {
         const title = latestEntry.getElementsByTagName('title')[0]?.textContent || '';
         const videoId = latestEntry.getElementsByTagName('yt:videoId')[0]?.textContent || '';
 
-        return {
+        const result = {
           title: title,
           thumbnail: `${this.thumbnailBaseUrl}/${videoId}/maxresdefault.jpg`,
           videoId: videoId,
         };
+
+        // 2. Save in cache if success
+        if (typeof window !== 'undefined' && window.localStorage) {
+          const cacheData = btoa(
+            encodeURIComponent(
+              JSON.stringify({
+                data: result,
+                timestamp: Date.now(),
+              }),
+            ),
+          );
+          localStorage.setItem(this.CACHE_KEY, cacheData);
+        }
+
+        return result;
       }
 
       return null;
