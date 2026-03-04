@@ -2,7 +2,7 @@ import {
   ApplicationConfig,
   provideBrowserGlobalErrorListeners,
   provideAppInitializer,
-  inject,
+  inject, isDevMode,
 } from '@angular/core';
 import { IconRegistryService } from './Core/services/icon-registry.service';
 import { provideHttpClient, withJsonpSupport } from '@angular/common/http';
@@ -12,6 +12,7 @@ import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { routes } from './app.routes';
+import { provideServiceWorker } from '@angular/service-worker';
 
 const getInitialLang = () => {
   if (typeof window !== 'undefined') {
@@ -61,6 +62,9 @@ export const appConfig: ApplicationConfig = {
           });
         }),
       ]);
-    }),
+    }), provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          }),
   ],
 };
