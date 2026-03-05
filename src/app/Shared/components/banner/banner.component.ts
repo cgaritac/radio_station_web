@@ -1,6 +1,6 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActionButtonComponent } from '../action-button/action-button.component';
+import { ActionButtonComponent } from '~/app/Shared/components/action-button/action-button.component';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { TranslateModule } from '@ngx-translate/core';
 

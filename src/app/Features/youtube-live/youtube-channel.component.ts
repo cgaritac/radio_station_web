@@ -9,11 +9,11 @@ import {
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
-import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import { ActionButtonComponent } from '~/app/Shared/components/action-button/action-button.component';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { YouTubeService } from '../../Core/services/youtube.service';
-import { RadioService } from '../../Core/services/radio.service';
+import { YouTubeService } from '~/app/Core/services/youtube.service';
+import { RadioService } from '~/app/Core/services/radio.service';
 
 @Component({
   selector: 'app-youtube-channel',

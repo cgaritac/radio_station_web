@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 interface TeamMember {

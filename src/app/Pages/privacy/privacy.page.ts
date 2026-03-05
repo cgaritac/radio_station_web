@@ -1,8 +1,8 @@
 import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
-import { SeoService } from '../../Core/services/seo.service';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
+import { SeoService } from '~/app/Core/services/seo.service';
 
 @Component({
   selector: 'app-privacy',

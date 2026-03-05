@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { SvgIconRegistryService } from 'angular-svg-icon';
-import { ICONS } from '../constants/icons';
+import { ICONS } from '~/app/Core/constants/icons';
 
 @Injectable({
   providedIn: 'root'

@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
-import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
+import { ActionButtonComponent } from '~/app/Shared/components/action-button/action-button.component';
 
 @Component({
   selector: 'app-studio-tour',

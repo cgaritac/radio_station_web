@@ -11,11 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
-import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
-import { CategoryFilterComponent } from '../../Shared/components/category-filter/category-filter.component';
-import { NewsGridComponent } from '../../Features/news-grid/news-grid.component';
-import { SeoService } from '../../Core/services/seo.service';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
+import { AdvertiseBannerComponent } from '~/app/Features/advertise-banner/advertise-banner.component';
+import { CategoryFilterComponent } from '~/app/Shared/components/category-filter/category-filter.component';
+import { NewsGridComponent } from '~/app/Features/news-grid/news-grid.component';
+import { SeoService } from '~/app/Core/services/seo.service';
 
 interface NewsItem {
   id: string;

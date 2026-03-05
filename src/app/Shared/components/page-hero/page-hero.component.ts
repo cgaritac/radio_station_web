@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { SectionHeaderComponent } from '../section-header/section-header.component';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
 
 @Component({
   selector: 'app-page-hero',

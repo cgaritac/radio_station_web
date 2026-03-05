@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, inject, signal } from '@angular/core';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { TranslateModule } from '@ngx-translate/core';
-import { RadioService } from '../../Core/services/radio.service';
+import { RadioService } from '~/app/Core/services/radio.service';
 import { NgClass } from '@angular/common';
 
 @Component({

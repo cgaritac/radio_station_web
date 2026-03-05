@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map, switchMap, of, catchError, shareReplay } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
-import { getMockPlaylist } from '../mocks/broadcast-history.mock';
+import { getMockPlaylist } from '~/app/Core/mocks/broadcast-history.mock';
 
 export interface BroadcastHistoryEntry {
   id: string;

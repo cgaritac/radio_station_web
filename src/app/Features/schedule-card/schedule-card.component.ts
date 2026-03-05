@@ -4,8 +4,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
   ScheduleDayColumnComponent,
   DaySchedule,
-} from '../../Shared/components/schedule-day-column/schedule-day-column.component';
-import { ScheduleBrandingComponent } from '../../Shared/components/schedule-branding/schedule-branding.component';
+} from '~/app/Shared/components/schedule-day-column/schedule-day-column.component';
+import { ScheduleBrandingComponent } from '~/app/Shared/components/schedule-branding/schedule-branding.component';
 
 export interface WeekSchedule {
   id: string;
