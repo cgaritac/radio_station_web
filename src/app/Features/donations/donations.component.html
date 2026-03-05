@@ -1,0 +1,92 @@
+<section id="donations-section" class="w-full py-16 md:py-24 bg-brand-tertiary/95 overflow-hidden">
+  <div class="container mx-auto px-4 max-w-desktop">
+    <div
+      class="relative bg-brand-tertiary/40 backdrop-blur-xl rounded-[48px] p-8 md:p-16 border border-white/20 shadow-2xl overflow-hidden"
+    >
+      <!-- Decorative Background Elements -->
+      <div
+        class="absolute -top-24 -right-24 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl animate-pulse"
+      ></div>
+      <div
+        class="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl"
+      ></div>
+
+      <div class="relative flex flex-col lg:flex-row gap-16 items-center">
+        <!-- Info Side (Left) -->
+        <div class="w-full lg:w-3/5 text-left order-2 lg:order-1">
+          <app-section-header
+            [title]="'DONATIONS.SUBTITLE' | translate"
+            [subtitle]="'DONATIONS.TITLE' | translate"
+          ></app-section-header>
+
+          <p
+            class="text-xl md:text-2xl text-brand-primary/60 leading-relaxed font-light mt-8 mb-12 max-w-2xl"
+          >
+            {{ 'DONATIONS.DESCRIPTION' | translate }}
+          </p>
+
+          <div
+            class="flex items-start gap-6 p-8 bg-brand-primary/5 rounded-[32px] border border-brand-primary/10 group transition-all duration-300 hover:bg-brand-primary/10"
+          >
+            <div
+              class="flex-shrink-0 w-14 h-14 rounded-2xl bg-brand-secondary flex items-center justify-center text-brand-primary shadow-lg transform group-hover:rotate-12 transition-transform"
+            >
+              <svg-icon name="qr"></svg-icon>
+            </div>
+            <div>
+              <h4 class="text-brand-primary font-bold text-lg mb-2">
+                {{ 'DONATIONS.INSTRUCTION' | translate }}
+              </h4>
+              <p class="text-brand-primary/40 text-sm">
+                {{ 'DONATIONS.SCAN_INFO' | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- QR Side (Right) -->
+        <div class="w-full lg:w-2/5 flex justify-center lg:justify-end order-1 lg:order-2">
+          <div class="relative group">
+            <!-- Glowing background -->
+            <div
+              class="absolute -inset-6 bg-gradient-to-tr from-brand-secondary to-brand-quinary opacity-20 blur-2xl group-hover:opacity-40 transition-all duration-700 rounded-full"
+            ></div>
+
+            <!-- QR Card -->
+            <div
+              class="relative bg-white p-10 rounded-[56px] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] border border-brand-primary/5 overflow-hidden transition-all duration-500 hover:rotate-2 hover:scale-[1.05]"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-primary/2 to-brand-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+
+              <div
+                class="relative z-10 p-4 bg-white rounded-[32px] border border-brand-primary/5 shadow-inner"
+              >
+                <img
+                  src="images/qr-donations.png"
+                  [alt]="'DONATIONS.QR_ALT' | translate"
+                  class="w-full max-w-[320px] h-auto object-contain mx-auto"
+                />
+              </div>
+
+              <div class="relative z-10 mt-8 text-center">
+                <div class="flex items-center justify-center gap-2 mb-2">
+                  <div class="w-2 h-2 rounded-full bg-brand-quinary animate-pulse"></div>
+                  <span
+                    class="text-[10px] font-black text-brand-primary/30 uppercase tracking-[0.4em]"
+                  >
+                    {{ 'DONATIONS.SCAN_TO_GIVE' | translate }}
+                  </span>
+                </div>
+                <p class="text-[10px] text-brand-primary/20 font-medium">
+                  Radio XXXXX &copy; {{ 2026 }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

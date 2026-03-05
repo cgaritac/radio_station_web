@@ -1,6 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map, switchMap, of, catchError, shareReplay } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
+import { getMockPlaylist } from '../mocks/broadcast-history.mock';
 
 export interface BroadcastHistoryEntry {
   id: string;
@@ -19,6 +21,7 @@ export interface BroadcastHistoryResponse {
 })
 export class BroadcastHistoryService {
   private readonly http = inject(HttpClient);
+  private readonly translate = inject(TranslateService);
   private get proxyUrl() {
     return (import.meta as any).env.NG_APP_CORS_PROXY_URL || '';
   }
@@ -57,6 +60,8 @@ export class BroadcastHistoryService {
     const urlObj = new URL(rawUrl);
     urlObj.searchParams.set('rnd', Math.random().toString());
 
+    const mockPlaylist = getMockPlaylist((key) => this.translate.instant(key));
+
     const currentUrl = urlObj.toString();
     const fetchHistory = (url: string) => {
       const proxy = this.proxyUrl;
@@ -67,15 +72,16 @@ export class BroadcastHistoryService {
           try {
             const parsed = JSON.parse(response);
             const data = parsed.contents ? JSON.parse(parsed.contents) : parsed;
-            return (data.playlist as BroadcastHistoryEntry[]) || [];
+            const playlist = (data.playlist as BroadcastHistoryEntry[]) || [];
+            return playlist.length > 0 ? playlist : mockPlaylist;
           } catch (e) {
-            console.error('Error parsing history JSON:', e);
-            return [];
+            console.error('Error parsing history JSON, using mock:', e);
+            return mockPlaylist;
           }
         }),
         catchError((err) => {
-          console.error(`Error loading history from proxy for ${url}:`, err);
-          return of([]);
+          console.error(`Error loading history for ${url}, using mock:`, err);
+          return of(mockPlaylist);
         }),
       );
     };

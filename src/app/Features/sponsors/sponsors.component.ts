@@ -28,10 +28,6 @@ export class SponsorsComponent {
     { name: 'Tech Sphere', logo: 'icon:microphone', link: '#' },
     { name: 'Pure Audio', logo: 'icon:speaker', link: '#' },
     { name: 'Global Connect', logo: 'icon:link', link: '#' },
-    { name: 'Sky Reach', logo: 'icon:radio', link: '#' },
-    { name: 'Fresh Market', logo: 'images/sponsor_placeholder.png', link: '#' },
-    { name: 'Eco Life', logo: 'images/sponsor_placeholder.png', link: '#' },
-    { name: 'Urban Style', logo: 'images/sponsor_placeholder.png', link: '#' },
     { name: 'SPONSORS.YOUR_LOGO', logo: 'cta', link: '/contact' },
   ]);
 }
