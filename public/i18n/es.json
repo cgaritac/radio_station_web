@@ -422,5 +422,12 @@
     "PHONE_LABEL": "Teléfono",
     "TOGGLE_PLAYER": "Alternar reproductor",
     "PLAY_STOP": "Reproducir / Detener"
+  },
+  "MOCKS": {
+    "TRACK_1": "Alabanza Celestial - Coros de Bendición",
+    "TRACK_2": "Estudio Bíblico: La Fe que Mueve Montañas",
+    "TRACK_3": "Palabra de Esperanza - Pastor Juan Pérez",
+    "TRACK_4": "Música Instrumental Cristiana",
+    "TRACK_5": "Radio XXXXX - Sintoniza la Fe"
   }
 }

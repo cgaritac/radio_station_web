@@ -422,5 +422,12 @@
     "PHONE_LABEL": "Phone",
     "TOGGLE_PLAYER": "Toggle player",
     "PLAY_STOP": "Play / Stop"
+  },
+  "MOCKS": {
+    "TRACK_1": "Heavenly Praise - Blessing Choirs",
+    "TRACK_2": "Bible Study: The Faith that Moves Mountains",
+    "TRACK_3": "Word of Hope - Pastor John Doe",
+    "TRACK_4": "Christian Instrumental Music",
+    "TRACK_5": "Radio XXXXX - Tune in to Faith"
   }
 }
