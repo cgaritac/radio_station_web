@@ -144,6 +144,23 @@
         stroke-width="0.5" 
         stroke="currentColor"/>
   </svg>`,
+  qr:
+  `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code">
+    <rect width="5" height="5" x="3" y="3" rx="1" />
+    <rect width="5" height="5" x="16" y="3" rx="1" />
+    <rect width="5" height="5" x="3" y="16" rx="1" />
+    <path d="M21 16V3" />
+    <path d="M7 21h14" />
+    <path d="M12 12h.01" />
+    <path d="M16 16h2" />
+    <path d="M21 21v-5" />
+    <path d="M12 7v5" />
+    <path d="M3 12h5" />
+    <path d="M8 3v5" />
+    <path d="M8 16v5" />
+    <path d="M3 8h5" />
+    <path d="M16 8h5" />
+  </svg>`,
   radio: 
   `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
     <path 

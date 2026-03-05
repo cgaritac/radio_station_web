@@ -10,8 +10,6 @@ export class IconRegistryService {
 
   /**
    * Preloads and registers all SVG icons from the ICONS constants.
-   * This approach (inlining) improves performance by reducing HTTP requests
-   * and ensuring icons are available instantly upon first render.
    */
   preloadIcons(): void {
     Object.entries(ICONS).forEach(([name, svg]) => {

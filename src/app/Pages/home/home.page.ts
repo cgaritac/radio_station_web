@@ -9,6 +9,7 @@ import { YouTubeChannelComponent } from '../../Features/youtube-live/youtube-cha
 import { PrayerRequestComponent } from '../../Features/prayer-request/prayer-request.component';
 import { SponsorsComponent } from '../../Features/sponsors/sponsors.component';
 import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
+import { DonationsComponent } from '../../Features/donations/donations.component';
 import { SeoService } from '../../Core/services/seo.service';
 
 @Component({
@@ -23,6 +24,7 @@ import { SeoService } from '../../Core/services/seo.service';
     CommunityComponent,
     YouTubeChannelComponent,
     PrayerRequestComponent,
+    DonationsComponent,
     SponsorsComponent,
   ],
   templateUrl: './home.page.html',

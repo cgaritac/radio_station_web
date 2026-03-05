@@ -135,6 +135,15 @@
     "SUBTITLE": "Apoye a quienes hacen posible esta señal",
     "YOUR_LOGO": "Tu Logo Aquí"
   },
+  "DONATIONS": {
+    "TITLE": "OFRENDAS Y CONTRIBUCIONES",
+    "SUBTITLE": "Apoye nuestro ministerio",
+    "DESCRIPTION": "Si siente en su corazón el deseo de contribuir con nuestro ministerio y ayudarnos a seguir llevando el mensaje de fe y esperanza a más hogares, puede hacerlo de manera sencilla a través de nuestro código QR.",
+    "INSTRUCTION": "Escanee el código QR con su aplicación bancaria o cámara para realizar su contribución de forma segura.",
+    "SCAN_INFO": "Siga las instrucciones en su aplicación móvil para completar el proceso.",
+    "SCAN_TO_GIVE": "ESCANEAR PARA OFRENDAR",
+    "QR_ALT": "Código QR para ofrendas"
+  },
   "ABOUT_US": {
     "TITLE": "SOBRE NOSOTROS",
     "SUBTITLE": "Llevando esperanza y fe a cada hogar",

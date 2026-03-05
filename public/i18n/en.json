@@ -135,6 +135,15 @@
     "SUBTITLE": "Support those who make this signal possible",
     "YOUR_LOGO": "Your Logo Here"
   },
+  "DONATIONS": {
+    "TITLE": "OFFERINGS AND CONTRIBUTIONS",
+    "SUBTITLE": "Support our ministry",
+    "DESCRIPTION": "If you feel in your heart the desire to contribute to our ministry and help us continue bringing the message of faith and hope to more homes, you can do so easily through our QR code.",
+    "INSTRUCTION": "Scan the QR code with your banking app or camera to make your contribution safely.",
+    "SCAN_INFO": "Follow the instructions in your mobile app to complete the process.",
+    "SCAN_TO_GIVE": "SCAN TO GIVE",
+    "QR_ALT": "QR code for offerings"
+  },
   "ABOUT_US": {
     "TITLE": "ABOUT US",
     "SUBTITLE": "Bringing hope and faith to every home",
