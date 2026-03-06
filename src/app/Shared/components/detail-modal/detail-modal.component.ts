@@ -2,8 +2,8 @@ import { Component, ChangeDetectionStrategy, input, output } from '@angular/core
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
-import { ActionButtonComponent } from '../action-button/action-button.component';
-import { SectionHeaderComponent } from '../section-header/section-header.component';
+import { ActionButtonComponent } from '~/app/Shared/components/action-button/action-button.component';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
 
 export interface ModalDetail {
   icon: string;

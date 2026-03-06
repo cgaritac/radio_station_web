@@ -24,6 +24,7 @@ To provide radio stations with a robust, scalable, and aesthetically superior di
 
 ### Community and Engagement
 
+- **Donations & Support**: Integrated donation section with QR code support for easy community contributions.
 - **Prayer Request System**: A dedicated, user-friendly interface for community members to submit requests.
 - **Contact Center**: Professional inquiry forms integrated with EmailJS for instant communication without a backend.
 - **Sponsors Showcase**: Dedicated space to feature partners, sponsors, and community supporters with premium styling.
@@ -40,6 +41,8 @@ To provide radio stations with a robust, scalable, and aesthetically superior di
 - **Angular 21+ Architecture**: Built using the absolute latest features of the Angular ecosystem.
 - **Reactive State Management**: 100% Signal-based logic for efficient, granular updates.
 - **Tailwind CSS 4.0 Styling**: Powered by the newest utility-first framework for a fast, responsive, and maintainable design system.
+- **Progressive Web App (PWA)**: Full offline support, installable on mobile and desktop, with automated update notifications.
+- **Path Aliasing**: Simplified imports using the `~` alias for clean and maintainable code.
 - **Modern Control Flow**: Utilizing @if, @for, and @switch for clean and readable templates.
 - **OnPush Change Detection**: Maximized performance across all components.
 
@@ -50,21 +53,39 @@ To provide radio stations with a robust, scalable, and aesthetically superior di
 This project follows a Feature-Driven Architecture, promoting high modularity and scalability.
 
 ```text
-src/app/
-├── Core/          # Global singletons (Guards, Interceptors, Global Services)
-├── Features/      # Domain-specific logic (Player, Schedule, History, Verse)
-├── Shared/        # Reusable UI components, pipes, and directives
-├── Pages/         # Routed views and page-level orchestration
-└── Layout/        # Application shell (Header, Footer, Navigation)
+src/
+├── app/
+│   ├── Core/          # Global singletons (Guards, Interceptors, Global Services)
+│   ├── Features/      # Domain-specific logic (Player, Schedule, History, Verse)
+│   ├── Shared/        # Reusable UI components, pipes, and directives
+│   ├── Pages/         # Routed views and page-level orchestration
+│   └── Layout/        # Application shell (Header, Footer, Navigation)
 ```
+
+### Path Aliasing
+
+To avoid complex relative paths (e.g., `../../../../shared`), the project uses a `~` alias that points to the `src/` directory.
+
+**Example:**
+
+```typescript
+// Instead of this:
+import { MyService } from '../../../Core/services/my.service';
+
+// Use this:
+import { MyService } from '~/app/Core/services/my.service';
+```
+
+---
 
 ## Tech Stack
 
 - **Framework**: Angular 21
 - **Styling**: Tailwind CSS 4.0
 - **Logical Streams**: Angular Signals & RxJS
-- **Internationalization**: NGX-Translate
+- **Internationalization**: NGX-Translate (en/es support)
 - **Email Engine**: EmailJS
+- **PWA Support**: @angular/service-worker
 - **Icons**: Angular SVG Icon
 - **Unit Testing**: Vitest 4.0
 
@@ -81,6 +102,7 @@ Create a .env file in the root directory. Below is the complete list of required
 ```env
 # Radio Configuration
 NG_APP_RADIO_NAME="Your Radio Station"
+NG_APP_RADIO_URL=https://your-radio-url.com
 NG_APP_STREAM_URL=https://stream.your-station.com/live
 NG_APP_METADATA_URL=https://api.your-station.com/metadata
 NG_APP_HISTORY_URL=https://api.your-station.com/history
@@ -92,10 +114,11 @@ NG_APP_BIBLE_GATEWAY_HOME_URL=https://www.biblegateway.com
 # YouTube Integration
 NG_APP_YOUTUBE_CHANNEL_ID=your_channel_id
 NG_APP_YOUTUBE_UPLOADS_PLAYLIST_ID=your_playlist_id
+NG_APP_STUDIO_TOUR_VIDEO_ID=your_video_id
 NG_APP_CORS_PROXY_URL=https://api.allorigins.win/get?url=
 NG_APP_YOUTUBE_EMBED_URL=https://www.youtube.com/embed
 NG_APP_YOUTUBE_THUMBNAIL_URL=https://img.youtube.com/vi
-NG_APP_YOUTUBE_FEEDS_URL=https://www.youtube.com/feeds/videos.xml?channel_id=
+NG_APP_YOUTUBE_WATCH_URL=https://www.youtube.com/watch?v=
 
 # Social Media Links
 NG_APP_FACEBOOK_URL=https://www.facebook.com/yourstation
@@ -107,8 +130,15 @@ NG_APP_WHATSAPP_URL=https://www.whatsapp.com/channel/your-id
 NG_APP_WHATSAPP_DIRECT_URL=https://wa.me/yournumber
 NG_APP_RADIO_BOX_URL=https://onlineradiobox.com/your-station/
 
-# Sponsors
+# Sponsors & Assets
 NG_APP_CGC_URL=https://cgarita.web.app/
+NG_APP_ADVERTISE_BROCHURE_URL=https://your-site.com/brochure.pdf
+
+# Location Info
+NG_APP_RADIO_ADDRESS="Your Physical Address"
+
+# Google Analytics
+NG_APP_GA_ID=G-XXXXXXXXXX
 
 # Google Maps
 NG_APP_GOOGLE_MAPS_SEARCH_URL=https://www.google.com/maps/search/?api=1&query=
@@ -125,7 +155,7 @@ NG_APP__EMAILJS_PRAYER_TEMPLATE_ID=your_prayer_template
 
 1.  **Clone the Repo**:
     ```bash
-    git clone https://github.com/your-username/radio-station-web.git
+    git clone https://github.com/cgaritac/radio_station_web.git
     ```
 2.  **Install Dependencies**:
     ```bash

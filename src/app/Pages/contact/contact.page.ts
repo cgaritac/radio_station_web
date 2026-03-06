@@ -1,12 +1,12 @@
 import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { ContactFormComponent } from '../../Features/contact-form/contact-form.component';
-import { ContactInfoComponent } from '../../Shared/components/contact-info/contact-info.component';
-import { SocialLinksComponent } from '../../Shared/components/social-links/social-links.component';
-import { LocationMapComponent } from '../../Shared/components/location-map/location-map.component';
-import { PageHeroComponent } from '../../Shared/components/page-hero/page-hero.component';
-import { SeoService } from '../../Core/services/seo.service';
+import { ContactFormComponent } from '~/app/Features/contact-form/contact-form.component';
+import { ContactInfoComponent } from '~/app/Shared/components/contact-info/contact-info.component';
+import { SocialLinksComponent } from '~/app/Shared/components/social-links/social-links.component';
+import { LocationMapComponent } from '~/app/Shared/components/location-map/location-map.component';
+import { PageHeroComponent } from '~/app/Shared/components/page-hero/page-hero.component';
+import { SeoService } from '~/app/Core/services/seo.service';
 
 @Component({
   selector: 'app-contact',

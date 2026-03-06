@@ -2,8 +2,8 @@ import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
-import { SectionHeaderComponent } from '../section-header/section-header.component';
-import { RadioService } from '../../../Core/services/radio.service';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
+import { RadioService } from '~/app/Core/services/radio.service';
 
 @Component({
   selector: 'app-contact-info',

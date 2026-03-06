@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, inject, input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { SvgIconComponent } from 'angular-svg-icon';
-import { RadioService } from '../../../Core/services/radio.service';
+import { RadioService } from '~/app/Core/services/radio.service';
 
 @Component({
   selector: 'app-logo',

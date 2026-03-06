@@ -1,8 +1,8 @@
 import { Component, ChangeDetectionStrategy, signal, HostListener, effect, OnDestroy } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
+import { ActionButtonComponent } from '~/app/Shared/components/action-button/action-button.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { LanguageSwitcherComponent } from '../../Shared/components/language-switcher/language-switcher.component';
+import { LanguageSwitcherComponent } from '~/app/Shared/components/language-switcher/language-switcher.component';
 
 @Component({
   selector: 'app-navbar',

@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
-import { RadioService } from '../../../Core/services/radio.service';
-import { SectionHeaderComponent } from '../section-header/section-header.component';
+import { RadioService } from '~/app/Core/services/radio.service';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
 
 @Component({
   selector: 'app-location-map',

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HorizontalCardComponent } from '../../Shared/components/horizontal-card/horizontal-card.component';
+import { HorizontalCardComponent } from '~/app/Shared/components/horizontal-card/horizontal-card.component';
 
 @Component({
   selector: 'app-blog-list',

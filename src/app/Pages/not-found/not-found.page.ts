@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
+import { ActionButtonComponent } from '~/app/Shared/components/action-button/action-button.component';
 
 @Component({
   selector: 'app-not-found',

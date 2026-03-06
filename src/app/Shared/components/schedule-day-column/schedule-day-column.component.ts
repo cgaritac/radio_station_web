@@ -4,7 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
   ScheduleProgramItemComponent,
   Program,
-} from '../schedule-program-item/schedule-program-item.component';
+} from '~/app/Shared/components/schedule-program-item/schedule-program-item.component';
 
 export interface DaySchedule {
   dayName: string;

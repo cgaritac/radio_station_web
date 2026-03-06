@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VerticalCardComponent } from '../../Shared/components/vertical-card/vertical-card.component';
+import { VerticalCardComponent } from '~/app/Shared/components/vertical-card/vertical-card.component';
 
 @Component({
   selector: 'app-news-grid',

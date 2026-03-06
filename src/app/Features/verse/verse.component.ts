@@ -7,10 +7,10 @@ import {
   signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BibleService } from '../../Core/services/bible.service';
+import { BibleService } from '~/app/Core/services/bible.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
 
 @Component({
   selector: 'app-verse',

@@ -1,16 +1,16 @@
 import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
-import { HeroComponent } from '../../Features/hero/hero.component';
-import { RadioService } from '../../Core/services/radio.service';
+import { HeroComponent } from '~/app/Features/hero/hero.component';
+import { RadioService } from '~/app/Core/services/radio.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { BroadcastHistoryComponent } from '../../Features/broadcast-history/broadcast-history.component';
-import { VerseComponent } from '../../Features/verse/verse.component';
-import { CommunityComponent } from '../../Features/community/communitycomponent';
-import { YouTubeChannelComponent } from '../../Features/youtube-live/youtube-channel.component';
-import { PrayerRequestComponent } from '../../Features/prayer-request/prayer-request.component';
-import { SponsorsComponent } from '../../Features/sponsors/sponsors.component';
-import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
-import { DonationsComponent } from '../../Features/donations/donations.component';
-import { SeoService } from '../../Core/services/seo.service';
+import { BroadcastHistoryComponent } from '~/app/Features/broadcast-history/broadcast-history.component';
+import { VerseComponent } from '~/app/Features/verse/verse.component';
+import { CommunityComponent } from '~/app/Features/community/communitycomponent';
+import { YouTubeChannelComponent } from '~/app/Features/youtube-live/youtube-channel.component';
+import { PrayerRequestComponent } from '~/app/Features/prayer-request/prayer-request.component';
+import { SponsorsComponent } from '~/app/Features/sponsors/sponsors.component';
+import { AdvertiseBannerComponent } from '~/app/Features/advertise-banner/advertise-banner.component';
+import { DonationsComponent } from '~/app/Features/donations/donations.component';
+import { SeoService } from '~/app/Core/services/seo.service';
 
 @Component({
   selector: 'app-home',

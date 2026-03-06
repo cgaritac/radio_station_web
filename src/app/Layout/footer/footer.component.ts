@@ -1,9 +1,9 @@
 import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
-import { LogoComponent } from '../../Shared/components/logo/logo.component';
+import { LogoComponent } from '~/app/Shared/components/logo/logo.component';
 import { SvgIconComponent } from 'angular-svg-icon';
 import { TranslateModule } from '@ngx-translate/core';
 import { Router, RouterLink } from '@angular/router';
-import { RadioService } from '../../Core/services/radio.service';
+import { RadioService } from '~/app/Core/services/radio.service';
 
 @Component({
   selector: 'app-footer',

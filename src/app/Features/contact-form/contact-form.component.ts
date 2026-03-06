@@ -2,8 +2,8 @@ import { Component, ChangeDetectionStrategy, signal, inject } from '@angular/cor
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
-import { EmailService } from '../../Core/services/email.service';
+import { ActionButtonComponent } from '~/app/Shared/components/action-button/action-button.component';
+import { EmailService } from '~/app/Core/services/email.service';
 
 @Component({
   selector: 'app-contact-form',

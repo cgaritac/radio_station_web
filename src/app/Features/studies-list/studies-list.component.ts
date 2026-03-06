@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StudyCardComponent } from '../../Shared/components/study-card/study-card.component';
+import { StudyCardComponent } from '~/app/Shared/components/study-card/study-card.component';
 
 @Component({
   selector: 'app-studies-list',

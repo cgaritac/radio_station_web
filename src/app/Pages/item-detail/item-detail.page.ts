@@ -11,10 +11,10 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
-import { ActionButtonComponent } from '../../Shared/components/action-button/action-button.component';
-import { RadioService } from '../../Core/services/radio.service';
-import { SeoService } from '../../Core/services/seo.service';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
+import { ActionButtonComponent } from '~/app/Shared/components/action-button/action-button.component';
+import { RadioService } from '~/app/Core/services/radio.service';
+import { SeoService } from '~/app/Core/services/seo.service';
 
 @Component({
   selector: 'app-item-detail',

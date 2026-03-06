@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { SvgIconComponent } from 'angular-svg-icon';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
 
 interface Sponsor {
   name: string;

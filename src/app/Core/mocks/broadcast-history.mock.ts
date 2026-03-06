@@ -1,4 +1,4 @@
-import { BroadcastHistoryEntry } from '../services/broadcast-history.service';
+import { BroadcastHistoryEntry } from '~/app/Core/services/broadcast-history.service';
 
 export const getMockPlaylist = (translate: (key: string) => string): BroadcastHistoryEntry[] => {
   const now = Math.floor(Date.now() / 1000);

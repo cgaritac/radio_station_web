@@ -1,12 +1,12 @@
 import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { PageHeroComponent } from '../../Shared/components/page-hero/page-hero.component';
-import { StudioTourComponent } from '../../Features/studio-tour/studio-tour.component';
-import { TeamGridComponent } from '../../Features/team-grid/team-grid.component';
-import { AboutIntroComponent } from '../../Features/about-intro/about-intro.component';
-import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
-import { SeoService } from '../../Core/services/seo.service';
+import { PageHeroComponent } from '~/app/Shared/components/page-hero/page-hero.component';
+import { StudioTourComponent } from '~/app/Features/studio-tour/studio-tour.component';
+import { TeamGridComponent } from '~/app/Features/team-grid/team-grid.component';
+import { AboutIntroComponent } from '~/app/Features/about-intro/about-intro.component';
+import { AdvertiseBannerComponent } from '~/app/Features/advertise-banner/advertise-banner.component';
+import { SeoService } from '~/app/Core/services/seo.service';
 
 @Component({
   selector: 'app-about',

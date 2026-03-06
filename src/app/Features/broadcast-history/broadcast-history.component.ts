@@ -4,10 +4,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
   BroadcastHistoryService,
   BroadcastHistoryEntry,
-} from '../../Core/services/broadcast-history.service';
-import { RadioService } from '../../Core/services/radio.service';
+} from '~/app/Core/services/broadcast-history.service';
+import { RadioService } from '~/app/Core/services/radio.service';
 import { SvgIconComponent } from 'angular-svg-icon';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
 
 @Component({
   selector: 'app-broadcast-history',

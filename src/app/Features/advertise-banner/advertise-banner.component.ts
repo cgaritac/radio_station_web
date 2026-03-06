@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { BannerComponent } from '../../Shared/components/banner/banner.component';
+import { BannerComponent } from '~/app/Shared/components/banner/banner.component';
 
 @Component({
   selector: 'app-advertise-banner',

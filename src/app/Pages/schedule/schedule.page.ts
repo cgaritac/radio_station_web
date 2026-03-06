@@ -8,14 +8,14 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { SectionHeaderComponent } from '../../Shared/components/section-header/section-header.component';
-import { RadioService } from '../../Core/services/radio.service';
-import { ScheduleTabsComponent } from '../../Shared/components/schedule-tabs/schedule-tabs.component';
+import { SectionHeaderComponent } from '~/app/Shared/components/section-header/section-header.component';
+import { RadioService } from '~/app/Core/services/radio.service';
+import { ScheduleTabsComponent } from '~/app/Shared/components/schedule-tabs/schedule-tabs.component';
 import {
   ScheduleCardComponent,
   WeekSchedule,
-} from '../../Features/schedule-card/schedule-card.component';
-import { SeoService } from '../../Core/services/seo.service';
+} from '~/app/Features/schedule-card/schedule-card.component';
+import { SeoService } from '~/app/Core/services/seo.service';
 
 @Component({
   selector: 'app-schedule',

@@ -11,11 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { PageHeroComponent } from '../../Shared/components/page-hero/page-hero.component';
-import { AdvertiseBannerComponent } from '../../Features/advertise-banner/advertise-banner.component';
-import { CategoryFilterComponent } from '../../Shared/components/category-filter/category-filter.component';
-import { BlogListComponent } from '../../Features/blog-list/blog-list.component';
-import { SeoService } from '../../Core/services/seo.service';
+import { PageHeroComponent } from '~/app/Shared/components/page-hero/page-hero.component';
+import { AdvertiseBannerComponent } from '~/app/Features/advertise-banner/advertise-banner.component';
+import { CategoryFilterComponent } from '~/app/Shared/components/category-filter/category-filter.component';
+import { BlogListComponent } from '~/app/Features/blog-list/blog-list.component';
+import { SeoService } from '~/app/Core/services/seo.service';
 
 interface BlogPost {
   id: string;
